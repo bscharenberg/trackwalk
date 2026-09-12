@@ -34,38 +34,21 @@
     padding: 24px;
     text-align: center;
   }
-  .logo {
-    width: clamp(84px, 20vw, 128px);
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 22%;
-  }
   .wordmark {
-    font-weight: 900;
-    font-size: clamp(3rem, 14vw, 7rem);
-    letter-spacing: 0.02em;
-    color: var(--accent);
-    line-height: 0.95;
+    width: min(90vw, 560px);
+    height: auto;
     margin: 0;
-    text-transform: uppercase;
   }
   .tagline {
     font-weight: 600;
     font-size: clamp(1.1rem, 4vw, 1.6rem);
     color: var(--text);
-    margin: 18px 0 0;
+    margin: 28px 0 0;
     max-width: 34rem;
     line-height: 1.25;
   }
   .tagline .old-name {
     color: var(--text-dim);
-    text-decoration: none;
-    border-bottom: 1px solid var(--text-dim);
-  }
-  .tagline .old-name:hover,
-  .tagline .old-name:active {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
   }
   .status {
     font-weight: 400;
@@ -106,25 +89,8 @@
 </style>
 </head>
 <body>
-  <svg class="logo" viewBox="0 0 567.8 604.25" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <style>
-        .cls-1 { fill: none; }
-        .cls-2 { fill: #ceff00; }
-        .cls-3 { clip-path: url(#tw-clippath); }
-      </style>
-      <clipPath id="tw-clippath">
-        <rect class="cls-1" x="55.73" width="512.07" height="512.07" rx="118.67" ry="118.67"/>
-      </clipPath>
-    </defs>
-    <g class="cls-3">
-      <rect x="55.73" width="512.07" height="512.07" rx="118.67" ry="118.67"/>
-      <path class="cls-2" d="M3.35,429.95l17.72-22.43-21.07-14.32,23.66-24.24,20.56,8.33,32.39-39.92-19.5-14.47,22.22-29.17,24.77,7.36,28.7-35.04-21.92-15.41,25.27-28.7,22.59,10.36,32.64-40.43-25.19-16.29,34.09-25.23,21.62,14.14c7.7,5.03,29.42-1.84,34.67-9.24,7.18-10.11,14.01-19.24,22.8-27.45,22.11,14.26,27.98,41.78,48.62,41.66,5.73-.03,14.06-6.67,22.86-12.91,7.9,2.85,20.89,16.6,25.54,25.25l-7.99,10.72c-2.85,3.83,2.74,21.32,27.81,34.39,10,5.21,17.81,24.52,21.12,36.83l-24.53,5.07-4.99,39.75c17.26,16.04,12.99,38.3.73,56.34l-20.54-19.01c-23,16.64-32.62,38.78-25.3,67.86l-22.94,29.43-10.78-24.64-31.7,37.77,9.25,29.15-19.72,27.98-16.17-22.37c-35.33,32.27-15.5,59.38-39.8,91.78l-16.17-20.9-35.01,42.31M116.53,523.93c14.33,11.57,25.25,26.15,34.78,39.31l191.43-245.34c26.04-33.37,18.16-82.8-10.56-107.53-43.08-37.08-96.2-20.28-128.83,20.8L27.74,452.25l88.8,71.68Z"/>
-      <path class="cls-2" d="M278.79,255.37c9.71,1.57,18.91,12.43,18.18,21.96-.67,8.88-11.17,18.51-22.79,17.79-8.19-.51-18.19-11.02-17.84-20.72.37-9.96,11.13-20.85,22.45-19.03Z"/>
-    </g>
-  </svg>
-  <h1 class="wordmark">Trackwalk</h1>
-  <p class="tagline">The new name for <a class="old-name" href="https://helltrack.app">Helltrack</a>.<br>UCI downhill race content and results.</p>
+  <img class="wordmark" src="assets/trackwalk-wordmark.png" alt="Trackwalk">
+  <p class="tagline">The new name for <span class="old-name">Helltrack</span>.<br>UCI downhill race content and results.</p>
   <p class="status">Full site launching soon.</p>
   <hr class="divider">
   <a class="link-back" href="https://helltrack.app">Go to the live site →</a>
