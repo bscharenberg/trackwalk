@@ -85,7 +85,7 @@ fetch('public/cache.json?t=' + Date.now()).then(r => r.json()).then(d => {
 | File | Location | Purpose |
 |---|---|---|
 | PWA app | /index.html (root) | Main frontend |
-| Feed data | /public/cache.json | Generated hourly |
+| Feed data | /public/cache.json | refresh.yml cron is hourly; GitHub fires ~24% of slots, so ~every 4h in practice |
 | Results data | /public/results.json | Race results database |
 | Riders data | /public/riders.json | Generated from CSV |
 | Directory data | /public/directory.json | PITS tab — teams, media, podcasts, UCI |
@@ -160,6 +160,17 @@ Then continue: `git rebase --continue` or `git stash pop && git push`
 ### Shorts appearing in main feed
 - Duration-based detection: youtube-fetcher.js calls videos.list with contentDetails, sets `isShort: true` for ≤60s
 - Check `isShortDuration()` in youtube-fetcher.js and `isShort` handling in content-filter.js
+
+### Feed looks hours out of date
+- Expected. `refresh.yml`'s cron is `0 * * * *`, but GitHub only fires roughly a quarter of those
+  slots — measured 2026-09-16: 29 runs across 122 hours, every one `schedule`/`success`, gaps of
+  2.2h to 7.8h. Nothing is broken; GitHub drops scheduled runs under load and `:00` is the busiest
+  minute on the platform.
+- Confirm before digging: `curl -s "https://api.github.com/repos/bscharenberg/trackwalk/actions/workflows/refresh.yml/runs?per_page=30" | python3 -c "import json,sys;[print(r['created_at'], r['event'], r['conclusion']) for r in json.load(sys.stdin)['workflow_runs']]"`
+  All `success` with wide gaps = scheduling, not a bug. A `failure` conclusion is a real problem.
+- Need it fresh now: run the workflow manually (`workflow_dispatch`) or `node scripts/build-cache.js`.
+- If this ever needs fixing properly, moving the cron off `:00` to something like `37 * * * *` is
+  the usual mitigation — a less contended minute gets dropped less often. Not currently done.
 
 ### Service worker caching stale content
 - Unregister in DevTools → Application → Service Workers

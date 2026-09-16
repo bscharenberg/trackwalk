@@ -75,7 +75,7 @@
   already-installed shell. Mitigated with a one-time banner on the old origin telling installed
   users to reinstall. **Plan for this before changing domains on any installable app** — the
   redirect solves links, not installs.
-- **Worker names kept**: `helltrack-rss` (and the vendored `helltrack-results`) keep their names.
+- **Worker name kept**: `helltrack-rss` keeps its name (the only live Worker).
   Renaming a Worker means a new workers.dev URL, which means re-issuing `PINKBIKE_PROXY` in
   GitHub Secrets and every local `.env` — secret churn for a string no user ever sees.
 - **localStorage keys**: renamed `helltrack-*`/`helltrack_*` → `trackwalk-*` on 2026-09-16, but

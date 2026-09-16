@@ -149,8 +149,10 @@ new-origin lesson. What is left is infrastructure and platform work, none of it 
 | Re-upload docs/icons to the Claude project | XS | Low | The Claude project still carries pre-rebrand docs and icon assets. |
 | Instagram @trackwalk_dh | S | Low | Handle registered 2026-09; no content yet. Already in the JSON-LD `sameAs`, deliberately NOT linked in the UI until there is something to land on. |
 
-Deliberately NOT doing: renaming the `helltrack-rss` / `helltrack-results` Workers (secret churn,
-zero user benefit) or the local folder (its absolute path is hardcoded in `.claude/launch.json`).
+Deliberately NOT doing: renaming the live `helltrack-rss` Worker (secret churn, zero user benefit)
+or the local folder (its absolute path is hardcoded in `.claude/launch.json`). The retired
+`helltrack-results` Worker was archived to `archive/helltrack-results/` on 2026-09-16 — deleted
+from Cloudflare long ago, kept only as reference for possible future historical scraping.
 
 ---
 
