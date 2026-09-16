@@ -16,6 +16,10 @@
 <meta property="og:title" content="Trackwalk · UCI Downhill Racing Results & Video">
 <meta property="og:description" content="UCI downhill results, race videos, and rider profiles. Everything downhill, nothing else.">
 <meta property="og:image" content="https://trackwalk.racing/og-image.png">
+<!-- Declared so scrapers can lay the card out without fetching the image first. -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Trackwalk — UCI downhill racing results and video">
 <meta property="og:url" content="https://trackwalk.racing/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Trackwalk">
@@ -41,6 +45,51 @@
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4EY22R6D2J';
     document.head.appendChild(s);
   });
+</script>
+<!-- Structured data. Tells search engines (and the assistants now allowed to cite us in
+     robots.txt) that Trackwalk is a specific thing with a name, a logo and an owner, rather
+     than an anonymous page. No SearchAction/sitelinks-searchbox here on purpose: that requires
+     a real, linkable search-results URL and this is a single-page app with none. It becomes
+     available with PBI 49. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://trackwalk.racing/#organization",
+      "name": "Trackwalk",
+      "url": "https://trackwalk.racing/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://trackwalk.racing/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": ["https://www.instagram.com/trackwalk_dh/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://trackwalk.racing/#website",
+      "name": "Trackwalk",
+      "url": "https://trackwalk.racing/",
+      "description": "UCI downhill racing — race content, results database, and every World Cup rider in one place.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://trackwalk.racing/#organization" }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://trackwalk.racing/#webapp",
+      "name": "Trackwalk",
+      "url": "https://trackwalk.racing/",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isPartOf": { "@id": "https://trackwalk.racing/#website" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+}
 </script>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -2696,6 +2745,30 @@ document.getElementById('install-btn').addEventListener('click', async () => {
 })
 
 window.addEventListener('appinstalled', () => { dismissInstall() })
+
+// Email signup — the one conversion that outlives a race weekend, and the only one that was
+// not measured. The Kit form posts straight to app.kit.com, so GA4 never saw it and signups
+// could not be attributed to a traffic source.
+//
+// Hooked by listener, NOT by editing the form: the Kit embed is static HTML that must not be
+// touched (see CLAUDE.md). Listening on document in the capture phase means this fires whether
+// Kit's ck.5.js intercepts the submit via AJAX or the form posts natively, and it survives Kit
+// re-rendering its own markup.
+//
+// NOTE: if the Kit form is ever replaced with another provider, re-point this selector —
+// otherwise signup measurement silently goes to zero.
+document.addEventListener('submit', e => {
+  const form = e.target
+  if (!form || !form.classList || !form.classList.contains('formkit-form')) return
+  if (typeof gtag !== 'function') return
+  gtag('event', 'email_signup', {
+    // which interest boxes were ticked, so the tag mix is visible in GA4 and not only in Kit
+    interests: [...form.querySelectorAll('input[name="tags[]"]:checked')]
+      .map(i => i.parentElement?.querySelector('label')?.textContent?.trim())
+      .filter(Boolean)
+      .join(',') || 'none',
+  })
+}, true)
 
 function dismissInstall() {
   document.getElementById('install-banner').style.display = 'none'
