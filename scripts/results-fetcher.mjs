@@ -11,7 +11,7 @@
 
 import fs   from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath, pathToFileURL } from 'url'
 
 const __dirname   = path.dirname(fileURLToPath(import.meta.url))
 const OUTPUT_PATH = path.join(__dirname, '..', 'public', 'results.json')
@@ -22,7 +22,10 @@ const UCI_API     = 'https://www.ucimtbworldseries.com/api/race-results'
 // Differs from our venue slug in two cases (South Korea).
 
 // date = finals date (matches docs/punchlist.md "Race Calendar 2026" table).
-const CALENDAR_2026 = [
+// Exported so scripts/build-calendar.mjs can emit public/calendar.json from it. The app's
+// "next round" countdown reads that file, so the countdown and the fetcher can never disagree
+// about when a round is — see docs/punchlist.md "2026 round dates disagree across sources".
+export const CALENDAR_2026 = [
   { slug: 'race-of-south-korea-2026', uciVenue: 'mona-yongpyong', name: 'Mona YongPyong', date: '2026-05-02', round: 1 },
   { slug: 'loudenvielle-2026',        uciVenue: 'loudenvielle',    name: 'Loudenvielle',   date: '2026-05-28', round: 2 },
   { slug: 'leogang-2026',             uciVenue: 'leogang',         name: 'Leogang',        date: '2026-06-13', round: 3 },
@@ -233,4 +236,9 @@ async function main() {
   }
 }
 
-main()
+// Only run the CLI when this file IS the entry point. Without this guard, importing
+// CALENDAR_2026 (see build-calendar.mjs) executes main(), which prints usage and exits.
+// Behaviour when run directly is unchanged.
+if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
+  main()
+}

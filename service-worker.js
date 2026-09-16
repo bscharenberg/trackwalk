@@ -1,4 +1,4 @@
-const CACHE_NAME = 'trackwalk-v26'
+const CACHE_NAME = 'trackwalk-v27'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -8,6 +8,7 @@ const STATIC_ASSETS = [
   '/icon-192.png',
   '/icon-512.png',
   '/public/cache.json',
+  '/public/calendar.json',
   '/public/results/index.json',
   '/public/riders.json',
   '/public/directory.json',
@@ -43,6 +44,7 @@ self.addEventListener('fetch', event => {
   // stale copy, but still stores under the clean path so it refreshes the same entry
   // rather than piling up one copy per app open.
   if (url.pathname.endsWith('cache.json') || url.pathname.endsWith('riders.json') ||
+      url.pathname.endsWith('calendar.json') ||
       url.pathname.endsWith('directory.json') || url.pathname.endsWith('watch.json') ||
       url.pathname.includes('/public/results/')) {
     const cacheKey = url.origin + url.pathname

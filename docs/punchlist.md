@@ -181,7 +181,7 @@ from Cloudflare long ago, kept only as reference for possible future historical 
 | 48 | ~~My Riders feed — empty-state prompt~~ | — | Done | ~~First-time visitors never saw the "Your Riders" section~~ — `renderMyRidersFeed()` now always renders the header; when no riders are saved it shows a dashed-border "Pick your 6 →" prompt card that jumps to the Riders tab (`goToRidersTab()`), instead of hiding the section. Deliberately skips loading `results.json` on the empty path so a brand-new visitor's feed load stays cheap. Shipped 2026-07-03 ahead of La Thuile race weekend as an onboarding fix for the My Riders feed's adoption risk. SW cache bumped v8→v9. |
 | 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |
 | 50 | Move trackwalk.racing DNS to Cloudflare | S | Medium | DNS is on Porkbun pointing straight at GitHub Pages; helltrack.app is already on Cloudflare. Unblocks #41 (Worker routes need the domain on Cloudflare), gives custom headers GitHub Pages cannot set, and consolidates two DNS panels into one. Do NOT do this before Whistler/Lake Placid. Full spec below. |
-| 51 | Live results on race day | L | **High — before Whistler 09-27** | **Parts A + B shipped 2026-09-16.** A: `.github/workflows/live-results.yml`, a dispatched job that polls internally with no scheduler dependency. B: the app now polls the season shard every 60s while the round on screen is In progress and the tab is visible, repainting only when data moved. Part C (a live marker outside the Results tab) still open. Full spec below. |
+| 51 | ~~Live results on race day~~ | — | Done | **A+B+C all shipped 2026-09-16.** A: `live-results.yml`, a dispatched job polling internally with no scheduler dependency. B: the app polls the season shard every 60s while the round on screen is In progress and the tab is visible. C: a `#next-round` strip at the top of the feed showing the countdown to the next round, flipping to a tappable "Racing now / Live" state during a race, plus a pulsing dot on the Results tab. End-to-end ChronoRace → user screen is ~2-4 min. |
 
 ### Notes on backlog items
 - **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
@@ -743,7 +743,19 @@ during finals sees a frozen screen until they reload. The `roundState()` "In pro
   - surface it honestly: keep the existing badge, refresh its `Last updated` stamp, and do not
     claim "live" when the last successful fetch is old
 
-### Part C — tell people it is worth coming back
+### Part C — tell people it is worth coming back — SHIPPED 2026-09-16
+
+Shipped as the `#next-round` strip, which does double duty: a "Next round · Whistler · 11 days"
+countdown normally, and a tappable "Racing now · <venue> · Live" during a race, plus a pulsing
+dot on the Results tab so the live state reads from anywhere in the app. Tapping lands on the
+round actually racing, not wherever the user left the Results tab.
+
+This also removed a real bug. The countdown needed a schedule, which `public/results/` cannot
+provide (it only holds rounds that already happened), so `public/calendar.json` is now generated
+by `scripts/build-calendar.mjs` from the fetcher's own `CALENDAR_2026`. index.html had its own
+hardcoded copy of that calendar and **six of its ten dates were a day wrong** — Mona YongPyong,
+Lenzerheide, La Thuile, Pal Arinsal, Les Gets and Val di Sole — and it was user-visible in the
+"Next race" line. The hardcoded copy is gone. Original plan follows.
 
   - a small "In progress" marker on the Results tab itself, so it is visible from the feed
   - once Part B is in, the existing `fetchedAt` stamp becomes meaningful and should be shown
