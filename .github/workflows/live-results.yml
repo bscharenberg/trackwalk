@@ -1,0 +1,157 @@
+name: Live Results (race day)
+
+# Race-day polling that does NOT depend on GitHub's scheduler.
+#
+# WHY THIS EXISTS: `schedule:` crons are best-effort and GitHub drops most of them. Measured
+# 2026-09-16, fetch-results.yml asks for `*/10 * * * *` and actually fired 59 times in 202 hours
+# — a 5% fire rate, one run every ~206 minutes, gaps up to 410. Every run was green; the missing
+# ones simply never happen. On a race day that is results landing hours after ChronoRace
+# publishes them, and tightening the cron makes it worse because GitHub throttles high-frequency
+# schedules hardest.
+#
+# So: consult the scheduler ONCE. You dispatch this by hand on race morning and a single job
+# loops internally for up to ~5 hours, polling every couple of minutes. A GitHub Actions job can
+# run 6 hours, which covers qualifying or a finals day.
+#
+# fetch-results.yml is deliberately untouched and still runs as the unattended safety net.
+
+on:
+  workflow_dispatch:
+    inputs:
+      venue_slug:
+        description: 'Which round is racing'
+        required: true
+        type: choice
+        options:
+          - whistler-2026
+          - lake-placid-2026
+          - val-di-sole-2026
+          - les-gets-2026
+          - pal-arinsal-2026
+          - la-thuile-2026
+          - lenzerheide-2026
+          - leogang-2026
+      minutes:
+        description: 'How long to keep polling, in minutes (default 300, max 330)'
+        required: false
+        default: '300'
+        type: string
+      interval_seconds:
+        description: 'Seconds between polls (default 120)'
+        required: false
+        default: '120'
+        type: string
+
+permissions:
+  contents: write
+
+# One live job at a time. Dispatching a second while one runs would have two jobs pushing
+# results commits at each other; the newer one waits instead.
+concurrency:
+  group: live-results
+  cancel-in-progress: false
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    # GitHub's hard job cap is 360 minutes. Stay under it so the job ends on its own terms and
+    # the summary below is still written.
+    timeout-minutes: 350
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Poll for results until the budget runs out
+        env:
+          VENUE_SLUG: ${{ inputs.venue_slug }}
+          MINUTES:    ${{ inputs.minutes }}
+          INTERVAL:   ${{ inputs.interval_seconds }}
+        run: |
+          # No `set -e` on purpose. A transient 5xx from one source must not end a race-day job —
+          # every fetch is allowed to fail, gets logged, and is retried on the next pass.
+
+          MINUTES="${MINUTES:-300}"
+          INTERVAL="${INTERVAL:-120}"
+          case "$MINUTES"  in ''|*[!0-9]*) MINUTES=300 ;; esac
+          case "$INTERVAL" in ''|*[!0-9]*) INTERVAL=120 ;; esac
+          [ "$MINUTES" -gt 330 ] && MINUTES=330
+          [ "$INTERVAL" -lt 30 ] && INTERVAL=30
+
+          YEAR=$(date -u +%Y)
+          DEADLINE=$(( $(date -u +%s) + MINUTES * 60 ))
+
+          git config user.name  "Trackwalk Bot"
+          git config user.email "trackwalk-bot@users.noreply.github.com"
+          BRANCH="${GITHUB_REF_NAME}"
+
+          PASS=0
+          COMMITS=0
+          echo "Polling $VENUE_SLUG for ${MINUTES}m, every ${INTERVAL}s, on $BRANCH."
+
+          while [ "$(date -u +%s)" -lt "$DEADLINE" ]; do
+            PASS=$(( PASS + 1 ))
+            LEFT=$(( (DEADLINE - $(date -u +%s)) / 60 ))
+            echo "::group::Pass $PASS — $(date -u '+%H:%M:%S') UTC (${LEFT}m left)"
+
+            # ChronoRace is the UCI's timing vendor and the only same-day source for a World
+            # Series round. Tissot carries World Championships. results-fetcher reads
+            # ucimtbworldseries.com, which has been serving its SPA shell instead of JSON since
+            # before Les Gets — kept in the rotation in case it comes back, never relied on.
+            node scripts/chronorace-fetcher.mjs "$YEAR" --merge || echo "  ! chronorace failed this pass"
+            node scripts/tissot-fetcher.mjs    "$YEAR" --merge || echo "  ! tissot failed this pass"
+            node scripts/results-fetcher.mjs   "$VENUE_SLUG"   || echo "  ! results-fetcher failed this pass"
+
+            # results.json is canonical; public/results/ is what the app fetches. Skipping this
+            # serves last pass's results to users.
+            node scripts/split-results.js || echo "  ! split-results failed this pass"
+
+            git add public/results.json public/results/
+            if git diff --staged --quiet; then
+              echo "  no change"
+            else
+              # Commit FIRST, then rebase — a staged-only change is silently unstaged by a
+              # stash/pop around a rebase (docs/decisions.md, 2026-06-14).
+              git commit -q -m "results: $VENUE_SLUG live $(date -u '+%Y-%m-%d %H:%M UTC')"
+              PUSHED=0
+              for attempt in 1 2 3 4 5; do
+                if git pull --rebase -q origin "$BRANCH" && git push -q origin "HEAD:$BRANCH"; then
+                  PUSHED=1; COMMITS=$(( COMMITS + 1 ))
+                  echo "  pushed (attempt $attempt)"
+                  break
+                fi
+                echo "  push attempt $attempt failed — retrying in 10s"
+                sleep 10
+              done
+              # refresh.yml pushes cache.json at :13 and :43, so a race here is expected and
+              # harmless. Leave the commit local and try again next pass rather than dying.
+              [ "$PUSHED" -eq 1 ] || echo "  ! could not push this pass; will retry next pass"
+            fi
+
+            echo "::endgroup::"
+            [ "$(date -u +%s)" -ge "$DEADLINE" ] && break
+            sleep "$INTERVAL"
+          done
+
+          echo "Done: $PASS passes, $COMMITS commits."
+          {
+            echo "### Live results — $VENUE_SLUG"
+            echo ""
+            echo "| | |"
+            echo "|---|---|"
+            echo "| Passes | $PASS |"
+            echo "| Commits pushed | $COMMITS |"
+            echo "| Budget | ${MINUTES}m at ${INTERVAL}s |"
+            echo "| Finished | $(date -u '+%Y-%m-%d %H:%M UTC') |"
+            echo ""
+            echo "Re-dispatch this workflow to keep polling."
+          } >> "$GITHUB_STEP_SUMMARY"
