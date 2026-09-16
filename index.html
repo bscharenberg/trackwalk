@@ -1752,7 +1752,9 @@ function detectVenue(item) {
 
 function lazyImg(src, cls) {
   if (!src) return ''
-  return `<img src="${src}" class="${cls} loading" loading="lazy"
+  // src is a third-party URL (YouTube/Pinkbike). Unescaped, a `"` in it closes the
+  // attribute and everything after is parsed as markup — i.e. an injected onerror.
+  return `<img src="${escAttr(src)}" class="${cls} loading" loading="lazy"
     onerror="this.parentElement.querySelector('.thumb-placeholder')?.classList.remove('hidden');this.style.display='none'"
     onload="this.classList.remove('loading');this.classList.add('loaded');this.parentElement.querySelector('.thumb-placeholder')?.classList.add('hidden')">`
 }
@@ -2015,7 +2017,7 @@ function spBuildSlides() {
   <div class="sp-overlay">
     <div class="sp-source">${escHtml(srcName(item))}</div>
     <div class="sp-title">${escHtml(item.title || '')}</div>
-    ${item.url ? `<a class="sp-yt" href="${escHtml(item.url)}" target="_blank" rel="noopener"
+    ${safeUrl(item.url) ? `<a class="sp-yt" href="${escAttr(safeUrl(item.url))}" target="_blank" rel="noopener"
        onclick="spTrackOut(${i})">Watch on YouTube</a>` : ''}
   </div>
 </div>`).join('')
@@ -2390,10 +2392,20 @@ function escHtml(s) {
   return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
-function renderHero(item, showBadge) {
+// escHtml does NOT escape quotes, so it is only safe for text nodes. Anything going into
+// an attribute goes through escAttr instead.
+//
+// For href specifically, escaping is not enough: a "javascript:" URL needs no quote to be
+// dangerous. Feed URLs come from third parties, so allow only http(s) and drop the rest.
+function safeUrl(u) {
+  if (!u) return ''
+  return /^https?:\/\//i.test(String(u).trim()) ? String(u).trim() : ''
+}
+
+function renderHero(item, showBadge, i) {
   const sc = srcClass(item)
   const isArticle = item.type === 'article'
-  return `<div class="card-hero" data-url="${item.url || ''}" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
+  return `<div class="card-hero" data-url="${escAttr(item.url || '')}" data-feed-i="${i}">
   <div class="hero-thumb">
     ${lazyImg(item.thumbnail, 'hero-img')}
     <div class="thumb-placeholder${item.thumbnail ? '' : ''}">
@@ -2413,7 +2425,7 @@ function renderHero(item, showBadge) {
 </div>`
 }
 
-function renderRow(item, showBadge) {
+function renderRow(item, showBadge, i) {
   const sc = srcClass(item)
   const isArticle = item.type === 'article'
   const isPodcast = item.type === 'podcast'
@@ -2425,7 +2437,7 @@ function renderRow(item, showBadge) {
   const badge = showBadge && item._catId && CAT_LABELS[item._catId]
     ? `<div class="meta-dot"></div><span class="cat-badge">${CAT_LABELS[item._catId]}</span>`
     : ''
-  return `<div class="card-row" data-url="${item.url || ''}" onclick='openSheet(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
+  return `<div class="card-row" data-url="${escAttr(item.url || '')}" data-feed-i="${i}">
   <div class="row-thumb">
     ${lazyImg(item.thumbnail, 'row-img')}
     ${thumbContent}
@@ -2444,6 +2456,9 @@ function renderRow(item, showBadge) {
 
 let data = null
 let activeTab = 'feed'
+// The feed list as last rendered, in render order. Cards carry data-feed-i into this
+// rather than a serialized copy of the item — see the click delegate below.
+let feedItems = []
 
 function renderShortsStrip(items) {
   if (!items || !items.length) return ''
@@ -2452,15 +2467,15 @@ function renderShortsStrip(items) {
   spItems = items
   const cards = items.map((item, i) => {
     const thumb = item.thumbnail
-      ? `<img src="${item.thumbnail}" class="short-card-img loading" loading="lazy"
+      ? `<img src="${escAttr(item.thumbnail)}" class="short-card-img loading" loading="lazy"
            onerror="this.style.display='none'"
            onload="this.classList.remove('loading');this.classList.add('loaded')">`
       : ''
-    return `<div class="short-card" data-url="${item.url || ''}" onclick="openShorts(${i})">
+    return `<div class="short-card" data-url="${escAttr(item.url || '')}" data-shorts-i="${i}">
       ${thumb}
       <div class="short-card-overlay">
-        <div class="short-card-source">${srcName(item)}</div>
-        <div class="short-card-title">${(item.title || '').replace(/</g,'&lt;')}</div>
+        <div class="short-card-source">${escHtml(srcName(item))}</div>
+        <div class="short-card-title">${escHtml(item.title || '')}</div>
       </div>
     </div>`
   }).join('')
@@ -2507,9 +2522,12 @@ function renderFeed() {
   // Shorts strip injects after item index 2 (the 3rd item)
   const stripAfter = 2
 
+  // The delegated click handler indexes into this, so it must match what was rendered.
+  feedItems = allItems
+
   let html = '<div style="padding:4px 0">'
   allItems.forEach((item, i) => {
-    html += i === heroIdx ? renderHero(item, true) : renderRow(item, true)
+    html += i === heroIdx ? renderHero(item, true, i) : renderRow(item, true, i)
     if (i === stripAfter && shortsItems.length) {
       html += renderShortsStrip(shortsItems)
     }
@@ -2524,6 +2542,23 @@ function renderFeed() {
   if (data.builtAt) document.getElementById('updated').textContent = 'Updated ' + timeAgo(data.builtAt)
   applySeenState()
 }
+
+// One delegated handler for every feed card, instead of an inline onclick per card.
+//
+// Each card used to carry `onclick='openSheet({...the whole item as JSON...})'`, which put a
+// second copy of cache.json into the DOM — ~95KB across a typical feed — and made the item's
+// own text part of the markup, so a title containing `&#39;` could close the attribute.
+// The card now carries only its index into feedItems.
+document.getElementById('content').addEventListener('click', e => {
+  const card = e.target.closest('[data-feed-i], [data-shorts-i]')
+  if (!card) return
+  if (card.dataset.shortsI !== undefined) {
+    openShorts(Number(card.dataset.shortsI))
+    return
+  }
+  const item = feedItems[Number(card.dataset.feedI)]
+  if (item) openSheet(item)
+})
 
 function buildTabs() {
   const tabs = document.getElementById('tabs')

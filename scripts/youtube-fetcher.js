@@ -7,6 +7,7 @@
  */
 
 require('dotenv').config()
+const { decodeEntities } = require('./lib/decode-entities')
 
 const API_KEY = process.env.YOUTUBE_API_KEY
 const BASE    = 'https://www.googleapis.com/youtube/v3'
@@ -133,8 +134,10 @@ function normaliseItem(snippet, channelId, channelName) {
     source:      'youtube',
     channelId,
     channelName,
-    title:       snippet.title || '',
-    description: snippet.description || '',
+    // The YouTube API escapes these ("Gwin &amp; Scarsi") — decode so cache.json holds
+    // plain text and the app escapes exactly once at render.
+    title:       decodeEntities(snippet.title),
+    description: decodeEntities(snippet.description),
     thumbnail:       thumb?.url    || null,
     thumbnailWidth:  thumb?.width  || null,
     thumbnailHeight: thumb?.height || null,

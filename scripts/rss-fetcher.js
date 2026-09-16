@@ -8,6 +8,7 @@
 
 require('dotenv').config()
 const xml2js = require('xml2js')
+const { decodeEntities } = require('./lib/decode-entities')
 
 const PROXY = process.env.PINKBIKE_PROXY || 'https://helltrack-rss.scharenbergs.workers.dev'
 
@@ -26,8 +27,10 @@ function extractThumbnail(description) {
   return match ? match[1] : null
 }
 
+// Pinkbike's feed is entity-encoded, so strip tags first and then decode. Decoding first
+// could synthesize a "<" that the tag strip would then eat, swallowing real text.
 function stripHtml(str) {
-  return (str || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+  return decodeEntities((str || '').replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim()
 }
 
 function getString(val) {
