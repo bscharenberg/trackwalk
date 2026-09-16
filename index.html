@@ -9,10 +9,14 @@
 <meta name="apple-mobile-web-app-title" content="Trackwalk">
 <meta name="description" content="UCI downhill racing — race content, results database, and every World Cup rider in one place. trackwalk.racing">
 <title>Trackwalk · UCI Downhill Racing Results & Video</title>
+<!-- Every share link is "/?v=<video url>", so the app hands out an unbounded set of URLs that
+     all serve this one page. Without a canonical, search engines treat each as its own page
+     and split the site's ranking signals across them. Point them all back at the root. -->
+<link rel="canonical" href="https://trackwalk.racing/">
 <meta property="og:title" content="Trackwalk · UCI Downhill Racing Results & Video">
 <meta property="og:description" content="UCI downhill results, race videos, and rider profiles. Everything downhill, nothing else.">
 <meta property="og:image" content="https://trackwalk.racing/og-image.png">
-<meta property="og:url" content="https://trackwalk.racing">
+<meta property="og:url" content="https://trackwalk.racing/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Trackwalk">
 <meta name="twitter:card" content="summary_large_image">

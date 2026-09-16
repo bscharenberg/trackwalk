@@ -1,6 +1,27 @@
-User-agent: *
-Disallow: /public/
+# Trackwalk — trackwalk.racing
+#
+# /public/ used to be disallowed here. That looked tidy (raw JSON out of the index) but it
+# was self-defeating: EVERY word of real content on this site — the feed, 18 seasons of
+# results, the rider list — is fetched from /public/*.json at runtime. Blocking it left
+# Googlebot rendering a 583-character shell that says "Loading race feed", so the site
+# indexed as an empty page and the results database was invisible to search.
+#
+# Crawlers must be able to fetch these to see anything at all. They are the content.
 
+User-agent: *
+# results.json is the 9 MB canonical artifact the fetchers merge into. The app never requests
+# it (it reads the per-season shards in /public/results/), so there is nothing to render from
+# it and no reason to spend crawl budget on it.
+#
+# This Disallow is listed BEFORE the blanket Allow on purpose: Google resolves conflicts by
+# longest match, but order-based parsers take the first rule that matches, and with "Allow: /"
+# first those would let this through.
+Disallow: /public/results.json
+Allow: /
+
+Sitemap: https://trackwalk.racing/sitemap.xml
+
+# LLM training crawlers — unchanged.
 User-agent: GPTBot
 Disallow: /
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Trackwalk is a single-page app: one real URL. The "/?v=..." share links all canonicalize
+     back to it (see the canonical tag in index.html), so they are deliberately not listed. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://trackwalk.racing/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

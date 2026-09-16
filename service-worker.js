@@ -1,9 +1,12 @@
-const CACHE_NAME = 'trackwalk-v25'
+const CACHE_NAME = 'trackwalk-v26'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/icon-round-192.png',
+  // The icons manifest.json actually names — pre-caching a file the manifest does not
+  // reference did nothing for the install prompt, which is the whole point on a QR-code launch.
+  '/icon-192.png',
+  '/icon-512.png',
   '/public/cache.json',
   '/public/results/index.json',
   '/public/riders.json',
