@@ -1,7 +1,7 @@
 {
   "name": "Trackwalk",
   "short_name": "Trackwalk",
-  "description": "UCI downhill and enduro race content.",
+  "description": "UCI downhill race content and results.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
