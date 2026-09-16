@@ -137,7 +137,7 @@ each shared-venue weekend as new XCO stars appear — no general fix, it's whack
 | # | Item | Size | Priority | Description |
 |---|---|---|---|---|
 | 7 | ~~Real PWA icon~~ | — | Done | ~~Replace placeholder HT icon~~ — replaced with chainsaw logo (icon-192.png/icon-512.png, #d4f500), header updated to icon + white wordmark lockup, OG/Twitter meta tags added (2026-06-12). |
-| 41 | Dynamic OG image for video shares (Cloudflare Worker) | S | Low | Static `og:image` can't differ between homepage and `?v=` video shares. Worker (same pattern as helltrack-rss) checks for `?v=` param: if present, injects that video's YouTube thumbnail (`maxresdefault.jpg`, fallback `hqdefault.jpg`) as `og:image` (+ optionally `og:title`); if absent, serves the static brand card. Needs route binding on trackwalk.racing domain (not just workers.dev). Est. ~1 hour. Build when share volume justifies it. |
+| 41 | Dynamic OG image for video shares (Cloudflare Worker) | S | Low | Static `og:image` can't differ between homepage and `?v=` video shares. Worker (same pattern as helltrack-rss) checks for `?v=` param: if present, injects that video's YouTube thumbnail (`maxresdefault.jpg`, fallback `hqdefault.jpg`) as `og:image` (+ optionally `og:title`); if absent, serves the static brand card. Needs route binding on trackwalk.racing domain (not just workers.dev) — **blocked on #50**, which moves DNS to Cloudflare; Worker routes are impossible while the domain is on Porkbun. Est. ~1 hour once unblocked. Build when share volume justifies it. |
 | 36b | 2024 results quality pass | S | Medium | ~~Re-fetch 2024 data via UCI JSON API~~ — done as part of the 2009–2024 DataRide backfill (2026-06-10). Bielsko-Biała 2024 winner now sourced from DataRide; re-verify against #34. |
 | 34 | Results data accuracy audit | M | Medium | Verify all 2024 round winners against authoritative sources. Podiums spot-checked against known history during the DataRide backfill (all seasons 2009-2024) — looked correct, but a formal audit hasn't been done. |
 | 5 | ~~Historical results 2015–2023~~ | — | Done | ~~Scrape and integrate~~ — superseded by the 2009–2024 UCI DataRide backfill (2026-06-10). See `docs/historical-data.md` §7/§9. |
@@ -156,6 +156,7 @@ each shared-venue weekend as new XCO stars appear — no general fix, it's whack
 | 47 | Standings points-source audit | M | Low | `computeStandings()` sums finals `points` only; if UCI awards qualifying/semifinal points (2023+ format) the Standings view undercounts vs official. The `lastRank` tiebreak also stays 999 for anyone who missed the latest round. Verify against official season standings before changing. |
 | 48 | ~~My Riders feed — empty-state prompt~~ | — | Done | ~~First-time visitors never saw the "Your Riders" section~~ — `renderMyRidersFeed()` now always renders the header; when no riders are saved it shows a dashed-border "Pick your 6 →" prompt card that jumps to the Riders tab (`goToRidersTab()`), instead of hiding the section. Deliberately skips loading `results.json` on the empty path so a brand-new visitor's feed load stays cheap. Shipped 2026-07-03 ahead of La Thuile race weekend as an onboarding fix for the My Riders feed's adoption risk. SW cache bumped v8→v9. |
 | 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |
+| 50 | Move trackwalk.racing DNS to Cloudflare | S | Medium | DNS is on Porkbun pointing straight at GitHub Pages; helltrack.app is already on Cloudflare. Unblocks #41 (Worker routes need the domain on Cloudflare), gives custom headers GitHub Pages cannot set, and consolidates two DNS panels into one. Do NOT do this before Whistler/Lake Placid. Full spec below. |
 
 ### Notes on backlog items
 - **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
@@ -577,6 +578,69 @@ maintaining), `index.html` (links into the new URLs), `docs/architecture.md`.
 
 **Watch out for:** the generator runs inside the race-day workflow, so it must be fast and must
 never fail the results commit — if page generation throws, the results still need to land.
+
+---
+
+## PBI 50 — Move trackwalk.racing DNS to Cloudflare
+
+**Status:** Open. Raised 2026-09-15. **Do NOT start before Whistler (09-27) and Lake Placid
+(10-04) are done.** A nameserver change during the launch window is the kind of avoidable risk
+that takes the site down on the one weekend it matters.
+
+**What:** Move `trackwalk.racing` DNS from Porkbun's nameservers to Cloudflare, keeping GitHub
+Pages as the origin.
+
+**Why:** Three reasons, in order of how much they actually matter.
+
+1. **It unblocks #41.** The dynamic OG image for `?v=` video shares needs a Cloudflare Worker
+   bound to a route on `trackwalk.racing`. Worker routes require the domain to be on Cloudflare —
+   `workers.dev` is not enough. #41 is currently unbuildable for this reason alone. (The existing
+   `helltrack-rss` Worker is unaffected: it is called server-side from CI by URL, no route needed.)
+
+2. **GitHub Pages will not let you set a single HTTP header.** Live response today is fixed at
+   `cache-control: max-age=600` with no way to change it, and no way to add `X-Robots-Tag`, CSP,
+   HSTS, or long-lived immutable caching for the JSON shards. Cloudflare Transform/Response
+   Header Rules give all of it. This becomes more relevant with #49, where generated pages want
+   different cache behaviour from the hourly-refreshed feed.
+
+3. **Consolidation.** `helltrack.app` is already on Cloudflare (that is where its 301 to
+   trackwalk.racing lives). Two registrars' DNS panels for one project is a thing to forget.
+   Porkbun stays the registrar either way — this changes nameservers, not ownership.
+
+Not a reason: performance or TLS. GitHub Pages already fronts the site with a CDN and valid
+HTTPS. Do not sell this to yourself as a speed win; it is a capability win.
+
+**Logic:**
+1. Add `trackwalk.racing` to Cloudflare, let it import existing records, and verify against
+   Porkbun before switching: apex `A` → `185.199.108.153`, `.109.153`, `.110.153`, `.111.153`;
+   `www` `CNAME` → `bscharenberg.github.io`. Re-add the Google Search Console `TXT` if it exists
+   by then — an import can miss records added the same day.
+2. Change nameservers at Porkbun to the two Cloudflare ones. Propagation is usually minutes but
+   allow up to 24h; do it on a weekday with no race.
+3. **Set SSL/TLS mode to Full (strict) before proxying anything.** "Flexible" against a GitHub
+   Pages origin that redirects to HTTPS produces an infinite redirect loop. This is the single
+   most common way this migration breaks.
+4. Expect a fight over the certificate: with the orange cloud on, GitHub cannot complete its
+   Let's Encrypt HTTP-01 challenge, so "Enforce HTTPS" in repo settings can fail or later fail to
+   renew. Either keep DNS-only (grey cloud) — which gets you Worker routes and consolidation but
+   not header rules — or proxy and let Cloudflare terminate TLS, having confirmed GitHub's cert
+   is already provisioned first.
+5. Keep the `CNAME` file in the repo root. Removing it unsets the custom domain on GitHub Pages.
+6. Afterwards, re-check `robots.txt`, `sitemap.xml`, and `/public/*.json` all still serve 200,
+   and re-run the live robots policy check.
+
+**File:** no repo changes expected beyond possibly `CNAME`. This is infrastructure. Record the
+outcome in `docs/decisions.md`.
+
+**Done when:**
+- `dig +short NS trackwalk.racing` returns Cloudflare nameservers
+- site serves 200 over HTTPS with a valid cert, no redirect loop, on apex and `www`
+- `robots.txt`, `sitemap.xml` and every `/public/*.json` the app fetches still return 200
+- a Worker route can be bound to `trackwalk.racing/*` (proves #41 is unblocked)
+- helltrack.app → trackwalk.racing 301 still works
+
+**Watch out for:** doing this and #49 in the same change. Land the DNS move, confirm it is
+boring for a week, then build on it.
 
 ---
 
