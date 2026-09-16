@@ -181,7 +181,7 @@ from Cloudflare long ago, kept only as reference for possible future historical 
 | 48 | ~~My Riders feed — empty-state prompt~~ | — | Done | ~~First-time visitors never saw the "Your Riders" section~~ — `renderMyRidersFeed()` now always renders the header; when no riders are saved it shows a dashed-border "Pick your 6 →" prompt card that jumps to the Riders tab (`goToRidersTab()`), instead of hiding the section. Deliberately skips loading `results.json` on the empty path so a brand-new visitor's feed load stays cheap. Shipped 2026-07-03 ahead of La Thuile race weekend as an onboarding fix for the My Riders feed's adoption risk. SW cache bumped v8→v9. |
 | 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |
 | 50 | Move trackwalk.racing DNS to Cloudflare | S | Medium | DNS is on Porkbun pointing straight at GitHub Pages; helltrack.app is already on Cloudflare. Unblocks #41 (Worker routes need the domain on Cloudflare), gives custom headers GitHub Pages cannot set, and consolidates two DNS panels into one. Do NOT do this before Whistler/Lake Placid. Full spec below. |
-| 51 | Live results on race day | L | **High — before Whistler 09-27** | **Part A shipped 2026-09-16** (`.github/workflows/live-results.yml` — dispatched job polls internally, no scheduler dependency). Parts B (client-side refresh while a round is In progress) and C (surface the fetchedAt stamp) still open. Full spec below. |
+| 51 | Live results on race day | L | **High — before Whistler 09-27** | **Parts A + B shipped 2026-09-16.** A: `.github/workflows/live-results.yml`, a dispatched job that polls internally with no scheduler dependency. B: the app now polls the season shard every 60s while the round on screen is In progress and the tab is visible, repainting only when data moved. Part C (a live marker outside the Results tab) still open. Full spec below. |
 
 ### Notes on backlog items
 - **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
@@ -719,7 +719,17 @@ Alternative if a manual dispatch is too easy to forget: a Cloudflare Worker Cron
 GitHub's `workflow_dispatch` API. Cloudflare's cron is far more reliable than GitHub's — but it
 needs a stored GitHub token and, for a route, punchlist #50. Start with the dispatched loop.
 
-### Part B — make the app refresh itself while a round is live
+### Part B — make the app refresh itself while a round is live — SHIPPED 2026-09-16
+
+Smaller than this spec assumed: `revalidateSeason()` already did the cache-busted fetch, the
+no-op-when-unchanged diff, and the rules about not yanking the round out from under someone. It
+only needed a `force` option to bypass its once-per-session guard, plus a timer and the guards
+below — about 45 lines, not a rewrite.
+
+Verified in-browser across six lifecycle cases: starts on a live round in the Results tab; stops
+immediately on leaving the tab; restarts on return; stops when the round stops being Live; stays
+off when the tab is hidden; stays off for a Provisional (past-dated) round. One fetch per poll.
+Original plan follows, for Part C context.
 
 Today nothing polls: `revalidateSeason()` runs on open, and a user staring at the results tab
 during finals sees a frozen screen until they reload. The `roundState()` "In progress" /

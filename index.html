@@ -2672,6 +2672,7 @@ function buildTabs() {
       if (typeof gtag === 'function') {
         gtag('event', 'tab_view', { tab: activeTab })
       }
+      syncLivePolling()   // leaving Results stops the live poll now, not a tick from now
       const isResults = activeTab === 'standings'
       const isRiders  = activeTab === 'riders'
       const isPits    = activeTab === 'pits'
@@ -3352,7 +3353,14 @@ function renderVenueCrossYear() {
 ${yearBlocks || `<div class="rs-section"><div class="rs-empty">No ${sessionLbl} data for ${genderLbl}</div></div>`}`
 }
 
+// Thin wrapper so every render path re-evaluates whether to be polling. Cheaper to reason
+// about than calling syncLivePolling() from each of the ten renderResults() call sites.
 function renderResults() {
+  renderResultsView()
+  syncLivePolling()
+}
+
+function renderResultsView() {
   if (activeView === 'standings') { renderStandings(); return }
   if (activeView === 'search')    { renderRiderSearch(); return }
   if (activeView === 'venue')     { renderVenueCrossYear(); return }
@@ -3498,8 +3506,12 @@ function loadResultsData() {
 // repaint into eighteen refetches. Only the boot season and seasons the user opens.
 
 const revalidatedSeasons = {}
-async function revalidateSeason(year) {
-  if (revalidatedSeasons[year]) return
+async function revalidateSeason(year, { force = false } = {}) {
+  // The once-per-session guard is for the fire-and-forget revalidation on open. Live polling
+  // passes force:true to re-run it; everything below — the cache-busted fetch, the no-op when
+  // nothing moved, and the rules about not yanking the round out from under someone — is
+  // already what a live refresh wants, so it is reused rather than reimplemented.
+  if (!force && revalidatedSeasons[year]) return
   revalidatedSeasons[year] = true
   try {
     const res = await fetch(seasonUrl(year) + '?t=' + Date.now())
@@ -3604,6 +3616,53 @@ function roundState(round) {
     note:  round.fetchedAt ? `Last updated ${fmtStamp(round.fetchedAt)}` : '',
   }
 }
+
+// ── Live polling while a round is actually in progress ──────────────────────────────────────
+//
+// Results used to be fetched once on open, so someone watching finals sat on a frozen screen
+// until they reloaded — the data was fresh on the server and stale in front of them. That is
+// the difference between results being live and the app feeling live.
+//
+// Kept deliberately narrow. It polls ONLY when all of these hold:
+//   - the Results tab is on screen, in the round view (not search/venue)
+//   - the round being looked at is genuinely in progress (roundState() === 'In progress',
+//     i.e. status 'Live' and race day has not passed)
+//   - the tab is visible
+// Anything else and the timer is torn down. A backgrounded phone at a bike park must not sit
+// there burning battery and mobile data on a race that finished yesterday.
+//
+// 60s, not faster: GitHub Pages is CDN-cached and live-results.yml commits at most every ~2
+// minutes, so polling harder cannot return anything newer — it would just cost data.
+const LIVE_POLL_MS = 60000
+let livePollTimer = null
+
+function liveRoundOnScreen() {
+  if (activeTab !== 'standings' || activeView !== 'results') return false
+  const round = currentRounds()[activeRound]
+  return roundState(round)?.label === 'In progress'
+}
+
+function syncLivePolling() {
+  const shouldPoll = liveRoundOnScreen() && document.visibilityState === 'visible'
+  if (shouldPoll && !livePollTimer) {
+    livePollTimer = setInterval(() => {
+      // Re-check each tick: the round can stop being live, or the view can change, between ticks.
+      if (!liveRoundOnScreen() || document.visibilityState !== 'visible') { syncLivePolling(); return }
+      revalidateSeason(activeSeason, { force: true })   // repaints itself only if data moved
+    }, LIVE_POLL_MS)
+  } else if (!shouldPoll && livePollTimer) {
+    clearInterval(livePollTimer)
+    livePollTimer = null
+  }
+}
+
+// Coming back to a phone that was in a pocket should not wait a full interval for fresh results.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && liveRoundOnScreen()) {
+    revalidateSeason(activeSeason, { force: true })
+  }
+  syncLivePolling()
+})
 
 function fmtShortDate(d) {
   return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
