@@ -181,6 +181,7 @@ from Cloudflare long ago, kept only as reference for possible future historical 
 | 48 | ~~My Riders feed — empty-state prompt~~ | — | Done | ~~First-time visitors never saw the "Your Riders" section~~ — `renderMyRidersFeed()` now always renders the header; when no riders are saved it shows a dashed-border "Pick your 6 →" prompt card that jumps to the Riders tab (`goToRidersTab()`), instead of hiding the section. Deliberately skips loading `results.json` on the empty path so a brand-new visitor's feed load stays cheap. Shipped 2026-07-03 ahead of La Thuile race weekend as an onboarding fix for the My Riders feed's adoption risk. SW cache bumped v8→v9. |
 | 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |
 | 50 | Move trackwalk.racing DNS to Cloudflare | S | Medium | DNS is on Porkbun pointing straight at GitHub Pages; helltrack.app is already on Cloudflare. Unblocks #41 (Worker routes need the domain on Cloudflare), gives custom headers GitHub Pages cannot set, and consolidates two DNS panels into one. Do NOT do this before Whistler/Lake Placid. Full spec below. |
+| 51 | Live results on race day | L | **High — before Whistler 09-27** | The 10-min results poller actually fires every ~3.4h (GitHub drops 95% of `*/10` slots), and the app never refreshes results while open. Both must change or "live results" is hours stale. Full spec below. |
 
 ### Notes on backlog items
 - **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
@@ -665,6 +666,89 @@ outcome in `docs/decisions.md`.
 
 **Watch out for:** doing this and #49 in the same change. Land the DNS move, confirm it is
 boring for a week, then build on it.
+
+---
+
+## PBI 51 — Live results on race day
+
+**Status:** Open, raised 2026-09-16. **Highest-value item before Whistler (finals 2026-09-27).**
+Sized L, but it splits into three independent parts and Part A alone fixes most of the lag.
+
+**What:** Get race results in front of users within a couple of minutes of ChronoRace publishing
+them, and make the app show that it is updating, so there is a reason to keep reopening it.
+
+**Why:** This is the retention hook. A results database people check once is a reference; results
+that move while you watch are a habit. Whistler is the first round with stickers pointing at the
+app, so it is the one weekend where being slow is expensive.
+
+### The actual bottleneck (measured 2026-09-16, not assumed)
+
+`fetch-results.yml` asks for `*/10 * * * *`. Over a 202-hour window it produced **59 runs — a 5%
+fire rate, averaging one run every 206 minutes, with gaps up to 410 minutes.** Every run
+succeeded; nothing is failing. GitHub simply drops most scheduled runs, and it throttles
+high-frequency crons hardest — `refresh.yml` at hourly fires ~24%, this at 10-minutely fires ~5%.
+
+**So on race day, results could land up to ~7 hours after ChronoRace publishes them.** No amount
+of source or frontend work fixes that; the scheduler is the constraint. Tightening the cron will
+not help either — asking more often is what causes the throttling.
+
+### Part A — stop depending on GitHub's scheduler (the fix that matters)
+
+Replace race-day polling with ONE long-lived job that polls internally. A GitHub Actions job can
+run up to 6 hours, so a single `workflow_dispatch` on race morning covers a race day without the
+scheduler ever being consulted again.
+
+New `.github/workflows/live-results.yml`, manually dispatched with `venue_slug` and an optional
+`minutes` (default 300):
+  - loop until the budget expires: run `chronorace-fetcher.mjs <year> --merge`, then
+    `tissot-fetcher.mjs` if the round is Worlds, then `split-results.js`
+  - commit + push only when the diff is non-empty (reuse the commit-then-rebase-with-retries
+    block from `fetch-results.yml`; do NOT reintroduce stash-around-rebase, see decisions.md)
+  - sleep ~120s between passes
+  - never let one bad pass kill the loop — wrap each fetch so a transient 5xx is logged and
+    retried next pass rather than ending the job
+Keep the existing `fetch-results.yml` exactly as it is as the unattended safety net.
+
+Alternative if a manual dispatch is too easy to forget: a Cloudflare Worker Cron Trigger calling
+GitHub's `workflow_dispatch` API. Cloudflare's cron is far more reliable than GitHub's — but it
+needs a stored GitHub token and, for a route, punchlist #50. Start with the dispatched loop.
+
+### Part B — make the app refresh itself while a round is live
+
+Today nothing polls: `revalidateSeason()` runs on open, and a user staring at the results tab
+during finals sees a frozen screen until they reload. The `roundState()` "In progress" /
+"Provisional" badge already exists — it is just never updated after first paint.
+
+  - when the visible round's `roundState()` is "In progress", poll `seasonUrl(year) + '?t=' + Date.now()`
+    every ~60s (the `?t=` is required — the service worker serves the cached shard otherwise)
+  - only while `document.visibilityState === 'visible'`; stop on hide, resume on show, and always
+    clear the timer on tab change so it cannot leak
+  - repaint only when the payload actually changed, so the list does not flicker or fight scroll
+  - surface it honestly: keep the existing badge, refresh its `Last updated` stamp, and do not
+    claim "live" when the last successful fetch is old
+
+### Part C — tell people it is worth coming back
+
+  - a small "In progress" marker on the Results tab itself, so it is visible from the feed
+  - once Part B is in, the existing `fetchedAt` stamp becomes meaningful and should be shown
+
+**Files:** `.github/workflows/live-results.yml` (new), `index.html` (polling + badge),
+`docs/architecture.md`, `docs/dev-workflow.md` (how to start it on race morning).
+
+**Done when:**
+- a dispatched live-results run polls for its full budget, commits only on change, and survives a
+  transient fetch failure
+- end-to-end lag from a ChronoRace update to a repainted open browser is under ~5 minutes
+- an open results tab repaints without a manual reload, and stops polling when hidden
+- the round badge and its `Last updated` stamp reflect the newest successful fetch
+- `fetch-results.yml` is unchanged and still runs as the safety net
+
+**Watch out for:**
+- the 6-hour job cap: budget 300 minutes, and start it before qualifying rather than mid-session
+- push races with `refresh.yml`, which now runs at `:13`/`:43` — the retry loop handles it, but do
+  not remove it
+- GitHub Pages deploy adds ~1 minute after each commit; that is the floor on end-to-end lag
+- do not poll from the client every few seconds; Pages is CDN-cached and it will not be fresher
 
 ---
 

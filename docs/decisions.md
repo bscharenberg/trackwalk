@@ -92,6 +92,24 @@
 - **Why**: JSON is easier to update per season without touching index.html; teams/streaming options change annually
 - **Exception**: Media and UCI sections are small enough to inline in HTML if needed, but JSON keeps it consistent
 
+### GitHub's scheduled workflows fire a fraction of the time (measured 2026-09-16)
+- **Finding**: `schedule:` crons are best-effort, and GitHub drops most of them. Measured on this
+  repo: `refresh.yml` at `0 * * * *` fired **~24%** of slots (29 runs / 122h, gaps 2.2h–7.8h);
+  `fetch-results.yml` at `*/10 * * * *` fired **~5%** (59 runs / 202h, avg gap 206m, max 410m).
+- **Every run succeeded.** This is not a failure mode you can find in logs — the runs that happen
+  are green, the ones that do not simply never appear. It cost a real investigation to spot,
+  prompted by the Cloudflare dashboard showing 6 Worker invocations in 24h against an "hourly" job.
+- **Two rules that follow**:
+  1. The higher the requested frequency, the harder GitHub throttles. `*/10` did worse than hourly.
+     Asking more often does not get you more runs.
+  2. `:00` is the most contended minute on the platform. Anything on the top of the hour competes
+     with every other repo on GitHub. `refresh.yml` moved to `13,43 * * * *` on 2026-09-16.
+- **Never rely on `schedule:` for anything time-critical.** For race-day results the fix is a
+  single dispatched job that loops internally (PBI 51), or an external Cloudflare Cron Trigger
+  calling `workflow_dispatch` — not a tighter cron.
+- **How to check**: `curl -s "https://api.github.com/repos/bscharenberg/trackwalk/actions/workflows/<file>/runs?per_page=30"`
+  and look at the gaps between `created_at`. All-success-with-wide-gaps is scheduling, not a bug.
+
 ## What Didn't Work
 
 ### Sidebar nav on desktop

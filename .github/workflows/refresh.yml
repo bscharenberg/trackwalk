@@ -2,7 +2,19 @@ name: Refresh Trackwalk Cache
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    # Two attempts an hour, both off the top of the hour.
+    #
+    # This was '0 * * * *'. Measured 2026-09-16 over 122 hours: 29 runs, every one success, but
+    # gaps of 2.2h-7.8h — GitHub fired only ~24% of the requested slots, so the feed refreshed
+    # about every 4 hours rather than hourly. GitHub drops scheduled runs under load and ':00' is
+    # the most contended minute on the platform, which is why the misses cluster there.
+    #
+    # Asking twice per hour at unpopular minutes raises the odds that at least one lands. Cost is
+    # nil: the repo is public (unlimited Actions minutes) and a run spends ~30 YouTube quota units
+    # (14 playlistItems + ~16 videos.list batches), so even if every slot fired it is ~1,440 of
+    # the 10,000/day limit. build-cache.js no-ops the commit when nothing changed, so extra runs
+    # cannot churn history.
+    - cron: '13,43 * * * *'
   workflow_dispatch:
 
 permissions:
