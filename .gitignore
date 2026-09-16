@@ -1,8 +1,12 @@
 .env
 node_modules/
 .DS_Store
-helltrack-results/
 .claude/
+
+# Cloudflare Worker (helltrack-results/) is vendored here — its source IS tracked.
+# Its own .gitignore covers the rest; these are belt-and-braces for the secret files.
+.dev.vars*
+.wrangler/
 
 # Historical backfill intermediates — regenerable, not committed.
 # data/raw/    = cached raw UCI DataRide JSON (re-fetched if absent)
