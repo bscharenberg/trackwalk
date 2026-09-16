@@ -3,7 +3,7 @@
 Tissot is the UCI's official timekeeping partner. `prod.server.tissottiming.com` is a public,
 unauthenticated REST API serving the same data as tissottiming.com, live during a race.
 
-**Why it exists in the stack.** It is the *only* source Helltrack has for a World
+**Why it exists in the stack.** It is the *only* source Trackwalk has for a World
 Championship on race day:
 
 | Source | World Series rounds | World Championships | Latency |

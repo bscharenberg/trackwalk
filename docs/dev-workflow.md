@@ -1,10 +1,10 @@
-# Helltrack — Developer Workflow
+# Trackwalk — Developer Workflow
 
 ## Common Commands
 
 ### Rebuild content cache
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
+cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
 node scripts/build-cache.js
 git add public/cache.json
 git commit -m 'rebuild cache'
@@ -13,7 +13,7 @@ git stash && git pull --rebase origin main && git stash pop && git push
 
 ### Fetch results for a race round
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
+cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
 node scripts/results-fetcher.mjs leogang-2026
 git add public/results.json
 git commit -m 'results: leogang-2026'
@@ -24,7 +24,7 @@ Results come from the UCI JSON API directly — no Cloudflare Worker or PDF pars
 
 ### Deploy frontend changes
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
+cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
 git add index.html
 git commit -m 'describe change'
 git stash && git pull --rebase origin main && git stash pop && git push
@@ -32,7 +32,7 @@ git stash && git pull --rebase origin main && git stash pop && git push
 
 ### Rebuild riders data
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
+cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
 node scripts/build-riders.js
 git add scripts/riders.csv public/riders.json
 git commit -m 'update riders roster'
@@ -41,7 +41,7 @@ git stash && git pull --rebase origin main && git stash pop && git push
 
 ### Test content filter scoring
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
+cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
 node -e "
 const {scoreItem, categorise} = require('./scripts/content-filter.js');
 const item = {title: 'YOUR TITLE HERE', description: '', channelId: null};
@@ -53,7 +53,7 @@ if (score >= threshold) console.log('Category:', categorise(item));
 ```
 
 ### Check what's in the live cache
-Open browser console on helltrack.app and run:
+Open browser console on trackwalk.racing and run:
 ```javascript
 fetch('public/cache.json?t=' + Date.now()).then(r => r.json()).then(d => {
   Object.entries(d.categories).forEach(([k,v]) => 
@@ -155,5 +155,5 @@ Then continue: `git rebase --continue` or `git stash pop && git push`
 
 ### Service worker caching stale content
 - Unregister in DevTools → Application → Service Workers
-- Service worker is currently at `helltrack-v24`
+- Service worker is currently at `trackwalk-v24`
 - Bump the version string in service-worker.js when you need browsers to pick up new files

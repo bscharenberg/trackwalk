@@ -1,6 +1,6 @@
 /**
  * youtube-fetcher.js
- * Helltrack — fetches recent videos from YouTube channels
+ * Trackwalk — fetches recent videos from YouTube channels
  *
  * Uses the uploads playlist approach (playlistItems.list) instead of
  * search.list — costs 1 API unit per channel vs 100 for search.

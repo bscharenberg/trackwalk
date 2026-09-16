@@ -1,6 +1,6 @@
 /**
  * rss-fetcher.js
- * Helltrack — fetches and parses RSS feeds
+ * Trackwalk — fetches and parses RSS feeds
  *
  * Pinkbike uses RSS 0.91 with uppercase tags.
  * We parse with xml2js in non-strict mode and handle uppercase keys.
@@ -104,7 +104,7 @@ async function fetchRSS() {
       console.log(`  Fetching ${feed.name}...`)
 
       const res = await fetch(feed.url, {
-        headers: { 'User-Agent': 'Helltrack/1.0' }
+        headers: { 'User-Agent': 'Trackwalk/1.0' }
       })
 
       if (!res.ok) throw new Error(`Status code ${res.status}`)

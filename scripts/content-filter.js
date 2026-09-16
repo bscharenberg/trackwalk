@@ -1,6 +1,6 @@
 /**
  * content-filter.js
- * Helltrack — UCI DH content scoring and categorisation
+ * Trackwalk — UCI DH content scoring and categorisation
  *
  * Every item fetched from YouTube or RSS gets run through scoreItem().
  * Items below MIN_SCORE are dropped. Items above it get a category assigned.
@@ -129,7 +129,7 @@ const EXCLUDE_KEYWORDS = [
             "women's uci xco", "men's uci xco", "women's uci xcc", "men's uci xcc"], weight: 15 },
   { terms: ['mtbws highlights'], weight: 8, titleOnly: true },
 
-  // Enduro — out of scope for Helltrack (DH only)
+  // Enduro — out of scope for Trackwalk (DH only)
   // wordBoundary: 'ews'/'ewsr' must not match inside "news", "reviews", etc.
   { terms: ['enduro world cup', 'ews', 'enduro world series', 'uci enduro', 'uci edr',
             'world cup enduro', 'ewsr', 'ixs edc', 'ixs european'], weight: 8, titleOnly: true, wordBoundary: true },

@@ -86,8 +86,8 @@ jobs:
       - name: Commit updated results
         if: inputs.mode != 'validate'
         run: |
-          git config user.name "Helltrack Bot"
-          git config user.email "helltrack-bot@users.noreply.github.com"
+          git config user.name "Trackwalk Bot"
+          git config user.email "trackwalk-bot@users.noreply.github.com"
 
           # results.json + the derived shards — data/ (raw cache + staging) is gitignored.
           git add public/results.json public/results/

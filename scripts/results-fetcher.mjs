@@ -1,6 +1,6 @@
 /**
  * results-fetcher.mjs
- * Helltrack — fetches UCI DHI race results from the UCI MTB World Series JSON API
+ * Trackwalk — fetches UCI DHI race results from the UCI MTB World Series JSON API
  *
  * POST /api/race-results returns clean JSON — no PDFs, no Worker, no auth needed.
  * Works server-to-server from GitHub Actions without cookies.
@@ -37,7 +37,7 @@ const CALENDAR_2026 = [
 
 // ─── Sessions ─────────────────────────────────────────────────────────────────
 // Maps our internal session key → UCI API slug suffix.
-// Elite only — juniors are out of scope for Helltrack.
+// Elite only — juniors are out of scope for Trackwalk.
 // Qualifiers are fetched opportunistically; they may not exist for all rounds.
 
 const SESSIONS = [
@@ -82,7 +82,7 @@ async function fetchSession(uciSlug) {
     // Keep non-finishers. The UCI API returns DNF/DNS/DSQ riders with a STRING
     // resultPosition (e.g. "DNF", "DNS") and the same marker in resultTime; finishers
     // have a numeric resultPosition. We keep them (flagged, no rank/time) so a crash in
-    // a final still shows on Helltrack and in that rider's history — matching the
+    // a final still shows on Trackwalk and in that rider's history — matching the
     // historical DataRide data and the UI's red DNF badges. API order is finishers
     // first, then non-finishers, so downstream podium slicing is unaffected.
     const mapStatus = pos => {

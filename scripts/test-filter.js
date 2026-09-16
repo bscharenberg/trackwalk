@@ -156,7 +156,7 @@ const TEST_ITEMS = [
 // ─── Run the tests ────────────────────────────────────────────────────────────
 
 console.log('─────────────────────────────────────────')
-console.log('  Helltrack content filter — test run')
+console.log('  Trackwalk content filter — test run')
 console.log('─────────────────────────────────────────\n')
 
 // Source of truth for PASS/DROP is filterItems itself, which applies the real tiered

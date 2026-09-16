@@ -1,5 +1,5 @@
 /**
- * canon.mjs — Helltrack name + venue canonicalization (shared across all result sources)
+ * canon.mjs — Trackwalk name + venue canonicalization (shared across all result sources)
  *
  * THE PROBLEM this solves:
  *   Different sources spell the same rider differently and in different word orders:

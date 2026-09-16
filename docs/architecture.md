@@ -1,21 +1,21 @@
-# Helltrack — Architecture Reference
+# Trackwalk — Architecture Reference
 
 ## Identity
-- **App name**: Helltrack
-- **Domain**: helltrack.app (registered Porkbun, ~$15/yr renewal)
+- **App name**: Trackwalk
+- **Domain**: trackwalk.racing (registered Porkbun, ~$15/yr renewal)
 - **Purpose**: UCI downhill race content aggregator + historical results database
-- **GitHub**: github.com/bscharenberg/helltrack
+- **GitHub**: github.com/bscharenberg/trackwalk
 - **Local path**: ~/Documents/Bryon Knowledge Base/Helltrack/
 
 ## Hosting (all free except domain)
 | Service | Purpose | URL |
 |---|---|---|
-| GitHub Pages | Static hosting | bscharenberg.github.io/helltrack |
+| GitHub Pages | Static hosting | bscharenberg.github.io/trackwalk |
 | GitHub Actions | Hourly cache refresh CI/CD | .github/workflows/refresh.yml |
 | Cloudflare Worker (free) | Pinkbike RSS proxy | helltrack-rss.scharenbergs.workers.dev |
 | Google Analytics | Usage tracking | G-4EY22R6D2J |
 | Google Forms | User feedback | https://forms.gle/sRySzSFzzwDyKNrWA |
-| Kit.com | Email list | hello@helltrack.app sender |
+| Kit.com | Email list | hello@trackwalk.racing sender |
 
 Note: Cloudflare Workers Paid plan was retired after the results pipeline moved to the UCI JSON API (no longer needs Browser Rendering). helltrack-rss Worker remains on the free plan.
 
@@ -205,7 +205,7 @@ Geographic streaming options for the PITS → WATCH section. Updated once per se
 
 ## Other PWA Files (root folder)
 - `manifest.json` — start_url: "/", scope: "/"
-- `service-worker.js` — **navigations are network-first** (2.5s timeout → cache), so a deploy is live on the next launch rather than one launch behind; other static assets cache-first; stale-while-revalidate for every app data file (cache.json, riders.json, directory.json, watch.json, `public/results/`), all of which are also precached so the app is fully usable offline; currently at helltrack-v24. Stale-first means the page can paint stale data, so `index.html` re-fetches past the worker (`?t=`) and repaints — see `revalidateFeed()`, `revalidateSeason()`, `revalidateResultsIndex()`, `revalidateRiders()`, `revalidatePits()`. Bump `CACHE_NAME` for ANY index.html change: the shell is cache-first, so existing installs won't see it otherwise. Static assets are root-relative (`/`, `/index.html`, `/manifest.json`) — the site serves at the helltrack.app root, NOT a `/helltrack/` subpath.
+- `service-worker.js` — **navigations are network-first** (2.5s timeout → cache), so a deploy is live on the next launch rather than one launch behind; other static assets cache-first; stale-while-revalidate for every app data file (cache.json, riders.json, directory.json, watch.json, `public/results/`), all of which are also precached so the app is fully usable offline; currently at trackwalk-v24. Stale-first means the page can paint stale data, so `index.html` re-fetches past the worker (`?t=`) and repaints — see `revalidateFeed()`, `revalidateSeason()`, `revalidateResultsIndex()`, `revalidateRiders()`, `revalidatePits()`. Bump `CACHE_NAME` for ANY index.html change: the shell is cache-first, so existing installs won't see it otherwise. Static assets are root-relative (`/`, `/index.html`, `/manifest.json`) — the site serves at the trackwalk.racing root, NOT a `/trackwalk/` subpath.
 - `icon-192.png`, `icon-512.png` — placeholder HT icons (real design pending)
 
 ## Environment
@@ -214,17 +214,17 @@ Geographic streaming options for the PITS → WATCH section. Updated once per se
 - npm packages: `dotenv`, `xml2js` (node-fetch and pdfjs-dist removed — Node 18+ has native fetch)
 
 ## Email
-- Address: hello@helltrack.app
+- Address: hello@trackwalk.racing
 - Routing: Cloudflare Email Routing → personal Gmail (receive)
-- Sending: Kit.com with helltrack.app authenticated sending domain
+- Sending: Kit.com with trackwalk.racing authenticated sending domain
 - Welcome automation: fires immediately on signup
 
 ## Cost Tracking
 | Item | Cost | Cadence |
 |---|---|---|
 | Claude Pro | $20.00 | /month |
-| helltrack.app domain | $10.81 | year 1 |
-| helltrack.app renewal | ~$15 | /year |
+| trackwalk.racing domain | $10.81 | year 1 |
+| trackwalk.racing renewal | ~$15 | /year |
 | GitHub everything | $0 | — |
 | Cloudflare Workers (free) | $0 | — |
 | Google Analytics | $0 | — |

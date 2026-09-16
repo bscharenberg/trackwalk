@@ -1,6 +1,6 @@
 /**
  * tissot-fetcher.mjs
- * Helltrack — DH results from Tissot Timing, the UCI's official timekeeping partner.
+ * Trackwalk — DH results from Tissot Timing, the UCI's official timekeeping partner.
  *
  * Fills the one gap the other two fetchers cannot cover. The ChronoRace WBD API carries the
  * World Series only — its 2026 event list jumps straight from Les Gets (08-21) to Soldier
@@ -38,7 +38,7 @@ const __dirname    = path.dirname(fileURLToPath(import.meta.url))
 const RESULTS_PATH = path.join(__dirname, '..', 'public', 'results.json')
 
 const API = 'https://prod.server.tissottiming.com'
-const UA  = 'Mozilla/5.0 (Helltrack results fetcher; helltrack.app)'
+const UA  = 'Mozilla/5.0 (Trackwalk results fetcher; trackwalk.racing)'
 
 // ─── Low-level ────────────────────────────────────────────────────────────────
 
@@ -61,7 +61,7 @@ function eliteDownhillGender(eventName) {
   return null
 }
 
-// Phase name → Helltrack session key. Worlds runs one qualifying and one final per gender;
+// Phase name → Trackwalk session key. Worlds runs one qualifying and one final per gender;
 // the numbered-qualifier forms are handled anyway so a format change doesn't silently drop
 // a session.
 function sessionKey(phase, gender) {

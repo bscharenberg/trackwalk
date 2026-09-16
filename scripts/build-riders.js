@@ -1,6 +1,6 @@
 /**
  * build-riders.js
- * Helltrack — builds public/riders.json from scripts/riders.csv
+ * Trackwalk — builds public/riders.json from scripts/riders.csv
  *
  * Usage:
  *   node scripts/build-riders.js

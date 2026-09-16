@@ -1,6 +1,6 @@
 /**
  * chronorace-fetcher.mjs
- * Helltrack — race results from ChronoRace, the UCI's on-site timing vendor.
+ * Trackwalk — race results from ChronoRace, the UCI's on-site timing vendor.
  *
  * ChronoRace is upstream of every other source: the official UCI results PDFs are theirs
  * (`Producer: chronorace - electronic timing via ABCpdf`), and the Les Gets 2026 Elite Men
@@ -37,7 +37,7 @@ const RESULTS_PATH = path.join(ROOT, 'public', 'results.json')
 
 const BASE = 'https://results.chronorace.be'
 const WBD  = `${BASE}/api/v1/wbd`
-const UA   = 'Mozilla/5.0 (Helltrack results fetcher; helltrack.app)'
+const UA   = 'Mozilla/5.0 (Trackwalk results fetcher; trackwalk.racing)'
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 async function api(pathname) {
@@ -49,10 +49,10 @@ async function api(pathname) {
 }
 
 // ─── Mapping ──────────────────────────────────────────────────────────────────
-// Elite only — juniors are out of scope for Helltrack (same rule as the other fetchers).
+// Elite only — juniors are out of scope for Trackwalk (same rule as the other fetchers).
 const GENDER = { ME: 'men', WE: 'women' }
 
-// Phase → Helltrack session prefix. Competition ids look like 2026-11-DHI-ME-F / -ME-Q2,
+// Phase → Trackwalk session prefix. Competition ids look like 2026-11-DHI-ME-F / -ME-Q2,
 // and Phase is the bare code ('F', 'Q1', 'Q2'); PhaseName is the prose ('Qualification 2').
 function sessionKey(phase, phaseName, gender) {
   const p = String(phase || '').toUpperCase()

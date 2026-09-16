@@ -1,6 +1,6 @@
 /**
  * dataride-fetcher.mjs
- * Helltrack — historical DH results from the UCI DataRide JSON API (2009→2024).
+ * Trackwalk — historical DH results from the UCI DataRide JSON API (2009→2024).
  *
  * DataRide is the UCI's own official results platform. It is NOT a PDF archive — the public
  * results iframe is backed by a hierarchical JSON API. Full contract in docs/historical-data.md §2a.
@@ -35,7 +35,7 @@ const RACETYPE_DHI   = 19
 const CLASS_WORLD_CUP    = 'CDM'   // Coupe du Monde
 const CLASS_WORLD_CHAMPS = 'CM'    // Championnat du Monde
 const HEADERS = {
-  'User-Agent': 'Mozilla/5.0 (Helltrack historical backfill; helltrack.app)',
+  'User-Agent': 'Mozilla/5.0 (Trackwalk historical backfill; trackwalk.racing)',
   'X-Requested-With': 'XMLHttpRequest',
   'Referer': `${BASE}/iframe/Results/${DISCIPLINE_MTB}/`,
 }
@@ -193,7 +193,7 @@ function normalizeResultRow(row) {
   return out
 }
 
-// ─── Assemble one season → round objects in Helltrack schema ──────────────────
+// ─── Assemble one season → round objects in Trackwalk schema ──────────────────
 async function fetchSeason(year, { onLog = () => {} } = {}) {
   const sId = await seasonId(year)
   onLog(`season ${year} → disciplineSeasonId ${sId}`)
