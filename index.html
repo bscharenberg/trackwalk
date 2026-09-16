@@ -1752,6 +1752,39 @@ html, body {
 </div>
 
 <script>
+// ── localStorage migration: helltrack-* → trackwalk-* ───────────────────────────────────────
+// Runs before anything reads a key, so the rest of the app only ever sees the new names.
+//
+// The keys are per-origin and invisible to users, so renaming them buys nothing on its own —
+// but they hold real state (saved riders, seen/dim marks, a dismissed install prompt), and a
+// bare rename would silently reset every returning visitor. Copying the values across costs
+// five lines and means nobody notices.
+//
+// Done at the small-user-base stage on purpose: the cost of this rename scales with the number
+// of returning devices, so this was the cheapest it would ever be. It also closes the last
+// "helltrack" hits in index.html, which kept re-surfacing in rebrand audits.
+//
+// SAFE TO DELETE once returning pre-rebrand devices stop mattering — say after the 2027 season
+// opener. Deleting it early only costs those devices their saved state; it cannot corrupt data.
+;(() => {
+  const MOVED = {
+    'helltrack-shorts-unmuted':    'trackwalk-shorts-unmuted',
+    'helltrack-install-dismissed': 'trackwalk-install-dismissed',
+    'helltrack-visit-count':       'trackwalk-visit-count',
+    'helltrack_seen':              'trackwalk_seen',
+    'helltrack_myriders':          'trackwalk_myriders',
+  }
+  try {
+    for (const [from, to] of Object.entries(MOVED)) {
+      const v = localStorage.getItem(from)
+      if (v === null) continue
+      // Never clobber a value the new key already holds — that one is newer by definition.
+      if (localStorage.getItem(to) === null) localStorage.setItem(to, v)
+      localStorage.removeItem(from)
+    }
+  } catch {}   // private mode / blocked storage: the app already tolerates losing this state
+})()
+
 const CACHE_URL = 'public/cache.json'
 
 const CAT_LABELS = {
@@ -2009,7 +2042,7 @@ function shareItem() {
 // which IS the auto-advance), and tear down cleanly (destroy() — clearing src leaves the
 // audio context alive).
 
-const SHORTS_UNMUTED_KEY = 'helltrack-shorts-unmuted'
+const SHORTS_UNMUTED_KEY = 'trackwalk-shorts-unmuted'
 const SP_WINDOW = 1          // keep players for active ±1; at most 3 alive at once
 
 let spItems     = []
@@ -2734,7 +2767,7 @@ let deferredPrompt = null
 window.addEventListener('beforeinstallprompt', e => {
   e.preventDefault()
   deferredPrompt = e
-  if (!localStorage.getItem('helltrack-install-dismissed')) {
+  if (!localStorage.getItem('trackwalk-install-dismissed')) {
     const banner = document.getElementById('install-banner')
     banner.style.display = 'flex'
     // push feed up so banner doesn't cover last card
@@ -2782,7 +2815,7 @@ document.addEventListener('submit', e => {
 function dismissInstall() {
   document.getElementById('install-banner').style.display = 'none'
   document.getElementById('feed').style.paddingBottom = ''
-  localStorage.setItem('helltrack-install-dismissed', '1')
+  localStorage.setItem('trackwalk-install-dismissed', '1')
 }
 
 // ── Rename banner ──
@@ -3699,8 +3732,8 @@ function goToRiderHistory(name) {
 
 
 // ── iOS install tip ───────────────────────────────────────────────────────────
-const visitCount = Number(localStorage.getItem('helltrack-visit-count') || '0') + 1
-localStorage.setItem('helltrack-visit-count', String(visitCount))
+const visitCount = Number(localStorage.getItem('trackwalk-visit-count') || '0') + 1
+localStorage.setItem('trackwalk-visit-count', String(visitCount))
 
 // First-ever open on this device, reported once.
 //
@@ -3757,7 +3790,7 @@ setTimeout(showIOSTip, 3000)
 
 
 // ── Seen / watched state ──────────────────────────────────────────────────────
-const SEEN_KEY = 'helltrack_seen'
+const SEEN_KEY = 'trackwalk_seen'
 
 function getSeenURLs() {
   try { return new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || '[]')) }
@@ -3794,7 +3827,7 @@ function setRiderGender(g) {
 }
 
 // ── My Riders storage ────────────────────────────────────────────────────────
-const MY_RIDERS_KEY = 'helltrack_myriders'
+const MY_RIDERS_KEY = 'trackwalk_myriders'
 const MY_RIDERS_MAX = 6
 
 function getMyRiders() {
