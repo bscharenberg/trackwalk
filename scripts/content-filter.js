@@ -372,4 +372,7 @@ function groupByCategory(items) {
   return groups
 }
 
-module.exports = { scoreItem, categorise, filterItems, groupByCategory, isRecent }
+// MIN_SCORE and TRUSTED_SOURCES are exported for the manual scoring check in
+// docs/dev-workflow.md — without them that snippet has to hardcode the threshold, which is
+// how it came to claim every channelId scored against 10 when trusted channels score against 6.
+module.exports = { scoreItem, categorise, filterItems, groupByCategory, isRecent, MIN_SCORE, TRUSTED_SOURCES }

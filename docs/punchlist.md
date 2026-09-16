@@ -1,6 +1,6 @@
 # Trackwalk — Product Backlog & Punch List
 
-**Last updated**: 2026-09-15
+**Last updated**: 2026-09-16
 
 ## Current State: LIVE ✅
 - trackwalk.racing live with HTTPS, FEED / RESULTS / RIDERS / PITS navigation
@@ -88,7 +88,7 @@ next race date ("Next · La Thuile · Jul 5"); tapping a card deep-links to that
 history in Results search. Only renders for users who follow riders (no clutter otherwise).
 `results.json` is lazy-loaded (promise-cached, shared with the Results tab) so the feed
 stays cheap for everyone else — this is the main reason **#46** (split results.json) is
-worth doing: it makes this strip's data load ~KB not 8.2 MB.
+worth doing: it makes this strip's data load ~KB not the full results.json (8.7 MB).
 
 **Freshness fix (2026-07-03, same day):** originally only checked `finals-*` sessions, so a
 round's live qualifying was ignored until its finals posted — a rider's card kept showing
@@ -132,6 +132,28 @@ each shared-venue weekend as new XCO stars appear — no general fix, it's whack
 
 ---
 
+## Trackwalk switchover — remaining items
+
+The rename itself is done and live (domain, redirect, in-app copy, one-time banner for installed
+users on the old origin, GA property, repo, manifest, service worker, localStorage keys + migration
+shim). See `docs/decisions.md` → "Rebrand to Trackwalk" for the reasoning, including the PWA
+new-origin lesson. What is left is infrastructure and platform work, none of it blocking:
+
+| Item | Size | Priority | Notes |
+|---|---|---|---|
+| Cloudflare DNS move for trackwalk.racing | S | Medium | Full spec in PBI #50. DNS is on Porkbun; helltrack.app is already on Cloudflare. Unblocks #41. **Not before Whistler/Lake Placid.** |
+| Cloudflare Email Routing for hello@trackwalk.racing | S | Medium | Receiving is not set up yet. Independent of #50 — Email Routing needs the domain on Cloudflare, so in practice this follows the DNS move. |
+| Email platform migration away from Kit.com | M | Medium | Kit's sequence features are paid and the reporting UI is a chore. Platform TBD. **Cheaper before Whistler than after** — every subscriber gained at the launch is one more to migrate. When it changes: `index.html` fires the GA4 `email_signup` event from a listener keyed on `.formkit-form`; re-point that selector or signup measurement silently drops to zero. |
+| Welcome sequence on the new platform | S | Medium | Kit's "fires immediately on signup" automation has to be rebuilt wherever the list lands. |
+| Google Form title still says Helltrack | XS | Low | `forms.gle/sRySzSFzzwDyKNrWA`, linked from the feedback button. Cosmetic, but it is user-visible — the one place a visitor can still see the old name. |
+| Re-upload docs/icons to the Claude project | XS | Low | The Claude project still carries pre-rebrand docs and icon assets. |
+| Instagram @trackwalk_dh | S | Low | Handle registered 2026-09; no content yet. Already in the JSON-LD `sameAs`, deliberately NOT linked in the UI until there is something to land on. |
+
+Deliberately NOT doing: renaming the `helltrack-rss` / `helltrack-results` Workers (secret churn,
+zero user benefit) or the local folder (its absolute path is hardcoded in `.claude/launch.json`).
+
+---
+
 ## Active Backlog
 
 | # | Item | Size | Priority | Description |
@@ -141,7 +163,7 @@ each shared-venue weekend as new XCO stars appear — no general fix, it's whack
 | 36b | 2024 results quality pass | S | Medium | ~~Re-fetch 2024 data via UCI JSON API~~ — done as part of the 2009–2024 DataRide backfill (2026-06-10). Bielsko-Biała 2024 winner now sourced from DataRide; re-verify against #34. |
 | 34 | Results data accuracy audit | M | Medium | Verify all 2024 round winners against authoritative sources. Podiums spot-checked against known history during the DataRide backfill (all seasons 2009-2024) — looked correct, but a formal audit hasn't been done. |
 | 5 | ~~Historical results 2015–2023~~ | — | Done | ~~Scrape and integrate~~ — superseded by the 2009–2024 UCI DataRide backfill (2026-06-10). See `docs/historical-data.md` §7/§9. |
-| 37 | results.json file size (8.0 MB) | M | Medium | After the 2009–2024 backfill, results.json grew from ~150 KB to 8.0 MB. Decide: split into `results-<year>.json` lazy-loaded per season, or keep monolithic. See `docs/historical-data.md` §8. |
+| 37 | ~~results.json file size~~ | — | Done | ~~Decide: split per season or keep monolithic.~~ Superseded by #46, which shipped the split (2026-09-03). results.json is now 8.7 MB and canonical-only — the app never fetches it; it reads the per-season shards in `public/results/`. Also `Disallow`ed in robots.txt so crawlers do not spend budget on it. |
 | 38 | 2023–2024 finals-women possibly truncated | M | Medium | Most 2023–2024 World Cup rounds show only ~10–13 finals-women rows (vs ~15–18 in 2021–22, ~32–40 at Worlds), with no DNF/DSQ/DNS entries. DataRide's own Results endpoint returns only those rows — unclear if this is a DataRide data gap (need PDF supplement) or a real 2023+ format change (smaller finals fields at regular rounds). Needs research before deciding on a fix. See `docs/historical-data.md` §9. |
 | 39 | 2022 Lenzerheide missing qualifying-men | S | Low | DataRide has no Men Elite qualifying race for this competition. Likely a genuine source gap; no known fix. See `docs/historical-data.md` §9. |
 | 8 | ~~Rider search in results~~ | — | Done | ~~Filter results.json for a rider name, show rank/time/gap across all rounds~~ — new "Search" sub-view in RESULTS tab, diacritic-normalized lookup across all 16 seasons, picker for ambiguous matches, full history table sorted most recent first (2026-06-12, `69d5bc1`). |
@@ -152,7 +174,7 @@ each shared-venue weekend as new XCO stars appear — no general fix, it's whack
 | 44 | ~~Venue cross-year view + rider↔venue loop~~ | — | Done | ~~Depends on #42.~~ Selecting a venue in Results (via a rider card's venue-name tap) opens a cross-year podium stack for that venue — respects gender/session toggles, reuses existing podium styling, "← Back to search" returns to the rider's prior search results (2026-06-14, `index.html`). |
 | 45 | Venue-primary search | M | Medium | The #44 cross-year venue view is currently only reachable via rider search → tap a venue name in their card. There's no way to search "Leogang" directly and land on its cross-year view. Needs a venue-name index alongside the existing rider-name index (`buildRiderIndex`) in the Search sub-view, plus a way to disambiguate rider vs. venue matches in the picker (e.g. a result-type label). Not yet speced — flagged for follow-up planning. |
 | 33b | ~~Thumbs-down filter feedback~~ | — | Dropped | Filter is clean enough. GA card_open provides sufficient signal. |
-| 46 | Split results.json per season | M | Medium | results.json is 8.2 MB and was fetched on every Results-tab open. Split into `results-index.json` (seasons/rounds/venues) + `results-<year>.json` lazy-loaded; current season by default. Unlocks proper caching (the `?t=` cache-buster is already removed) and moves `buildRiderIndex()`'s full-history walk off the main thread. Supersedes #37. |
+| 46 | ~~Split results.json per season~~ | — | Done | ~~results.json was fetched whole on every Results-tab open.~~ Shipped 2026-09-03 via `scripts/split-results.js` → `public/results/index.json` + `public/results/<year>.json` (18 seasons). The app opens with the index plus the current season only. Re-run `node scripts/split-results.js` after ANY merge into results.json or the app serves stale results — both results workflows do this automatically. Supersedes #37. |
 | 47 | Standings points-source audit | M | Low | `computeStandings()` sums finals `points` only; if UCI awards qualifying/semifinal points (2023+ format) the Standings view undercounts vs official. The `lastRank` tiebreak also stays 999 for anyone who missed the latest round. Verify against official season standings before changing. |
 | 48 | ~~My Riders feed — empty-state prompt~~ | — | Done | ~~First-time visitors never saw the "Your Riders" section~~ — `renderMyRidersFeed()` now always renders the header; when no riders are saved it shows a dashed-border "Pick your 6 →" prompt card that jumps to the Riders tab (`goToRidersTab()`), instead of hiding the section. Deliberately skips loading `results.json` on the empty path so a brand-new visitor's feed load stays cheap. Shipped 2026-07-03 ahead of La Thuile race weekend as an onboarding fix for the My Riders feed's adoption risk. SW cache bumped v8→v9. |
 | 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |

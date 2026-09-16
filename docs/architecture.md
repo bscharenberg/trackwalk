@@ -5,12 +5,16 @@
 - **Domain**: trackwalk.racing (registered Porkbun, ~$15/yr renewal)
 - **Purpose**: UCI downhill race content aggregator + historical results database
 - **GitHub**: github.com/bscharenberg/trackwalk
-- **Local path**: ~/Documents/Bryon Knowledge Base/Helltrack/
+- **Local path**: `~/Documents/Bryon Knowledge Base/Helltrack/` — the folder is still named
+  `Helltrack`; the repo, domain and app are all Trackwalk. Renaming it would break the absolute
+  path hardcoded in `.claude/launch.json`, so it is deliberately left alone.
 
 ## Hosting (all free except domain)
 | Service | Purpose | URL |
 |---|---|---|
-| GitHub Pages | Static hosting | bscharenberg.github.io/trackwalk |
+| GitHub Pages | Static hosting | bscharenberg.github.io/trackwalk → trackwalk.racing |
+| Porkbun | DNS for trackwalk.racing (A → GitHub Pages) | — |
+| Cloudflare | DNS for helltrack.app only; 301 rule → trackwalk.racing | — |
 | GitHub Actions | Hourly cache refresh CI/CD | .github/workflows/refresh.yml |
 | Cloudflare Worker (free) | Pinkbike RSS proxy | helltrack-rss.scharenbergs.workers.dev |
 | Google Analytics | Usage tracking | G-4EY22R6D2J |
@@ -18,6 +22,14 @@
 | Kit.com | Email list | hello@trackwalk.racing sender |
 
 Note: Cloudflare Workers Paid plan was retired after the results pipeline moved to the UCI JSON API (no longer needs Browser Rendering). helltrack-rss Worker remains on the free plan.
+
+**The `helltrack-rss` Worker name is kept deliberately.** Renaming it means a new workers.dev URL,
+which means re-issuing `PINKBIKE_PROXY` in GitHub Secrets and in every local `.env` — secret churn
+for a string no user ever sees. Same reasoning for the vendored `helltrack-results/` Worker.
+
+The old domain **helltrack.app 301-redirects to trackwalk.racing** via a Cloudflare Redirect Rule
+(verified 2026-09-15). Its DNS stays on Cloudflare; trackwalk.racing DNS is on Porkbun. Moving
+trackwalk.racing to Cloudflare is punchlist #50 — do not attempt before the season ends.
 
 ## Content Pipeline
 
@@ -205,8 +217,11 @@ Geographic streaming options for the PITS → WATCH section. Updated once per se
 
 ## Other PWA Files (root folder)
 - `manifest.json` — start_url: "/", scope: "/"
-- `service-worker.js` — **navigations are network-first** (2.5s timeout → cache), so a deploy is live on the next launch rather than one launch behind; other static assets cache-first; stale-while-revalidate for every app data file (cache.json, riders.json, directory.json, watch.json, `public/results/`), all of which are also precached so the app is fully usable offline; currently at trackwalk-v24. Stale-first means the page can paint stale data, so `index.html` re-fetches past the worker (`?t=`) and repaints — see `revalidateFeed()`, `revalidateSeason()`, `revalidateResultsIndex()`, `revalidateRiders()`, `revalidatePits()`. Bump `CACHE_NAME` for ANY index.html change: the shell is cache-first, so existing installs won't see it otherwise. Static assets are root-relative (`/`, `/index.html`, `/manifest.json`) — the site serves at the trackwalk.racing root, NOT a `/trackwalk/` subpath.
-- `icon-192.png`, `icon-512.png` — placeholder HT icons (real design pending)
+- `service-worker.js` — **navigations are network-first** (2.5s timeout → cache), so a deploy is live on the next launch rather than one launch behind; other static assets cache-first; stale-while-revalidate for every app data file (cache.json, riders.json, directory.json, watch.json, `public/results/`), all of which are also precached so the app is fully usable offline; currently at `trackwalk-v26`. Stale-first means the page can paint stale data, so `index.html` re-fetches past the worker (`?t=`) and repaints — see `revalidateFeed()`, `revalidateSeason()`, `revalidateResultsIndex()`, `revalidateRiders()`, `revalidatePits()`. Bump `CACHE_NAME` when the precached asset LIST changes. The shell itself is network-first now, so an index.html change reaches existing installs on the next launch without a bump — the older note here said the opposite and predated that change. Static assets are root-relative (`/`, `/index.html`, `/manifest.json`) — the site serves at the trackwalk.racing root, NOT a `/trackwalk/` subpath.
+- `icon-192.png`, `icon-512.png` — final chainsaw mark (`#d4f500`); referenced by `manifest.json`,
+  the `<link rel=icon>` tags, the JSON-LD logo and the service worker precache.
+  (`icon-round-192.png` and `TW-Icon-Square_Corners-512px-Green.png` were deleted 2026-09-16 —
+  both were unreferenced.)
 
 ## Environment
 - `.env`: YOUTUBE_API_KEY, PINKBIKE_PROXY=https://helltrack-rss.scharenbergs.workers.dev
@@ -215,9 +230,13 @@ Geographic streaming options for the PITS → WATCH section. Updated once per se
 
 ## Email
 - Address: hello@trackwalk.racing
-- Routing: Cloudflare Email Routing → personal Gmail (receive)
+- Routing: Cloudflare Email Routing → personal Gmail (receive) — **pending setup**
 - Sending: Kit.com with trackwalk.racing authenticated sending domain
 - Welcome automation: fires immediately on signup
+- **Kit.com: migrating away — platform TBD.** Paid-tier sequence features and an awkward
+  reporting UI make it a poor fit. Note that `index.html` fires the GA4 `email_signup` event
+  from a listener keyed on `.formkit-form`; whatever replaces Kit must have that selector
+  re-pointed or signup measurement silently drops to zero. See punchlist "Trackwalk switchover".
 
 ## Cost Tracking
 | Item | Cost | Cadence |
@@ -225,6 +244,7 @@ Geographic streaming options for the PITS → WATCH section. Updated once per se
 | Claude Pro | $20.00 | /month |
 | trackwalk.racing domain | $10.81 | year 1 |
 | trackwalk.racing renewal | ~$15 | /year |
+| helltrack.app renewal | ~$12 | /year — redirect only, review renewal in 12 months |
 | GitHub everything | $0 | — |
 | Cloudflare Workers (free) | $0 | — |
 | Google Analytics | $0 | — |

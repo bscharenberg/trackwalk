@@ -58,6 +58,35 @@
 - **Solution**: Must go as static HTML in the body — never inject via JS template literals (backticks/quotes in the embed break JS strings)
 - **Placement**: After ~20 feed cards (mid-feed, not bottom) via insertion at render time
 
+### Rebrand to Trackwalk (2026-09, ahead of the Whistler sticker/QR launch)
+- **Decision**: Helltrack → Trackwalk on a new domain, `trackwalk.racing`, keeping the product,
+  aesthetic and design tokens exactly as they were. Rename only.
+- **Old domain**: `helltrack.app` 301-redirects to `trackwalk.racing` via a Cloudflare Redirect
+  Rule (verified live 2026-09-15). Its DNS stays on Cloudflare; trackwalk.racing DNS is on
+  Porkbun. Keep the old registration as redirect-only and review the renewal in 12 months —
+  dropping it breaks every link and QR printed before the rename.
+- **Analytics**: kept the SAME GA4 property and measurement ID (`G-4EY22R6D2J`). GA4 keys on the
+  measurement ID, not the domain, so data kept flowing with no gap. Creating a new property
+  would have reset history and destroyed year-over-year retention comparison for a cosmetic
+  tidy. Only the property name, stream URL and Search Console link needed updating.
+- **PWA lesson — the expensive one**: a new domain is a NEW ORIGIN. Installed PWAs, service
+  worker caches and localStorage do NOT migrate. Anyone who installed Helltrack keeps an app
+  pointing at the old origin and is invisible to the new one; the redirect cannot reach into an
+  already-installed shell. Mitigated with a one-time banner on the old origin telling installed
+  users to reinstall. **Plan for this before changing domains on any installable app** — the
+  redirect solves links, not installs.
+- **Worker names kept**: `helltrack-rss` (and the vendored `helltrack-results`) keep their names.
+  Renaming a Worker means a new workers.dev URL, which means re-issuing `PINKBIKE_PROXY` in
+  GitHub Secrets and every local `.env` — secret churn for a string no user ever sees.
+- **localStorage keys**: renamed `helltrack-*`/`helltrack_*` → `trackwalk-*` on 2026-09-16, but
+  only WITH a migration shim that copies each value before anything reads it (index.html, top of
+  the app script). Done deliberately while the user base was small: the cost of this rename
+  scales with returning devices, so it was the cheapest it would ever be. A bare rename would
+  have silently wiped saved riders and seen-state for every returning visitor.
+- **Kept as "Helltrack" on purpose**: this decisions log, the two Worker names, and the local
+  folder (`~/Documents/Bryon Knowledge Base/Helltrack/`, whose absolute path is hardcoded in
+  `.claude/launch.json`).
+
 ### PITS tab static data approach
 - **Decision**: PITS tab data (teams, media, podcasts, UCI links) lives in `public/directory.json` and `public/watch.json` — fetched at runtime, not hardcoded in HTML
 - **Why**: JSON is easier to update per season without touching index.html; teams/streaming options change annually

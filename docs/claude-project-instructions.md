@@ -48,8 +48,10 @@ All live in the repo at `docs/` — read these for full context:
 
 ## Content Filter Rules
 - XCO must always be excluded — weight 15 on exclude terms
-- Trusted sources get BOOST_SCORE=4
-- MIN_SCORE=4 is correct — don't change without testing
+- Trusted sources get BOOST_SCORE=4 (added to the score) AND a lower pass threshold
+- MIN_SCORE=6 — don't change without testing. Two thresholds derive from it:
+  RSS articles and TRUSTED_SOURCES channels pass at 6; every other YouTube channel
+  needs MIN_SCORE + 4 = 10. (This line previously said MIN_SCORE=4, which was wrong.)
 - Always test scoring before any filter change recommendation
 - Venue keywords are high-signal — add new 2026 venue names each season
 

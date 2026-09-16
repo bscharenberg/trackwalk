@@ -4,7 +4,7 @@
 
 ### Rebuild content cache
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
+cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
 node scripts/build-cache.js
 git add public/cache.json
 git commit -m 'rebuild cache'
@@ -13,10 +13,10 @@ git stash && git pull --rebase origin main && git stash pop && git push
 
 ### Fetch results for a race round
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
-node scripts/results-fetcher.mjs leogang-2026
+cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
+node scripts/results-fetcher.mjs <venue-slug>-<year>   # e.g. whistler-2026
 git add public/results.json
-git commit -m 'results: leogang-2026'
+git commit -m 'results: <venue-slug>-<year>'
 git stash && git pull --rebase origin main && git stash pop && git push
 ```
 
@@ -24,7 +24,7 @@ Results come from the UCI JSON API directly — no Cloudflare Worker or PDF pars
 
 ### Deploy frontend changes
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
+cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
 git add index.html
 git commit -m 'describe change'
 git stash && git pull --rebase origin main && git stash pop && git push
@@ -32,7 +32,7 @@ git stash && git pull --rebase origin main && git stash pop && git push
 
 ### Rebuild riders data
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
+cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
 node scripts/build-riders.js
 git add scripts/riders.csv public/riders.json
 git commit -m 'update riders roster'
@@ -41,12 +41,15 @@ git stash && git pull --rebase origin main && git stash pop && git push
 
 ### Test content filter scoring
 ```bash
-cd ~/Documents/Bryon\ Knowledge\ Base/Trackwalk
+cd ~/Documents/Bryon\ Knowledge\ Base/Helltrack
 node -e "
-const {scoreItem, categorise} = require('./scripts/content-filter.js');
+const {scoreItem, categorise, MIN_SCORE, TRUSTED_SOURCES} = require('./scripts/content-filter.js');
 const item = {title: 'YOUR TITLE HERE', description: '', channelId: null};
 const score = scoreItem(item);
-const threshold = item.channelId ? 10 : 6;  // untrusted YT=10, RSS/trusted=6
+// Threshold comes from the module, so this can't drift: RSS (no channelId) and trusted
+// channels score against MIN_SCORE (6); every other YouTube channel against MIN_SCORE + 4 (10).
+const isTrusted = item.channelId && TRUSTED_SOURCES.has(item.channelId);
+const threshold = (!item.channelId || isTrusted) ? MIN_SCORE : MIN_SCORE + 4;
 console.log('Score:', score, '| Threshold:', threshold, '| Passes?', score >= threshold);
 if (score >= threshold) console.log('Category:', categorise(item));
 "
@@ -104,7 +107,12 @@ PINKBIKE_PROXY=https://helltrack-rss.scharenbergs.workers.dev
 Also set as GitHub Secrets for Actions.
 
 ## 2026 Race Calendar (for results-fetcher)
-Date = finals date (matches `CALENDAR_2026` in `scripts/results-fetcher.mjs`, the source of truth).
+
+**Before each round, check the crons in `.github/workflows/fetch-results.yml`** — that file, not
+this table, decides when the poller actually runs. The dates below have drifted from it before
+(Les Gets and Val di Sole were both a day out), and `CALENDAR_2026` in `results-fetcher.mjs` has
+been wrong too. Treat this table as orientation, never as the schedule. See punchlist
+"Open: 2026 round dates disagree across sources".
 
 | Round | Venue | Date | Slug |
 |---|---|---|---|
@@ -155,5 +163,5 @@ Then continue: `git rebase --continue` or `git stash pop && git push`
 
 ### Service worker caching stale content
 - Unregister in DevTools → Application → Service Workers
-- Service worker is currently at `trackwalk-v24`
+- Service worker is currently at `trackwalk-v26`
 - Bump the version string in service-worker.js when you need browsers to pick up new files
