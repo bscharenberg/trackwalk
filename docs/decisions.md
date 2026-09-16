@@ -1,4 +1,4 @@
-# Helltrack — Decisions, Learnings, and What Not To Do
+# Trackwalk — Decisions, Learnings, and What Not To Do
 
 ## What Worked
 
@@ -104,7 +104,7 @@
 - **Lesson**: Never `git stash`/`pop` around a rebase to preserve a change you intend to commit — `pop` unstages it. Commit before you rebase. And a CI job exiting 0 is not proof it did its job; gate on the actual artifact (here, an absent commit) not the green check.
 
 ### Chronorace live timing as a qualifying-day data source (2026-06-19)
-- **Problem**: UCI's `race-results` JSON API had a backend outage on Lenzerheide qualifying day (every slug, including previously-working ones, returned `"Unexpected token '<' ... not valid JSON"` — confirmed via direct curl, not a Helltrack bug). Qualifying results are otherwise unavailable from UCI until well after the session, if at all before finals.
+- **Problem**: UCI's `race-results` JSON API had a backend outage on Lenzerheide qualifying day (every slug, including previously-working ones, returned `"Unexpected token '<' ... not valid JSON"` — confirmed via direct curl, not a Trackwalk bug). Qualifying results are otherwise unavailable from UCI until well after the session, if at all before finals.
 - **Discovery**: A third-party fan site (gravitylab.live) renders live qualifying/finals leaderboards by polling **Chronorace** — the actual on-site timing vendor — through a same-origin Netlify function proxy (`/.netlify/functions/chronorace?event=<id>&key=<n>`) that adds CORS headers over Chronorace's raw feed. The proxy is public (no auth, `Access-Control-Allow-Origin: *`) and returns full live timing JSON: rider roster, on-track/next-to-start, and a `Results` array with split-by-split times.
 - **One-time manual pull**: fetched Lenzerheide Q1/Q2 (both genders) directly from that proxy with `event=20260619_mtb` and per-session `key` (2/5/91/92 — Chronorace's own session-key numbering, not stable round to round), converted `RaceTime` (ms) to the existing `M:SS.mmm` format, and merged into `results.json` with `points: null` (Chronorace carries no UCI ranking-points field).
 - **Caveat**: this was a one-off manual pull, not a standing pipeline. The site owner's Netlify function and any Chronorace credentials are server-side and not something we have a right to depend on without his explicit OK — useful as a future collaboration, not as a thing to silently scrape on a schedule.
@@ -173,10 +173,10 @@
 
 ### "Rider feature" Shorts have no discipline text at all — only a name (2026-06-23)
 - **Problem**: at dual-format venues (Lenzerheide hosts XCO/XCC and DHI the same weekend), UCI posts personality/reaction Shorts like "Alessandra Keller loves the all-Swiss setup in Lenzerheide" or "Digging Deep — Savilia Blunk's Reaction To Controversy in Leogang." No XCO/XCC term, no race-tag line, nothing but the rider's name and a venue — the venue alone is shared by both disciplines, so it boosts the score instead of excluding it.
-- **Confirmed via web search, not assumption**: every name added was independently verified as XCO/XCC-only before excluding (Paul Schehl, Alessandra Keller, Savilia Blunk, Luca Martin, Mathis Guay) — also cross-checked against Helltrack's own Chronorace-sourced Lenzerheide DH qualifying data (none of them appear in it). One WebSearch summary falsely claimed Luca Martin "came out on top" in DH qualifying; our own results data shows that's wrong — Luca Martin doesn't appear in the DH field at all. Don't trust an AI search summary over verified first-party data.
+- **Confirmed via web search, not assumption**: every name added was independently verified as XCO/XCC-only before excluding (Paul Schehl, Alessandra Keller, Savilia Blunk, Luca Martin, Mathis Guay) — also cross-checked against Trackwalk's own Chronorace-sourced Lenzerheide DH qualifying data (none of them appear in it). One WebSearch summary falsely claimed Luca Martin "came out on top" in DH qualifying; our own results data shows that's wrong — Luca Martin doesn't appear in the DH field at all. Don't trust an AI search summary over verified first-party data.
 - **Solution**: added the five names to the existing XCO/road rider names exclude list (`titleOnly: true`, weight 10) — the same whack-a-mole list that already held Sagan/Van der Poel/Pidcock/Schurter etc. There is no general-purpose fix here; a feature short with zero discipline text is only classifiable by knowing who the rider is.
 - **Remaining gap**: a handful of completely generic, nameless caption Shorts ("DRAMA! 😱", "WHAT A RACE 😮‍💨") passed through unverified — there is no text signal of any kind to check. Left as-is; revisit only if one is confirmed to be XCO.
-- **Lesson**: this list will need ongoing maintenance every season as new XCO/XCC stars come up, especially around shared-venue weekends. When checking a name's discipline, prefer Helltrack's own verified results data over a search engine's AI summary, which can be confidently wrong.
+- **Lesson**: this list will need ongoing maintenance every season as new XCO/XCC stars come up, especially around shared-venue weekends. When checking a name's discipline, prefer Trackwalk's own verified results data over a search engine's AI summary, which can be confidently wrong.
 
 ### Race-tag exact-phrase match broke when UCI changed the wording (2026-07-05)
 - **Problem**: 6 La Thuile XCC Shorts leaked into the feed at score 10 — right at the untrusted-channel threshold. Same "rider feature, no discipline text in the title" pattern as above (captions like "A new day, a new chance 👊", "Smiles all round 😄"), so the full-text race-tag exclude from 2026-06-14 should have caught them.
@@ -298,6 +298,6 @@
 
 ### Franchise model
 - Core pipeline is mostly config: channel list, keyword weights, venue slugs, results source
-- Strongest candidate after DH: Helltrack Enduro (EWS, adjacent culture)
+- Strongest candidate after DH: Trackwalk Enduro (EWS, adjacent culture)
 - Prerequisite: prove retention on DH first before expanding
 - Decision criteria: returning users week-over-week across multiple race rounds in GA

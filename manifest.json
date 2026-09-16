@@ -1,7 +1,7 @@
 {
-  "name": "Helltrack",
-  "short_name": "Helltrack",
-  "description": "UCI downhill and enduro race content. No fluff.",
+  "name": "Trackwalk",
+  "short_name": "Trackwalk",
+  "description": "UCI downhill and enduro race content.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

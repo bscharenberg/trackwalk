@@ -1,6 +1,6 @@
 /**
  * preflight-check.mjs
- * Helltrack — warn BEFORE a race weekend that a results source isn't reachable yet.
+ * Trackwalk — warn BEFORE a race weekend that a results source isn't reachable yet.
  *
  * The results pipeline is unattended: fetch-results.yml polls every 10 minutes on race days
  * and commits whatever it finds. The failure mode that costs a round is silent — a source
@@ -32,7 +32,7 @@ const arg = (name, fallback) => {
 const YEAR  = arg('year', String(new Date().getUTCFullYear()))
 const DAYS  = Number(arg('days', '14'))
 const ALL   = process.argv.includes('--all')
-const UA    = 'Mozilla/5.0 (Helltrack preflight; helltrack.app)'
+const UA    = 'Mozilla/5.0 (Trackwalk preflight; trackwalk.racing)'
 const TISSOT = 'https://prod.server.tissottiming.com'
 
 const daysUntil = iso => Math.round((new Date(iso + 'T00:00:00Z') - Date.now()) / 86400000)
@@ -71,7 +71,7 @@ const upcoming = ALL ? rows : rows.filter(r => {
   return d >= -2 && d <= DAYS          // still counts the day after, in case of a delay
 })
 
-say(`Helltrack source preflight — ${YEAR}`)
+say(`Trackwalk source preflight — ${YEAR}`)
 say(ALL ? '\nHorizon: all rounds.' : `\nHorizon: rounds starting within ${DAYS} days (checked ${new Date().toISOString().slice(0, 10)}).`)
 
 const problems = []

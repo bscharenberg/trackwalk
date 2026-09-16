@@ -12,7 +12,7 @@ const URL   = `${PROXY}/?url=https://www.pinkbike.com/pinkbike_xml_feed.php`
 
 async function debug() {
   console.log('Fetching...')
-  const res = await fetch(URL, { headers: { 'User-Agent': 'Helltrack/1.0' } })
+  const res = await fetch(URL, { headers: { 'User-Agent': 'Trackwalk/1.0' } })
   const xml = await res.text()
 
   console.log('\nFirst 300 chars of XML:')

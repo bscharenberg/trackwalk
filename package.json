@@ -1,5 +1,5 @@
 {
-  "name": "helltrack",
+  "name": "trackwalk",
   "version": "1.0.0",
   "description": "> *\"Ok dudes, let's walk this sucker.\"* — Cru Jones, RAD (1986)",
   "main": "index.js",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bscharenberg/helltrack.git"
+    "url": "git+https://github.com/bscharenberg/trackwalk.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/bscharenberg/helltrack.git"
+    "url": "https://github.com/bscharenberg/trackwalk.git"
   },
-  "homepage": "https://github.com/bscharenberg/helltrack#readme",
+  "homepage": "https://github.com/bscharenberg/trackwalk#readme",
   "dependencies": {
     "dotenv": "^17.4.2",
     "xml2js": "^0.6.2"

@@ -1,4 +1,4 @@
-# Helltrack
+# Trackwalk
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
@@ -10,7 +10,7 @@ A mobile-first PWA that aggregates UCI downhill race content into one clean, boo
 
 ## What it is
 
-Helltrack pulls from the best sources in the game — YouTube channels, Pinkbike, podcasts, and race film outfits like Sleeper — filters out everything that isn't UCI DH, and serves it as a card-based digest you can bookmark on your phone home screen.
+Trackwalk pulls from the best sources in the game — YouTube channels, Pinkbike, podcasts, and race film outfits like Sleeper — filters out everything that isn't UCI DH, and serves it as a card-based digest you can bookmark on your phone home screen.
 
 Feels like a newspaper. Opens like an app. Updates itself.
 
@@ -80,7 +80,7 @@ GitHub Actions (weekly cron)
   → write cache.json
   → commit to main
 
-helltrack.app (GitHub Pages)
+trackwalk.racing (GitHub Pages)
   → serves static PWA
   → reads cache.json on load
   → card-based feed by category
@@ -111,13 +111,13 @@ Full logic in `scripts/content-filter.js`.
 
 ## Quota strategy
 
-YouTube's free tier allows 10,000 API units/day. Helltrack uses the uploads playlist approach (`playlistItems.list`) instead of `search.list`, which costs 1 unit per channel vs 100 units per search. Weekly refresh across all sources costs roughly 6–10 units total — well under 0.1% of the daily limit.
+YouTube's free tier allows 10,000 API units/day. Trackwalk uses the uploads playlist approach (`playlistItems.list`) instead of `search.list`, which costs 1 unit per channel vs 100 units per search. Weekly refresh across all sources costs roughly 6–10 units total — well under 0.1% of the daily limit.
 
 ## Running locally
 
 ```bash
-git clone https://github.com/bscharenberg/helltrack
-cd helltrack
+git clone https://github.com/bscharenberg/trackwalk
+cd trackwalk
 npm install
 
 # add your YouTube API key
@@ -143,6 +143,6 @@ Built by a saddle donkey, for saddle donkeys.
 
 ---
 
-*Helltrack is an independent project and is not affiliated with the film Rad, its cast, or any related properties. The name is used in tribute to the culture of the sport.*
+*Trackwalk is an independent project and is not affiliated with the film Rad, its cast, or any related properties. The name is used in tribute to the culture of the sport.*
 
 *MIT Licensed. © 2026 bscharenberg.*

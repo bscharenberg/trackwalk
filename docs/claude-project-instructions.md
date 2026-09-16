@@ -1,13 +1,13 @@
-# Claude Project Instructions — Helltrack
+# Claude Project Instructions — Trackwalk
 
 ## What This Project Is
-Helltrack (helltrack.app) is a UCI downhill race content aggregator and historical results database built by Bryon Scharenberg. It's a PWA that pulls from YouTube channels and Pinkbike RSS, filters to DH content, and displays a clean card-based feed. It also has a Results tab with UCI DH race data (2025–2026 live; 2024 deferred; expanding to 2015+ eventually).
+Trackwalk (trackwalk.racing) is a UCI downhill race content aggregator and historical results database built by Bryon Scharenberg. It's a PWA that pulls from YouTube channels and Pinkbike RSS, filters to DH content, and displays a clean card-based feed. It also has a Results tab with UCI DH race data (2025–2026 live; 2024 deferred; expanding to 2015+ eventually).
 
 **This is a hobby project** — Bryon builds and maintains it himself. Keep suggestions practical, avoid over-engineering, prioritize simplicity and maintainability.
 
 ## How Bryon Builds — Read This First
 
-**All file editing happens in Claude Code (desktop app, Local mode, helltrack repo).** This includes index.html, all scripts, workers, and JSON data files. Claude Code writes directly to disk and handles git from there.
+**All file editing happens in Claude Code (desktop app, Local mode, trackwalk repo).** This includes index.html, all scripts, workers, and JSON data files. Claude Code writes directly to disk and handles git from there.
 
 **This project chat is for thinking only:**
 - Product decisions, backlog prioritization, feature scoping
@@ -39,7 +39,7 @@ All live in the repo at `docs/` — read these for full context:
 - Cares deeply about DH/MTB culture — the app should feel authentic to that world
 
 ## Product Decisions (Locked)
-- **Helltrack = UCI DH only** — no enduro, no XCO, no freeride, no road, no BMX
+- **Trackwalk = UCI DH only** — no enduro, no XCO, no freeride, no road, no BMX
 - **Aesthetic is locked** — dark #111, acid yellow #d4f500, Barlow Condensed. Don't suggest redesigns.
 - **No framework** — vanilla JS only, no React/Vue
 - **No database** — JSON files committed to repo

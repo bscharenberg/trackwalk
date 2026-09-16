@@ -1,6 +1,6 @@
-# Helltrack — Claude Code Instructions
+# Trackwalk — Claude Code Instructions
 
-Helltrack (helltrack.app) is a UCI downhill race content aggregator + results database. Vanilla JS PWA, GitHub Pages, Cloudflare Workers. Hobby project — keep changes simple and maintainable.
+Trackwalk (trackwalk.racing) is a UCI downhill race content aggregator + results database. Vanilla JS PWA, GitHub Pages, Cloudflare Workers. Hobby project — keep changes simple and maintainable.
 
 Full reference docs are in `/docs/`:
 - `docs/architecture.md` — system architecture, file locations, data structures

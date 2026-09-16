@@ -1,16 +1,16 @@
-# Helltrack — Product Backlog & Punch List
+# Trackwalk — Product Backlog & Punch List
 
 **Last updated**: 2026-06-12
 
 ## Current State: LIVE ✅
-- helltrack.app live with HTTPS, FEED / RESULTS / RIDERS / PITS navigation
+- trackwalk.racing live with HTTPS, FEED / RESULTS / RIDERS / PITS navigation
 - Hourly cache refresh running clean
 - Results data: 2025–2026 via UCI JSON API (replaced/corrected), 2009–2024 backfilled via
   UCI DataRide JSON API (16 seasons, see `docs/historical-data.md` §7/§9). DNF/DSQ/DNS riders
   kept and listed last with no finish number.
 - Shorts strip in feed with duration-based detection (≤60s); seen/dim state on all cards
 - PITS tab with TEAMS / MEDIA / PODCASTS / UCI / WATCH sub-tabs; real broadcaster data in watch.json
-- Email list via Kit.com (hello@helltrack.app)
+- Email list via Kit.com (hello@trackwalk.racing)
 - R1 South Korea, R2 Loudenvielle, R3 Leogang results live
 - Results fetcher workflow: race-day crons + 30-min polling backstop. Auto-commit fixed 2026-06-14 (see `docs/decisions.md`) — the old commit step `git stash`/`pop`'d around the rebase, which unstaged the `git add`, so `git diff --staged --quiet` was always true and results were fetched then silently dropped. Now commits first, then rebase-and-push with retries.
 - Branding finalized: chainsaw icon (192×192/512×512), header icon + white wordmark lockup, OG/Twitter share card and meta tags live
@@ -20,8 +20,8 @@
 ## Completed ✅
 
 ### Infrastructure & Pipeline
-- Domain registered (helltrack.app)
-- GitHub repos (helltrack + helltrack-results)
+- Domain registered (trackwalk.racing)
+- GitHub repos (trackwalk + helltrack-results)
 - YouTube API key + content pipeline
 - Hourly GitHub Actions cache refresh
 - Cloudflare Worker proxy for Pinkbike RSS (helltrack-rss, free plan)
@@ -45,7 +45,7 @@
 - PITS tab with sub-tab nav (TEAMS / MEDIA / PODCASTS / UCI / WATCH)
 - RIDERS tab with Men/Women toggle, Instagram links
 - Kit.com email signup form (mid-feed, static HTML embed, Barlow Condensed styled)
-- Email hello@helltrack.app via Cloudflare routing + Kit sending domain
+- Email hello@trackwalk.racing via Cloudflare routing + Kit sending domain
 - Kit.com welcome automation (fires immediately on signup)
 - Deep link sharing — Web Share API on mobile, clipboard fallback on desktop (#38)
 - In-app YouTube player in bottom sheet — embedded iframe via YouTube IFrame Player API, "Open in YouTube →" secondary link, falls back to "Watch on YouTube" CTA if embedding is disabled (#40)
@@ -115,7 +115,7 @@ adjacent rounds' windows before shipping.
 `index.html` + SW cache bump v6→v7. Followed riders are set via the existing Riders-tab bookmark.
 
 ### Codebase audit pass (2026-07-02)
-360° audit + fixes. Shipped: service-worker paths fixed (`/helltrack/`→root, cache bumped
+360° audit + fixes. Shipped: service-worker paths fixed (`/trackwalk/`→root, cache bumped
 v5→v6 — the SW never installed in production before this); build-cache min-items guard
 (refuses to write an empty cache.json on a source outage); content-filter word-boundary
 matching (`ews`⊂"news", `ski`⊂"skills" were silently dropping valid DH content);
@@ -137,7 +137,7 @@ each shared-venue weekend as new XCO stars appear — no general fix, it's whack
 | # | Item | Size | Priority | Description |
 |---|---|---|---|---|
 | 7 | ~~Real PWA icon~~ | — | Done | ~~Replace placeholder HT icon~~ — replaced with chainsaw logo (icon-192.png/icon-512.png, #d4f500), header updated to icon + white wordmark lockup, OG/Twitter meta tags added (2026-06-12). |
-| 41 | Dynamic OG image for video shares (Cloudflare Worker) | S | Low | Static `og:image` can't differ between homepage and `?v=` video shares. Worker (same pattern as helltrack-rss) checks for `?v=` param: if present, injects that video's YouTube thumbnail (`maxresdefault.jpg`, fallback `hqdefault.jpg`) as `og:image` (+ optionally `og:title`); if absent, serves the static brand card. Needs route binding on helltrack.app domain (not just workers.dev). Est. ~1 hour. Build when share volume justifies it. |
+| 41 | Dynamic OG image for video shares (Cloudflare Worker) | S | Low | Static `og:image` can't differ between homepage and `?v=` video shares. Worker (same pattern as helltrack-rss) checks for `?v=` param: if present, injects that video's YouTube thumbnail (`maxresdefault.jpg`, fallback `hqdefault.jpg`) as `og:image` (+ optionally `og:title`); if absent, serves the static brand card. Needs route binding on trackwalk.racing domain (not just workers.dev). Est. ~1 hour. Build when share volume justifies it. |
 | 36b | 2024 results quality pass | S | Medium | ~~Re-fetch 2024 data via UCI JSON API~~ — done as part of the 2009–2024 DataRide backfill (2026-06-10). Bielsko-Biała 2024 winner now sourced from DataRide; re-verify against #34. |
 | 34 | Results data accuracy audit | M | Medium | Verify all 2024 round winners against authoritative sources. Podiums spot-checked against known history during the DataRide backfill (all seasons 2009-2024) — looked correct, but a formal audit hasn't been done. |
 | 5 | ~~Historical results 2015–2023~~ | — | Done | ~~Scrape and integrate~~ — superseded by the 2009–2024 UCI DataRide backfill (2026-06-10). See `docs/historical-data.md` §7/§9. |
@@ -242,11 +242,11 @@ sequenced (#44 depends on #42); #43 is independent.
 ## Wordmark/icon batch — done (2026-06-12)
 
 All three PBIs shipped:
-- **PBI 1** — `/og-image.png` swapped to designer's final chainsaw-as-T HELLTRACK lockup (1200×630). (`944819f`)
+- **PBI 1** — `/og-image.png` swapped to designer's final chainsaw-as-T TRACKWALK lockup (1200×630). (`944819f`)
 - **PBI 2** — Header icon swapped to rounded-corner chainsaw, recolored `#ceff00`→`#d4f500`, 40px, PWA home-screen icons (`icon-192.png`/`icon-512.png`) untouched. New asset `icon-round-192.png`. (`c179996`)
-- **PBI 3** — Header "HELLTRACK" text replaced with inline SVG wordmark (white `#ffffff`, 26px height, `role="img"`/`aria-label`/`<title>` for a11y), subtext unchanged, SW cache bumped `helltrack-v3`→`helltrack-v4`. (`2416bfe`)
+- **PBI 3** — Header "TRACKWALK" text replaced with inline SVG wordmark (white `#ffffff`, 26px height, `role="img"`/`aria-label`/`<title>` for a11y), subtext unchanged, SW cache bumped `trackwalk-v3`→`trackwalk-v4`. (`2416bfe`)
 
-**Eyeball check (post-PBI 3)**: `HT-Wordmark.svg` is plain white "HELLTRACK" lettering — no embedded chainsaw, no `#d4f500` accent. The rounded chainsaw icon (PBI 2) is the only chainsaw in the header, so there's no redundancy. Kept both icon and wordmark.
+**Eyeball check (post-PBI 3)**: `HT-Wordmark.svg` is plain white "TRACKWALK" lettering — no embedded chainsaw, no `#d4f500` accent. The rounded chainsaw icon (PBI 2) is the only chainsaw in the header, so there's no redundancy. Kept both icon and wordmark.
 
 ---
 

@@ -1,6 +1,6 @@
 /**
  * build-cache.js
- * Helltrack — orchestrates the full content pipeline
+ * Trackwalk — orchestrates the full content pipeline
  *
  * Run manually:  node scripts/build-cache.js
  * Run via CI:    triggered by GitHub Actions on a schedule
@@ -66,7 +66,7 @@ function capCategories(grouped) {
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 async function buildCache() {
-  console.log('\n🚵 Helltrack cache build starting...\n')
+  console.log('\n🚵 Trackwalk cache build starting...\n')
   const startTime = Date.now()
 
   // 1. Fetch all sources

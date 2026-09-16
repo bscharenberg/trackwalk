@@ -3,12 +3,12 @@
 ChronoRace is the UCI's on-site electronic timing vendor. Every official DH result
 originates with them: the UCI results PDFs carry `Producer: chronorace - electronic timing
 via ABCpdf` and the footer "Timing and results provided by ChronoRace". They are strictly
-upstream of both sources Helltrack currently uses, which is why they are worth pulling from
+upstream of both sources Trackwalk currently uses, which is why they are worth pulling from
 directly on race days.
 
 **Why bother:** the Les Gets 2026 Elite Men final started 14:10 local and ChronoRace's
 official results report was generated at **13:51 UTC = 15:51 local** — roughly 40 minutes
-after the last rider. `ucimtbworldseries.com` (Helltrack's 2026 source) was down entirely
+after the last rider. `ucimtbworldseries.com` (Trackwalk's 2026 source) was down entirely
 that weekend and never recovered; DataRide had the round but only after the fact, and
 carries only one qualifying race per gender.
 
@@ -97,7 +97,7 @@ GET /api/v1/wbd/resource/team-standings  [discipline, season, category, competit
 Intended flow: `event-list` → `competition-list/{eventId}` → `resource/results/{competitionId}`,
 with `live/DHI/situation/{competitionId}` polled while a session is running.
 
-`resource/standings` is notable — Helltrack has no season-standings feature today, and this
+`resource/standings` is notable — Trackwalk has no season-standings feature today, and this
 would supply it for free.
 
 **Open item:** `discovery/event-list` did not return the array shape guessed at
@@ -178,7 +178,7 @@ internal id, so build a `RaceNr` index first.
 gravitylab.live's Netlify function is **someone else's infrastructure**, and their page
 already guards its own usage (only probes Thu–Sun UTC, caches verdicts in localStorage).
 Per docs/decisions.md (2026-06-19), it is fine to learn from and not fine to poll on a
-schedule without the owner's OK. Helltrack must talk to `results.chronorace.be` directly —
+schedule without the owner's OK. Trackwalk must talk to `results.chronorace.be` directly —
 which is now known to be public and self-documented, so there is no reason not to.
 
 If a first-party path proves unusable, the correct move is to ask the gravitylab owner about
