@@ -3674,6 +3674,29 @@ function goToRiderHistory(name) {
 const visitCount = Number(localStorage.getItem('helltrack-visit-count') || '0') + 1
 localStorage.setItem('helltrack-visit-count', String(visitCount))
 
+// First-ever open on this device, reported once.
+//
+// The Whistler stickers went to print pointing at the bare domain, so QR scans arrive as
+// GA4 "Direct" and cannot be told apart from someone typing the URL. This is the closest
+// honest proxy: a device that has never opened Trackwalk before. Segment it by date +
+// region and a race-weekend scan spike is visible even without a utm_source.
+//
+// Deliberately keyed on the existing visit counter rather than GA4's own first_visit, which
+// is cookie-scoped and re-fires when cookies are cleared or a browser expires them. This
+// keys on localStorage, which also backs the install prompt — same lifetime as the app's
+// own idea of a returning user, so the two never disagree.
+//
+// Caveats, so this is not over-read later: private windows and cleared site data both look
+// like a new device, and an install-then-open can count the PWA separately from the browser.
+// It is a trend signal, not a headcount.
+if (visitCount === 1 && typeof gtag === 'function') {
+  gtag('event', 'first_open_ever', {
+    // Standalone means it was launched from the home screen, i.e. not a fresh scan.
+    launch_mode: window.matchMedia('(display-mode: standalone)').matches ||
+                 window.navigator.standalone === true ? 'installed' : 'browser',
+  })
+}
+
 function showIOSTip() {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const isStandalone = window.navigator.standalone === true
