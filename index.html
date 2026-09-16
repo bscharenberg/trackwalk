@@ -1705,6 +1705,15 @@ html, body {
   <button onclick="dismissInstall()" style="background:none; border:none; color:var(--text-muted); font-size:20px; cursor:pointer; padding:4px; line-height:1;">×</button>
 </div>
 
+<!-- Rename banner (installed users only — their home screen icon/label is frozen at install time and won't update on its own) -->
+<div id="rename-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:300; padding:12px 16px calc(var(--safe-bottom) + 12px); background:#191919; border-top:0.5px solid #2a2a2a; align-items:center; gap:12px;">
+  <div style="flex:1">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-primary); margin-bottom:2px">We're now Trackwalk</div>
+    <div style="font-size:11px; color:var(--text-muted)">Remove this icon and re-add to home screen to update it.</div>
+  </div>
+  <button onclick="dismissRenameBanner()" style="background:none; border:none; color:var(--text-muted); font-size:20px; cursor:pointer; padding:4px; line-height:1;">×</button>
+</div>
+
 <!-- Bottom sheet -->
 <div id="sheet-overlay" onclick="closeSheet()"></div>
 <div id="sheet" role="dialog" aria-modal="true">
@@ -2774,6 +2783,25 @@ function dismissInstall() {
   document.getElementById('install-banner').style.display = 'none'
   document.getElementById('feed').style.paddingBottom = ''
   localStorage.setItem('helltrack-install-dismissed', '1')
+}
+
+// ── Rename banner ──
+// Only installed users have a stale home screen icon/label — a browser tab isn't
+// affected, so gate on standalone display mode (Android/desktop PWA) or navigator.standalone
+// (iOS). One-time: dismissing (or just seeing it) sets the flag for good.
+addEventListener('load', () => {
+  const isInstalled = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true
+  if (isInstalled && !localStorage.getItem('trackwalk-rename-notice-seen')) {
+    const banner = document.getElementById('rename-banner')
+    banner.style.display = 'flex'
+    document.getElementById('feed').style.paddingBottom = 'calc(var(--safe-bottom) + 90px)'
+  }
+})
+
+function dismissRenameBanner() {
+  document.getElementById('rename-banner').style.display = 'none'
+  document.getElementById('feed').style.paddingBottom = ''
+  localStorage.setItem('trackwalk-rename-notice-seen', '1')
 }
 
 // ── Results tab ──────────────────────────────────────────────────────────────
