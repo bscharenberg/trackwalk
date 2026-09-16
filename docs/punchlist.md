@@ -1,6 +1,6 @@
 # Trackwalk — Product Backlog & Punch List
 
-**Last updated**: 2026-06-12
+**Last updated**: 2026-09-15
 
 ## Current State: LIVE ✅
 - trackwalk.racing live with HTTPS, FEED / RESULTS / RIDERS / PITS navigation
@@ -155,6 +155,7 @@ each shared-venue weekend as new XCO stars appear — no general fix, it's whack
 | 46 | Split results.json per season | M | Medium | results.json is 8.2 MB and was fetched on every Results-tab open. Split into `results-index.json` (seasons/rounds/venues) + `results-<year>.json` lazy-loaded; current season by default. Unlocks proper caching (the `?t=` cache-buster is already removed) and moves `buildRiderIndex()`'s full-history walk off the main thread. Supersedes #37. |
 | 47 | Standings points-source audit | M | Low | `computeStandings()` sums finals `points` only; if UCI awards qualifying/semifinal points (2023+ format) the Standings view undercounts vs official. The `lastRank` tiebreak also stays 999 for anyone who missed the latest round. Verify against official season standings before changing. |
 | 48 | ~~My Riders feed — empty-state prompt~~ | — | Done | ~~First-time visitors never saw the "Your Riders" section~~ — `renderMyRidersFeed()` now always renders the header; when no riders are saved it shows a dashed-border "Pick your 6 →" prompt card that jumps to the Riders tab (`goToRidersTab()`), instead of hiding the section. Deliberately skips loading `results.json` on the empty path so a brand-new visitor's feed load stays cheap. Shipped 2026-07-03 ahead of La Thuile race weekend as an onboarding fix for the My Riders feed's adoption risk. SW cache bumped v8→v9. |
+| 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |
 
 ### Notes on backlog items
 - **#36b / #34**: Combine these — formal audit of 2024 (and now 2009-2023) winners against authoritative sources is still open, though spot-checks during ingest found no errors.
@@ -512,6 +513,70 @@ after. One close-and-reopen, then permanent.
 | Worlds | Val di Sole | 2026-08-28 | 2026-08-29 | val-di-sole-2026 | — |
 | R8 | Whistler | 2026-09-26 | 2026-09-27 | whistler-2026 | — |
 | R9 | Lake Placid | 2026-10-03 | 2026-10-04 | lake-placid-2026 | — |
+
+---
+
+## PBI 49 — Crawlable results URLs (SEO re-architecture)
+
+**Status:** Open. Raised 2026-09-15 during a pre-Whistler review. Do NOT start before the
+Whistler/Lake Placid rounds are done — this is an architecture change, not a race-week task.
+
+**What:** Give each round and each rider a real, server-rendered URL so search engines can
+index the results database instead of a single JavaScript shell.
+
+**Why:** The site is a single page. Every result is reached by tapping through tabs, and all
+content arrives via `fetch()` after load, so there is exactly one indexable URL
+(`trackwalk.racing/`) no matter how much data sits behind it. Nobody searching "Leogang 2026
+downhill results" or "Jackson Goldstone results" can land on us, because there is no page for
+either query to match. The 18-season database is the most linkable, most searchable thing
+Trackwalk has and it is currently invisible to search.
+
+Related, already fixed 2026-09-15 (`a220f5f`): robots.txt had `Disallow: /public/`, which
+blocked the very JSON the page renders from — Googlebot was seeing a 583-character "Loading
+race feed" shell. That fix lets Google render the *feed*; it does not create URLs for results.
+This PBI is the other half.
+
+**Logic:** Pre-render static HTML at build time from `public/results.json` — no server, no
+framework, keep the vanilla/GitHub Pages model. A generator script (`scripts/build-pages.js`,
+sibling to `split-results.js`, run in the same workflow step right after it) walks results.json
+and writes:
+
+  /race/<slug>/index.html        e.g. /race/leogang-2026/   — one round, all sessions
+  /rider/<slug>/index.html       e.g. /rider/jackson-goldstone/ — full career table
+
+Each generated page is a complete, readable HTML document: real `<h1>`, a real `<table>` of
+results, `<title>`/`<meta description>`/canonical of its own, and JSON-LD (`SportsEvent` for a
+round, `Person` for a rider). It must make sense with JavaScript switched off — that is the
+entire point. Progressive enhancement on top: a small inline script can hand off into the SPA
+so navigation stays fast for humans.
+
+Then wire them together, or the pages stay orphans:
+  - link rounds and riders from the SPA views (the `.rvc-venue-name` element already exists)
+  - extend `sitemap.xml` from one URL to every generated page (regenerate in the same script)
+  - reuse `scripts/lib/canon.mjs` for rider-name → slug so slugs match stored canonical names
+    and do not fragment across spelling variants
+
+Scale check: ~18 seasons x ~10 rounds ≈ 180 round pages, plus riders (cap to those with a real
+result history, not every DNS in the database — a few thousand pages is fine for GitHub Pages,
+tens of thousands is not). Decide the rider cutoff before generating.
+
+**File:** `scripts/build-pages.js` (new), `.github/workflows/fetch-results.yml` and
+`dataride-fetch.yml` (run it after `split-results.js`), `sitemap.xml` (generated, stop hand-
+maintaining), `index.html` (links into the new URLs), `docs/architecture.md`.
+
+**Done when:**
+- `/race/leogang-2026/` and `/rider/jackson-goldstone/` return full results in `curl` output
+  with no JavaScript executed
+- every generated page carries a self-canonical, and the SPA's `?v=` links still canonicalize
+  to root
+- `sitemap.xml` lists every generated page and is regenerated by the same script
+- Search Console URL Inspection on a sample round page shows the results table in the
+  rendered HTML
+- a results merge followed by `node scripts/build-pages.js` updates the affected pages and
+  leaves the rest byte-identical (so the hourly workflow does not churn commits)
+
+**Watch out for:** the generator runs inside the race-day workflow, so it must be fast and must
+never fail the results commit — if page generation throws, the results still need to land.
 
 ---
 
