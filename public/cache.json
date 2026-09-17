@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-17T06:37:50.600Z",
-  "totalItems": 123,
+  "builtAt": "2026-09-17T12:02:32.919Z",
+  "totalItems": 122,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -716,21 +716,6 @@
           "category": "results"
         },
         {
-          "id": "https://www.pinkbike.com/news/aaron-gwin-and-gloria-scarsi-win-the-2026-us-open-downhill.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Aaron Gwin & Gloria Scarsi Win the 2026 US Open Downhill",
-          "description": "The results are in from the 2026 Fox US Open, where $15,000 was on the line for each pro race winner.( Comments: 97 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
-          "publishedAt": "2026-09-13T11:34:00.000Z",
-          "url": "https://www.pinkbike.com/news/aaron-gwin-and-gloria-scarsi-win-the-2026-us-open-downhill.html?trk=rss",
-          "categories": [],
-          "score": 10,
-          "category": "results"
-        },
-        {
           "id": "ZYUZFZpceWY",
           "type": "video",
           "source": "youtube",
@@ -998,9 +983,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Podcast Roundup: Aaron Gwin on His Chainless Run, Rachel Atherton on Motherhood & Kilian Bron's Craziest MTB Expeditions",
-          "description": "Here are some of the podcasts that have been filling our earbuds for the last little while.( Comments: 6 )",
+          "description": "Here are some of the podcasts that have been filling our earbuds for the last little while.( Comments: 8 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30167734/p2pb30167734.jpg",
-          "publishedAt": "2026-09-15T11:50:00.000Z",
+          "publishedAt": "2026-09-15T11:44:00.000Z",
           "url": "https://www.pinkbike.com/news/podcast-roundup-aaron-gwin-on-his-chainless-run-rachel-atherton-on-motherhood-and-kilian-brons-craziest-mtb-expeditions.html?trk=rss",
           "categories": [],
           "score": 6,
