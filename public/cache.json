@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-18T19:10:46.003Z",
-  "totalItems": 114,
+  "builtAt": "2026-09-18T21:39:29.778Z",
+  "totalItems": 113,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1354,23 +1354,6 @@
           "url": "https://www.youtube.com/watch?v=UD4GrHOecPY",
           "isShort": false,
           "score": 6,
-          "category": "news"
-        },
-        {
-          "id": "VUgH4BQrl-Y",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "WE ARE BACK MARCHING DOWN LES GETS!",
-          "description": "It's been a tough 8 weeks recovering from the knee injury but honestly I have never felt better. I've been training hard and we're finally back! The teams feeling strong and everyones in high spirits. Lets go sports fans!\n\nshot on #sony & #dji  \n\n#dji #mtb #bksport #downhill #mountainbike #pivot #mtblife #shimano #fox #darco #france #streetrace #alps #montblanc",
-          "thumbnail": "https://i.ytimg.com/vi/VUgH4BQrl-Y/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-19T21:32:59Z",
-          "url": "https://www.youtube.com/watch?v=VUgH4BQrl-Y",
-          "isShort": false,
-          "score": 7,
           "category": "news"
         }
       ]
