@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-18T11:47:29.064Z",
-  "totalItems": 121,
+  "builtAt": "2026-09-18T16:20:55.540Z",
+  "totalItems": 117,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -935,23 +935,6 @@
           "isShort": false,
           "score": 13,
           "category": "results"
-        },
-        {
-          "id": "T-0qt3UsUT0",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "PIT BITS - Les Gets World Cup Downhill",
-          "description": "After a big mid-summer break, the 2026 UCI Mountain Bike World Series is back in Les Gets, France. The riders and mechanics get the bikes ready and prepare for a big crowd this weekend. Hear from Loic Bruni, Steve Peat, Ronan Dunne, Luca Shaw and more. See bikes from Canyon, Specialized, Mondraker, Santa Cruz, Gamux, Nicolai and Commencal. SugarBrad's tool bag may take the cake, though!\n\nContents\n0:00 - Luca Shaw\n1:07 - Andi Kolb's Santa Cruz V10 XL with Burgtec MX adapters\n1:51 - Loic Bruni on his injury and team success\n3:20 - Jordan Williams current overall leader\n4:11 - Richie Rude, Yeti practice bike vs. race bike\n5:22 - Reece Wilson's Gamux and Nicolai DH E-MTB\n7:01 - Coolest toolbox backpack from Brad at Giant Factory\n7:54 - Amaury Pierron's chrome and pink Commencal\n9:01 - Steve Peat and his Les Gets history with archival footage\n10:54 - Ronan Dunne injury update\n11:58 - RockShox pits",
-          "thumbnail": "https://i.ytimg.com/vi/T-0qt3UsUT0/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-19T16:01:15Z",
-          "url": "https://www.youtube.com/watch?v=T-0qt3UsUT0",
-          "isShort": false,
-          "score": 21,
-          "category": "results"
         }
       ]
     },
@@ -966,9 +949,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Podcast Roundup: Aaron Gwin on His Chainless Run, Rachel Atherton on Motherhood & Kilian Bron's Craziest MTB Expeditions",
-          "description": "Here are some of the podcasts that have been filling our earbuds for the last little while.( Comments: 8 )",
+          "description": "Here are some of the podcasts that have been filling our earbuds for the last little while.( Comments: 9 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30167734/p2pb30167734.jpg",
-          "publishedAt": "2026-09-15T11:35:00.000Z",
+          "publishedAt": "2026-09-15T11:32:00.000Z",
           "url": "https://www.pinkbike.com/news/podcast-roundup-aaron-gwin-on-his-chainless-run-rachel-atherton-on-motherhood-and-kilian-brons-craziest-mtb-expeditions.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1231,9 +1214,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "26 Riders Announced For Red Bull Hardline British Columbia",
-          "description": "22 men and 4 women will line up for Hardline at Cypress Mountain.( Photos: 4, Comments: 128 )",
+          "description": "22 men and 4 women will line up for Hardline at Cypress Mountain.( Photos: 4, Comments: 138 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb27764091/p2pb27764091.jpg",
-          "publishedAt": "2026-09-17T11:56:00.000Z",
+          "publishedAt": "2026-09-17T11:53:00.000Z",
           "url": "https://www.pinkbike.com/news/26-riders-announced-for-red-bull-hardline-british-columbia.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1248,7 +1231,7 @@
           "title": "Beyond Gravity Announces First Wave of Athletes Signed On for 2027 Event",
           "description": "The first nine riders out of the 25-rider selection for the event include the likes of Vali Höll, Asa Vermette and Aaron Gwin.( Photos: 1, Comments: 23 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb27764090/p2pb27764090.jpg",
-          "publishedAt": "2026-09-17T11:50:00.000Z",
+          "publishedAt": "2026-09-17T11:47:00.000Z",
           "url": "https://www.pinkbike.com/news/beyond-gravity-announces-first-wave-of-athletes-signed-on-for-2027-event.html?trk=rss",
           "categories": [],
           "score": 7,
