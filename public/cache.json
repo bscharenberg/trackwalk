@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-20T05:23:15.192Z",
-  "totalItems": 107,
+  "builtAt": "2026-09-20T10:05:08.535Z",
+  "totalItems": 108,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1051,6 +1051,23 @@
       "label": "Pits",
       "items": [
         {
+          "id": "Jym_2urB2rQ",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "The Moment Red Bull Hardline Felt Too Big 🫣 Aaron Gwin on Just Ride",
+          "description": "Aaron Gwin never imagined himself racing Red Bull Hardline Tasmania.\n\nIn this clip, he explains the rollercoaster of emotions leading up to the event, from seeing the massive jumps for the first time and thinking \"we might have made a mistake\" to eventually conquering the biggest features he's ever ridden.\n\nAaron shares which jump scared him most, how he managed the risks, and why the experience ultimately made him a better rider.\n\n🎙️ Watch the full conversation on the Just Ride podcast.\n\n#AaronGwin #RedBullHardline #MountainBike #DownhillMTB #JustRidePodcast\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#podcast #redbull #justride",
+          "thumbnail": "https://i.ytimg.com/vi/Jym_2urB2rQ/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-20T06:00:03Z",
+          "url": "https://www.youtube.com/watch?v=Jym_2urB2rQ",
+          "isShort": false,
+          "score": 17,
+          "category": "paddock"
+        },
+        {
           "id": "81JgCD44-Ak",
           "type": "video",
           "source": "youtube",
@@ -1182,9 +1199,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Mud Mayhem & Silver World Champs Medals with Lachie Stevens-McNab",
-          "description": "Lachie Stevens-McNab recaps the Les Gets World Cup and the Val di Sole World Championships.( Comments: 1 )",
+          "description": "Lachie Stevens-McNab recaps the Les Gets World Cup and the Val di Sole World Championships.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30210777/p2pb30210777.jpg",
-          "publishedAt": "2026-09-19T11:57:00.000Z",
+          "publishedAt": "2026-09-19T11:56:00.000Z",
           "url": "https://www.pinkbike.com/news/video-mud-mayhem-and-silver-world-champs-medals-with-lachie-stevens-mcnab.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -1199,7 +1216,7 @@
           "title": "26 Riders Announced For Red Bull Hardline British Columbia",
           "description": "22 men and 4 women will line up for Hardline at Cypress Mountain.( Photos: 4, Comments: 152 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb27764091/p2pb27764091.jpg",
-          "publishedAt": "2026-09-17T11:47:00.000Z",
+          "publishedAt": "2026-09-17T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/26-riders-announced-for-red-bull-hardline-british-columbia.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1214,7 +1231,7 @@
           "title": "Beyond Gravity Announces First Wave of Athletes Signed On for 2027 Event",
           "description": "The first nine riders out of the 25-rider selection for the event include the likes of Vali Höll, Asa Vermette and Aaron Gwin.( Photos: 1, Comments: 24 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb27764090/p2pb27764090.jpg",
-          "publishedAt": "2026-09-17T11:41:00.000Z",
+          "publishedAt": "2026-09-17T11:40:00.000Z",
           "url": "https://www.pinkbike.com/news/beyond-gravity-announces-first-wave-of-athletes-signed-on-for-2027-event.html?trk=rss",
           "categories": [],
           "score": 7,
