@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-21T20:33:42.431Z",
-  "totalItems": 67,
+  "builtAt": "2026-09-21T23:34:51.600Z",
+  "totalItems": 68,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -267,6 +267,23 @@
       "id": "race-runs",
       "label": "Race runs",
       "items": [
+        {
+          "id": "UFi8cxWjWdU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Sammie's Comeback & Savilia's Homecoming | THE B LINE 🇺🇸 | WHOOP UCI MTB World Series",
+          "description": "The B-Line heads to Soldier Hollow as UCI World Cup racing returns to the USA 🇺🇸\n\nJoin Ashleigh Wilmot alongside Savilia Blunk and Sammie Maxwell for a wide-ranging conversation about life at the highest level of Cross-country racing, from the highs of success to the tougher moments that come with being a professional athlete.\n\nThe pair discuss what it means to race a UCI World Cup on home soil, Sammie’s return to racing after nine months away and the challenges they’ve faced along the way, before things take a slightly different turn with some cheeky wedding chat 👀💍\n\nGo beyond the results and get to know two of the biggest names in American mountain biking as they open up about racing, life away from the bike and everything in between.\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/UFi8cxWjWdU/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-21T22:37:29Z",
+          "url": "https://www.youtube.com/watch?v=UFi8cxWjWdU",
+          "isShort": false,
+          "score": 11,
+          "category": "race-runs"
+        },
         {
           "id": "https://www.pinkbike.com/news/seeding-run-ixs-int-rookies-championships-schladming-2026.html?trk=rss",
           "type": "article",
