@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-20T21:50:32.941Z",
-  "totalItems": 99,
+  "builtAt": "2026-09-21T00:13:04.099Z",
+  "totalItems": 97,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -898,23 +898,6 @@
           "url": "https://www.youtube.com/watch?v=_SIKlZleBDA",
           "isShort": false,
           "score": 13,
-          "category": "results"
-        },
-        {
-          "id": "M5NmJwG3fvA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Awesome Insights At The Les Gets World Cup | Day 3",
-          "description": "The World Cup in Les Gets has been challenging for many reasons but the biblical weather was the cherry on top. It became so hard to ride people literally couldn't push their bikes down the hill. Ben and Innes give a breakdown of the race track before it literally broke down from erosion. Hear from riders, check out the analysis and see who thrived in the conditions in the qualification recap.\n\nInside The Tape Presented By 6D Helmets - https://www.6dhelmets.com/collections/bike\n\nPlay the Pinkbike DH Fantasy League against your mates:\n• https://www.pinkbike.com/contest/fantasy/dh/\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\n• https://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/M5NmJwG3fvA/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-21T22:14:44Z",
-          "url": "https://www.youtube.com/watch?v=M5NmJwG3fvA",
-          "isShort": false,
-          "score": 11,
           "category": "results"
         }
       ]
