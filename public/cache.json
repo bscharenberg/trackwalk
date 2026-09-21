@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-09-21T04:55:25.547Z",
-  "totalItems": 95,
+  "builtAt": "2026-09-21T10:38:56.004Z",
+  "totalItems": 94,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "QJ6M7QQ5RyM",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "It's race week in Whistler 🤩",
+          "description": "It's race week in Whistler 🤩\n\nLocal legend and UCI DHI World Champ Jackson Goldstone talked about the inclusion of Whistler, Canada, in the 2026 DHI calendar… home soil has never looked so good. 🍁👀",
+          "thumbnail": "https://i.ytimg.com/vi/QJ6M7QQ5RyM/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-21T09:07:21Z",
+          "url": "https://www.youtube.com/watch?v=QJ6M7QQ5RyM",
+          "isShort": true,
+          "score": 18,
+          "category": "shorts"
+        },
         {
           "id": "ukKBdZKoL7k",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 21,
           "category": "shorts"
-        },
-        {
-          "id": "INCCTKEtV4g",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "What a place to take your first win 🤯🇫🇷",
-          "description": "What a place to take your first win 🤯🇫🇷\n\nThe noise was deafening as the Les Gets crowd celebrated Max Alran’s maiden Elite World Cup victory on home soil. What a moment. 🔥\n\n📍Les Gets, Haute-Savoie 🏁 Men’s Elite UCI DHI World Cup Final\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/INCCTKEtV4g/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-22T15:17:39Z",
-          "url": "https://www.youtube.com/watch?v=INCCTKEtV4g",
-          "isShort": true,
-          "score": 21,
-          "category": "shorts"
         }
       ]
     },
@@ -361,7 +361,7 @@
           "title": "Seeding Run: iXS Int. Rookies Championships Schladming 2026",
           "description": "The future of downhill racing went against the clock in seeding at the 2026 iXS International Rookies Championships.( Photos: 13, Comments: 1 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30298106/p2pb30298106.jpg",
-          "publishedAt": "2026-09-20T11:54:00.000Z",
+          "publishedAt": "2026-09-20T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/seeding-run-ixs-int-rookies-championships-schladming-2026.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -1182,7 +1182,7 @@
           "title": "Video: Mud Mayhem & Silver World Champs Medals with Lachie Stevens-McNab",
           "description": "Lachie Stevens-McNab recaps the Les Gets World Cup and the Val di Sole World Championships.( Comments: 2 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30210777/p2pb30210777.jpg",
-          "publishedAt": "2026-09-19T11:51:00.000Z",
+          "publishedAt": "2026-09-19T11:48:00.000Z",
           "url": "https://www.pinkbike.com/news/video-mud-mayhem-and-silver-world-champs-medals-with-lachie-stevens-mcnab.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -1195,9 +1195,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "26 Riders Announced For Red Bull Hardline British Columbia",
-          "description": "22 men and 4 women will line up for Hardline at Cypress Mountain.( Photos: 4, Comments: 152 )",
+          "description": "22 men and 4 women will line up for Hardline at Cypress Mountain.( Photos: 4, Comments: 153 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb27764091/p2pb27764091.jpg",
-          "publishedAt": "2026-09-17T11:40:00.000Z",
+          "publishedAt": "2026-09-17T11:37:00.000Z",
           "url": "https://www.pinkbike.com/news/26-riders-announced-for-red-bull-hardline-british-columbia.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1212,7 +1212,7 @@
           "title": "Beyond Gravity Announces First Wave of Athletes Signed On for 2027 Event",
           "description": "The first nine riders out of the 25-rider selection for the event include the likes of Vali Höll, Asa Vermette and Aaron Gwin.( Photos: 1, Comments: 24 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb27764090/p2pb27764090.jpg",
-          "publishedAt": "2026-09-17T11:34:00.000Z",
+          "publishedAt": "2026-09-17T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/beyond-gravity-announces-first-wave-of-athletes-signed-on-for-2027-event.html?trk=rss",
           "categories": [],
           "score": 7,
