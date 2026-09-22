@@ -1,0 +1,154 @@
+name: Live Results (auto)
+
+# The automatic half of PBI 51. live-results.yml does the same job but must be dispatched by
+# hand; this one needs nobody awake.
+#
+# THE TRICK: GitHub drops most scheduled runs (measured: ~24% at hourly, ~5% at */10), so a
+# scheduler-driven poller is hopeless if each run does one fetch. Here each run that DOES fire
+# polls internally for hours. The scheduler only has to succeed ONCE in the session window, not
+# every ten minutes — and across ~16 slots at a ~24% hit rate, at least one landing is close to
+# certain.
+#
+# WHY NOT dispatch live-results.yml instead: a workflow_dispatch sent with the built-in
+# GITHUB_TOKEN does not reliably start a new run (GitHub suppresses token-triggered events to
+# avoid recursion), and doing it properly would mean storing a PAT. Running the loop here needs
+# no token at all.
+#
+# TIMEZONE, the part that is easy to get wrong: these crons are UTC and the races are not.
+# Whistler and Lake Placid are UTC-7 (PDT), so a 06:00 UTC start would cover 23:00-04:00 local
+# and see nothing. DH sessions run roughly 09:00-16:00 local = 16:00-23:00 UTC, so the window
+# below is deliberately late in the UTC day. Re-check this for any round in another timezone.
+
+on:
+  schedule:
+    # Twice an hour across the North American session window, at uncontended minutes (":00" is
+    # the most-dropped slot on GitHub). Cheap: every fire on a non-race day exits at step one.
+    - cron: '8,38 15-23 * * *'
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: 'Override poll budget in minutes (default 240)'
+        required: false
+        type: string
+
+# Shared with live-results.yml on purpose: a hand-dispatched run and an automatic one must never
+# both be pushing results commits. If one is already polling, the other waits — which is correct,
+# because the work is already being done.
+concurrency:
+  group: live-results
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  auto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+
+    steps:
+      # Same windows as fetch-results.yml. A day matching nothing is a no-op, so every step
+      # below is skipped and an idle day costs one shell command.
+      - name: Is a round racing today?
+        id: venue
+        run: |
+          case "$(date -u +%m-%d)" in
+            06-12|06-13) echo "slug=leogang-2026"      >> $GITHUB_OUTPUT ;;
+            06-20|06-21) echo "slug=lenzerheide-2026"  >> $GITHUB_OUTPUT ;;
+            07-0[2-6])   echo "slug=la-thuile-2026"    >> $GITHUB_OUTPUT ;;
+            07-09|07-1[0-3])
+                         echo "slug=pal-arinsal-2026"  >> $GITHUB_OUTPUT ;;
+            08-2[0-4])   echo "slug=les-gets-2026"     >> $GITHUB_OUTPUT ;;
+            08-2[7-9]|08-3[0-1])
+                         echo "slug=val-di-sole-2026"  >> $GITHUB_OUTPUT ;;
+            09-2[3-9])   echo "slug=whistler-2026"     >> $GITHUB_OUTPUT ;;
+            09-30|10-0[1-6])
+                         echo "slug=lake-placid-2026"  >> $GITHUB_OUTPUT ;;
+            *)           echo "slug=unknown"           >> $GITHUB_OUTPUT ;;
+          esac
+
+      - name: Checkout repo
+        if: steps.venue.outputs.slug != 'unknown'
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        if: steps.venue.outputs.slug != 'unknown'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        if: steps.venue.outputs.slug != 'unknown'
+        run: npm ci
+
+      - name: Poll for results until the budget runs out
+        if: steps.venue.outputs.slug != 'unknown'
+        env:
+          VENUE_SLUG: ${{ steps.venue.outputs.slug }}
+          MINUTES:    ${{ inputs.minutes }}
+        run: |
+          # No `set -e`: a transient 5xx from one source must not end a race-day job. Every
+          # fetch may fail, is logged, and is retried on the next pass. Same loop as
+          # live-results.yml — keep the two in step if either changes.
+
+          MINUTES="${MINUTES:-240}"
+          case "$MINUTES" in ''|*[!0-9]*) MINUTES=240 ;; esac
+          [ "$MINUTES" -gt 280 ] && MINUTES=280
+          INTERVAL=120
+
+          YEAR=$(date -u +%Y)
+          DEADLINE=$(( $(date -u +%s) + MINUTES * 60 ))
+
+          git config user.name  "Trackwalk Bot"
+          git config user.email "trackwalk-bot@users.noreply.github.com"
+          BRANCH="${GITHUB_REF_NAME}"
+
+          PASS=0
+          COMMITS=0
+          echo "Auto-polling $VENUE_SLUG for ${MINUTES}m, every ${INTERVAL}s, on $BRANCH."
+
+          while [ "$(date -u +%s)" -lt "$DEADLINE" ]; do
+            PASS=$(( PASS + 1 ))
+            LEFT=$(( (DEADLINE - $(date -u +%s)) / 60 ))
+            echo "::group::Pass $PASS — $(date -u '+%H:%M:%S') UTC (${LEFT}m left)"
+
+            node scripts/chronorace-fetcher.mjs "$YEAR" --merge || echo "  ! chronorace failed this pass"
+            node scripts/tissot-fetcher.mjs    "$YEAR" --merge || echo "  ! tissot failed this pass"
+            node scripts/results-fetcher.mjs   "$VENUE_SLUG"   || echo "  ! results-fetcher failed this pass"
+            node scripts/split-results.js                      || echo "  ! split-results failed this pass"
+
+            git add public/results.json public/results/
+            if git diff --staged --quiet; then
+              echo "  no change"
+            else
+              git commit -q -m "results: $VENUE_SLUG live $(date -u '+%Y-%m-%d %H:%M UTC')"
+              PUSHED=0
+              for attempt in 1 2 3 4 5; do
+                if git pull --rebase -q origin "$BRANCH" && git push -q origin "HEAD:$BRANCH"; then
+                  PUSHED=1; COMMITS=$(( COMMITS + 1 ))
+                  echo "  pushed (attempt $attempt)"
+                  break
+                fi
+                echo "  push attempt $attempt failed — retrying in 10s"
+                sleep 10
+              done
+              [ "$PUSHED" -eq 1 ] || echo "  ! could not push this pass; will retry next pass"
+            fi
+
+            echo "::endgroup::"
+            [ "$(date -u +%s)" -ge "$DEADLINE" ] && break
+            sleep "$INTERVAL"
+          done
+
+          echo "Done: $PASS passes, $COMMITS commits."
+          {
+            echo "### Live results (auto) — $VENUE_SLUG"
+            echo ""
+            echo "| | |"
+            echo "|---|---|"
+            echo "| Passes | $PASS |"
+            echo "| Commits pushed | $COMMITS |"
+            echo "| Budget | ${MINUTES}m at ${INTERVAL}s |"
+            echo "| Finished | $(date -u '+%Y-%m-%d %H:%M UTC') |"
+          } >> "$GITHUB_STEP_SUMMARY"

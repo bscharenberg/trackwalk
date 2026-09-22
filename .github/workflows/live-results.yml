@@ -105,8 +105,9 @@ jobs:
 
             # ChronoRace is the UCI's timing vendor and the only same-day source for a World
             # Series round. Tissot carries World Championships. results-fetcher reads
-            # ucimtbworldseries.com, which has been serving its SPA shell instead of JSON since
-            # before Les Gets — kept in the rotation in case it comes back, never relied on.
+            # ucimtbworldseries.com, which returns valid JSON again as of 2026-09-22 but still
+            # answers every round empty (completed rounds results:null, unraced results:[]) —
+            # kept in the rotation in case real data returns, never relied on.
             node scripts/chronorace-fetcher.mjs "$YEAR" --merge || echo "  ! chronorace failed this pass"
             node scripts/tissot-fetcher.mjs    "$YEAR" --merge || echo "  ! tissot failed this pass"
             node scripts/results-fetcher.mjs   "$VENUE_SLUG"   || echo "  ! results-fetcher failed this pass"

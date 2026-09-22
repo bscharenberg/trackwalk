@@ -97,7 +97,10 @@ jobs:
         continue-on-error: true
         run: node scripts/tissot-fetcher.mjs "$(date -u +%Y)" --merge
 
-      # World Series rounds. ucimtbworldseries.com (the step above) has served its SPA shell
+      # World Series rounds. ucimtbworldseries.com (the step above) no longer serves an SPA shell
+      # — since 2026-09-22 it returns valid JSON — but every round comes back empty (completed
+      # rounds give results:null, unraced ones results:[]), so it is still not a usable source.
+      # The old note said it served its SPA shell
       # instead of JSON since before Les Gets and has not recovered, so for Whistler and Lake
       # Placid this is the only same-day source — Tissot carries World Championships only, and
       # DataRide runs days behind. ChronoRace is the UCI's timing vendor, i.e. upstream of

@@ -824,7 +824,11 @@ Three same-day sources, each covering what the others cannot, plus a delayed bac
 | `chronorace-fetcher.mjs` (results.chronorace.be) | World Series | same |
 | `dataride-fetcher.mjs` (dataride.uci.ch) | everything, days late | dataride-fetch.yml, 6-hourly, `--fill-gaps` only |
 
-ucimtbworldseries.com has served its SPA shell instead of JSON since before Les Gets 2026 and
+ucimtbworldseries.com no longer serves its SPA shell — as of 2026-09-22 it returns valid JSON
+again — but it is still unusable: every round comes back empty. Completed rounds return
+`{"error":false,"results":null}` and unraced ones `{"error":false,"results":[]}`. Checked against
+Les Gets, Haute Savoie and Val di Sole, and against slug variants in case of a rename; all null.
+So the symptom changed but the conclusion did not. The old note said it
 has not recovered. The pipeline no longer depends on it.
 
 `preflight.yml` runs Mondays 12:00 UTC and opens an issue if a round inside a two-week horizon
