@@ -1496,7 +1496,7 @@ html, body {
 
 /* ── Email signup section ── */
 .signup-section {
-  padding: 32px 16px;
+  padding: 24px 16px;
   border-top: 1px solid #222;
   border-bottom: 1px solid #222;
   margin: 8px 0;
@@ -1512,7 +1512,7 @@ html, body {
   color: #888;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px; font-weight: 400;
-  margin: 0 0 24px 0;
+  margin: 0 0 16px 0;
 }
 /* ── Newsletter form (Loops custom endpoint — markup is ours, no overrides needed) ── */
 .signup-form { display: flex; flex-direction: column; }
@@ -1527,7 +1527,7 @@ html, body {
   box-sizing: border-box;
 }
 .signup-form input[type="email"]::placeholder { color: #888; }
-.signup-fieldset { border: none; padding: 0; margin: 20px 0 0 0; }
+.signup-fieldset { border: none; padding: 0; margin: 16px 0 0 0; }
 .signup-legend {
   color: #888;
   font-family: 'Barlow Condensed', sans-serif;
@@ -1661,6 +1661,9 @@ html, body {
     <button id="retry-btn" onclick="loadFeed(true)">Retry</button>
   </div>
   <div id="my-riders-feed"></div>
+  <!-- The feed renders into two containers so the signup can sit at the seam the layout
+       already has (after the shorts strip) without the form ever becoming a JS string.
+       #content holds the hero, the first rows and the strip; #content-rest holds the rest. -->
   <div id="content"></div>
   <div class="signup-section">
     <h2 class="signup-headline">Every round, in your inbox</h2>
@@ -1687,6 +1690,7 @@ html, body {
       <p class="signup-note">No spam, no unread counts. Unsubscribe whenever.</p>
     </form>
   </div>
+  <div id="content-rest"></div>
 
   <div id="updated"></div>
 </div>
@@ -2650,6 +2654,7 @@ function renderFeed() {
     el.innerHTML = `<div style="padding:60px 24px;text-align:center">
       <p style="font-family:'Barlow Condensed';font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">No content available</p>
     </div>`
+    document.getElementById('content-rest').innerHTML = ''
     if (data.builtAt) document.getElementById('updated').textContent = 'Updated ' + timeAgo(data.builtAt)
     return
   }
@@ -2658,24 +2663,38 @@ function renderFeed() {
   const heroIdx = allItems.findIndex(i => i.source !== 'pinkbike' && i._catId !== 'shorts')
   // Shorts strip injects after item index 2 (the 3rd item)
   const stripAfter = 2
+  // The signup goes further down than the strip on purpose. Hanging it straight off the strip
+  // put two full-bleed non-card blocks back to back — a screen and a half with no article in
+  // it, right where a first-time reader is still deciding whether the app is worth the tap.
+  // Three more rows in between restores card → break → card → break.
+  const signupAfter = stripAfter + 3
 
   // The delegated click handler indexes into this, so it must match what was rendered.
   feedItems = allItems
 
-  let html = '<div style="padding:4px 0">'
+  // Everything up to and including the shorts strip goes above the signup; the rest below.
+  // The strip is the one break the layout already makes, so the form lands on a seam the
+  // reader is crossing anyway rather than interrupting a run of cards.
+  let top = '<div style="padding:4px 0">'
+  let rest = '<div style="padding:4px 0">'
   allItems.forEach((item, i) => {
-    html += i === heroIdx ? renderHero(item, true, i) : renderRow(item, true, i)
-    if (i === stripAfter && shortsItems.length) {
-      html += renderShortsStrip(shortsItems)
+    const card = i === heroIdx ? renderHero(item, true, i) : renderRow(item, true, i)
+    if (i <= signupAfter) {
+      top += card
+      if (i === stripAfter && shortsItems.length) top += renderShortsStrip(shortsItems)
+    } else {
+      rest += card
     }
   })
   // If feed has ≤3 items, still append strip at the end
   if (allItems.length <= stripAfter && shortsItems.length) {
-    html += renderShortsStrip(shortsItems)
+    top += renderShortsStrip(shortsItems)
   }
-  html += '</div>'
+  top += '</div>'
+  rest += '</div>'
 
-  el.innerHTML = html
+  el.innerHTML = top
+  document.getElementById('content-rest').innerHTML = rest
   if (data.builtAt) document.getElementById('updated').textContent = 'Updated ' + timeAgo(data.builtAt)
   applySeenState()
   renderNextRound()
@@ -2687,7 +2706,9 @@ function renderFeed() {
 // second copy of cache.json into the DOM — ~95KB across a typical feed — and made the item's
 // own text part of the markup, so a title containing `&#39;` could close the attribute.
 // The card now carries only its index into feedItems.
-document.getElementById('content').addEventListener('click', e => {
+// Bound to BOTH feed containers. The signup sits between them, so cards below it would be
+// dead to a handler attached only to #content.
+function onFeedClick(e) {
   const card = e.target.closest('[data-feed-i], [data-shorts-i]')
   if (!card) return
   if (card.dataset.shortsI !== undefined) {
@@ -2696,7 +2717,9 @@ document.getElementById('content').addEventListener('click', e => {
   }
   const item = feedItems[Number(card.dataset.feedI)]
   if (item) openSheet(item)
-})
+}
+document.getElementById('content').addEventListener('click', onFeedClick)
+document.getElementById('content-rest').addEventListener('click', onFeedClick)
 
 function buildTabs() {
   const tabs = document.getElementById('tabs')
