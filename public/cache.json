@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-22T01:50:30.062Z",
-  "totalItems": 68,
+  "builtAt": "2026-09-22T07:40:23.204Z",
+  "totalItems": 67,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1169,23 +1169,6 @@
           "url": "https://www.youtube.com/watch?v=uiwf6AuyRxw",
           "isShort": false,
           "score": 13,
-          "category": "news"
-        },
-        {
-          "id": "kORUUv1d2OI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Andreas Kob Les Gets 2nd place run  |  26 UCI MTB DH World Series  |",
-          "description": "Andy Kolb does it again, another second place in Les Gets and he bounced back from a difficult start of the 2026 UCI DH MTB World Cup season, congrats Andy!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/kORUUv1d2OI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-23T07:39:44Z",
-          "url": "https://www.youtube.com/watch?v=kORUUv1d2OI",
-          "isShort": false,
-          "score": 10,
           "category": "news"
         }
       ]
