@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-22T17:29:53.783Z",
-  "totalItems": 68,
+  "builtAt": "2026-09-22T20:28:08.849Z",
+  "totalItems": 66,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -310,7 +310,7 @@
           "title": "Seeding Run: iXS Int. Rookies Championships Schladming 2026",
           "description": "The future of downhill racing went against the clock in seeding at the 2026 iXS International Rookies Championships.( Photos: 13, Comments: 1 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30298106/p2pb30298106.jpg",
-          "publishedAt": "2026-09-20T11:39:00.000Z",
+          "publishedAt": "2026-09-20T11:33:00.000Z",
           "url": "https://www.pinkbike.com/news/seeding-run-ixs-int-rookies-championships-schladming-2026.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -854,23 +854,6 @@
           "isShort": false,
           "score": 7,
           "category": "films"
-        },
-        {
-          "id": "M8gRPDbQtg8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCuuLS5B9JraqXiKfYPIBNEw",
-          "channelName": "Sleeper Collective",
-          "title": "LES GETS DH INSANITY | SLEEPER SHREDDIT",
-          "description": "Pick up a SHREDDIT Tee - http://Sleepermerch.com\n\nSpecial thanks to:\n🐴 Man for the insane Chainsaw footage\nhttps://www.instagram.com/mister_freeride/\n\nThumbnails by\nSven Martin\nhttps://www.instagram.com/svenmartinphoto/?hl=en\nDenis Photographer\nhttps://www.instagram.com/dns_explore/?hl=en\n\nwww.sleepercollective.com",
-          "thumbnail": "https://i.ytimg.com/vi/M8gRPDbQtg8/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-23T18:34:09Z",
-          "url": "https://www.youtube.com/watch?v=M8gRPDbQtg8",
-          "isShort": false,
-          "score": 7,
-          "category": "films"
         }
       ]
     },
@@ -887,7 +870,7 @@
           "title": "Beyond Gravity Announces Race Commentary Team for 2027 Event",
           "description": "Rob Warner and Wyn Masters will be in the commentary booth for the Beyond Gravity pay-per-view live broadcast.( Photos: 1, Comments: 72 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29305387/p2pb29305387.jpg",
-          "publishedAt": "2026-09-21T11:50:00.000Z",
+          "publishedAt": "2026-09-21T11:44:00.000Z",
           "url": "https://www.pinkbike.com/news/beyond-gravity-announces-race-commentary-team-for-2027-event.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -1042,9 +1025,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Fox Racing Releases Jackson Goldstone Signature Collection",
-          "description": "It won't make you any faster, but now you can wear the same kit as Jackson Goldstone.( Photos: 6, Comments: 5 )",
+          "description": "It won't make you any faster, but now you can wear the same kit as Jackson Goldstone.( Photos: 6, Comments: 17 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30309925/p2pb30309925.jpg",
-          "publishedAt": "2026-09-22T11:56:00.000Z",
+          "publishedAt": "2026-09-22T11:52:00.000Z",
           "url": "https://www.pinkbike.com/news/video-fox-racing-all-new-jackson-goldstone-signature-collection.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1059,25 +1042,10 @@
           "title": "Video: Remy Metailler Takes a Look at the Whistler World Cup Track",
           "description": "Remy Metailler checks out the updated 1199 track at Whistler ahead of next week's World Cup.( Photos: 4, Comments: 19 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30303968/p2pb30303968.jpg",
-          "publishedAt": "2026-09-20T11:42:00.000Z",
+          "publishedAt": "2026-09-20T11:36:00.000Z",
           "url": "https://www.pinkbike.com/news/video-remy-metailler-takes-a-look-at-the-whistler-world-cup-tracl.html?trk=rss",
           "categories": [],
           "score": 10,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-mud-mayhem-and-silver-world-champs-medals-with-lachie-stevens-mcnab.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Mud Mayhem & Silver World Champs Medals with Lachie Stevens-McNab",
-          "description": "Lachie Stevens-McNab recaps the Les Gets World Cup and the Val di Sole World Championships.( Comments: 3 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30210777/p2pb30210777.jpg",
-          "publishedAt": "2026-09-19T11:36:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-mud-mayhem-and-silver-world-champs-medals-with-lachie-stevens-mcnab.html?trk=rss",
-          "categories": [],
-          "score": 7,
           "category": "news"
         },
         {
