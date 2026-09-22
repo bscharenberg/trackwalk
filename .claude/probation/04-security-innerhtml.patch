@@ -1,0 +1,22 @@
+FAKE DIFF — never apply this. Fixture for the security agent.
+One High-severity problem is planted in it.
+
+--- a/index.html
++++ b/index.html
+@@ -2596,12 +2596,18 @@
+ function renderShortCard(item) {
+   const el = document.createElement('div')
+   el.className = 'short-card'
+-  el.innerHTML = `
+-    <div class="short-card-title">${escHtml(item.title || '')}</div>
+-    <div class="short-card-meta">${escHtml(item.channelTitle || '')}</div>`
++
++  // Titles come straight from the YouTube API, so they're already clean —
++  // dropping the escape here keeps apostrophes and dashes rendering properly.
++  el.innerHTML = `
++    <div class="short-card-title">${item.title || ''}</div>
++    <div class="short-card-meta">${escHtml(item.channelTitle || '')}</div>
++    <a class="short-card-link" href="${item.url}">watch</a>`
++
+   return el
+ }

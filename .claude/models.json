@@ -1,0 +1,23 @@
+{
+  "_comment": "Registry of outside models. Slugs and prices live ONLY here. Verify on openrouter.ai before editing, and update lastTested when you do. costPer1M is USD per 1,000,000 tokens.",
+  "models": {
+    "openai/gpt-6-astra": {
+      "slug": "openai/gpt-6-astra",
+      "provider": "openrouter",
+      "strengths": "Flagship reasoning and coding. Good for long multi-step analysis, reading a lot of code at once, and second opinions on architecture.",
+      "costPer1M": { "input": 10.0, "output": 50.0 },
+      "contextTokens": 1050000,
+      "lastTested": "2026-09-22",
+      "notes": "Default outside model. Priced and verified from the OpenRouter model list on 2026-09-22."
+    },
+    "openai/gpt-6-astra-pro": {
+      "slug": "openai/gpt-6-astra-pro",
+      "provider": "openrouter",
+      "strengths": "Same model in pro reasoning mode. Only for the hardest problems where a normal answer has already fallen short.",
+      "costPer1M": { "input": 10.0, "output": 50.0 },
+      "contextTokens": 1050000,
+      "lastTested": "2026-09-22",
+      "notes": "Same per-token price as the base model, but it thinks far longer, so a real answer costs several times more. Reasoning tokens bill as output."
+    }
+  }
+}

@@ -1,7 +1,10 @@
 .env
 node_modules/
 .DS_Store
-.claude/
+
+# Agent setup in .claude/ is tracked; only local-machine files are ignored.
+.claude/settings.local.json
+.claude/launch.json
 
 # The retired results Worker now lives in archive/helltrack-results/ (not deployed — see the
 # README in that folder). Its source IS tracked; its own .gitignore covers node_modules etc.
