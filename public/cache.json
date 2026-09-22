@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-22T20:28:08.849Z",
+  "builtAt": "2026-09-22T23:15:16.196Z",
   "totalItems": 66,
   "categories": {
     "shorts": {
@@ -837,23 +837,6 @@
           "isShort": false,
           "score": 10,
           "category": "films"
-        },
-        {
-          "id": "IAID1_7wTsk",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "Is this the best we’ve ever seen Downhill racing?!",
-          "description": "Is that the best Downhill racing has ever looked?! I think so anyways, even the French president is posting it’s that epic! \n\nMassive shout out to @lesgetsofficiel for putting on the best @uci_mtbworldseries year after year and also for always keeping it free event entry, I really think other venues could learn from that too.. it does come with a couple of worries though with rumour that a few people were injured in amongst the crowd, we really want to avoid an injury to a rider like they had in the Tour de France this year, but how you control a crowd like that I really have no idea.. anyways all hail the King 👑 of Les Gets @max_alran_5 🙌🏼🙌🏼 \n\n\nshout out to the guys who got these visuals too #longlivedownhill 🎥 @sleeper.co @monsterenergy @lucas_stanus_videos",
-          "thumbnail": "https://i.ytimg.com/vi/IAID1_7wTsk/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-23T20:47:20Z",
-          "url": "https://www.youtube.com/watch?v=IAID1_7wTsk",
-          "isShort": false,
-          "score": 7,
-          "category": "films"
         }
       ]
     },
@@ -1019,13 +1002,30 @@
       "label": "News",
       "items": [
         {
+          "id": "VrcgfqTddlI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "WHISTLER WORLD CUP HITS THE BIKE PARK",
+          "description": "Whistler World Cup is here and we hit the bike park with some all time crews, hit a line, dirt merch, garbanzo zone, goats gully, too mushroom, D1, captain safety and just so many sick laps!\n\nEnjoy sports fans the World Cup is just around the corner!\n\n#bksport #whistlerbikepark",
+          "thumbnail": "https://i.ytimg.com/vi/VrcgfqTddlI/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-22T21:24:06Z",
+          "url": "https://www.youtube.com/watch?v=VrcgfqTddlI",
+          "isShort": false,
+          "score": 8,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-fox-racing-all-new-jackson-goldstone-signature-collection.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Fox Racing Releases Jackson Goldstone Signature Collection",
-          "description": "It won't make you any faster, but now you can wear the same kit as Jackson Goldstone.( Photos: 6, Comments: 17 )",
+          "description": "It won't make you any faster, but now you can wear the same kit as Jackson Goldstone.( Photos: 6, Comments: 32 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30309925/p2pb30309925.jpg",
           "publishedAt": "2026-09-22T11:52:00.000Z",
           "url": "https://www.pinkbike.com/news/video-fox-racing-all-new-jackson-goldstone-signature-collection.html?trk=rss",
