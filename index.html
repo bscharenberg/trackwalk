@@ -1593,7 +1593,7 @@ html, body {
 <div id="header">
   <div id="header-top">
     <div>
-      <div id="logo"><img id="logo-wordmark" src="trackwalk-wordmark.png" alt="Trackwalk"></div>
+      <div id="logo"><img id="logo-wordmark" src="trackwalk-wordmark.png" alt="Trackwalk" width="136" height="32" fetchpriority="high" decoding="async"></div>
       <div id="logo-sub">Downhill Racing</div>
     </div>
     <button id="refresh-btn" aria-label="Refresh feed" onclick="loadFeed(true)">↻</button>
@@ -1868,8 +1868,27 @@ function detectVenue(item) {
   }
 }
 
+// YouTube serves the same still at several sizes and the feed was asking for the largest of
+// them for every card. maxresdefault is ~225KB; the row thumbnails render it 88px wide, so
+// ~95% of those bytes were decoded and thrown away. mqdefault (320px, ~16KB) is already more
+// than a 2x row thumb needs. Only the hero is big enough on screen to justify maxres.
+//
+// Rewriting here rather than in the pipeline means it applies to the cache.json already in
+// everyone's service worker, with no rebuild. mqdefault also exists for every video, while
+// maxresdefault does not, so this incidentally kills a class of broken thumbnails.
+// short-card is a PORTRAIT crop of a landscape still, so it throws away most of the width:
+// mqdefault (320x180) leaves only ~100px of usable source for an 89px-wide slot, which is
+// soft on a 3x phone. hqdefault is the smallest that still looks sharp there.
+const THUMB_SIZE = { 'row-img': 'mqdefault', 'short-card-img': 'hqdefault', 'sheet-img': 'hqdefault' }
+function thumbFor(src, cls) {
+  const want = THUMB_SIZE[cls]
+  if (!want || !src) return src
+  return src.replace(/\/(maxres|sd|hq|mq)default\.jpg/, '/' + want + '.jpg')
+}
+
 function lazyImg(src, cls) {
   if (!src) return ''
+  src = thumbFor(src, cls)
   // src is a third-party URL (YouTube/Pinkbike). Unescaped, a `"` in it closes the
   // attribute and everything after is parsed as markup — i.e. an injected onerror.
   return `<img src="${escAttr(src)}" class="${cls} loading" loading="lazy"
@@ -2585,7 +2604,7 @@ function renderShortsStrip(items) {
   spItems = items
   const cards = items.map((item, i) => {
     const thumb = item.thumbnail
-      ? `<img src="${escAttr(item.thumbnail)}" class="short-card-img loading" loading="lazy"
+      ? `<img src="${escAttr(thumbFor(item.thumbnail, 'short-card-img'))}" class="short-card-img loading" loading="lazy"
            onerror="this.style.display='none'"
            onload="this.classList.remove('loading');this.classList.add('loaded')">`
       : ''
