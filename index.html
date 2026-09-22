@@ -1514,98 +1514,71 @@ html, body {
   font-size: 16px; font-weight: 400;
   margin: 0 0 24px 0;
 }
-/* ── Kit.com form overrides ── */
-.signup-section .formkit-form * {
-  font-family: 'Barlow Condensed', sans-serif !important;
+/* ── Newsletter form (Loops custom endpoint — markup is ours, no overrides needed) ── */
+.signup-form { display: flex; flex-direction: column; }
+.signup-form input[type="email"] {
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #d4f500;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  padding: 12px;
   box-sizing: border-box;
 }
-/* Email input */
-.signup-section .formkit-form .formkit-input[type="email"] {
-  width: 100% !important;
-  background: #111 !important;
-  border: 1px solid #d4f500 !important;
-  border-radius: 0 !important;
-  color: #fff !important;
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-size: 16px !important;
-  padding: 10px 12px !important;
-  outline: none !important;
+.signup-form input[type="email"]::placeholder { color: #888; }
+.signup-fieldset { border: none; padding: 0; margin: 20px 0 0 0; }
+.signup-legend {
+  color: #888;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0; margin-bottom: 10px;
 }
-.signup-section .formkit-form .formkit-input[type="email"]::placeholder {
-  color: #888 !important;
-  font-family: 'Barlow Condensed', sans-serif !important;
+.signup-options { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.signup-option {
+  display: flex; align-items: center; gap: 6px;
+  color: #ccc;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
 }
-/* Fieldset / legend */
-.signup-section .formkit-form fieldset {
-  border: none !important;
-  padding: 0 !important;
-  margin: 24px 0 0 0 !important;
+.signup-option input[type="checkbox"] {
+  appearance: none; -webkit-appearance: none;
+  width: 16px; height: 16px; margin: 0;
+  border: 1px solid #444; background: #1a1a1a;
+  cursor: pointer; position: relative; flex-shrink: 0;
 }
-.signup-section .formkit-form legend {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.1em !important;
-  text-transform: uppercase !important;
-  color: #888 !important;
-  margin-bottom: 8px !important;
+.signup-option input[type="checkbox"]:checked { background: #d4f500; border-color: #d4f500; }
+.signup-option input[type="checkbox"]:checked::after {
+  content: ''; position: absolute; left: 4px; top: 0;
+  width: 5px; height: 10px;
+  border: solid #111; border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
-/* Checkbox rows */
-.signup-section .formkit-form .formkit-checkboxes {
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  margin-bottom: 8px !important;
+.signup-submit {
+  background: #d4f500; color: #111;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  border: none; border-radius: 0;
+  padding: 12px 24px; margin-top: 20px;
+  cursor: pointer;
 }
-.signup-section .formkit-form .formkit-checkbox {
-  appearance: none !important;
-  -webkit-appearance: none !important;
-  width: 16px !important;
-  height: 16px !important;
-  min-width: 16px !important;
-  border: 1px solid #555 !important;
-  background: #111 !important;
-  border-radius: 0 !important;
-  cursor: pointer !important;
-  position: relative !important;
+.signup-submit[disabled] { opacity: 0.5; cursor: default; }
+.signup-note {
+  color: #666;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  margin: 12px 0 0 0;
 }
-.signup-section .formkit-form .formkit-checkbox:checked {
-  background: #d4f500 !important;
-  border-color: #d4f500 !important;
+.signup-result {
+  color: #d4f500;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px; font-weight: 600;
+  margin: 0;
 }
-.signup-section .formkit-form .formkit-checkbox:checked::after {
-  content: '' !important;
-  position: absolute !important;
-  left: 4px !important; top: 1px !important;
-  width: 5px !important; height: 9px !important;
-  border: 2px solid #111 !important;
-  border-top: none !important; border-left: none !important;
-  transform: rotate(45deg) !important;
-}
-.signup-section .formkit-form [data-group="checkbox"] label {
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-size: 18px !important;
-  font-weight: 400 !important;
-  color: #fff !important;
-  cursor: pointer !important;
-  line-height: 1 !important;
-}
-/* Submit button */
-.signup-section .formkit-form .formkit-submit {
-  background: #d4f500 !important;
-  color: #111 !important;
-  font-family: 'Barlow Condensed', sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  border: none !important;
-  border-radius: 0 !important;
-  padding: 12px 24px !important;
-  cursor: pointer !important;
-  box-shadow: none !important;
-  margin-top: 16px !important;
-}
+.signup-error { color: #ff6b6b; font-size: 15px; font-weight: 400; }
 
 /* ── iOS install tip ── */
 @keyframes ios-tip-bounce {
@@ -1690,9 +1663,29 @@ html, body {
   <div id="my-riders-feed"></div>
   <div id="content"></div>
   <div class="signup-section">
-    <h2 class="signup-headline">Make the Cut</h2>
-    <p class="signup-subhead">First on course when new features drop</p>
-    <script defer src="https://f.convertkit.com/ckjs/ck.5.js"></script><form action="https://app.kit.com/forms/9481228/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9481228" data-uid="513bdca50f" data-format="inline" data-version="5" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"></div><div class="formkit-field"><div role="button" tabindex="0"><fieldset data-group="checkboxes" class="formkit-3413" group="field" type="Custom" order="2" save_as="Tag"><legend style="color: rgb(255, 255, 255); font-weight: 700;">What are you interested in?</legend><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773114" type="checkbox" name="tags[]" value="19773114"><label for="tag-3413-19773114">Downhill (DH)</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773117" type="checkbox" name="tags[]" value="19773117"><label for="tag-3413-19773117">Enduro</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773118" type="checkbox" name="tags[]" value="19773118"><label for="tag-3413-19773118">XCO</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773119" type="checkbox" name="tags[]" value="19773119"><label for="tag-3413-19773119">BMX</label></div><div class="formkit-checkboxes" data-element="tags-checkboxes" data-group="checkbox" style="color: rgb(255, 255, 255); border-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><input class="formkit-checkbox" id="tag-3413-19773120" type="checkbox" name="tags[]" value="19773120"><label for="tag-3413-19773120">Road</label></div></fieldset></div></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(17, 17, 17); background-color: rgb(212, 245, 0); border-radius: 4px; font-weight: 700;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">MAKE THE CUT</span></button></div></div></form>
+    <h2 class="signup-headline">Every round, in your inbox</h2>
+    <p class="signup-subhead">You don't have to go looking. Podium, times, and the clips worth watching after every round.</p>
+    <!-- Static HTML posting to the Loops form endpoint. Do not inject this via a JS template
+         literal (see CLAUDE.md). Submission is intercepted in JS only so the reader stays in
+         the app instead of being navigated to Loops' own success page. -->
+    <form class="signup-form" action="https://app.loops.so/api/newsletter-form/cmud7r43m018g0jwx17eid8q3" method="POST">
+      <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required>
+      <fieldset class="signup-fieldset">
+        <legend class="signup-legend">Trackwalk is downhill. Would you want this for anything else?</legend>
+        <div class="signup-options">
+          <label class="signup-option"><input type="checkbox" name="wantEnduro" value="true">Enduro</label>
+          <label class="signup-option"><input type="checkbox" name="wantXco" value="true">XCO</label>
+          <label class="signup-option"><input type="checkbox" name="wantBmx" value="true">BMX</label>
+          <label class="signup-option"><input type="checkbox" name="wantRoad" value="true">Road</label>
+        </div>
+      </fieldset>
+      <!-- Race Recap list (public). `source` is a Loops built-in and is overwritten in JS with
+           ?src= so venue sticker scans can be told apart from ordinary web signups. -->
+      <input type="hidden" name="mailingLists" value="cmud9umn93cjh0jz8a8c78xnk">
+      <input type="hidden" name="source" value="web">
+      <button type="submit" class="signup-submit">Send it</button>
+      <p class="signup-note">No spam, no unread counts. Unsubscribe whenever.</p>
+    </form>
   </div>
 
   <div id="updated"></div>
@@ -2820,28 +2813,62 @@ document.getElementById('install-btn').addEventListener('click', async () => {
 
 window.addEventListener('appinstalled', () => { dismissInstall() })
 
-// Email signup — the one conversion that outlives a race weekend, and the only one that was
-// not measured. The Kit form posts straight to app.kit.com, so GA4 never saw it and signups
-// could not be attributed to a traffic source.
+// Email signup — the one conversion that outlives a race weekend.
 //
-// Hooked by listener, NOT by editing the form: the Kit embed is static HTML that must not be
-// touched (see CLAUDE.md). Listening on document in the capture phase means this fires whether
-// Kit's ck.5.js intercepts the submit via AJAX or the form posts natively, and it survives Kit
-// re-rendering its own markup.
+// The form is static HTML posting to the Loops form endpoint (see CLAUDE.md: never inject the
+// embed via a JS template literal). This handler exists for one reason: a native POST would
+// navigate the reader away to Loops' success page, which is wrong inside a PWA. So we post it
+// ourselves and swap the form for a confirmation in place.
 //
-// NOTE: if the Kit form is ever replaced with another provider, re-point this selector —
-// otherwise signup measurement silently goes to zero.
-document.addEventListener('submit', e => {
+// The selector is the SECTION, not a provider class. The old Kit hook keyed on `.formkit-form`
+// and would have silently gone to zero at this migration. Keyed this way it survives the next one.
+document.addEventListener('submit', async e => {
   const form = e.target
-  if (!form || !form.classList || !form.classList.contains('formkit-form')) return
-  if (typeof gtag !== 'function') return
-  gtag('event', 'email_signup', {
-    // which interest boxes were ticked, so the tag mix is visible in GA4 and not only in Kit
-    interests: [...form.querySelectorAll('input[name="tags[]"]:checked')]
-      .map(i => i.parentElement?.querySelector('label')?.textContent?.trim())
-      .filter(Boolean)
-      .join(',') || 'none',
-  })
+  if (!form || !form.closest || !form.closest('.signup-section')) return
+  e.preventDefault()
+
+  const btn = form.querySelector('.signup-submit')
+  const interests = [...form.querySelectorAll('input[type="checkbox"]:checked')]
+    .map(i => i.parentElement?.textContent?.trim())
+    .filter(Boolean)
+    .join(',') || 'none'
+
+  // Where they came from — ?src=whistler on the sticker QR, so venue handouts can be told
+  // apart from ordinary web traffic in Loops. Defaults to 'web'.
+  const src = form.querySelector('input[name="source"]')
+  if (src) src.value = new URLSearchParams(location.search).get('src') || 'web'
+
+  if (btn) { btn.disabled = true; btn.textContent = 'Sending…' }
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+    const data = await res.json().catch(() => ({}))
+    // Loops rate-limits this endpoint per IP and answers 429. Worth its own message: "try again"
+    // is wrong advice if the real problem is that they need to wait.
+    if (res.status === 429) throw Object.assign(new Error('rate limited'), { rateLimited: true })
+    if (!res.ok || data.success === false) throw new Error(data.message || `HTTP ${res.status}`)
+
+    if (typeof gtag === 'function') gtag('event', 'email_signup', { interests })
+
+    form.outerHTML = '<p class="signup-result">You\'re on the list. See you at the finish line.</p>'
+  } catch (err) {
+    // Never swallow it — a silent failure here looks like a successful signup to the reader.
+    if (btn) { btn.disabled = false; btn.textContent = 'Send it' }
+    let p = form.querySelector('.signup-result')
+    if (!p) {
+      p = document.createElement('p')
+      p.className = 'signup-result signup-error'
+      form.appendChild(p)
+    }
+    p.textContent = err.rateLimited
+      ? 'Too many signups from your network just now. Give it a minute.'
+      : "That didn't go through. Try again in a moment."
+    console.error('signup failed:', err)
+  }
 }, true)
 
 function dismissInstall() {
