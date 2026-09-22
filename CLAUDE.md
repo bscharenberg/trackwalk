@@ -105,7 +105,7 @@ node scripts/split-results.js
 - Cares deeply about DH/MTB culture; the app should feel authentic to that world.
 
 ## Current switchover items (see punchlist.md)
-- Move trackwalk.racing DNS from Porkbun to Cloudflare, then set up Email Routing for hello@trackwalk.racing.
-- Migrate off Kit.com (candidates: MailerLite, Brevo, Loops) and rewrite the welcome sequence. The embed must be static HTML, and the `email_signup` GA hook on `.formkit-form` must be re-pointed.
+- ~~DNS move to Cloudflare~~ and ~~Email Routing for hello@trackwalk.racing~~ are both done (2026-09-22).
+- Migrate off Kit.com and rewrite the welcome sequence. Leading candidate is Loops (1,000 free contacts, welcome flows on the free tier); Brevo is the fallback. MailerLite is out — its free plan dropped to 250 subscribers on 2026-06-16. The embed must be static HTML, and the `email_signup` GA hook keyed on `.formkit-form` (`index.html:2836`) must be re-pointed, ideally to `.signup-section` so the next migration doesn't break it.
 - Retitle the Google feedback form (forms.gle/sRySzSFzzwDyKNrWA).
 - Instagram handle.

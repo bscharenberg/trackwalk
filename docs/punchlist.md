@@ -141,8 +141,8 @@ new-origin lesson. What is left is infrastructure and platform work, none of it 
 
 | Item | Size | Priority | Notes |
 |---|---|---|---|
-| Cloudflare DNS move for trackwalk.racing | S | Medium | Full spec in PBI #50. DNS is on Porkbun; helltrack.app is already on Cloudflare. Unblocks #41. **Not before Whistler/Lake Placid.** |
-| Cloudflare Email Routing for hello@trackwalk.racing | S | Medium | Receiving is not set up yet. Independent of #50 — Email Routing needs the domain on Cloudflare, so in practice this follows the DNS move. |
+| ~~Cloudflare DNS move for trackwalk.racing~~ | S | — | **Done** (confirmed 2026-09-22). Nameservers are `laylah`/`nikon.ns.cloudflare.com`, site proxied through Cloudflare. Unblocked #41. See PBI #50. |
+| ~~Cloudflare Email Routing for hello@trackwalk.racing~~ | S | — | **Done** (verified 2026-09-22). MX points at `route1/2/3.mx.cloudflare.net`, SPF is `v=spf1 include:_spf.mx.cloudflare.net ~all`. Receiving and sending both active. No `_dmarc` record yet — add one when the newsletter platform is chosen, alongside its own SPF/DKIM. |
 | Email platform migration away from Kit.com | M | Medium | Kit's sequence features are paid and the reporting UI is a chore. Platform TBD. **Cheaper before Whistler than after** — every subscriber gained at the launch is one more to migrate. When it changes: `index.html` fires the GA4 `email_signup` event from a listener keyed on `.formkit-form`; re-point that selector or signup measurement silently drops to zero. |
 | Welcome sequence on the new platform | S | Medium | Kit's "fires immediately on signup" automation has to be rebuilt wherever the list lands. |
 | Google Form title still says Helltrack | XS | Low | `forms.gle/sRySzSFzzwDyKNrWA`, linked from the feedback button. Cosmetic, but it is user-visible — the one place a visitor can still see the old name. |
@@ -161,7 +161,7 @@ from Cloudflare long ago, kept only as reference for possible future historical 
 | # | Item | Size | Priority | Description |
 |---|---|---|---|---|
 | 7 | ~~Real PWA icon~~ | — | Done | ~~Replace placeholder HT icon~~ — replaced with chainsaw logo (icon-192.png/icon-512.png, #d4f500), header updated to icon + white wordmark lockup, OG/Twitter meta tags added (2026-06-12). |
-| 41 | Dynamic OG image for video shares (Cloudflare Worker) | S | Low | Static `og:image` can't differ between homepage and `?v=` video shares. Worker (same pattern as helltrack-rss) checks for `?v=` param: if present, injects that video's YouTube thumbnail (`maxresdefault.jpg`, fallback `hqdefault.jpg`) as `og:image` (+ optionally `og:title`); if absent, serves the static brand card. Needs route binding on trackwalk.racing domain (not just workers.dev) — **blocked on #50**, which moves DNS to Cloudflare; Worker routes are impossible while the domain is on Porkbun. Est. ~1 hour once unblocked. Build when share volume justifies it. |
+| 41 | Dynamic OG image for video shares (Cloudflare Worker) | S | Low | Static `og:image` can't differ between homepage and `?v=` video shares. Worker (same pattern as helltrack-rss) checks for `?v=` param: if present, injects that video's YouTube thumbnail (`maxresdefault.jpg`, fallback `hqdefault.jpg`) as `og:image` (+ optionally `og:title`); if absent, serves the static brand card. Needs route binding on trackwalk.racing domain (not just workers.dev) — **unblocked 2026-09-22** when #50 landed; route binding itself is still untested. Est. ~1 hour. Build when share volume justifies it. |
 | 36b | 2024 results quality pass | S | Medium | ~~Re-fetch 2024 data via UCI JSON API~~ — done as part of the 2009–2024 DataRide backfill (2026-06-10). Bielsko-Biała 2024 winner now sourced from DataRide; re-verify against #34. |
 | 34 | Results data accuracy audit | M | Medium | Verify all 2024 round winners against authoritative sources. Podiums spot-checked against known history during the DataRide backfill (all seasons 2009-2024) — looked correct, but a formal audit hasn't been done. |
 | 5 | ~~Historical results 2015–2023~~ | — | Done | ~~Scrape and integrate~~ — superseded by the 2009–2024 UCI DataRide backfill (2026-06-10). See `docs/historical-data.md` §7/§9. |
@@ -180,7 +180,7 @@ from Cloudflare long ago, kept only as reference for possible future historical 
 | 47 | Standings points-source audit | M | Low | `computeStandings()` sums finals `points` only; if UCI awards qualifying/semifinal points (2023+ format) the Standings view undercounts vs official. The `lastRank` tiebreak also stays 999 for anyone who missed the latest round. Verify against official season standings before changing. |
 | 48 | ~~My Riders feed — empty-state prompt~~ | — | Done | ~~First-time visitors never saw the "Your Riders" section~~ — `renderMyRidersFeed()` now always renders the header; when no riders are saved it shows a dashed-border "Pick your 6 →" prompt card that jumps to the Riders tab (`goToRidersTab()`), instead of hiding the section. Deliberately skips loading `results.json` on the empty path so a brand-new visitor's feed load stays cheap. Shipped 2026-07-03 ahead of La Thuile race weekend as an onboarding fix for the My Riders feed's adoption risk. SW cache bumped v8→v9. |
 | 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |
-| 50 | Move trackwalk.racing DNS to Cloudflare | S | Medium | DNS is on Porkbun pointing straight at GitHub Pages; helltrack.app is already on Cloudflare. Unblocks #41 (Worker routes need the domain on Cloudflare), gives custom headers GitHub Pages cannot set, and consolidates two DNS panels into one. Do NOT do this before Whistler/Lake Placid. Full spec below. |
+| ~~50~~ | ~~Move trackwalk.racing DNS to Cloudflare~~ | S | — | **Done** (confirmed 2026-09-22, ahead of the Whistler/Lake Placid hold — it landed without incident). Unblocked #41. Spec and verification below. |
 | 51 | ~~Live results on race day~~ | — | Done | **A+B+C all shipped 2026-09-16.** A: `live-results.yml`, a dispatched job polling internally with no scheduler dependency. B: the app polls the season shard every 60s while the round on screen is In progress and the tab is visible. C: a `#next-round` strip at the top of the feed showing the countdown to the next round, flipping to a tappable "Racing now / Live" state during a race, plus a pulsing dot on the Results tab. End-to-end ChronoRace → user screen is ~2-4 min. |
 
 ### Notes on backlog items
@@ -608,9 +608,12 @@ never fail the results commit — if page generation throws, the results still n
 
 ## PBI 50 — Move trackwalk.racing DNS to Cloudflare
 
-**Status:** Open. Raised 2026-09-15. **Do NOT start before Whistler (09-27) and Lake Placid
-(10-04) are done.** A nameserver change during the launch window is the kind of avoidable risk
-that takes the site down on the one weekend it matters.
+**Status:** **Done** — raised 2026-09-15, landed a few days before 2026-09-22 and verified that
+day. It went ahead of the Whistler/Lake Placid hold below and caused no incident; the hold is kept
+in the text as written for the record, not as live advice.
+
+The remaining hold that still stands is #49 — do not start it before Whistler (09-27) and Lake
+Placid (10-04) are done.
 
 **What:** Move `trackwalk.racing` DNS from Porkbun's nameservers to Cloudflare, keeping GitHub
 Pages as the origin.
@@ -657,12 +660,18 @@ HTTPS. Do not sell this to yourself as a speed win; it is a capability win.
 **File:** no repo changes expected beyond possibly `CNAME`. This is infrastructure. Record the
 outcome in `docs/decisions.md`.
 
-**Done when:**
-- `dig +short NS trackwalk.racing` returns Cloudflare nameservers
-- site serves 200 over HTTPS with a valid cert, no redirect loop, on apex and `www`
-- `robots.txt`, `sitemap.xml` and every `/public/*.json` the app fetches still return 200
-- a Worker route can be bound to `trackwalk.racing/*` (proves #41 is unblocked)
-- helltrack.app → trackwalk.racing 301 still works
+**Done when — verified 2026-09-22:**
+- [x] `dig +short NS trackwalk.racing` → `laylah.ns.cloudflare.com`, `nikon.ns.cloudflare.com`
+- [x] apex serves 200 over HTTPS, no redirect loop; `www` 301s to apex
+- [x] `robots.txt`, `sitemap.xml`, `public/cache.json`, `public/results/index.json` all 200
+- [ ] a Worker route bound to `trackwalk.racing/*` — **not yet tested**; #41 is unblocked in
+      principle but nothing has been bound, so treat this as unproven until #41 is built
+- [x] helltrack.app → trackwalk.racing 301 still works
+
+**Note:** the site is proxied (`server: cloudflare`, `cf-ray` present), but responses still carry
+GitHub Pages' `cache-control: max-age=600`. Reason 2 above — custom headers and long-lived
+immutable caching for the JSON shards — is now *possible* but not *done*. No Transform or
+Response Header Rules have been added yet.
 
 **Watch out for:** doing this and #49 in the same change. Land the DNS move, confirm it is
 boring for a week, then build on it.
