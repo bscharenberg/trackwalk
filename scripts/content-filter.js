@@ -70,7 +70,11 @@ const INCLUDE_KEYWORDS = [
   { terms: ['inside the tape', 'vital raw', 'story of the race', 'wyntv', 'wyn tv',
             'race analysis'], weight: 6 },
   { terms: ['b line', 'mtbws highlights dhi'], weight: 3 },
-  { terms: ['red bull hardline', 'hardline'], weight: 6 },
+  { terms: ['red bull hardline', 'hardline', 'beyond gravity'], weight: 6 },
+  // Broadcast/schedule info — only reaches MIN_SCORE paired with another signal
+  // (e.g. 'world cup'), so an XCO-only "how to watch" article still needs to
+  // clear the exclude list on its own merits.
+  { terms: ['how to watch'], weight: 4 },
   { terms: ['anthill films', 'anthill', 'milliseconds'], weight: 3 },
   { terms: ['track walk', 'course preview', 'track preview', 'course walk'], weight: 3 },
   { terms: ['ghost mode', 'ghosted', 'split times', 'time analysis'], weight: 3 },
@@ -87,7 +91,7 @@ const INCLUDE_KEYWORDS = [
             'benoit coulanges', 'luke meier-smith', 'luke meier smith',
             'max alran', 'till alran', 'loris vergier',
             'ryan pinkerton', 'ronan dunne',
-            'aaron gwin', 'neko mulally'], weight: 6 },
+            'aaron gwin', 'neko mulally', 'remy metailler'], weight: 6 },
   // Paddock/media/legends — post mixed content, need supporting signal
   { terms: ['greg minnaar', 'bernard kerr', 'wyn masters', 'ben cathro',
             'jack moir', 'richie rude', 'isabeau courdurier',
@@ -153,12 +157,21 @@ const EXCLUDE_KEYWORDS = [
             'mathis guay', 'sina frei', 'jenny rissveds', 'evie richards',
             'adrien boichis', 'charlie aldridge', 'chris blevins',
             'christopher blevins', 'mathis azzaro', 'ronja blochlinger',
-            'ronja blöchlinger', 'martina berta'], weight: 10, titleOnly: true },
+            'ronja blöchlinger', 'martina berta', 'kate courtney'], weight: 10, titleOnly: true },
 
   // Explicit XC discipline in title — catches "XC Racing", "XC World Cup" etc.
   // Needed for trusted-source channels (e.g. Just Ride) that occasionally feature
   // XCO athletes; their trust boost can carry an XCO video to threshold otherwise.
-  { terms: ['xc racing', 'xc world cup', 'xc rider'], weight: 10, titleOnly: true },
+  // 'xc world champ' catches UCI's Shorts pattern "X Are XC World Champions" —
+  // bare "XC" (not "XCO") is how UCI abbreviates cross-country in short captions.
+  { terms: ['xc racing', 'xc world cup', 'xc rider', 'xc world champ'], weight: 10, titleOnly: true },
+
+  // Real content signal, not UCI's per-video format-disclaimer boilerplate (which lists
+  // "Cross-country Olympic (XCO)" / "(XCC)", never the bare phrase "cross-country racing").
+  // Checked against full text, not titleOnly — catches paddock/interview content whose
+  // title only gives a rider's first name or a segment name (e.g. "THE B LINE") with no
+  // discipline hint, while the description makes clear it's an XC conversation.
+  { terms: ['cross-country racing', 'cross country racing'], weight: 10 },
 
   // Freeride / slopestyle — not DH world cup
   { terms: ['crankworx slopestyle', 'rampage', 'redbull rampage',
