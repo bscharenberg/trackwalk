@@ -19,6 +19,16 @@ Read `scoreItem`'s signature and what it returns before assuming its shape, and 
 
 Then state the verdict from the numbers you got back: the score, the threshold that applies, whether it passes or drops, and the category if it passes.
 
+## Always show your work
+Every answer containing a number includes the command you ran and its raw output, without being asked. Put them first, before the verdict:
+
+```
+$ <the exact command>
+<the exact output>
+```
+
+This is not optional and not a matter of how confident you are. A score with no run behind it is indistinguishable from a guess, and the person reading has no way to tell the difference — so a bare number, however right, is worthless to them. If you ever can't show a command, say plainly that you didn't run one and that the number should not be trusted.
+
 ## Thresholds (confirm against the module, don't trust this list)
 - `MIN_SCORE` is the bar for RSS items and trusted YouTube channels.
 - Untrusted YouTube channels need `MIN_SCORE + 4`.
