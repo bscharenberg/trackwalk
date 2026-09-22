@@ -1,4 +1,4 @@
-const CACHE_NAME = 'trackwalk-v29'
+const CACHE_NAME = 'trackwalk-v30'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -71,6 +71,15 @@ self.addEventListener('fetch', event => {
   // invisible: the app looks fine, it is just old. 31KB gzipped is worth paying to know you
   // are running current code, and the timeout means a bad connection still opens instantly
   // from cache rather than hanging on the network.
+  //
+  // The timeout was 2500ms, which is the whole budget for a launch that should feel instant.
+  // It is paid in full on a cold PWA open while the phone's radio is still waking up, and the
+  // reader stares at nothing the entire time. 1000ms is comfortably more than the shell needs
+  // on any working connection (measured ~56ms through the SW on wifi, ~200ms TTFB cold), so in
+  // practice this only changes what happens on a bad one: fall back to cache a second and a
+  // half sooner. The cost is that a genuinely slow-but-alive connection now shows the previous
+  // shell and picks up the new one next launch, which is the trade cache-first made all the
+  // time and this makes only under duress.
   if (event.request.mode === 'navigate') {
     event.respondWith(
       caches.open(CACHE_NAME).then(async cache => {
@@ -78,7 +87,7 @@ self.addEventListener('fetch', event => {
         try {
           const res = await Promise.race([
             fetch(event.request),
-            new Promise((_, reject) => setTimeout(() => reject(new Error('slow')), 2500)),
+            new Promise((_, reject) => setTimeout(() => reject(new Error('slow')), 1000)),
           ])
           if (res && res.ok) {
             cache.put('/index.html', res.clone())
