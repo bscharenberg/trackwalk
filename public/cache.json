@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-23T01:45:45.749Z",
+  "builtAt": "2026-09-23T07:42:23.795Z",
   "totalItems": 66,
   "categories": {
     "shorts": {
@@ -310,7 +310,7 @@
           "title": "Seeding Run: iXS Int. Rookies Championships Schladming 2026",
           "description": "The future of downhill racing went against the clock in seeding at the 2026 iXS International Rookies Championships.( Photos: 13, Comments: 1 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30298106/p2pb30298106.jpg",
-          "publishedAt": "2026-09-20T11:33:00.000Z",
+          "publishedAt": "2026-09-20T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/seeding-run-ixs-int-rookies-championships-schladming-2026.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -853,7 +853,7 @@
           "title": "Beyond Gravity Announces Race Commentary Team for 2027 Event",
           "description": "Rob Warner and Wyn Masters will be in the commentary booth for the Beyond Gravity pay-per-view live broadcast.( Photos: 1, Comments: 72 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29305387/p2pb29305387.jpg",
-          "publishedAt": "2026-09-21T11:44:00.000Z",
+          "publishedAt": "2026-09-21T11:42:00.000Z",
           "url": "https://www.pinkbike.com/news/beyond-gravity-announces-race-commentary-team-for-2027-event.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -1019,15 +1019,30 @@
           "category": "news"
         },
         {
+          "id": "https://www.pinkbike.com/news/beyond-gravity-adds-6-world-cup-winning-athletes-to-already-stacked-roster-for-february-event.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Beyond Gravity Adds 6 World Cup Winning Athletes to Already Stacked Roster for February Event",
+          "description": "Finn Iles, Ronan Dunne, Tahnee Seagrave, Amaury Pierron, Luca Shaw, and Aletha Ostgaard will be making the trip to Maydena Bike Park come February.( Photos: 1, Comments: 21 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29305383/p2pb29305383.jpg",
+          "publishedAt": "2026-09-22T11:59:00.000Z",
+          "url": "https://www.pinkbike.com/news/beyond-gravity-adds-6-world-cup-winning-athletes-to-already-stacked-roster-for-february-event.html?trk=rss",
+          "categories": [],
+          "score": 17,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-fox-racing-all-new-jackson-goldstone-signature-collection.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Fox Racing Releases Jackson Goldstone Signature Collection",
-          "description": "It won't make you any faster, but now you can wear the same kit as Jackson Goldstone.( Photos: 6, Comments: 36 )",
+          "description": "It won't make you any faster, but now you can wear the same kit as Jackson Goldstone.( Photos: 6, Comments: 42 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30309925/p2pb30309925.jpg",
-          "publishedAt": "2026-09-22T11:52:00.000Z",
+          "publishedAt": "2026-09-22T11:50:00.000Z",
           "url": "https://www.pinkbike.com/news/video-fox-racing-all-new-jackson-goldstone-signature-collection.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1042,7 +1057,7 @@
           "title": "Video: Remy Metailler Takes a Look at the Whistler World Cup Track",
           "description": "Remy Metailler checks out the updated 1199 track at Whistler ahead of next week's World Cup.( Photos: 4, Comments: 19 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30303968/p2pb30303968.jpg",
-          "publishedAt": "2026-09-20T11:36:00.000Z",
+          "publishedAt": "2026-09-20T11:34:00.000Z",
           "url": "https://www.pinkbike.com/news/video-remy-metailler-takes-a-look-at-the-whistler-world-cup-tracl.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -1131,23 +1146,6 @@
           "url": "https://www.youtube.com/watch?v=6stLc-C4xik",
           "isShort": false,
           "score": 15,
-          "category": "news"
-        },
-        {
-          "id": "uiwf6AuyRxw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "WATCH 'EM FLEX",
-          "description": "What crazy things did you see?\n\nWatch the downhill bikes at the 2026 Les Gets World Cup Downhill flex under maximum compression as they fly through the mud.\n\n#MTB #DH",
-          "thumbnail": "https://i.ytimg.com/vi/uiwf6AuyRxw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-24T02:28:41Z",
-          "url": "https://www.youtube.com/watch?v=uiwf6AuyRxw",
-          "isShort": false,
-          "score": 13,
           "category": "news"
         }
       ]
