@@ -3814,8 +3814,14 @@ function renderNextRound() {
   const next = nextScheduledRound()
   if (!next) { el.style.display = 'none'; return }     // season over — say nothing
 
+  // calendar.json carries ONE date per round and it is finals day, not the first day of
+  // racing. Whistler 2026 is a worked example: the calendar says 09-27, but the track walk
+  // and junior racing are on the 25th and qualifying is the 26th. Counting to the 27th and
+  // labelling it "3 days" would read as stale to anyone standing at the track on Saturday
+  // watching qualifying. Saying "finals" makes the number honest without needing the calendar
+  // to learn about race weekends, which is a bigger change than this is worth.
   const days = daysUntil(next.date)
-  const count = days === 0 ? 'Today' : days === 1 ? 'Tomorrow' : `${days} days`
+  const count = days === 0 ? 'Finals today' : days === 1 ? 'Finals tomorrow' : `Finals in ${days} days`
   el.innerHTML = `<span class="nr-label">Next round</span>
     <span class="nr-venue">${escHtml(next.name)}</span>
     <span class="nr-count">${count}</span>`
