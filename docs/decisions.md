@@ -302,6 +302,96 @@
 - Keep the cron windows wide (they cost one shell command on an idle day) and prefer a
   discovery-based fetcher wherever one exists.
 
+### A 225KB still drawn 88px wide was most of the app's weight (2026-09-22)
+- Reported as "almost 10 seconds waiting after I tapped the PWA icon". Desktop cold load was
+  535ms and warm FCP 748ms, so the symptom was never reproducible here — measuring the payload
+  was what found it, not profiling the launch.
+- The feed requested `maxresdefault.jpg` (224,600 bytes) for every card and rendered it at 88px.
+  61 of 66 cache.json items point at it. `mqdefault` is 15,921 bytes and is already more than a
+  2x row thumb needs. Full scroll: 13.1 MB → 1.3 MB.
+- Fixed at render (`lazyImg()` picks by class) rather than in the pipeline, so it applies to the
+  cache.json already sitting in every installed service worker with no rebuild. `mqdefault` also
+  exists for videos where `maxresdefault` does not, so some broken thumbnails went away too.
+- Lesson: "slow on mobile" is usually bytes, and bytes are measurable without the slow device.
+  Ask what the image is *drawn* at before asking why the page is slow.
+
+### Navigation timeout: 2500ms was the whole budget (2026-09-22)
+- The app shell is network-first so a deploy is never a launch behind. The fallback timeout was
+  2500ms, paid in full on a cold PWA open while the radio is still waking.
+- Cut to 1000ms. The shell needs ~56ms through the SW on wifi and ~200ms TTFB cold, so this only
+  changes behaviour on a bad connection: fall back to cache 1.5s sooner. Confirmed better on
+  cellular, indistinguishable on wifi — which is the point.
+- Related: do NOT bump `CACHE_NAME` for an HTML-only change. The shell is network-first so it
+  reaches clients anyway, and bumping drops every cached thumbnail, undoing the work above.
+
+### The signup sold the roadmap, and nobody could see it anyway (2026-09-22)
+- Old pitch: "Make the Cut — first on course when new features drop". That is a reason to
+  subscribe that only makes sense to the person building it. It also promised a stream of
+  features that would have to keep coming.
+- New pitch is the race recap: the podium, the times, and links to the coverage worth reading.
+  Trackwalk aggregates, it does not write — the recap points at Cathro's Story of the Race, POV
+  runs and the Shreddit rather than competing with them. That is honest, it is generated from
+  data already in the repo (~9 emails a year), and it sends traffic to the people making the work.
+- Deliberately no cadence promise ("nothing in between" was cut): a promise about frequency is
+  the first thing that breaks.
+- Placement: it sat after all 50 cards, so a QR scanner reading three cards never saw it. Now
+  inline, six cards down. The `ux` agent refused the first attempt — hanging it off the shorts
+  strip put two full-bleed non-card blocks back to back, a screen and a half with no article in
+  it. Three rows between them fixed it.
+- Kept the discipline checkboxes against that same agent's advice to cut them for height: they
+  are the only demand signal for the franchise question below, and weak evidence acquired free
+  still beats guessing later.
+
+### Loops over MailerLite and Brevo, custom form over hosted embed (2026-09-22)
+- MailerLite is out: its free plan dropped to **250 subscribers** on 2026-06-16, which one good
+  sticker weekend would exhaust mid-launch. Brevo gives 100k contacts but restricts automation on
+  free — and the automated welcome is the whole requirement. Loops: 1,000 contacts, welcome flows
+  included.
+- Took the **custom form endpoint**, not the hosted embed. The embed ships its own font import and
+  inline styles, which is what produced ~20 `!important` rules fighting Kit's stylesheet. With the
+  endpoint the markup is ours and the overrides are gone.
+- The GA4 hook now keys on `.signup-section`, not a provider class. The old `.formkit-form`
+  selector would have silently zeroed signup measurement at this very migration.
+- `source` is a Loops built-in (defaults to "Form"); only the four `want*` Booleans need creating
+  as custom properties. Properties whose API name does not match are dropped silently.
+
+### calendar.json stores finals day, which reads as stale all weekend (2026-09-22)
+- `calendar.json` carries one date per round and it is finals day. Whistler 2026 is stored as
+  09-27, but the track walk and junior racing are the 25th and qualifying is the 26th. Three
+  sources disagree: ChronoRace reports the event starting 09-25, punchlist said 09-26 → 09-27.
+- A bare "3 days" would read as stale to someone standing at the track on Saturday watching
+  bikes come down. The countdown now says "Finals in N days", which is true on every day of the
+  weekend without teaching the calendar about race weekends. Real fix is PBI 54.
+
+### The docs were three months stale about the thing that matters most (2026-09-22)
+- `CLAUDE.md` and the old project instructions said results were "2024–2026 live, 2015–2023 a
+  backlog item". `public/results/index.json` says 18 seasons, 2009–2026. The backfill closed that
+  on 2026-06-10 and `punchlist.md:167` recorded it — the summaries were just never updated.
+- Same for DNS: three places still said "on Porkbun, not before Whistler" after the move had
+  landed and was serving traffic through Cloudflare.
+- This is why `CLAUDE.md` now leads with "the code is the source of truth, read values from code,
+  not docs", and why the agent probation tests that behaviour explicitly.
+
+### Agent setup (trial) (2026-09-22)
+- Four read-only Claude subagents in `.claude/agents/` named by job, not by model: `product`
+  (scoping, refusing ideas against locked decisions), `ux` (the locked aesthetic), `security`
+  (feed text into innerHTML, the RSS proxy, secrets), `filter` (scores by running
+  `content-filter.js`, never by arithmetic). Commands in `.claude/commands/`: `/scope`, `/review`,
+  `/panel`, `/tryout`, `/filter-test`, `/wrap`, `/probation`.
+- Outside models live only in `.claude/models.json` — `openai/gpt-6-astra` and
+  `openai/gpt-6-astra-pro`, slugs and $10/$50 per 1M verified against OpenRouter's live model
+  list, not recalled. `scripts/ask-model.mjs` bundles CLAUDE.md + docs, prints estimated cost and
+  requires y/n before sending, refuses secret files, and caps output at 4000 tokens. Nothing else
+  hardcodes a model name.
+- `.claude/` was entirely gitignored; now only `settings.local.json` and `launch.json` are.
+- `/probation` runs five fixtures and passed 5/5. Worth keeping: the agents found real things
+  outside their fixtures — dead `ENDURO_SIGNALS` code at `index.html:1832`, and `safeUrl()` at
+  `index.html:2525` which the security agent knew to pair with `escAttr()` for an href.
+- One failure worth remembering: the filter agent first reported a correct score without showing
+  the command it ran. A right number with no run behind it is indistinguishable from a guess, so
+  `filter.md` now requires the command and raw output unprompted. Agent definitions load at
+  session start, so testing an instruction change needs a restart.
+
 ## Deployment Learnings
 
 ### Always stash before pull
