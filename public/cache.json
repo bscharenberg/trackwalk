@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-24T14:24:33.080Z",
-  "totalItems": 66,
+  "builtAt": "2026-09-24T18:39:04.496Z",
+  "totalItems": 64,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -830,21 +830,6 @@
           "category": "paddock"
         },
         {
-          "id": "https://www.pinkbike.com/news/beyond-gravity-announces-race-commentary-team-for-2027-event.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Beyond Gravity Announces Race Commentary Team for 2027 Event",
-          "description": "Rob Warner and Wyn Masters will be in the commentary booth for the Beyond Gravity pay-per-view live broadcast.( Photos: 1, Comments: 72 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29305387/p2pb29305387.jpg",
-          "publishedAt": "2026-09-21T11:33:00.000Z",
-          "url": "https://www.pinkbike.com/news/beyond-gravity-announces-race-commentary-team-for-2027-event.html?trk=rss",
-          "categories": [],
-          "score": 9,
-          "category": "paddock"
-        },
-        {
           "id": "Jym_2urB2rQ",
           "type": "video",
           "source": "youtube",
@@ -993,9 +978,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 Whistler DH World Cup Preview: Rider List, How to Watch & Race Favorites",
-          "description": "Everything you need to know about this weekend's 2026 Downhill World Cup round in Whistler.( Photos: 6, Comments: 54 )",
+          "description": "Everything you need to know about this weekend's 2026 Downhill World Cup round in Whistler.( Photos: 6, Comments: 62 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26985490/p2pb26985490.jpg",
-          "publishedAt": "2026-09-23T11:55:00.000Z",
+          "publishedAt": "2026-09-23T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-whistler-dh-world-cup-preview-rider-list-how-to-watch-and-race-favorites.html?trk=rss",
           "categories": [],
           "score": 15,
@@ -1010,7 +995,7 @@
           "title": "Build Your Team Ahead of Round 9 - 2026 Whistler DH World Cup",
           "description": "Get your team ready for this week's racing.( Photos: 2, Comments: 8 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29633579/p2pb29633579.jpg",
-          "publishedAt": "2026-09-23T11:52:00.000Z",
+          "publishedAt": "2026-09-23T11:48:00.000Z",
           "url": "https://www.pinkbike.com/news/build-your-team-ahead-of-round-9-2026-whistler-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -1040,9 +1025,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Beyond Gravity Adds 6 World Cup Winning Athletes to Already Stacked Roster for February Event",
-          "description": "Finn Iles, Ronan Dunne, Tahnee Seagrave, Amaury Pierron, Luca Shaw, and Aletha Ostgaard will be making the trip to Maydena Bike Park come February.( Photos: 1, Comments: 55 )",
+          "description": "Finn Iles, Ronan Dunne, Tahnee Seagrave, Amaury Pierron, Luca Shaw, and Aletha Ostgaard will be making the trip to Maydena Bike Park come February.( Photos: 1, Comments: 56 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29305383/p2pb29305383.jpg",
-          "publishedAt": "2026-09-22T11:50:00.000Z",
+          "publishedAt": "2026-09-22T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/beyond-gravity-adds-6-world-cup-winning-athletes-to-already-stacked-roster-for-february-event.html?trk=rss",
           "categories": [],
           "score": 17,
@@ -1057,7 +1042,7 @@
           "title": "Fox Racing Releases Jackson Goldstone Signature Collection",
           "description": "It won't make you any faster, but now you can wear the same kit as Jackson Goldstone.( Photos: 6, Comments: 49 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30309925/p2pb30309925.jpg",
-          "publishedAt": "2026-09-22T11:41:00.000Z",
+          "publishedAt": "2026-09-22T11:37:00.000Z",
           "url": "https://www.pinkbike.com/news/video-fox-racing-all-new-jackson-goldstone-signature-collection.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1129,23 +1114,6 @@
           "url": "https://www.youtube.com/watch?v=0HYM_GJtpSA",
           "isShort": false,
           "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "6stLc-C4xik",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "Val di Sole WORLD CHAMPS DOWNHILL BIKES",
-          "description": "Downhill mountain bikes with the sickest custom paint jobs, wraps and anodized bits mean it's World Championships time. John Lawlor delivers the bling!\n\nContents\n0:00 - Truck Parking and Rain Setup\n1:50 - RockShox\n3:10 - Canyon\n4:04 - Atherton\n4:55 - Ronan Dunne / Mondraker\n6:18 - Trek Unbroken\n8:08 - Syndicate\n10:14 - Frameworks / Neko Mulally\n11:24 - Specialized\n11:56 - Commencal",
-          "thumbnail": "https://i.ytimg.com/vi/6stLc-C4xik/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-08-25T17:13:56Z",
-          "url": "https://www.youtube.com/watch?v=6stLc-C4xik",
-          "isShort": false,
-          "score": 15,
           "category": "news"
         }
       ]
