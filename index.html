@@ -240,7 +240,7 @@
   --border-mid: #2a2a2a;
   --text-primary: #e8e8e0;
   --text-secondary: #888880;
-  --text-muted: #444440;
+  --text-muted: #777770;   /* was #444440 — 1.93:1 on #111, unreadable for anyone without perfect eyes */
   --pb-orange: #e05a1e;
   --pb-dim: rgba(224,90,30,0.1);
   --safe-top: env(safe-area-inset-top, 0px);
@@ -376,7 +376,7 @@ html, body {
 .mrf-rank.podium { color: #c0c0c0; }
 .mrf-session-tag {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text-muted); flex-shrink: 0;
 }
 .mrf-badge {
@@ -1050,8 +1050,8 @@ html, body {
 .rs-section { padding:16px 16px 4px; }
 .rs-section-label {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
-  color:#777; margin-bottom:12px;
+  font-size:12px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--text-secondary); margin-bottom:12px;
   display:flex; align-items:center; gap:10px;
 }
 .rs-section-label::after { content:''; flex:1; height:1px; background:var(--border); }
@@ -1068,7 +1068,7 @@ html, body {
   color:var(--pb-orange);
 }
 .rs-state-note {
-  font-weight:400; letter-spacing:0.06em; text-transform:none;
+  font-size:13px; font-weight:400; letter-spacing:0.06em; text-transform:none;
   color:var(--text-secondary);
 }
 
@@ -1138,9 +1138,11 @@ html, body {
 .rs-td-nat {
   font-family:'Barlow Condensed',sans-serif;
   font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
-  color:#666; width:34px;
+  color:var(--text-muted); width:34px;
 }
-.rs-td-name { color:var(--text-primary); font-weight:500; }
+/* Qualified with td: `.rs-table td` is (0,1,1) and beats a bare class, so a plain
+   .rs-td-name rule silently loses the font-size and the name stays at 13px. */
+.rs-table td.rs-td-name { font-size:14px; color:var(--text-primary); font-weight:500; }
 .rs-td-time {
   font-family:'Barlow Condensed',sans-serif;
   font-size:13px; font-variant-numeric:tabular-nums;
@@ -1149,11 +1151,11 @@ html, body {
 .rs-td-gap {
   font-family:'Barlow Condensed',sans-serif;
   font-size:11px; font-variant-numeric:tabular-nums;
-  color:#666; text-align:right; white-space:nowrap; width:48px;
+  color:var(--text-muted); text-align:right; white-space:nowrap; width:48px;
 }
 .rs-td-pts {
   font-family:'Barlow Condensed',sans-serif;
-  font-size:11px; color:#666; text-align:right; width:24px;
+  font-size:11px; color:var(--text-muted); text-align:right; width:24px;
 }
 
 .rs-empty {
