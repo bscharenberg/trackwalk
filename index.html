@@ -3004,6 +3004,16 @@ function buildSeasonBar() {
       return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}" data-slug="${escAttr(r.slug)}"
         onclick="setRound(${i})">${label}</div>`
     }).join('')
+
+    // The bar is chronological and the app opens on the LAST round, so on any season with more
+    // rounds than fit the screen it selected a round and then showed a strip that did not
+    // contain it. Worst exactly when it matters most: the newest round is the furthest right.
+    // scrollLeft rather than scrollIntoView, which would also scroll the page vertically.
+    const act = roundBar.querySelector('.rs-round-pill.active')
+    if (act) {
+      const centred = act.offsetLeft - (roundBar.clientWidth - act.offsetWidth) / 2
+      roundBar.scrollLeft = Math.max(0, centred)
+    }
   }
 }
 
