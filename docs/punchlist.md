@@ -183,7 +183,9 @@ from Cloudflare long ago, kept only as reference for possible future historical 
 | 53 | ~~Signup placement and pitch~~ | — | Done | **Shipped 2026-09-22.** The form sold the roadmap ("first on course when new features drop") and sat after all 50 feed cards, where a QR scanner never reached it. Now sells the race recap and sits inline six cards down. Feed renders into `#content` + `#content-rest` with the static form between them, so the markup never becomes a JS template literal; the click handler is bound to both containers. |
 | 54 | Calendar knows finals day, not race weekend | S | Medium | `calendar.json` carries one date per round and it is **finals day**. Whistler 2026 says 09-27, but the track walk and junior racing are the 25th and qualifying is the 26th. Mitigated for now by labelling the countdown "Finals in N days" (2026-09-22) so it is never wrong mid-weekend. A real fix needs a start and an end date on each round, a `build-calendar.mjs` change, and an upstream source that actually carries the start — unverified that one does. Do after Lake Placid. |
 | 55 | No `_dmarc` record for trackwalk.racing | XS | Medium | SPF and Cloudflare Email Routing are live; DMARC is not. A new sending domain with no DMARC policy is likelier to land in spam, which matters most on the first welcome email a sticker scanner ever receives. `v=DMARC1; p=none; rua=mailto:hello@trackwalk.racing` is the safe start. Do alongside Loops' own DKIM records. |
-| 56 | Loops signup never tested end to end | XS | High | Every test of the form ran with `fetch` stubbed, so the real round trip to Loops has not happened. Sign up with a plus-alias (Loops treats an existing contact as not-new, so the welcome workflow will not fire for an address already in the audience) and confirm: contact created, `source` = `web`/`whistler`, on the Race Recap list, ticked `want*` properties arrive as `true`, welcome email has no `[PREVIEW]` prefix. |
+| ~~56~~ | ~~Loops signup never tested end to end~~ | XS | — | **Done** (2026-09-25). Real signup on the live site confirmed: contact created and the welcome email arrived. |
+| 57 | Search within the feed | S | Medium | **User-requested** (feedback form, 2026-09-25): *"Is there a possibility of adding a search function within the feed? For example, to look for things related to a specific rider or event? Urban racing, WynTV, Aaron Gwin, etc…"* Mostly glue, not new machinery: `feedItems` (`index.html:2675`) is already a flat array of every rendered item carrying title, channelName, source and category, and the search UI exists in Results (`renderRiderSearch()` at `:3290`, `buildRiderIndex()` at `:3178`, CSS at `:1193`). **The trap is expectations, not code.** The feed is 30 days deep (`MAX_AGE_DAYS=30`, 79 items on 2026-09-25); measured against that cache, "gwin" returns 5, "urban" 2, "wyntv" 13. Someone typing a rider name is asking a career question and the feed answers with a month of podcast clips, which reads as broken when the real answer is one tab away. So it must be labelled as scoped ("N in the last 30 days") and must offer a jump into Results search on a rider-name hit — `riderSearchSelected` (`:3992`) already deep-links that way. Two structural cautions: the feed now renders across `#content` + `#content-rest` with the static signup between them, and the Shorts strip indexes into `spItems` by position (`:2610`), so a filtered strip would open the wrong clip — suppress the strip while filtering. Build alongside #45 (venue search); both extend the same sub-view. **Not before Lake Placid (10-04).** |
+| 58 | No safety net for shipping to real users | M | High | Raised 2026-09-25, the day Trackwalk got its first venue traffic. Everything ships from one `index.html`, so any JS error takes the whole app down rather than degrading one feature, and there is currently no test before a push, no alert when the live site throws, and no rehearsed rollback. Every change from here lands in front of users. See the spec below. |
 | 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |
 | ~~50~~ | ~~Move trackwalk.racing DNS to Cloudflare~~ | S | — | **Done** (confirmed 2026-09-22, ahead of the Whistler/Lake Placid hold — it landed without incident). Unblocked #41. Spec and verification below. |
 | 51 | ~~Live results on race day~~ | — | Done | **A+B+C all shipped 2026-09-16.** A: `live-results.yml`, a dispatched job polling internally with no scheduler dependency. B: the app polls the season shard every 60s while the round on screen is In progress and the tab is visible. C: a `#next-round` strip at the top of the feed showing the countdown to the next round, flipping to a tappable "Racing now / Live" state during a race, plus a pulsing dot on the Results tab. End-to-end ChronoRace → user screen is ~2-4 min. |
@@ -857,3 +859,61 @@ node scripts/chronorace-fetcher.mjs 2026 --preflight    # ChronoRace detail
 Known: Whistler (wbd-2026-13) and Lake Placid (wbd-2026-14) return 500 from ChronoRace's
 competition-list as of 2026-08-29. Expected for rounds weeks out — every past round is READY —
 but re-check inside race week.
+
+---
+
+## PBI 58 — A safety net for shipping to real users
+
+**Status:** Open. Raised 2026-09-25, the day Trackwalk first had venue traffic and QR stickers
+pointing at it. Not before Lake Placid (10-04) unless something breaks first.
+
+**What:** Three layers so that a bad push is noticed, ideally prevented, and quickly undone.
+
+**Why:** Everything ships from one `index.html`. A thrown error does not degrade one feature, it
+blanks the app. Until now the only consequence of that was Bryon seeing it. From today there are
+strangers who scanned a sticker, and the current position is: nothing tests a change before it is
+pushed, nothing reports an error from the live site, and rollback has never been rehearsed. Also
+worth naming: the service worker serves the shell network-first, so a broken deploy reaches
+everyone on their next launch rather than being held back by cache — which cuts both ways, since
+a revert reaches them just as fast.
+
+**Logic — in priority order. Layer 1 is worth more than the other two combined.**
+
+1. **Know when it breaks.** Add a `window.addEventListener('error')` and
+   `'unhandledrejection'` handler that forwards to GA4 as a `js_error` event with message, source
+   file and line. GA4 is already on the page (`G-4EY22R6D2J`), so this is a few lines and no new
+   infrastructure. Right now a JS error on a stranger's phone is invisible forever; this makes it
+   a number that shows up in Realtime within minutes. Sample or cap it so one looping error cannot
+   flood the property.
+
+2. **Catch it before pushing.** `scripts/smoke-test.mjs`: load the local page in headless
+   Chromium (Playwright as a devDependency) and assert the things whose failure would be
+   catastrophic and silent — feed renders at least one card, each of the four tabs switches
+   without a console error, the results table renders rows for a known season, the signup form is
+   present with its Loops endpoint, and zero uncaught errors throughout. Run it before every push.
+   Wire it into `preflight.yml` afterwards if it proves useful; local first, because a CI job that
+   cannot block a GitHub Pages deploy is theatre.
+
+3. **Make rollback boring.** Document the exact revert-and-push sequence in `dev-workflow.md`
+   with the real propagation time measured once, so that under pressure it is a copy-paste rather
+   than a decision. Related: consider wrapping `renderFeed()` and the results render in a
+   try/catch that shows a small "couldn't load — reload" state instead of a blank screen, so a
+   future failure degrades rather than disappears.
+
+**Explicitly not doing yet:** a staging environment. A preview deploy on a subdomain is possible
+now that DNS is on Cloudflare, but it is the most work and the least value of the four ideas for
+a one-person project — the smoke test catches the same class of problem earlier and cheaper.
+
+**File:** `index.html` (error handler), new `scripts/smoke-test.mjs`, `package.json`
+(devDependency + script), `docs/dev-workflow.md` (rollback). No data or workflow changes.
+
+**Done when:**
+- A deliberate thrown error on a local build produces a `js_error` event visible in GA4 Realtime
+- `node scripts/smoke-test.mjs` passes on current main, and fails when a render function is
+  deliberately broken — proving it can actually catch something
+- The rollback sequence is written down and has been run once for real, with the propagation
+  time recorded
+- Neither addition changes anything a user sees on a working build
+
+**Watch out for:** the error handler itself becoming the bug. Keep it dependency-free, wrap it in
+its own try/catch, and never let it throw or block rendering.
