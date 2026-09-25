@@ -187,6 +187,7 @@ from Cloudflare long ago, kept only as reference for possible future historical 
 | 57 | Search within the feed | S | Medium | **User-requested** (feedback form, 2026-09-25): *"Is there a possibility of adding a search function within the feed? For example, to look for things related to a specific rider or event? Urban racing, WynTV, Aaron Gwin, etc…"* Mostly glue, not new machinery: `feedItems` (`index.html:2675`) is already a flat array of every rendered item carrying title, channelName, source and category, and the search UI exists in Results (`renderRiderSearch()` at `:3290`, `buildRiderIndex()` at `:3178`, CSS at `:1193`). **The trap is expectations, not code.** The feed is 30 days deep (`MAX_AGE_DAYS=30`, 79 items on 2026-09-25); measured against that cache, "gwin" returns 5, "urban" 2, "wyntv" 13. Someone typing a rider name is asking a career question and the feed answers with a month of podcast clips, which reads as broken when the real answer is one tab away. So it must be labelled as scoped ("N in the last 30 days") and must offer a jump into Results search on a rider-name hit — `riderSearchSelected` (`:3992`) already deep-links that way. Two structural cautions: the feed now renders across `#content` + `#content-rest` with the static signup between them, and the Shorts strip indexes into `spItems` by position (`:2610`), so a filtered strip would open the wrong clip — suppress the strip while filtering. Build alongside #45 (venue search); both extend the same sub-view. **Not before Lake Placid (10-04).** |
 | 58 | No safety net for shipping to real users | M | High | Raised 2026-09-25, the day Trackwalk got its first venue traffic. Everything ships from one `index.html`, so any JS error takes the whole app down rather than degrading one feature, and there is currently no test before a push, no alert when the live site throws, and no rehearsed rollback. Every change from here lands in front of users. See the spec below. |
 | 59 | A round with no results yet is invisible | S | Medium | Raised 2026-09-25 from Bryon's own use at Whistler. The round strip is built from `currentRounds()` (`index.html:2981`), which reads the season shard — so a round exists in the UI only once it has results. During the biggest weekend of the season the round everyone is at is simply absent, and there is nothing saying when it will appear. Bryon: *"would be nice if that was evident from the card."* The data to fix it is already fetched: `calendar.json` carries every round with its slug. **The trap:** `activeRound` is a positional index into `currentRounds()`, and `:3981` does `indexOf(live)` — injecting a scheduled round shifts every index, so this needs the scheduled entry appended and index-safe, or rounds keyed by slug instead of position. Also see #54: the calendar date is finals day, so a card saying "results Sunday" would be wrong for qualifying, which lands Saturday. Do after Lake Placid, with #54. |
+| 60 | Content refresh runs a fraction of the times it is scheduled | S | High | Measured 2026-09-25. `refresh.yml` is `13,43 * * * *` — 48 runs/day. Actual: **6 runs in 26 hours**, gaps of 164-310 minutes. The measurement is sound because `build-cache.js:108` stamps a fresh `builtAt` every build, so `cache.json` always differs and the commit-if-changed guard never suppresses a run: every run leaves a commit, and there were six. GitHub is dropping ~85-90% of the fires, exactly as `live-results.yml`'s header already documents ("crons are best-effort and GitHub drops most of them... tightening the cron makes it worse"). Effect: a Pinkbike article or a YouTube upload can be up to 5 hours stale, worst on the weekends that matter. **Not a quota problem** — `youtube-fetcher.js` uses `playlistItems.list` at 1 unit per channel across 21 channels, roughly 25 units a build against 10,000/day; 5-minute polling would still use under 8,000. See the spec below. |
 | 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |
 | ~~50~~ | ~~Move trackwalk.racing DNS to Cloudflare~~ | S | — | **Done** (confirmed 2026-09-22, ahead of the Whistler/Lake Placid hold — it landed without incident). Unblocked #41. Spec and verification below. |
 | 51 | ~~Live results on race day~~ | — | Done | **A+B+C all shipped 2026-09-16.** A: `live-results.yml`, a dispatched job polling internally with no scheduler dependency. B: the app polls the season shard every 60s while the round on screen is In progress and the tab is visible. C: a `#next-round` strip at the top of the feed showing the countdown to the next round, flipping to a tappable "Racing now / Live" state during a race, plus a pulsing dot on the Results tab. End-to-end ChronoRace → user screen is ~2-4 min. |
@@ -918,3 +919,50 @@ a one-person project — the smoke test catches the same class of problem earlie
 
 **Watch out for:** the error handler itself becoming the bug. Keep it dependency-free, wrap it in
 its own try/catch, and never let it throw or block rendering.
+
+---
+
+## PBI 60 — Make the content refresh actually run
+
+**Status:** Open, raised 2026-09-25. Do not add or edit a workflow during a race weekend; land
+this after Lake Placid (10-04) unless content staleness becomes visibly painful first.
+
+**What:** Stop depending on GitHub's `schedule:` for content freshness.
+
+**Why:** The cron claims twice an hour and delivers roughly once every four. The numbers are in
+the backlog row above. This is the same failure the results pipeline already worked around; the
+content pipeline never got the same treatment.
+
+**Options, cheapest first:**
+
+1. **Manual dispatch** (available today, no code). Run `refresh.yml` by hand, or run
+   `node scripts/build-cache.js` locally and push — identical output to what the bot commits.
+   Fine as a race-weekend stopgap, useless as a system.
+
+2. **Self-polling dispatched job**, the shape `live-results-auto.yml` already proves: one job
+   that loops internally for N hours calling the build every ~10 minutes, instead of trusting N
+   separate fires. Keeps everything inside GitHub, no new credentials. Costs a long-running
+   Actions job, so it suits race weekends rather than every day.
+
+3. **External trigger** (recommended as the durable fix). A Cloudflare Worker Cron Trigger —
+   reliable, unlike GitHub's scheduler — calling GitHub's `repository_dispatch` API every 15
+   minutes, with `refresh.yml` gaining a `repository_dispatch` trigger alongside its existing
+   `schedule`. Cloudflare Workers are already part of this project and the domain is already on
+   Cloudflare. Cost: a fine-grained PAT with Actions write, stored as a Worker secret — the first
+   credential this project holds outside GitHub and `.env`, which is the real reason to think
+   before doing it.
+
+**Recommendation:** 3, with 1 in the meantime. Keep the existing `schedule:` as a backstop when
+the external trigger is in place — two unreliable-ish triggers on the same job are strictly better
+than one, and the build is idempotent.
+
+**Done when:**
+- Measured gap between consecutive `chore: refresh cache` commits is under ~20 minutes for a full
+  day, verified the same way the problem was found (`git log` on the refresh commits)
+- The token, if option 3, is fine-grained, scoped to this repo, Actions-write only, and recorded
+  in the switchover notes so it can be rotated
+- A failed or throttled trigger degrades to the old cadence rather than stopping refreshes
+
+**Watch out for:** double-committing. `refresh.yml` and the results workflows push to the same
+branch; the existing rebase-and-retry logic covers it, but a faster cadence exercises that path
+far more often than it has been exercised so far.
