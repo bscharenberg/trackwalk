@@ -1,112 +1,217 @@
 {
-  "lastUpdated": "2026-05-28",
+  "lastUpdated": "2026-09-25",
   "teams": [
     {
       "name": "Santa Cruz Syndicate",
-      "primary": { "url": "https://www.instagram.com/santacruzsyndicate/", "icon": "instagram" },
-      "secondary": { "url": "https://www.youtube.com/@TheSyndicate/featured", "icon": "youtube" }
+      "primary": {
+        "url": "https://www.instagram.com/santacruzsyndicate/",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://www.youtube.com/@TheSyndicate/featured",
+        "icon": "youtube"
+      }
     },
     {
       "name": "Commencal / Muc-Off",
-      "primary": { "url": "https://www.instagram.com/commencal_mucoff/", "icon": "instagram" },
+      "primary": {
+        "url": "https://www.instagram.com/commencal_mucoff/",
+        "icon": "instagram"
+      },
       "secondary": null
     },
     {
       "name": "Canyon DH Racing",
-      "primary": { "url": "https://www.instagram.com/canyon_mtb/", "icon": "instagram" },
-      "secondary": { "url": "https://www.ucimtbworldseries.com/teams/canyon-dh-racing-2026", "icon": "website" }
+      "primary": {
+        "url": "https://www.instagram.com/canyon_mtb/",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://www.ucimtbworldseries.com/teams/canyon-dh-racing-2026",
+        "icon": "website"
+      }
     },
     {
       "name": "Trek Factory Racing",
-      "primary": { "url": "https://www.instagram.com/trekfactoryracingdh", "icon": "instagram" },
+      "primary": {
+        "url": "https://www.instagram.com/trekfactoryracingdh",
+        "icon": "instagram"
+      },
       "secondary": null
     },
     {
       "name": "Specialized Gravity",
-      "primary": { "url": "https://www.instagram.com/specializedgravity", "icon": "instagram" },
-      "secondary": { "url": "https://www.ucimtbworldseries.com/teams/specialized-gravity-2026", "icon": "website" }
+      "primary": {
+        "url": "https://www.instagram.com/specializedgravity",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://www.ucimtbworldseries.com/teams/specialized-gravity-2026",
+        "icon": "website"
+      }
     },
     {
       "name": "Frameworks Racing / TRP",
-      "primary": { "url": "https://www.instagram.com/frameworksracing/", "icon": "instagram" },
-      "secondary": { "url": "https://rideframeworks.com/", "icon": "website" }
+      "primary": {
+        "url": "https://www.instagram.com/frameworksracing/",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://rideframeworks.com/",
+        "icon": "website"
+      }
     },
     {
       "name": "Mondraker Factory Racing",
-      "primary": { "url": "https://www.instagram.com/mondraker.factory.racing.dh", "icon": "instagram" },
-      "secondary": { "url": "https://mondraker.com/us/en/mondraker-factory-racing", "icon": "website" }
+      "primary": {
+        "url": "https://www.instagram.com/mondraker.factory.racing.dh",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://mondraker.com/us/en/mondraker-factory-racing",
+        "icon": "website"
+      }
     },
     {
       "name": "Pivot Factory Racing",
-      "primary": { "url": "https://www.instagram.com/pivotfactoryracing", "icon": "instagram" },
-      "secondary": { "url": "https://www.pivotcycles.com/en-us/pivot-factory-racing", "icon": "website" }
+      "primary": {
+        "url": "https://www.instagram.com/pivotfactoryracing",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://www.pivotcycles.com/en-us/pivot-factory-racing",
+        "icon": "website"
+      }
     }
   ],
   "media": [
     {
       "name": "Pinkbike",
       "description": "2026 DH race coverage",
-      "primary": { "url": "https://youtube.com/playlist?list=PLQCfPUTFFOknCaIZdaxqOlHObDp6c45ZK&si=Ykh6qgZgjulZbDzt", "icon": "youtube" },
-      "secondary": { "url": "https://www.pinkbike.com/", "icon": "website" }
+      "primary": {
+        "url": "https://youtube.com/playlist?list=PLQCfPUTFFOknCaIZdaxqOlHObDp6c45ZK&si=Ykh6qgZgjulZbDzt",
+        "icon": "youtube"
+      },
+      "secondary": {
+        "url": "https://www.pinkbike.com/",
+        "icon": "website"
+      }
     },
     {
       "name": "Vital MTB",
       "description": "Results and deep tech",
-      "primary": { "url": "https://www.instagram.com/vitalmtb/", "icon": "instagram" },
-      "secondary": { "url": "https://www.youtube.com/vitalMTB", "icon": "youtube" }
+      "primary": {
+        "url": "https://www.instagram.com/vitalmtb/",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://www.youtube.com/vitalMTB",
+        "icon": "youtube"
+      }
     },
     {
       "name": "Fast AF",
       "description": "French DH coverage",
-      "primary": { "url": "https://www.instagram.com/fast.as.french/", "icon": "instagram" },
-      "secondary": { "url": "https://www.youtube.com/@FastAsFrench", "icon": "youtube" }
+      "primary": {
+        "url": "https://www.instagram.com/fast.as.french/",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://www.youtube.com/@FastAsFrench",
+        "icon": "youtube"
+      }
     },
     {
       "name": "Martin Whiteley",
       "description": "Stats and historical context",
-      "primary": { "url": "https://www.instagram.com/captain23mw", "icon": "instagram" },
-      "secondary": { "url": "https://23degrees-sports.com/", "icon": "website" }
+      "primary": {
+        "url": "https://www.instagram.com/captain23mw",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://23degrees-sports.com/",
+        "icon": "website"
+      }
     },
     {
       "name": "Sleeper Collective",
       "description": "Race films",
-      "primary": { "url": "https://www.instagram.com/sleeper.co", "icon": "instagram" },
-      "secondary": { "url": "https://www.youtube.com/@Sleeper.collective", "icon": "youtube" }
+      "primary": {
+        "url": "https://www.instagram.com/sleeper.co",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://www.youtube.com/@Sleeper.collective",
+        "icon": "youtube"
+      }
     },
     {
       "name": "WynTV",
       "description": "Paddock access",
-      "primary": { "url": "https://www.youtube.com/@wyntv6148", "icon": "youtube" },
+      "primary": {
+        "url": "https://www.youtube.com/@wyntv6148",
+        "icon": "youtube"
+      },
       "secondary": null
     },
     {
       "name": "Rob Warner",
       "description": "The voice of DH — commentary and stories",
-      "primary": { "url": "https://www.instagram.com/robwarner970", "icon": "instagram" },
-      "secondary": { "url": "https://www.youtube.com/channel/UCi955Vn7JGqz30PlaMi-QfA", "icon": "youtube" }
+      "primary": {
+        "url": "https://www.instagram.com/robwarner970",
+        "icon": "instagram"
+      },
+      "secondary": {
+        "url": "https://www.youtube.com/channel/UCi955Vn7JGqz30PlaMi-QfA",
+        "icon": "youtube"
+      }
     }
   ],
   "podcasts": [
     {
       "name": "Just Ride",
       "description": "Rob Warner + Eliot Jackson — Red Bull",
-      "primary": { "url": "https://www.youtube.com/@RedBullJustRide", "icon": "youtube" },
-      "secondary": { "url": "https://open.spotify.com/show/03zN67ToY8kd5Rq1zGsQln", "icon": "spotify" }
+      "primary": {
+        "url": "https://www.youtube.com/@RedBullJustRide",
+        "icon": "youtube"
+      },
+      "secondary": {
+        "url": "https://open.spotify.com/show/03zN67ToY8kd5Rq1zGsQln",
+        "icon": "spotify"
+      }
     },
     {
       "name": "Downtime Podcast",
       "description": "DH racing deep dives",
-      "primary": { "url": "https://www.youtube.com/downtimemountainbikepodcast", "icon": "youtube" },
-      "secondary": { "url": "https://open.spotify.com/show/3wr0yy2aq2ZoAPz5537zFW", "icon": "spotify" }
+      "primary": {
+        "url": "https://www.youtube.com/downtimemountainbikepodcast",
+        "icon": "youtube"
+      },
+      "secondary": {
+        "url": "https://open.spotify.com/show/3wr0yy2aq2ZoAPz5537zFW",
+        "icon": "spotify"
+      }
     },
     {
       "name": "The Ride Companion",
       "description": "Olly Wilkins + Davi Birks — DH riders and guests",
-      "primary": { "url": "https://www.youtube.com/@TheRideCompanion", "icon": "youtube" },
-      "secondary": { "url": "https://open.spotify.com/show/66evYlliy7rOpMgvABeBgw", "icon": "spotify" }
+      "primary": {
+        "url": "https://www.youtube.com/@TheRideCompanion",
+        "icon": "youtube"
+      },
+      "secondary": {
+        "url": "https://open.spotify.com/show/66evYlliy7rOpMgvABeBgw",
+        "icon": "spotify"
+      }
     }
   ],
   "uci": [
+    {
+      "name": "Whistler Spectator Map",
+      "description": "Course, fan zones, food, shuttles",
+      "url": "https://public-maps.iventis.co.uk/wbd-26/whistler-spectator-map/index.html",
+      "icon": "website"
+    },
     {
       "name": "Results",
       "description": "Official race results",
