@@ -37,6 +37,15 @@ const CHANNELS = [
   { id: 'UCXqlds5f7B2OOs9vQuevl4A', name: 'Red Bull Bike' },
   { id: 'UC-oqtSrbAwCIB98RZfsdreA', name: 'GoPro Bike' },
 
+  // Broad MTB mags — untrusted, so they need MIN_SCORE + 4. Most of their output is XC,
+  // eMTB and workshop content that scores near zero and drops on its own.
+  { id: 'UCEJsJ1KnRSiNvOQEU8fwFTQ', name: 'MBUK TV' },
+
+  // Fox Racing is a MOTOCROSS channel that occasionally posts MTB. Added for the "How We Roll"
+  // DH team series; an include term carries those titles over the bar. MX titles score 0 and
+  // drop untouched, so nothing else gets in. Series has been dormant since 2024-12.
+  { id: 'UCRuCx-QoX3PbPaM2NEWw-Tw', name: 'Fox Racing' },
+
   // Podcasts / long-form
   { id: 'UCgwpS_N4DQDYsip73rsQ6iA', name: 'Downtime Podcast' },
   { id: 'UCUjYvTWqwm7x6LU8uGLvdxQ', name: 'Just Ride' },

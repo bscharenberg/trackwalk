@@ -46,6 +46,11 @@ const INCLUDE_KEYWORDS = [
   // Downhill season recaps from UCI channel
   { terms: ['downhill season recap', 'dh season recap'], weight: 5 },
 
+  // Named DH series whose titles carry no discipline word of their own. Fox Racing's channel is
+  // mostly motocross, so this is what separates the DH team series from the MX feed: 10 clears
+  // the untrusted bar on its own, and MX titles never match it.
+  { terms: ['how we roll'], weight: 10 },
+
   // Venues — weight 2 so venue alone cannot pass MIN_SCORE=6.
   // Requires at least one other signal to reach threshold.
   // Prevents trail rides, surveys, and FKT articles that mention venues from passing.
