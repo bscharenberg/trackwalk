@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-26T21:25:34.809Z",
+  "lastUpdated": "2026-09-26T21:27:59.861Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -301826,16 +301826,6 @@
               },
               {
                 "rank": null,
-                "name": "Megan Bedard",
-                "nat": "CAN",
-                "team": null,
-                "time": null,
-                "gap": null,
-                "points": null,
-                "dns": true
-              },
-              {
-                "rank": null,
                 "name": "Jess Blewitt",
                 "nat": "NZL",
                 "team": "SCOTT DOWNHILL FACTORY",
@@ -301849,6 +301839,16 @@
                 "name": "Veronika Widmann",
                 "nat": "ITA",
                 "team": "UNNO FACTORY RACING DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Megan Bedard",
+                "nat": "CAN",
+                "team": null,
                 "time": null,
                 "gap": null,
                 "points": null,
@@ -302814,16 +302814,6 @@
               },
               {
                 "rank": null,
-                "name": "Oleksii Pryimachek",
-                "nat": "UKR",
-                "team": null,
-                "time": null,
-                "gap": null,
-                "points": null,
-                "dns": true
-              },
-              {
-                "rank": null,
                 "name": "Oliver Zwar",
                 "nat": "SWE",
                 "team": "ORBEA FMD RACING",
@@ -302837,6 +302827,16 @@
                 "name": "Loïc Bruni",
                 "nat": "FRA",
                 "team": "SPECIALIZED GRAVITY",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Oleksii Pryimachek",
+                "nat": "UKR",
+                "team": null,
                 "time": null,
                 "gap": null,
                 "points": null,
