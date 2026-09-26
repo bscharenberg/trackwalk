@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-26T21:30:24.055Z",
+  "lastUpdated": "2026-09-26T22:41:26.538Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -302814,6 +302814,16 @@
               },
               {
                 "rank": null,
+                "name": "Oliver Zwar",
+                "nat": "SWE",
+                "team": "ORBEA FMD RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
                 "name": "Loïc Bruni",
                 "nat": "FRA",
                 "team": "SPECIALIZED GRAVITY",
@@ -302827,16 +302837,6 @@
                 "name": "Oleksii Pryimachek",
                 "nat": "UKR",
                 "team": null,
-                "time": null,
-                "gap": null,
-                "points": null,
-                "dns": true
-              },
-              {
-                "rank": null,
-                "name": "Oliver Zwar",
-                "nat": "SWE",
-                "team": "ORBEA FMD RACING",
                 "time": null,
                 "gap": null,
                 "points": null,
