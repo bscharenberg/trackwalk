@@ -358,7 +358,9 @@ html, body {
 }
 .mrf-strip::-webkit-scrollbar { display: none; }
 .mrf-card {
-  flex: 0 0 auto; min-width: 128px; max-width: 168px;
+  /* max-width went 168 -> 186 when the Instagram icon joined the top row: at 168 the icon
+     ate enough width to truncate a normal-length name ("JACKSON GOLDS..."). */
+  flex: 0 0 auto; min-width: 128px; max-width: 186px;
   background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 10px;
   padding: 10px 12px; cursor: pointer; -webkit-tap-highlight-color: transparent;
   transition: border-color 0.15s, background 0.15s;
@@ -372,6 +374,14 @@ html, body {
   font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
   color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+.mrf-ig {
+  margin-left: auto; flex-shrink: 0; display: flex; align-items: center;
+  color: var(--text-muted); line-height: 0;
+  /* Tap target: the icon is small, so pad it out without moving the row. */
+  padding: 4px; margin-right: -4px;
+}
+.mrf-ig:hover, .mrf-ig:active { color: var(--acid); }
+.mrf-ig svg { width: 15px; height: 15px; display: block; }
 .mrf-result { display: flex; align-items: baseline; gap: 7px; min-width: 0; }
 .mrf-rank {
   font-family: 'Barlow Condensed', sans-serif;
@@ -3981,8 +3991,16 @@ function renderMyRidersFeed() {
       }
     }
     const nm = String(display).replace(/"/g, '&quot;')
+    // Instagram is already stored per saved rider when they are followed, so this costs no
+    // extra fetch. Riders followed before that field existed simply render no icon.
+    // stopPropagation: the card itself navigates to the rider's history.
+    const igHtml = r.instagram
+      ? `<a class="mrf-ig" href="${escAttr(r.instagram)}" target="_blank" rel="noopener"
+          aria-label="${escAttr(display)} on Instagram"
+          onclick="event.stopPropagation()">${pitsIcon('instagram')}</a>`
+      : ''
     return `<div class="mrf-card" data-name="${nm}" onclick="goToRiderHistory(this.dataset.name)">
-      <div class="mrf-card-top"><span class="mrf-flag">${r.flag || ''}</span><span class="mrf-name">${escHtml(display)}</span></div>
+      <div class="mrf-card-top"><span class="mrf-flag">${r.flag || ''}</span><span class="mrf-name">${escHtml(display)}</span>${igHtml}</div>
       ${resultHtml}
     </div>`
   }).join('')
