@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-23T18:35:34.265Z",
+  "lastUpdated": "2026-09-26T19:56:32.347Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -301598,6 +301598,260 @@
                 "bib": "18",
                 "points": null,
                 "uciId": "10057982944",
+                "dns": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 8,
+          "eventType": "world-cup",
+          "venue": "Whistler",
+          "slug": "whistler-2026",
+          "country": "CAN",
+          "date": "2026-09-27",
+          "source": "chronorace",
+          "sourceRef": "chronorace:wbd-2026-13",
+          "status": null,
+          "fetchedAt": "2026-09-26T19:56:32.139Z",
+          "sessions": {
+            "qualifying-1-women": [
+              {
+                "rank": 1,
+                "name": "Lisa Bouladou",
+                "nat": "FRA",
+                "team": "SANTA CRUZ BURGTEC BY GOODMAN",
+                "time": "4:35.818",
+                "gap": null,
+                "points": 50
+              },
+              {
+                "rank": 2,
+                "name": "Eliana Hulsebosch",
+                "nat": "NZL",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "4:36.406",
+                "gap": "+0.588",
+                "points": 40
+              },
+              {
+                "rank": 3,
+                "name": "Gracey Hemstreet",
+                "nat": "CAN",
+                "team": "NORCO X ADIDAS RACE DIVISION",
+                "time": "4:39.166",
+                "gap": "+3.348",
+                "points": 30
+              },
+              {
+                "rank": 4,
+                "name": "Harriet Harnden",
+                "nat": "GBR",
+                "team": "AON RACING",
+                "time": "4:41.283",
+                "gap": "+5.465",
+                "points": 25
+              },
+              {
+                "rank": 5,
+                "name": "Valentina Höll",
+                "nat": "AUT",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "4:41.308",
+                "gap": "+5.490",
+                "points": 20
+              },
+              {
+                "rank": 6,
+                "name": "Anna Newkirk",
+                "nat": "USA",
+                "team": "FRAMEWORKS RACING / TRP",
+                "time": "4:41.419",
+                "gap": "+5.601",
+                "points": 16
+              },
+              {
+                "rank": 7,
+                "name": "Lisa Baumann",
+                "nat": "SUI",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "4:43.057",
+                "gap": "+7.239",
+                "points": 14
+              },
+              {
+                "rank": 8,
+                "name": "Gloria Scarsi",
+                "nat": "ITA",
+                "team": "MS-RACING",
+                "time": "4:45.124",
+                "gap": "+9.306",
+                "points": 12
+              },
+              {
+                "rank": 9,
+                "name": "Sacha Earnest",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": "4:46.072",
+                "gap": "+10.254",
+                "points": 10
+              },
+              {
+                "rank": 10,
+                "name": "Jenna Hastings",
+                "nat": "NZL",
+                "team": "PIVOT FACTORY RACING",
+                "time": "4:47.395",
+                "gap": "+11.577",
+                "points": 5
+              },
+              {
+                "rank": 11,
+                "name": "Nina Hoffmann",
+                "nat": "GER",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "4:47.877",
+                "gap": "+12.059",
+                "points": null
+              },
+              {
+                "rank": 12,
+                "name": "Tahnee Seagrave",
+                "nat": "GBR",
+                "team": "ORBEA FMD RACING",
+                "time": "4:51.443",
+                "gap": "+15.625",
+                "points": null
+              },
+              {
+                "rank": 13,
+                "name": "Marine Cabirou",
+                "nat": "FRA",
+                "team": "CANYON DH RACING",
+                "time": "4:51.802",
+                "gap": "+15.984",
+                "points": null
+              },
+              {
+                "rank": 14,
+                "name": "Phoebe Gale",
+                "nat": "GBR",
+                "team": "ORBEA FMD RACING",
+                "time": "4:52.531",
+                "gap": "+16.713",
+                "points": null
+              },
+              {
+                "rank": 15,
+                "name": "Kate Hastings",
+                "nat": "NZL",
+                "team": "TEAM HIGH COUNTRY",
+                "time": "4:56.299",
+                "gap": "+20.481",
+                "points": null
+              },
+              {
+                "rank": 16,
+                "name": "Myriam Nicole",
+                "nat": "FRA",
+                "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
+                "time": "4:59.742",
+                "gap": "+23.924",
+                "points": null
+              },
+              {
+                "rank": 17,
+                "name": "Matilda Melton",
+                "nat": "USA",
+                "team": "YETI / FOX FACTORY RACE TEAM",
+                "time": "4:59.766",
+                "gap": "+23.948",
+                "points": null
+              },
+              {
+                "rank": 18,
+                "name": "Frida Helena Rønning",
+                "nat": "NOR",
+                "team": "CRESTLINE SPEED SHOP",
+                "time": "5:00.264",
+                "gap": "+24.446",
+                "points": null
+              },
+              {
+                "rank": 19,
+                "name": "Isla O' Connor",
+                "nat": "CAN",
+                "team": null,
+                "time": "5:24.313",
+                "gap": "+48.495",
+                "points": null
+              },
+              {
+                "rank": 20,
+                "name": "Julia Lofqvist-Traum",
+                "nat": "USA",
+                "team": null,
+                "time": "5:27.017",
+                "gap": "+51.199",
+                "points": null
+              },
+              {
+                "rank": 21,
+                "name": "Kelly Swarens",
+                "nat": "USA",
+                "team": null,
+                "time": "5:46.233",
+                "gap": "+1:10.415",
+                "points": null
+              },
+              {
+                "rank": 22,
+                "name": "Amelia Freeman",
+                "nat": "AUS",
+                "team": null,
+                "time": "6:28.888",
+                "gap": "+1:53.070",
+                "points": null
+              },
+              {
+                "rank": null,
+                "name": "Valentina Roa Sanchez",
+                "nat": "COL",
+                "team": "MS-RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Megan Bedard",
+                "nat": "CAN",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Jess Blewitt",
+                "nat": "NZL",
+                "team": "SCOTT DOWNHILL FACTORY",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Veronika Widmann",
+                "nat": "ITA",
+                "team": "UNNO FACTORY RACING DH",
+                "time": null,
+                "gap": null,
+                "points": null,
                 "dns": true
               }
             ]
