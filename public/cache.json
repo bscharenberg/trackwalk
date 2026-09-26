@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-26T06:09:17.998Z",
-  "totalItems": 85,
+  "builtAt": "2026-09-26T06:36:11.316Z",
+  "totalItems": 87,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -667,7 +667,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 Whistler DH World Cup Timed Training Results",
-          "description": "A soggy timed training session.( Photos: 13, Comments: 26 )",
+          "description": "A soggy timed training session.( Photos: 13, Comments: 27 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-09-25T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-whistler-dh-world-cup-timed-training-results.html?trk=rss",
@@ -720,6 +720,40 @@
           "url": "https://www.pinkbike.com/news/the-world-cup-overall-just-changed-after-a-points-error-was-retroactively-corrected.html?trk=rss",
           "categories": [],
           "score": 7,
+          "category": "results"
+        },
+        {
+          "id": "QiFqM5FsJic",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCgwpS_N4DQDYsip73rsQ6iA",
+          "channelName": "Downtime Podcast",
+          "title": "Loic Bruni Reveals How Serious His Injury Really Was",
+          "description": "Loïc Bruni isn’t finished yet.\n\nSeven years after his last appearance on the Downtime Podcast, one of the defining downhill racers of his generation joins Chris in person at a very different point in his career.\n\nAfter a heavy crash in Loudenvielle brought his 2026 season to an abrupt halt, Loïc is rebuilding from one of the most serious injuries of his career. A badly dislocated wrist required urgent surgery, while questions remain around the nerve issue that may have contributed to his hand unexpectedly coming off the handlebar in the first place.\n\nAt 32, recovery feels different.\n\nLoïc talks candidly about the dark days of being unable to race, struggling with confidence, rebuilding strength and mobility, and trying to balance rehabilitation with life as a new father.\n\nBut retirement is not the plan. Loïc still believes he can win.\n\nWe dive deep into his rivalry with Jackson Goldstone, the 2025 title battle, the redemption of finally stopping Jackson’s winning streak in Andorra, and the heartbreak of losing the overall at Mont-Sainte-Anne without getting the chance to race the final.\n\nThat rivalry still drives him.\n\nLoïc talks about Jackson, Jordan Williams, Finn Iles and Max Alran, why he believes some of the younger riders may have more natural talent, and why he still thinks experience, preparation and work ethic can keep him at the front.\n\nHe explains how he is changing his training, bodyweight, riding position and approach to stay competitive, and why he genuinely believes he is a better racer now than he was in his twenties.\n\nWe also get into the evolution of Specialized Gravity, working alongside Nico Vouilloz, Jack Roure’s influence on his career, and what would have to happen before Loïc seriously considers retirement.\n\nBeyond his own comeback, the conversation opens up into the wider state of downhill.\n\nLoïc gives his thoughts on modern World Cup tracks, why predictable lines may actually be contributing to crashes and inconsistent results, how downhill could learn from Red Bull Hardline, the current broadcast, prize money, rider consultation and what the sport needs to do to attract genuinely mainstream sponsors.\n\nAfter years of winning World Championships, World Cups and overall titles, Loïc Bruni has nothing left to prove.\n\nBut he still has something he wants to prove to himself.\n\nCan Super Bruni come back and win again?\n\n#DownhillMTB #LoicBruni #WorldCupDH\n\nThis episode is supported by Industry Nine. Take a look at what they’re doing: https://www.industrynine.com/\n\nPhoto Credit: Seb Schieck\n\nPodcast Stuff\n\nListener Offers\n\nDowntime listeners can now get 10% off of Stashed Space Rails. Stashed is the ultimate way to sort your bike storage. Their clever design means you can get way more bikes into the same space and easily access whichever one you want to ride that day. If you have 2 or more bikes in your garage, they are definitely worth checking out. Just head to https://www.stashedproducts.com/downtime and use the code DOWNTIME at the checkout for 10% off your entire order. And Just so you know, we get 10% of the sale too, so it’s a win win.\n\nPatreon\n\nYou can support the podcast to help it keep going and improving by heading over to https://www.patreon.com/downtimepodcast/\n\nMerch\n\nIf you want to support the podcast, and represent, then my webstore is the place to head. All products are 100% organic, shipped without plastics, and made with a supply chain that's using renewable energy. So check it out now over at https://downtimepodcast.teemill.com/\n\nNewsletter\n\nIf you want a bit more Downtime in your life, then you can join my newsletter where I’ll provide you with a bit of behind the scenes info on the podcast, interesting bits and pieces from around the mountain bike world, some mini-reviews of products that I’ve been using and like, partner offers and more. You can do that over at https://www.downtimepodcast.com/newsletter/\n\nAre you enjoying the podcast? If so, then don’t forget to follow it. Each episode will get delivered to your device as soon as it’s available and it's totally free. You'll find all the links you need at https://www.downtimepodcast.com/follow-podcast/ You can find us on Apple Podcast, Spotify, Google and most of the podcast apps out there. \n\nOur back catalogue of amazing episodes is available at https://www.downtimepodcast.com/episodes/\n\n#mountainbike #downtimepodcast #mtbpodcast",
+          "thumbnail": "https://i.ytimg.com/vi/QiFqM5FsJic/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-21T17:00:12Z",
+          "url": "https://www.youtube.com/watch?v=QiFqM5FsJic",
+          "isShort": false,
+          "score": 11,
+          "category": "results"
+        },
+        {
+          "id": "_EqQbkUF6V8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCgwpS_N4DQDYsip73rsQ6iA",
+          "channelName": "Downtime Podcast",
+          "title": "Henri Kiefer: Why Speed Isn't Enough to Win",
+          "description": "Henri Kiefer already knows he has the speed to compete with the fastest downhill racers in the world.\n\nThe harder challenge has been learning how to access that speed when the pressure is highest.\n\nIn this episode of the Downtime Podcast, Henri joins Chris to talk about confidence, expectation, visualisation and the mental side of racing at the very top of World Cup downhill.\n\nWe rewind to the 2025 World Championships in Champéry, where Henri arrived with an unusually strong sense of belief and produced one of the biggest rides of his career. At just 20 years old, he took Elite World Championship silver, with only Jackson Goldstone able to beat his time.\n\nHenri explains how GoPro footage, visualisation and confidence helped him prepare, and why he believes a World Championship demands an almost extreme level of self-belief.\n\nFrom there, we go back through his journey from grassroots racing in Germany and the iXS Rookies Cup to the SRAM Young Guns programme, Canyon, and his relationship with three-time World Champion Fabien Barel.\n\nWe discuss Henri's 2023 Junior World Championship victory, his move into Elite racing and the difficult transition from being one of the fastest juniors in the world to lining up against riders he'd spent years watching.\n\nHenri also opens up about the highs and lows of his 2025 season, including mechanicals, missed qualifications, his first Elite World Cup podium, World Championship silver and a run of podium performances that suddenly made everything feel effortless.\n\nThen came injury.\n\nA scaphoid fracture at Mont-Sainte-Anne disrupted his off-season and contributed to a difficult start to 2026. But as Henri explains, the physical setback wasn't the whole problem.\n\nHe'd become too focused on results, comparison and what he believed he should be achieving.\n\nWorking with Fabien, his coach and his father, Henri began changing the way he approached race weekends. The shift quickly paid off with another podium at Leogang and a return to greater consistency.\n\nThroughout the episode, we get into visualisation, routines, reflection, confidence, learning from teammates like Troy Brosnan and Luca Shaw, and the delicate balance between ambition and pressure.\n\nHenri has already been Junior World Champion, stood on Elite World Cup podiums and finished within touching distance of an Elite rainbow jersey.\n\nThe speed isn't the question anymore.\n\nThe challenge is creating the conditions that allow that speed to appear when it matters most.\n\n#DownhillMTB #WorldCupDH #MountainBiking\n\nThis is a paid partnership with Indusry Nine, so thanks to them for making this conversation possible. Take a look at what they’re doing: https://www.industrynine.com/\n\nPhoto Credit: Boris Beyer\n\nPodcast Stuff\n\nListener Offers\n\nDowntime listeners can now get 10% off of Stashed Space Rails. Stashed is the ultimate way to sort your bike storage. Their clever design means you can get way more bikes into the same space and easily access whichever one you want to ride that day. If you have 2 or more bikes in your garage, they are definitely worth checking out. Just head to https://www.stashedproducts.com/downtime and use the code DOWNTIME at the checkout for 10% off your entire order. And Just so you know, we get 10% of the sale too, so it’s a win win.\n\nPatreon\n\nYou can support the podcast to help it keep going and improving by heading over to https://www.patreon.com/downtimepodcast/\n\nMerch\n\nIf you want to support the podcast, and represent, then my webstore is the place to head. All products are 100% organic, shipped without plastics, and made with a supply chain that's using renewable energy. So check it out now over at https://downtimepodcast.teemill.com/\n\nNewsletter\n\nIf you want a bit more Downtime in your life, then you can join my newsletter where I’ll provide you with a bit of behind the scenes info on the podcast, interesting bits and pieces from around the mountain bike world, some mini-reviews of products that I’ve been using and like, partner offers and more. You can do that over at https://www.downtimepodcast.com/newsletter/\n\nAre you enjoying the podcast? If so, then don’t forget to follow it. Each episode will get delivered to your device as soon as it’s available and it's totally free. You'll find all the links you need at https://www.downtimepodcast.com/follow-podcast/ You can find us on Apple Podcast, Spotify, Google and most of the podcast apps out there. \n\nOur back catalogue of amazing episodes is available at https://www.downtimepodcast.com/episodes/\n\n#mountainbike #downtimepodcast #mtbpodcast",
+          "thumbnail": "https://i.ytimg.com/vi/_EqQbkUF6V8/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-09-14T17:00:15Z",
+          "url": "https://www.youtube.com/watch?v=_EqQbkUF6V8",
+          "isShort": false,
+          "score": 12,
           "category": "results"
         },
         {
@@ -979,7 +1013,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Rainy Day Tech Randoms - Whistler DH World Cup 2026",
-          "description": "Rotor covers, big fenders, mud spikes, and more.( Photos: 43, Comments: 13 )",
+          "description": "Rotor covers, big fenders, mud spikes, and more.( Photos: 43, Comments: 15 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30327323/p2pb30327323.jpg",
           "publishedAt": "2026-09-25T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/rainy-day-tech-randoms-whistler-dh-world-cup.html?trk=rss",
