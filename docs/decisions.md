@@ -392,6 +392,73 @@
   `filter.md` now requires the command and raw output unprompted. Agent definitions load at
   session start, so testing an instruction change needs a restart.
 
+### Contrast, not font size, was why the app was hard to read (2026-09-25)
+- Asked as "can we increase font sizes slightly". The `ux` agent audited and found the real fault
+  elsewhere: `--text-muted` was `#444440`, which computes to **1.93:1** against `#111`. AA wants
+  4.5:1 for body text. No font size fixes text that is nearly the same darkness as its background.
+- Now `#777770` (4.19:1). One token covered feed card meta, Your Riders venue names and the Pits
+  descriptions at once. `.rs-td-nat` / `.rs-td-gap` / `.rs-td-pts` were separately hardcoded `#666`
+  (3.29:1) and now route through the same token.
+- The agent proposed `#6a6a64`; computing it showed 3.47:1, still failing. Worth the ten seconds to
+  check an agent's number before shipping it — the recommendation was right, the value was not.
+- CSS gotcha that cost a round trip: `.rs-table td` is specificity (0,1,1) and silently beat a bare
+  `.rs-td-name` rule. The file read as though the change had applied; only the computed style
+  showed it had not. Qualify as `.rs-table td.rs-td-name`.
+
+### Link other people's work, do not embed it (2026-09-25)
+- The UCI/Iventis spectator map is genuinely useful at a venue, and their page sends no
+  `X-Frame-Options` or frame-ancestors CSP, so an iframe would have worked.
+- Absence of a lock is not permission. It is their work, and Trackwalk's posture is pointing at
+  other people's stuff rather than wrapping it in its own chrome.
+- Measurement backed the same conclusion for a second reason: their map is **1.66 MB across 72
+  requests**, and 30 more tile requests after three zoom steps. That is heavier than Trackwalk's
+  entire first screen after the image work. An iframe would have dragged all of it into page load.
+- `SPECTATOR_MAPS` is keyed by **our** round slug rather than deriving their URL. Their slugs are
+  venue-based and disagree with ours (`race-of-south-korea-2026` vs venue naming), and a guessed
+  slug sends someone standing at a venue to a 403 or, worse, another venue's map. Verified the
+  pattern was real before relying on it: real venues 200, a nonsense slug 403.
+
+### Race-day automation worked, and hand-running it is what caused problems (2026-09-25/27)
+- Whistler was the first time `live-results.yml` ran against a live race. It landed qualifying,
+  both Q2 sessions and finals on its own. Qualifying was already committed and pushed before a
+  manual fetch finished, and finals were live 23 minutes before anyone asked for them.
+- Both manual pulls produced rebase conflicts on `public/results/` and `cache.json` instead of
+  results. The workflow has a `concurrency` guard for exactly this; running locally sidesteps it.
+- Lesson: during an active polling window, the correct action is to check whether the poller
+  already has it, not to run the fetchers. Content refresh is the one that genuinely needs a
+  manual nudge (PBI 60) — results do not.
+- Related near-miss: a tool timeout left a `git reset` silently unapplied, and a stale local shard
+  nearly got reported as "finals are not in yet" when they were. A timed-out command needs an
+  explicit re-check, not an assumption that it ran.
+
+### Rider names can carry an article on their own, which is a leak (2026-09-29)
+- A Pinkbike article, "Remy Metailler Checks Out Pennsylvania's Trails", reached the feed. Trail
+  riding, not racing. It scored **exactly 6 against the RSS bar of 6**, entirely on the rider-name
+  weight — nothing in the title or description contributed anything else.
+- The filter already had the right structure and he was in the wrong half of it: weight 6 is for
+  riders whose name alone is DH signal, weight 2 is commented "post mixed content, need supporting
+  signal". Bryon, who knows the channel, described it as mostly Whistler/Squamish trail riding.
+  That is the weight 2 definition.
+- His own channel was unaffected, because he does not put his name in his own video titles — so
+  the rider-name weight never applied there. All nine recent uploads score identically before and
+  after, including the Whistler track video that still passes at 18.
+- Generalisable lesson: on the RSS path the bar is 6, so **any single term weighted 6 is a
+  one-word pass**. `aaron gwin` and `neko mulally` still sit there (PBI 66).
+- Method worth repeating: before shipping, the change was scored against every item in the live
+  cache. Exactly one verdict flipped — the intended one.
+
+### Adding a source is a measurement, not an opinion (2026-09-25/28)
+- Three channels were evaluated by pulling their real uploads and scoring them with the actual
+  filter, not by reasoning about whether they "feel" DH. MBUK passed 1 of 25. Fox Racing passed 0
+  of 25 and is a motocross channel. Métailler passes 1 of 10.
+- That low pass rate is the feature: it means a broad channel can be added for its occasional gems
+  without its routine output reaching the feed.
+- Two candidates were rejected on the same evidence and stayed rejected on re-check: Ben Cathro
+  (0 uploads in 30 days — his content arrives via Pinkbike's RSS anyway, which is already trusted)
+  and Rob Warner (3 uploads, none scoring above 6).
+- `MAX_AGE_DAYS=30` means a dormant channel contributes nothing at all. Fox Racing was added
+  knowing "How We Roll" has not posted since 2024-12; that is a bet, and it was recorded as one.
+
 ## Deployment Learnings
 
 ### Always stash before pull
