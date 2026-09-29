@@ -96,11 +96,11 @@ const INCLUDE_KEYWORDS = [
             'benoit coulanges', 'luke meier-smith', 'luke meier smith',
             'max alran', 'till alran', 'loris vergier',
             'ryan pinkerton', 'ronan dunne',
-            'aaron gwin', 'neko mulally', 'remy metailler'], weight: 6 },
+            'aaron gwin', 'neko mulally'], weight: 6 },
   // Paddock/media/legends — post mixed content, need supporting signal
   { terms: ['greg minnaar', 'bernard kerr', 'wyn masters', 'ben cathro',
             'jack moir', 'richie rude', 'isabeau courdurier',
-            'morgane charre'], weight: 2 },
+            'morgane charre', 'remy metailler', 'rémy métailler'], weight: 2 },
 
   // Equipment — DH specific
   { terms: ['dh bike', 'dh race bike', 'downhill bike', 'dh frame', 'dh fork',
