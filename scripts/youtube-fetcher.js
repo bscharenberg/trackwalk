@@ -46,6 +46,14 @@ const CHANNELS = [
   // drop untouched, so nothing else gets in. Series has been dormant since 2024-12.
   { id: 'UCRuCx-QoX3PbPaM2NEWw-Tw', name: 'Fox Racing' },
 
+  // Rémy Métailler is mostly Whistler/Squamish trail-riding content, not DH racing (confirmed
+  // by Bryon, who knows the channel). Untrusted, so it needs MIN_SCORE + 4 same as the others
+  // here. Measured against the real filter: 9 of his last 10 uploads score 4 or below and drop
+  // on their own. Added for the one that doesn't — race-week, venue-specific World Cup coverage
+  // ("Whistler World Cup DH: The Track Is WAY Harder Than Expected", scored 18) that reached
+  // zero people because his channel was never fetched, confirmed by checking the full feed.
+  { id: 'UC_wCbFZHCh9amfaXXI4yq_g', name: 'Rémy Métailler' },
+
   // Podcasts / long-form
   { id: 'UCgwpS_N4DQDYsip73rsQ6iA', name: 'Downtime Podcast' },
   { id: 'UCUjYvTWqwm7x6LU8uGLvdxQ', name: 'Just Ride' },
