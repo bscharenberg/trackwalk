@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-27T23:12:51.319Z",
+  "lastUpdated": "2026-10-03T18:39:13.191Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -304150,6 +304150,1022 @@
                 "time": "5:03.134",
                 "gap": "+49.729",
                 "points": 30
+              }
+            ]
+          }
+        },
+        {
+          "round": 9,
+          "eventType": "world-cup",
+          "venue": "Lake Placid",
+          "slug": "lake-placid-2026",
+          "country": "USA",
+          "date": "2026-10-04",
+          "source": "chronorace",
+          "sourceRef": "chronorace:wbd-2026-14",
+          "status": null,
+          "fetchedAt": "2026-10-03T18:39:13.120Z",
+          "sessions": {
+            "qualifying-1-men": [
+              {
+                "rank": 1,
+                "name": "Ryan Pinkerton",
+                "nat": "USA",
+                "team": "MONDRAKER FACTORY RACING DH",
+                "time": "3:19.191",
+                "gap": null,
+                "points": null
+              },
+              {
+                "rank": 2,
+                "name": "Lachlan Stevens-McNab",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": "3:20.609",
+                "gap": "+1.418",
+                "points": null
+              },
+              {
+                "rank": 3,
+                "name": "Luke Meier-Smith",
+                "nat": "AUS",
+                "team": "GIANT FACTORY OFF-ROAD TEAM - DH",
+                "time": "3:22.471",
+                "gap": "+3.280",
+                "points": null
+              },
+              {
+                "rank": 4,
+                "name": "Till Alran",
+                "nat": "FRA",
+                "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
+                "time": "3:22.509",
+                "gap": "+3.318",
+                "points": null
+              },
+              {
+                "rank": 5,
+                "name": "Finn Iles",
+                "nat": "CAN",
+                "team": "SPECIALIZED GRAVITY",
+                "time": "3:22.700",
+                "gap": "+3.509",
+                "points": null
+              },
+              {
+                "rank": 6,
+                "name": "Bernard Kerr",
+                "nat": "GBR",
+                "team": "PIVOT FACTORY RACING",
+                "time": "3:22.749",
+                "gap": "+3.558",
+                "points": null
+              },
+              {
+                "rank": 7,
+                "name": "Benoit Coulanges",
+                "nat": "FRA",
+                "team": "SCOTT DOWNHILL FACTORY",
+                "time": "3:22.878",
+                "gap": "+3.687",
+                "points": null
+              },
+              {
+                "rank": 8,
+                "name": "Luca Shaw",
+                "nat": "USA",
+                "team": "CANYON DH RACING",
+                "time": "3:23.013",
+                "gap": "+3.822",
+                "points": null
+              },
+              {
+                "rank": 9,
+                "name": "Oli Clark",
+                "nat": "NZL",
+                "team": "MONDRAKER FACTORY RACING DH",
+                "time": "3:23.332",
+                "gap": "+4.141",
+                "points": null
+              },
+              {
+                "rank": 10,
+                "name": "Loris Vergier",
+                "nat": "FRA",
+                "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
+                "time": "3:23.497",
+                "gap": "+4.306",
+                "points": null
+              },
+              {
+                "rank": 11,
+                "name": "Andreas Kolb",
+                "nat": "AUT",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "3:23.554",
+                "gap": "+4.363",
+                "points": null
+              },
+              {
+                "rank": 12,
+                "name": "Henri Kiefer",
+                "nat": "GER",
+                "team": "CANYON DH RACING",
+                "time": "3:24.353",
+                "gap": "+5.162",
+                "points": null
+              },
+              {
+                "rank": 13,
+                "name": "Martin Maes",
+                "nat": "BEL",
+                "team": "ORBEA FMD RACING",
+                "time": "3:24.384",
+                "gap": "+5.193",
+                "points": null
+              },
+              {
+                "rank": 14,
+                "name": "Dylan Maples",
+                "nat": "USA",
+                "team": "PIVOT FACTORY RACING",
+                "time": "3:24.498",
+                "gap": "+5.307",
+                "points": null
+              },
+              {
+                "rank": 15,
+                "name": "Charlie Hatton",
+                "nat": "GBR",
+                "team": "CONTINENTAL ATHERTON",
+                "time": "3:24.631",
+                "gap": "+5.440",
+                "points": null
+              },
+              {
+                "rank": 16,
+                "name": "Jordan Williams",
+                "nat": "GBR",
+                "team": "SPECIALIZED GRAVITY",
+                "time": "3:24.703",
+                "gap": "+5.512",
+                "points": null
+              },
+              {
+                "rank": 17,
+                "name": "Henry Kerr",
+                "nat": "IRL",
+                "team": "AON RACING",
+                "time": "3:25.045",
+                "gap": "+5.854",
+                "points": null
+              },
+              {
+                "rank": 18,
+                "name": "Matt Walker",
+                "nat": "GBR",
+                "team": "TREK - UNBROKEN DH",
+                "time": "3:25.351",
+                "gap": "+6.160",
+                "points": null
+              },
+              {
+                "rank": 19,
+                "name": "Max Alran",
+                "nat": "FRA",
+                "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
+                "time": "3:25.465",
+                "gap": "+6.274",
+                "points": null
+              },
+              {
+                "rank": 20,
+                "name": "Oisin O'Callaghan",
+                "nat": "IRL",
+                "team": "TREK - UNBROKEN DH",
+                "time": "3:25.473",
+                "gap": "+6.282",
+                "points": null
+              },
+              {
+                "rank": 21,
+                "name": "Richard Rude Jr",
+                "nat": "USA",
+                "team": "YETI / FOX FACTORY RACE TEAM",
+                "time": "3:25.608",
+                "gap": "+6.417",
+                "points": null
+              },
+              {
+                "rank": 22,
+                "name": "Oliver Zwar",
+                "nat": "SWE",
+                "team": "ORBEA FMD RACING",
+                "time": "3:26.062",
+                "gap": "+6.871",
+                "points": null
+              },
+              {
+                "rank": 23,
+                "name": "Danny Hart",
+                "nat": "GBR",
+                "team": "NORCO X ADIDAS RACE DIVISION",
+                "time": "3:26.406",
+                "gap": "+7.215",
+                "points": null
+              },
+              {
+                "rank": 24,
+                "name": "Roger Vieira",
+                "nat": "BRA",
+                "team": "PIVOT FACTORY RACING",
+                "time": "3:26.455",
+                "gap": "+7.264",
+                "points": null
+              },
+              {
+                "rank": 25,
+                "name": "Loris Revelli",
+                "nat": "ITA",
+                "team": null,
+                "time": "3:26.789",
+                "gap": "+7.598",
+                "points": null
+              },
+              {
+                "rank": 26,
+                "name": "Aaron Gwin",
+                "nat": "USA",
+                "team": "FRAMEWORKS RACING / TRP",
+                "time": "3:26.974",
+                "gap": "+7.783",
+                "points": null
+              },
+              {
+                "rank": 27,
+                "name": "Luke Wayman",
+                "nat": "NZL",
+                "team": "CONTINENTAL ATHERTON",
+                "time": "3:27.004",
+                "gap": "+7.813",
+                "points": null
+              },
+              {
+                "rank": 28,
+                "name": "Antoine Pierron",
+                "nat": "FRA",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "3:27.085",
+                "gap": "+7.894",
+                "points": null
+              },
+              {
+                "rank": 29,
+                "name": "Joe Breeden",
+                "nat": "GBR",
+                "team": "NUKEPROOF AXESS RACING",
+                "time": "3:27.151",
+                "gap": "+7.960",
+                "points": null
+              },
+              {
+                "rank": 30,
+                "name": "Ronan Dunne",
+                "nat": "IRL",
+                "team": "MONDRAKER FACTORY RACING DH",
+                "time": "3:27.238",
+                "gap": "+8.047",
+                "points": null
+              },
+              {
+                "rank": 31,
+                "name": "Evan Medcalf",
+                "nat": "USA",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "3:27.256",
+                "gap": "+8.065",
+                "points": null
+              },
+              {
+                "rank": 32,
+                "name": "George Madley",
+                "nat": "GBR",
+                "team": "TEAM HIGH COUNTRY",
+                "time": "3:27.282",
+                "gap": "+8.091",
+                "points": null
+              },
+              {
+                "rank": 33,
+                "name": "Simon Chapelet",
+                "nat": "FRA",
+                "team": "UNNO FACTORY RACING DH",
+                "time": "3:27.474",
+                "gap": "+8.283",
+                "points": null
+              },
+              {
+                "rank": 34,
+                "name": "Jake Polito",
+                "nat": "CAN",
+                "team": "OUTLAW INTENSE RACING",
+                "time": "3:27.629",
+                "gap": "+8.438",
+                "points": null
+              },
+              {
+                "rank": 35,
+                "name": "Troy Brosnan",
+                "nat": "AUS",
+                "team": "CANYON DH RACING",
+                "time": "3:27.651",
+                "gap": "+8.460",
+                "points": null
+              },
+              {
+                "rank": 36,
+                "name": "Stefano Introzzi",
+                "nat": "ITA",
+                "team": null,
+                "time": "3:27.669",
+                "gap": "+8.478",
+                "points": null
+              },
+              {
+                "rank": 37,
+                "name": "Christian Hauser",
+                "nat": "ITA",
+                "team": null,
+                "time": "3:27.845",
+                "gap": "+8.654",
+                "points": null
+              },
+              {
+                "rank": 38,
+                "name": "Nathan Pontvianne",
+                "nat": "FRA",
+                "team": "SANTA CRUZ BURGTEC BY GOODMAN",
+                "time": "3:28.064",
+                "gap": "+8.873",
+                "points": null
+              },
+              {
+                "rank": 39,
+                "name": "Tuhoto-Ariki Pene",
+                "nat": "NZL",
+                "team": "MS-RACING",
+                "time": "3:28.094",
+                "gap": "+8.903",
+                "points": null
+              },
+              {
+                "rank": 40,
+                "name": "Reece Wilson",
+                "nat": "GBR",
+                "team": "AON RACING",
+                "time": "3:28.187",
+                "gap": "+8.996",
+                "points": null
+              },
+              {
+                "rank": 41,
+                "name": "Thibaut Daprela",
+                "nat": "FRA",
+                "team": null,
+                "time": "3:28.344",
+                "gap": "+9.153",
+                "points": null
+              },
+              {
+                "rank": 42,
+                "name": "Antoine Rogge",
+                "nat": "FRA",
+                "team": null,
+                "time": "3:28.633",
+                "gap": "+9.442",
+                "points": null
+              },
+              {
+                "rank": 43,
+                "name": "Dane Jewett",
+                "nat": "CAN",
+                "team": "GIANT FACTORY OFF-ROAD TEAM - DH",
+                "time": "3:29.079",
+                "gap": "+9.888",
+                "points": null
+              },
+              {
+                "rank": 44,
+                "name": "Bode Burke",
+                "nat": "USA",
+                "team": "CRESTLINE SPEED SHOP",
+                "time": "3:29.132",
+                "gap": "+9.941",
+                "points": null
+              },
+              {
+                "rank": 45,
+                "name": "Cole Suetos",
+                "nat": "USA",
+                "team": null,
+                "time": "3:29.706",
+                "gap": "+10.515",
+                "points": null
+              },
+              {
+                "rank": 46,
+                "name": "Benny De Vall",
+                "nat": "CAN",
+                "team": "STOIC RACING",
+                "time": "3:29.805",
+                "gap": "+10.614",
+                "points": null
+              },
+              {
+                "rank": 47,
+                "name": "Austin Dooley",
+                "nat": "USA",
+                "team": null,
+                "time": "3:30.072",
+                "gap": "+10.881",
+                "points": null
+              },
+              {
+                "rank": 48,
+                "name": "Jt Fisher",
+                "nat": "USA",
+                "team": "YETI / FOX FACTORY RACE TEAM",
+                "time": "3:30.153",
+                "gap": "+10.962",
+                "points": null
+              },
+              {
+                "rank": 49,
+                "name": "Daniel Castellanos Liberal",
+                "nat": "ESP",
+                "team": null,
+                "time": "3:30.269",
+                "gap": "+11.078",
+                "points": null
+              },
+              {
+                "rank": 50,
+                "name": "Yannick Baechler",
+                "nat": "SUI",
+                "team": null,
+                "time": "3:30.395",
+                "gap": "+11.204",
+                "points": null
+              },
+              {
+                "rank": 51,
+                "name": "Kasper Woolley",
+                "nat": "CAN",
+                "team": "MS-RACING",
+                "time": "3:30.691",
+                "gap": "+11.500",
+                "points": null
+              },
+              {
+                "rank": 52,
+                "name": "Henry Sherry",
+                "nat": "CAN",
+                "team": null,
+                "time": "3:31.105",
+                "gap": "+11.914",
+                "points": null
+              },
+              {
+                "rank": 53,
+                "name": "Jack Piercy",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:31.274",
+                "gap": "+12.083",
+                "points": null
+              },
+              {
+                "rank": 54,
+                "name": "Jackson Connelly",
+                "nat": "AUS",
+                "team": "THE ALLIANCE",
+                "time": "3:31.517",
+                "gap": "+12.326",
+                "points": null
+              },
+              {
+                "rank": 55,
+                "name": "Asa Vermette",
+                "nat": "USA",
+                "team": "FRAMEWORKS RACING / TRP",
+                "time": "3:31.597",
+                "gap": "+12.406",
+                "points": null
+              },
+              {
+                "rank": 56,
+                "name": "Sebastian Holguin Villa",
+                "nat": "COL",
+                "team": "MS-RACING",
+                "time": "3:32.096",
+                "gap": "+12.905",
+                "points": null
+              },
+              {
+                "rank": 57,
+                "name": "Jed Stanton",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:32.098",
+                "gap": "+12.907",
+                "points": null
+              },
+              {
+                "rank": 58,
+                "name": "Johan Garcin",
+                "nat": "FRA",
+                "team": null,
+                "time": "3:32.339",
+                "gap": "+13.148",
+                "points": null
+              },
+              {
+                "rank": 59,
+                "name": "Davide Palazzari",
+                "nat": "ITA",
+                "team": "UNNO FACTORY RACING DH",
+                "time": "3:32.792",
+                "gap": "+13.601",
+                "points": null
+              },
+              {
+                "rank": 60,
+                "name": "Hudson Tarling",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:33.829",
+                "gap": "+14.638",
+                "points": null
+              },
+              {
+                "rank": 61,
+                "name": "Mylann Falquet",
+                "nat": "FRA",
+                "team": "SANTA CRUZ BURGTEC BY GOODMAN",
+                "time": "3:33.959",
+                "gap": "+14.768",
+                "points": null
+              },
+              {
+                "rank": 62,
+                "name": "Thomas Estaque",
+                "nat": "FRA",
+                "team": "SANTA CRUZ BURGTEC BY GOODMAN",
+                "time": "3:34.134",
+                "gap": "+14.943",
+                "points": null
+              },
+              {
+                "rank": 63,
+                "name": "Christopher Grice",
+                "nat": "USA",
+                "team": null,
+                "time": "3:34.792",
+                "gap": "+15.601",
+                "points": null
+              },
+              {
+                "rank": 64,
+                "name": "Gavin Tomlinson",
+                "nat": "USA",
+                "team": "CRESTLINE SPEED SHOP",
+                "time": "3:35.438",
+                "gap": "+16.247",
+                "points": null
+              },
+              {
+                "rank": 65,
+                "name": "Dakotah Norton",
+                "nat": "USA",
+                "team": "SCOTT DOWNHILL FACTORY",
+                "time": "3:35.496",
+                "gap": "+16.305",
+                "points": null
+              },
+              {
+                "rank": 66,
+                "name": "Alden Pate",
+                "nat": "USA",
+                "team": "CRESTLINE SPEED SHOP",
+                "time": "3:38.229",
+                "gap": "+19.038",
+                "points": null
+              },
+              {
+                "rank": 67,
+                "name": "Samuel Hawkinberry",
+                "nat": "USA",
+                "team": null,
+                "time": "3:38.468",
+                "gap": "+19.277",
+                "points": null
+              },
+              {
+                "rank": 68,
+                "name": "Luca Thurlow",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:39.517",
+                "gap": "+20.326",
+                "points": null
+              },
+              {
+                "rank": 69,
+                "name": "Jakob Jewett",
+                "nat": "CAN",
+                "team": "GIANT FACTORY OFF-ROAD TEAM - DH",
+                "time": "3:39.872",
+                "gap": "+20.681",
+                "points": null
+              },
+              {
+                "rank": 70,
+                "name": "William Pugh",
+                "nat": "GBR",
+                "team": null,
+                "time": "3:40.040",
+                "gap": "+20.849",
+                "points": null
+              },
+              {
+                "rank": 71,
+                "name": "Zac Bradley-Hudson",
+                "nat": "AUS",
+                "team": "TEAM HIGH COUNTRY",
+                "time": "3:42.544",
+                "gap": "+23.353",
+                "points": null
+              },
+              {
+                "rank": 72,
+                "name": "Tyler Ervin",
+                "nat": "USA",
+                "team": null,
+                "time": "3:43.513",
+                "gap": "+24.322",
+                "points": null
+              },
+              {
+                "rank": 73,
+                "name": "Matthew Empey",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:44.849",
+                "gap": "+25.658",
+                "points": null
+              },
+              {
+                "rank": 74,
+                "name": "Bergen O’Neill",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:46.548",
+                "gap": "+27.357",
+                "points": null
+              },
+              {
+                "rank": 75,
+                "name": "Braedyn Davis",
+                "nat": "USA",
+                "team": null,
+                "time": "3:51.282",
+                "gap": "+32.091",
+                "points": null
+              },
+              {
+                "rank": 76,
+                "name": "Bodie Terrill",
+                "nat": "AUS",
+                "team": null,
+                "time": "3:55.982",
+                "gap": "+36.791",
+                "points": null
+              },
+              {
+                "rank": 77,
+                "name": "Loïs Henry",
+                "nat": "FRA",
+                "team": null,
+                "time": "3:56.890",
+                "gap": "+37.699",
+                "points": null
+              },
+              {
+                "rank": 78,
+                "name": "Jackson Goldstone",
+                "nat": "CAN",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "4:09.263",
+                "gap": "+50.072",
+                "points": null
+              },
+              {
+                "rank": 79,
+                "name": "Ethan Craik",
+                "nat": "GBR",
+                "team": "SCOTT DOWNHILL FACTORY",
+                "time": "4:35.236",
+                "gap": "+1:16.045",
+                "points": null
+              },
+              {
+                "rank": 80,
+                "name": "Oliver Davis",
+                "nat": "AUS",
+                "team": "TREK - UNBROKEN DH",
+                "time": "6:39.900",
+                "gap": "+3:20.709",
+                "points": null
+              },
+              {
+                "rank": 81,
+                "name": "Luke Williamson",
+                "nat": "GBR",
+                "team": null,
+                "time": "7:17.881",
+                "gap": "+3:58.690",
+                "points": null
+              },
+              {
+                "rank": null,
+                "name": "Amaury Pierron",
+                "nat": "FRA",
+                "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Ryder Lawrence",
+                "nat": "USA",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dnf": true
+              },
+              {
+                "rank": null,
+                "name": "Loïc Bruni",
+                "nat": "FRA",
+                "team": "SPECIALIZED GRAVITY",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Michael Delesalle",
+                "nat": "CAN",
+                "team": "FRAMEWORKS RACING / TRP",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Tetsuma Haguchi",
+                "nat": "JPN",
+                "team": null,
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              }
+            ],
+            "qualifying-1-women": [
+              {
+                "rank": 1,
+                "name": "Lisa Bouladou",
+                "nat": "FRA",
+                "team": "SANTA CRUZ BURGTEC BY GOODMAN",
+                "time": "3:53.175",
+                "gap": null,
+                "points": null
+              },
+              {
+                "rank": 2,
+                "name": "Valentina Höll",
+                "nat": "AUT",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "3:53.209",
+                "gap": "+0.034",
+                "points": null
+              },
+              {
+                "rank": 3,
+                "name": "Anna Newkirk",
+                "nat": "USA",
+                "team": "FRAMEWORKS RACING / TRP",
+                "time": "3:54.699",
+                "gap": "+1.524",
+                "points": null
+              },
+              {
+                "rank": 4,
+                "name": "Tahnee Seagrave",
+                "nat": "GBR",
+                "team": "ORBEA FMD RACING",
+                "time": "3:55.065",
+                "gap": "+1.890",
+                "points": null
+              },
+              {
+                "rank": 5,
+                "name": "Harriet Harnden",
+                "nat": "GBR",
+                "team": "AON RACING",
+                "time": "3:55.198",
+                "gap": "+2.023",
+                "points": null
+              },
+              {
+                "rank": 6,
+                "name": "Marine Cabirou",
+                "nat": "FRA",
+                "team": "CANYON DH RACING",
+                "time": "3:55.942",
+                "gap": "+2.767",
+                "points": null
+              },
+              {
+                "rank": 7,
+                "name": "Nina Hoffmann",
+                "nat": "GER",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "3:57.210",
+                "gap": "+4.035",
+                "points": null
+              },
+              {
+                "rank": 8,
+                "name": "Phoebe Gale",
+                "nat": "GBR",
+                "team": "ORBEA FMD RACING",
+                "time": "3:58.033",
+                "gap": "+4.858",
+                "points": null
+              },
+              {
+                "rank": 9,
+                "name": "Myriam Nicole",
+                "nat": "FRA",
+                "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
+                "time": "3:58.608",
+                "gap": "+5.433",
+                "points": null
+              },
+              {
+                "rank": 10,
+                "name": "Lisa Baumann",
+                "nat": "SUI",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "3:59.977",
+                "gap": "+6.802",
+                "points": null
+              },
+              {
+                "rank": 11,
+                "name": "Sacha Earnest",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": "4:00.038",
+                "gap": "+6.863",
+                "points": null
+              },
+              {
+                "rank": 12,
+                "name": "Gloria Scarsi",
+                "nat": "ITA",
+                "team": "MS-RACING",
+                "time": "4:00.950",
+                "gap": "+7.775",
+                "points": null
+              },
+              {
+                "rank": 13,
+                "name": "Jenna Hastings",
+                "nat": "NZL",
+                "team": "PIVOT FACTORY RACING",
+                "time": "4:01.805",
+                "gap": "+8.630",
+                "points": null
+              },
+              {
+                "rank": 14,
+                "name": "Gracey Hemstreet",
+                "nat": "CAN",
+                "team": "NORCO X ADIDAS RACE DIVISION",
+                "time": "4:02.399",
+                "gap": "+9.224",
+                "points": null
+              },
+              {
+                "rank": 15,
+                "name": "Kate Hastings",
+                "nat": "NZL",
+                "team": "TEAM HIGH COUNTRY",
+                "time": "4:08.989",
+                "gap": "+15.814",
+                "points": null
+              },
+              {
+                "rank": 16,
+                "name": "Eliana Hulsebosch",
+                "nat": "NZL",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "4:11.705",
+                "gap": "+18.530",
+                "points": null
+              },
+              {
+                "rank": 17,
+                "name": "Frida Helena Rønning",
+                "nat": "NOR",
+                "team": "CRESTLINE SPEED SHOP",
+                "time": "4:11.777",
+                "gap": "+18.602",
+                "points": null
+              },
+              {
+                "rank": 18,
+                "name": "Maylei Leaneagh",
+                "nat": "USA",
+                "team": null,
+                "time": "4:14.304",
+                "gap": "+21.129",
+                "points": null
+              },
+              {
+                "rank": 19,
+                "name": "Matilda Melton",
+                "nat": "USA",
+                "team": "YETI / FOX FACTORY RACE TEAM",
+                "time": "4:16.427",
+                "gap": "+23.252",
+                "points": null
+              },
+              {
+                "rank": 20,
+                "name": "Abigail Hogie",
+                "nat": "USA",
+                "team": null,
+                "time": "4:23.568",
+                "gap": "+30.393",
+                "points": null
+              },
+              {
+                "rank": 21,
+                "name": "Florencia Rodriguez Contardo",
+                "nat": "CHI",
+                "team": null,
+                "time": "5:02.436",
+                "gap": "+1:09.261",
+                "points": null
+              },
+              {
+                "rank": null,
+                "name": "Valentina Roa Sanchez",
+                "nat": "COL",
+                "team": "MS-RACING",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Veronika Widmann",
+                "nat": "ITA",
+                "team": "UNNO FACTORY RACING DH",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
+              },
+              {
+                "rank": null,
+                "name": "Jess Blewitt",
+                "nat": "NZL",
+                "team": "SCOTT DOWNHILL FACTORY",
+                "time": null,
+                "gap": null,
+                "points": null,
+                "dns": true
               }
             ]
           }
