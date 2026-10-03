@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-03T18:39:13.191Z",
+  "lastUpdated": "2026-10-03T18:41:36.683Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -305166,6 +305166,107 @@
                 "gap": null,
                 "points": null,
                 "dns": true
+              }
+            ],
+            "qualifying-2-women": [
+              {
+                "rank": 1,
+                "name": "Sacha Earnest",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": "3:49.404",
+                "gap": null,
+                "points": null
+              },
+              {
+                "rank": 2,
+                "name": "Gloria Scarsi",
+                "nat": "ITA",
+                "team": "MS-RACING",
+                "time": "3:52.882",
+                "gap": "+3.478",
+                "points": null
+              },
+              {
+                "rank": 3,
+                "name": "Gracey Hemstreet",
+                "nat": "CAN",
+                "team": "NORCO X ADIDAS RACE DIVISION",
+                "time": "3:55.006",
+                "gap": "+5.602",
+                "points": null
+              },
+              {
+                "rank": 4,
+                "name": "Eliana Hulsebosch",
+                "nat": "NZL",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "3:57.867",
+                "gap": "+8.463",
+                "points": null
+              },
+              {
+                "rank": 5,
+                "name": "Frida Helena Rønning",
+                "nat": "NOR",
+                "team": "CRESTLINE SPEED SHOP",
+                "time": "4:01.874",
+                "gap": "+12.470",
+                "points": null
+              },
+              {
+                "rank": 6,
+                "name": "Kate Hastings",
+                "nat": "NZL",
+                "team": "TEAM HIGH COUNTRY",
+                "time": "4:02.553",
+                "gap": "+13.149",
+                "points": null
+              },
+              {
+                "rank": 7,
+                "name": "Jenna Hastings",
+                "nat": "NZL",
+                "team": "PIVOT FACTORY RACING",
+                "time": "4:03.844",
+                "gap": "+14.440",
+                "points": null
+              },
+              {
+                "rank": 8,
+                "name": "Matilda Melton",
+                "nat": "USA",
+                "team": "YETI / FOX FACTORY RACE TEAM",
+                "time": "4:04.733",
+                "gap": "+15.329",
+                "points": null
+              },
+              {
+                "rank": 9,
+                "name": "Maylei Leaneagh",
+                "nat": "USA",
+                "team": null,
+                "time": "4:07.905",
+                "gap": "+18.501",
+                "points": null
+              },
+              {
+                "rank": 10,
+                "name": "Abigail Hogie",
+                "nat": "USA",
+                "team": null,
+                "time": "4:11.892",
+                "gap": "+22.488",
+                "points": null
+              },
+              {
+                "rank": 11,
+                "name": "Florencia Rodriguez Contardo",
+                "nat": "CHI",
+                "team": null,
+                "time": "4:50.622",
+                "gap": "+1:01.218",
+                "points": null
               }
             ]
           }
