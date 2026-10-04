@@ -1,19 +1,22 @@
 # Trackwalk — Product Backlog & Punch List
 
-**Last updated**: 2026-09-29
+**Last updated**: 2026-10-04
 
 ## Current State: LIVE ✅
 - trackwalk.racing live with HTTPS, FEED / RESULTS / RIDERS / PITS navigation
 - Cache refresh scheduled twice hourly but actually firing ~6x/day — see PBI 60
-- Live race-day results proven end to end at Whistler (2026-09-25/27): qualifying, both Q2
-  sessions and finals all landed automatically via `live-results.yml` with no intervention
+- Live race-day results proven end to end across two weekends — Whistler (2026-09-25/27) and
+  Lake Placid (2026-10-03/04). Every session landed automatically via `live-results.yml` with
+  no intervention either time. The data path is not the weak point; delivery to an already-open
+  app was (see 67).
 - Results data: 2025–2026 via UCI JSON API (replaced/corrected), 2009–2024 backfilled via
   UCI DataRide JSON API (16 seasons, see `docs/historical-data.md` §7/§9). DNF/DSQ/DNS riders
   kept and listed last with no finish number.
 - Shorts strip in feed with duration-based detection (≤60s); seen/dim state on all cards
 - PITS tab with TEAMS / MEDIA / PODCASTS / UCI / WATCH sub-tabs; real broadcaster data in watch.json
 - Email list via Loops (hello@trackwalk.racing), Race Recap mailing list, welcome email live
-- R1 South Korea, R2 Loudenvielle, R3 Leogang results live
+- **2026 season complete**: all 10 rounds in `public/results/`, finishing with Lake Placid
+  (2026-10-04). Luke Meier-Smith won the men's finale, Lisa Bouladou the women's.
 - Results fetcher workflow: race-day crons + 30-min polling backstop. Auto-commit fixed 2026-06-14 (see `docs/decisions.md`) — the old commit step `git stash`/`pop`'d around the rebase, which unstaged the `git add`, so `git diff --staged --quiet` was always true and results were fetched then silently dropped. Now commits first, then rebase-and-push with retries.
 - Branding finalized: chainsaw icon (192×192/512×512), header icon + white wordmark lockup, OG/Twitter share card and meta tags live
 
@@ -196,6 +199,8 @@ from Cloudflare long ago, kept only as reference for possible future historical 
 | ~~64~~ | ~~Instagram link on Your Riders cards~~ | XS | — | **Done** (2026-09-28). One tap from the feed to a followed rider's Instagram. No new fetch: `toggleMyRider` already stores `instagram` alongside name/nat/flag, so the data was already in localStorage; riders followed before that field existed render no icon rather than a dead link. Card max-width 168→186px, because at 168 the icon truncated a normal name to "JACKSON GOLDS...". |
 | ~~65~~ | ~~Feed sources: MBUK TV, Fox Racing, Rémy Métailler~~ | S | — | **Done** (2026-09-25 / 09-28). All untrusted. MBUK: 1 of its last 25 uploads cleared the bar (a Goldstone V10 bike check filmed at Whistler); the rest is XC/eMTB/workshop scoring ≤2 — that ratio is the feature. Fox Racing is a **motocross** channel; MX titles score 0 and drop untouched, but "How We Roll" episodes score 0–3 and would never have passed, so an include term for `how we roll` at weight 10 carries them. That series has been dormant since 2024-12, so it contributes nothing today and is a bet on Season 4. Métailler is mostly Whistler/Squamish trail riding (9 of 10 recent uploads score ≤4) — added for the one that does not drop, a Whistler World Cup track video scoring 18 that was reaching nobody. |
 | 66 | Two more riders sit in the wrong name-weight tier | XS | Medium | Found 2026-09-29 while fixing the Métailler leak. `content-filter.js:99` gives weight 6 to riders whose name alone is DH signal, which on the RSS path (bar 6) means **the name alone passes with zero other signal**. `aaron gwin` and `neko mulally` are still in that tier and both post plenty of non-racing content, so the same hole exists for them. Not yet triggered — no leak observed — so it was deliberately left alone rather than changed speculatively on a race weekend. Fix is the same one-line move to the weight-2 tier, but verify against real titles first: some genuinely DH articles about them may be carried by the name alone today. |
+| ~~67~~ | ~~Refresh button could not refresh results~~ | S | — | **Done** (2026-10-04). Lake Placid results were live and correct upstream for hours while an already-open app showed stale ones, and the refresh button could not fix it: it called `loadFeed(true)`, so on Results it span and did nothing (`aria-label` was literally "Refresh feed"). Three things lined up — live polling only runs while a round is *In progress*, `revalidateSeason` is once-per-session unless forced, so once a round goes `Confirmed` an app that already spent its revalidation has **no path left** to the final results. `refreshActiveTab()` now routes by tab. Riders and Pits needed a different fix: re-calling their loaders repaints and fetches nothing (`loadPits` short-circuits when data is in memory, and both revalidators carry their own guard), so the guard is cleared instead. Verified against the real failure — dropped the round from memory, marked the season revalidated, pressed the button: 9 rounds → 10. |
+| 68 | Riders and Pits refresh paths are barely exercised | XS | Low | Raised 2026-10-04 alongside 67. Those tabs now force a genuine refetch, but their data changes rarely, so a regression there could sit unnoticed for a long time. Worth a deliberate look next time that area is open — it is the kind of path that only gets tested the day it matters. |
 | 49 | Crawlable results URLs (SEO re-architecture) | L | Medium | Trackwalk's deepest asset — 18 seasons of results — lives behind tab clicks at a single URL, so search engines can index exactly one page. Give rounds and riders real URLs with server-rendered content. Full spec below. |
 | ~~50~~ | ~~Move trackwalk.racing DNS to Cloudflare~~ | S | — | **Done** (confirmed 2026-09-22, ahead of the Whistler/Lake Placid hold — it landed without incident). Unblocked #41. Spec and verification below. |
 | 51 | ~~Live results on race day~~ | — | Done | **A+B+C all shipped 2026-09-16.** A: `live-results.yml`, a dispatched job polling internally with no scheduler dependency. B: the app polls the season shard every 60s while the round on screen is In progress and the tab is visible. C: a `#next-round` strip at the top of the feed showing the countdown to the next round, flipping to a tappable "Racing now / Live" state during a race, plus a pulsing dot on the Results tab. End-to-end ChronoRace → user screen is ~2-4 min. |

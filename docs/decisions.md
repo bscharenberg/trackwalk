@@ -459,6 +459,39 @@
 - `MAX_AGE_DAYS=30` means a dormant channel contributes nothing at all. Fox Racing was added
   knowing "How We Roll" has not posted since 2024-12; that is a bet, and it was recorded as one.
 
+### Correct data upstream is not the same as data reaching the reader (2026-10-04)
+- Lake Placid results were pushed, live, and correct on trackwalk.racing for hours while an
+  already-open app kept showing stale ones. Every check of the pipeline passed, because the
+  pipeline was never the problem.
+- Three correct-in-isolation behaviours combined into a dead end: live polling only runs while a
+  round is `In progress` (so it stops the moment a race is confirmed — correct), `revalidateSeason`
+  is once-per-session unless forced (correct, it is a cheap-open optimisation), and the refresh
+  button called `loadFeed(true)` — feed only. Once the round went `Confirmed`, an app that had
+  already spent its revalidation had no remaining path to the final results.
+- The button's own `aria-label` said "Refresh feed", which is the tell: it was honest about being
+  feed-only, and nobody reads an aria-label.
+- Fix: `refreshActiveTab()` routes by tab. The general lesson is that the most dangerous bugs here
+  are not broken components but correct components whose *union* leaves a gap — and that "is the
+  data right on the server" is the wrong question when someone says they cannot see it.
+
+### Forcing a refresh means clearing the guard, not re-calling the loader (2026-10-04)
+- The obvious fix for Riders and Pits was to call `loadRiders()` / `loadPits()` again. It would have
+  looked right in review and done nothing: `loadPits` short-circuits when the data is already in
+  memory, and both revalidators carry their own once-per-session flag.
+- Clearing `ridersRevalidated` / `pitsRevalidated` before calling the revalidator is what actually
+  forces a refetch. Worth remembering because the wrong version is the one that reads naturally.
+- Both were verified by pressing the real button and watching state, not by reasoning about it.
+
+### Two race weekends proved the automation, and both manual interventions caused problems (2026-10-04)
+- Whistler and Lake Placid both ran start to finish with no intervention. Every qualifying session
+  and both finals landed via `live-results.yml` on each weekend.
+- Across both, every manual fetch produced a rebase conflict rather than results, and in one case a
+  tool timeout left a `git reset` unapplied and a stale local shard was nearly reported as missing
+  finals. The poller is more reliable than hand-running it, and checking whether it already has the
+  data is the correct first move.
+- Content refresh remains the opposite case: it genuinely needs nudging (PBI 60), and manual
+  rebuilds on both weekends pulled in whole content waves the feed was missing.
+
 ## Deployment Learnings
 
 ### Always stash before pull
