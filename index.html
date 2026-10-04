@@ -1613,7 +1613,7 @@ html, body {
       <div id="logo"><img id="logo-wordmark" src="trackwalk-wordmark.png" alt="Trackwalk" width="136" height="32" fetchpriority="high" decoding="async"></div>
       <div id="logo-sub">Downhill Racing</div>
     </div>
-    <button id="refresh-btn" aria-label="Refresh feed" onclick="loadFeed(true)">↻</button>
+    <button id="refresh-btn" aria-label="Refresh" onclick="refreshActiveTab()">↻</button>
   </div>
   <div id="tabs"></div>
   <div id="riders-nav" style="display:none; padding-bottom:4px">
@@ -2780,6 +2780,40 @@ function buildTabs() {
       window.scrollTo({ top:0, behavior:'smooth' })
     })
   })
+}
+
+// The refresh button used to call loadFeed(true), so on the Results tab it spun and did
+// nothing. That is exactly the case that fails after a race: polling only runs while a round
+// is In progress, revalidateSeason is once-per-session unless forced, so once a round goes
+// Confirmed an already-open app has no path left to the final results. Lake Placid 2026-10-04
+// sat on stale results for hours with the data live the whole time.
+async function refreshActiveTab() {
+  const btn = document.getElementById('refresh-btn')
+  if (activeTab === 'standings') {
+    btn.classList.add('spinning')
+    try { await revalidateSeason(activeSeason, { force: true }) }
+    catch {}
+    finally { btn.classList.remove('spinning') }
+    return
+  }
+  // Riders and Pits revalidate once per session too, and their loaders short-circuit when the
+  // data is already in memory — so re-calling them would repaint and fetch nothing. Clearing
+  // the guard is what actually forces a fresh fetch.
+  if (activeTab === 'riders') {
+    btn.classList.add('spinning')
+    try { ridersRevalidated = false; await revalidateRiders() }
+    catch {}
+    finally { btn.classList.remove('spinning') }
+    return
+  }
+  if (activeTab === 'pits') {
+    btn.classList.add('spinning')
+    try { pitsRevalidated = false; await revalidatePits() }
+    catch {}
+    finally { btn.classList.remove('spinning') }
+    return
+  }
+  return loadFeed(true)
 }
 
 async function loadFeed(force=false) {
