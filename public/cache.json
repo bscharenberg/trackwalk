@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-10-04T20:24:14.028Z",
-  "totalItems": 178,
+  "builtAt": "2026-10-04T23:34:57.405Z",
+  "totalItems": 180,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "ihjPJm2s_z8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "YOUR 2026 DOWNHILL WORLD CUP CHAMPIONS 🏆",
+          "description": "YOUR 2026 DOWNHILL WORLD CUP CHAMPIONS 🏆\n\nAsa Vermette and Vali Höll lift their UCI DHI World Cup overall trophies after an incredible season of downhill racing 🇺🇸🇦🇹\n\n📍Lake Placid Olympic Sites, Whiteface Mountain 🏁 UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/ihjPJm2s_z8/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-04T21:03:11Z",
+          "url": "https://www.youtube.com/watch?v=ihjPJm2s_z8",
+          "isShort": true,
+          "score": 21,
+          "category": "shorts"
+        },
         {
           "id": "CzrmSqe2nV8",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 23,
           "category": "shorts"
-        },
-        {
-          "id": "skN5BYEKX04",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Not the ideal run for Jordan Williams but he's through to finals with a P16 in Q1 🇺🇸",
-          "description": "Not the ideal run for Jordan Williams but he's through to finals with a P16 in Q1 🇺🇸\n\nAsa Vermette and Amaury Pierron have not qualified in Q1, so it's all to play for in Q2 for the World Cup Overall contenders 👀\n\n📍Lake Placid Olympic Sites, New York 🏁 Men's Elite UCI DHI World Cup Qualification 1",
-          "thumbnail": "https://i.ytimg.com/vi/skN5BYEKX04/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-03T18:01:07Z",
-          "url": "https://www.youtube.com/watch?v=skN5BYEKX04",
-          "isShort": true,
-          "score": 19,
-          "category": "shorts"
         }
       ]
     },
@@ -352,6 +352,40 @@
       "id": "race-runs",
       "label": "Race runs",
       "items": [
+        {
+          "id": "VfWc4gGTtIY",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "MTBWS HIGHLIGHTS 🇺🇸 Men's Elite DHI | 2026 Lake Placid Olympic Sites",
+          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/VfWc4gGTtIY/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-04T20:57:04Z",
+          "url": "https://www.youtube.com/watch?v=VfWc4gGTtIY",
+          "isShort": false,
+          "score": 12,
+          "category": "race-runs"
+        },
+        {
+          "id": "sAB4RoVvsB0",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "MTBWS HIGHLIGHTS 🇺🇸 Women's Elite DHI | 2026 Lake Placid Olympic Sites",
+          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/sAB4RoVvsB0/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-04T20:47:03Z",
+          "url": "https://www.youtube.com/watch?v=sAB4RoVvsB0",
+          "isShort": false,
+          "score": 12,
+          "category": "race-runs"
+        },
         {
           "id": "g4fsTgh3pnY",
           "type": "video",
@@ -444,7 +478,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Results: Luke Meier-Smith & Lisa Bouladou Win the 2026 Lake Placid DH World Cup Elite Finals",
-          "description": "The elite Lake Placid World Cup produced an incredible end to the 2026 season.( Photos: 5, Comments: 152 )",
+          "description": "The elite Lake Placid World Cup produced an incredible end to the 2026 season.( Photos: 5, Comments: 174 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-10-04T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/results-2026-lake-placid-dh-world-cup-elite-finals.html?trk=rss",
@@ -458,8 +492,8 @@
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
-          "title": "Results: Tilly Boadle & Ryder Wilson Lead 2026 Lake Placid DH World Cup Junior Finals",
-          "description": "Stay tuned for live results as the action unfolds at the 2026 Lake Placid downhill World Cup.( Photos: 4, Comments: 46 )",
+          "title": "Results: Tilly Boadle & Ryder Wilson Win 2026 Lake Placid DH World Cup Junior Finals",
+          "description": "Your fastest juniors at the 2026 Lake Placid downhill World Cup.( Photos: 4, Comments: 46 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-10-04T11:58:00.000Z",
           "url": "https://www.pinkbike.com/news/results-2026-lake-placid-dh-world-cup-junior-finals.html?trk=rss",
@@ -643,40 +677,6 @@
           "isShort": false,
           "score": 17,
           "category": "race-runs"
-        },
-        {
-          "id": "xJ8FXmmz24M",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "VITAL RAW - Lake Placid WORLD CUP DOWNHILL",
-          "description": "Sloppy, goopy, slow and frustrating. The first practice session at the final UCI Mountain Bike World Series DH race was a battle thanks to overnight rain. \n\nJohn Lawlor gets the goods so you can stay dry.",
-          "thumbnail": "https://i.ytimg.com/vi/xJ8FXmmz24M/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-02T23:55:42Z",
-          "url": "https://www.youtube.com/watch?v=xJ8FXmmz24M",
-          "isShort": false,
-          "score": 16,
-          "category": "race-runs"
-        },
-        {
-          "id": "kkG_Wg_Xnz4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Jackson Goldstone DHI course preview | Lake Placid Olympic Sites, USA 🇺🇸 WHOOP UCI MTB World Series",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/kkG_Wg_Xnz4/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-02T20:58:30Z",
-          "url": "https://www.youtube.com/watch?v=kkG_Wg_Xnz4",
-          "isShort": false,
-          "score": 19,
-          "category": "race-runs"
         }
       ]
     },
@@ -684,6 +684,23 @@
       "id": "results",
       "label": "Results",
       "items": [
+        {
+          "id": "mzcFY5FG7hA",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "2026 WORLDCUP SEASON IS OVER!!",
+          "description": "Sports fans and everyone involved, thank you so much for everything. What a crazy season it’s been, finishing it off in Lake Placid, which was absolutely wild.\n\nWe were up against so many talented riders, which always makes it tough. I’m disappointed with my riding today, but I’m really glad everyone made it down unscathed. At the end of the day, our overall results are pretty good, and there’s a lot to be proud of.\n \nThis was training for Hardline. Sports fans, I’ll see you in a couple of weeks back in Whistler!! 🤘\n\n#sony  #mtb #bksport #downhill #mountainbike #pivot #mtblife #continental #shimano #fox  #canada",
+          "thumbnail": "https://i.ytimg.com/vi/mzcFY5FG7hA/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-04T23:00:06Z",
+          "url": "https://www.youtube.com/watch?v=mzcFY5FG7hA",
+          "isShort": false,
+          "score": 13,
+          "category": "results"
+        },
         {
           "id": "-W2QlXz4NHU",
           "type": "video",
@@ -708,7 +725,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Who Are the 2026 Downhill World Cup Overall Series Winners?",
-          "description": "Check out how the results stack up in the DH World Cup standings and who the newly crowned 2026 overall champions are.( Photos: 7, Comments: 3 )",
+          "description": "Check out how the results stack up in the DH World Cup standings and who the newly crowned 2026 overall champions are.( Photos: 7, Comments: 34 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb26594278/p2pb26594278.jpg",
           "publishedAt": "2026-10-04T12:00:00.000Z",
           "url": "https://www.pinkbike.com/news/who-are-the-2026-downhill-world-cup-overall-series-winners.html?trk=rss",
@@ -946,23 +963,6 @@
           "url": "https://www.youtube.com/watch?v=-tU7bHYKakQ",
           "isShort": false,
           "score": 10,
-          "category": "results"
-        },
-        {
-          "id": "gdJlcMDsU9U",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV “On track with Gary” REDBULL CERRO ABAJO STUTTGART DAY 1",
-          "description": "Day one here at Redbull Cerro Abajo Stuttgart was a good one, a little bit of testing and course walk went down and Gary was on track to catch the action!",
-          "thumbnail": "https://i.ytimg.com/vi/gdJlcMDsU9U/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-04T20:29:57Z",
-          "url": "https://www.youtube.com/watch?v=gdJlcMDsU9U",
-          "isShort": false,
-          "score": 13,
           "category": "results"
         }
       ]
@@ -1371,7 +1371,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Myriam Nicole Will Be The First Woman to Compete in 100 DH World Cups - Lake Placid World Cup DH 2026",
-          "description": "100 World Cups for Pompon.( Photos: 7, Comments: 38 )",
+          "description": "100 World Cups for Pompon.( Photos: 7, Comments: 40 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb21217443/p2pb21217443.jpg",
           "publishedAt": "2026-10-02T11:39:00.000Z",
           "url": "https://www.pinkbike.com/news/myriam-nicole-first-woman-to-compete-in-100-dh-world-cups.html?trk=rss",
