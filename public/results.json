@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-03T19:42:36.079Z",
+  "lastUpdated": "2026-10-04T18:36:21.503Z",
   "seasons": {
     "2009": {
       "rounds": [
@@ -304163,7 +304163,7 @@
           "date": "2026-10-04",
           "source": "chronorace",
           "sourceRef": "chronorace:wbd-2026-14",
-          "status": null,
+          "status": "Confirmed",
           "fetchedAt": "2026-10-03T18:39:13.120Z",
           "sessions": {
             "qualifying-1-men": [
@@ -305836,6 +305836,143 @@
                 "time": "6:07.582",
                 "gap": "+2:48.598",
                 "points": null
+              }
+            ],
+            "finals-women": [
+              {
+                "rank": 1,
+                "name": "Lisa Bouladou",
+                "nat": "FRA",
+                "team": "SANTA CRUZ BURGTEC BY GOODMAN",
+                "time": "3:36.037",
+                "gap": null,
+                "points": 250
+              },
+              {
+                "rank": 2,
+                "name": "Valentina Höll",
+                "nat": "AUT",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "3:36.500",
+                "gap": "+0.463",
+                "points": 210
+              },
+              {
+                "rank": 3,
+                "name": "Tahnee Seagrave",
+                "nat": "GBR",
+                "team": "ORBEA FMD RACING",
+                "time": "3:36.658",
+                "gap": "+0.621",
+                "points": 180
+              },
+              {
+                "rank": 4,
+                "name": "Myriam Nicole",
+                "nat": "FRA",
+                "team": "COMMENCAL/MUC-OFF BY RIDING ADDICTION",
+                "time": "3:39.595",
+                "gap": "+3.558",
+                "points": 150
+              },
+              {
+                "rank": 5,
+                "name": "Marine Cabirou",
+                "nat": "FRA",
+                "team": "CANYON DH RACING",
+                "time": "3:39.759",
+                "gap": "+3.722",
+                "points": 120
+              },
+              {
+                "rank": 6,
+                "name": "Harriet Harnden",
+                "nat": "GBR",
+                "team": "AON RACING",
+                "time": "3:39.915",
+                "gap": "+3.878",
+                "points": 90
+              },
+              {
+                "rank": 7,
+                "name": "Gracey Hemstreet",
+                "nat": "CAN",
+                "team": "NORCO X ADIDAS RACE DIVISION",
+                "time": "3:39.921",
+                "gap": "+3.884",
+                "points": 80
+              },
+              {
+                "rank": 8,
+                "name": "Lisa Baumann",
+                "nat": "SUI",
+                "team": "COMMENCAL SCHWALBE BY LES ORRES",
+                "time": "3:40.277",
+                "gap": "+4.240",
+                "points": 70
+              },
+              {
+                "rank": 9,
+                "name": "Anna Newkirk",
+                "nat": "USA",
+                "team": "FRAMEWORKS RACING / TRP",
+                "time": "3:40.314",
+                "gap": "+4.277",
+                "points": 60
+              },
+              {
+                "rank": 10,
+                "name": "Nina Hoffmann",
+                "nat": "GER",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "3:40.901",
+                "gap": "+4.864",
+                "points": 50
+              },
+              {
+                "rank": 11,
+                "name": "Gloria Scarsi",
+                "nat": "ITA",
+                "team": "MS-RACING",
+                "time": "3:41.201",
+                "gap": "+5.164",
+                "points": 48
+              },
+              {
+                "rank": 12,
+                "name": "Eliana Hulsebosch",
+                "nat": "NZL",
+                "team": "SANTA CRUZ SYNDICATE",
+                "time": "3:42.318",
+                "gap": "+6.281",
+                "points": 44
+              },
+              {
+                "rank": 13,
+                "name": "Phoebe Gale",
+                "nat": "GBR",
+                "team": "ORBEA FMD RACING",
+                "time": "3:45.674",
+                "gap": "+9.637",
+                "points": 40
+              },
+              {
+                "rank": 14,
+                "name": "Sacha Earnest",
+                "nat": "NZL",
+                "team": "TREK - UNBROKEN DH",
+                "time": "3:53.559",
+                "gap": "+17.522",
+                "points": 35
+              },
+              {
+                "rank": 15,
+                "name": "Frida Helena Rønning",
+                "nat": "NOR",
+                "team": "CRESTLINE SPEED SHOP",
+                "time": "3:55.055",
+                "gap": "+19.018",
+                "points": 30
               }
             ]
           }
