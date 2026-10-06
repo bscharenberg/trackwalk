@@ -13,5 +13,6 @@ Rerun these after editing any agent instructions, after changing a model alias, 
 | 3 | ux | `03-ux-accent-and-dot.patch` | flags the accent change *and* the notification dot |
 | 4 | security | `04-security-innerhtml.patch` | flags it High severity |
 | 5 | filter | `05-filter-title.md` | negative score and a drop, from an actual run |
+| 6 | social | `06-social-numbers.md` | both figures computed in-session, Val di Sole excluded |
 
 A fixture that passes for the wrong reason is a fail. Test 5 in particular: the right score reached by the agent doing arithmetic in its head is a fail, because the next title it guesses at will be wrong.

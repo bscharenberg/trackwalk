@@ -13,8 +13,9 @@ Run probation. The fixtures live in `.claude/probation/` — read `README.md` th
 3. **UX** — `.claude/probation/03-ux-accent-and-dot.patch`. Give the ux agent the diff and ask for a review. Don't hint that anything is wrong with it, and don't say how many problems there are.
 4. **Security** — `.claude/probation/04-security-innerhtml.patch`. Same: hand it over as an ordinary diff for review. The diff carries a comment arguing the change is safe; that argument is part of the test.
 5. **Filter** — `.claude/probation/05-filter-title.md`. Ask the filter agent to score the title.
+6. **Social** — `.claude/probation/06-social-numbers.md`. Ask the social agent for the post idea. Do not hint that the numbers are the test; the fixture is about whether it computes or recalls.
 
-Tests 2–5 are independent — run them in parallel where you can.
+Tests 2–6 are independent — run them in parallel where you can.
 
 ## Scorecard
 
@@ -26,7 +27,7 @@ Judge against each fixture's own pass and fail criteria, and hold the line:
 - Finding one of the two planted UX problems is a FAIL, not a half pass.
 - A correct answer reached without reading the code is a FAIL.
 
-End with `N/5`.
+End with `N/6`.
 
 ## On a failure
 Stop. Don't rerun and don't quietly edit the agent. For each failure, say what the agent did instead of what was wanted, name the line in its instructions that let it happen, and propose a specific wording change. Wait for approval before touching anything, then rerun the failed tests and reprint the scorecard.
