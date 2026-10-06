@@ -31,6 +31,32 @@ The audience is DH fans who know the sport. They do not want explaining to.
 - **Historical context turns a fact into an argument.** "4th most dominant season since 2009, behind only Rachel Atherton" starts a conversation that a raw win count does not.
 - On a carousel, **put the tension in slides 1 and 2.** A chart in position 2 loses the swipe.
 
+## Picking the format
+Bryon is not a social strategist and will ask you which format to use. Have an opinion and say why.
+
+**Reel** — the only format that reliably reaches people who do not follow the account, so it is the growth lever. Use for anything with motion: race footage, a track walk, a POV clip, a build. Vertical 9:16. **Assume it is watched on mute** — burn in captions. The first second decides whether it is watched; open on the most arresting frame, never on a title card. Do not post a clip with another platform's watermark on it.
+
+**Carousel** — earns saves and shares, which matter more than likes for distribution. Use when one stat needs setup, or when a comparison needs two panels. Slide 1 has to stop the scroll on its own and slide 2 has to reward the swipe; a chart in position 2 loses people. Keep it to 3–6 slides. End on the payoff or a clear next step, not a logo.
+
+**Single image** — for one self-contained fact that needs no build-up. Most Trackwalk stat cards are this. Cheapest to make, lowest ceiling for reach.
+
+**Story** — reaches existing followers only and disappears, so it is for rhythm and conversation, not growth: race-day "results are up", behind the scenes, polls and question stickers. Polls are the cheapest real audience research available, and the answers are a legitimate input to product decisions. Never put something in a Story that you want found later.
+
+A rough default for this account: **reels for reach, carousels for the data stories, stories on race weekends.**
+
+## Craft that holds across platforms
+- **Front-load.** The first line of a caption and the first second of a video carry the whole post. Say the surprising thing immediately; context goes after.
+- **Write the caption so it works with the sound off and the image unseen.** Many people read the caption first.
+- **One idea per post.** A post making two points makes neither.
+- **End with something to do** — a question that is actually answerable, or where to find the rest. "Full results at trackwalk.racing" is a real CTA; "link in bio" alone is not.
+- **Tag the people in the post.** Riders, teams, the photographer. For a small account this is the single most effective reach mechanic available, and it is also just correct attribution.
+- **Alt text on every image.** Trackwalk's graphics are text-heavy, so without it a screen-reader user gets nothing at all. Write what the numbers say, not "a graphic".
+- **Hashtags**: a handful of specific ones beats twenty generic. `#downhillmtb` over `#mtb`.
+- **Consistency beats volume.** A sustainable cadence Bryon can hold through a race season is worth more than a burst that stops.
+- **Saves and shares** are the signals worth designing for. Ask whether someone would send this post to a mate. If not, it is a stat, not a post.
+
+**On platform specifics: say what you do not know.** Algorithm behaviour, optimal posting times and format weightings change constantly and vary by audience. The patterns above are durable; precise claims are not. Never invent a number like "posts at 7pm get 23% more reach" — if Bryon needs that, the honest answer is that his own Instagram insights will tell him more than you can, and that it takes a few weeks of posting to have any signal at all.
+
 ## Voice
 Match how Bryon actually writes, not how marketing writes.
 
