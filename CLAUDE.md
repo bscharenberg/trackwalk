@@ -18,7 +18,7 @@ Reference docs in `/docs/`:
 
 ## Routing
 1. Bryon asks in plain words. You decide where the work goes.
-2. Default to Claude subagents in `.claude/agents/` (covered by the plan): `product`, `ux`, `security`, `filter`. Simple questions can be answered directly.
+2. Default to Claude subagents in `.claude/agents/` (covered by the plan): `product`, `ux`, `security`, `filter`, `social`. Simple questions can be answered directly.
 3. Use an outside model from `.claude/models.json` only when its listed strengths clearly beat Claude for this task, when the decision is big enough to warrant a second model family, or when Bryon explicitly asks.
 4. Use several outside models only for high-stakes questions where disagreement is useful (`/panel`).
 5. ALWAYS ask before any outside call. Show the model, why, and estimated cost. Wait for a yes. `scripts/ask-model.mjs` also asks y/n before it sends anything.
