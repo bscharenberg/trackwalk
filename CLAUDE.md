@@ -1,6 +1,6 @@
 # Trackwalk — Claude Code Instructions
 
-Trackwalk (trackwalk.racing) is a UCI downhill race content aggregator and historical results database built by Bryon Scharenberg. Formerly Helltrack (helltrack.app 301-redirects here). It's a PWA that pulls from YouTube channels and Pinkbike RSS, filters to DH content, and shows a clean card-based feed. The Results tab has UCI DH World Cup results for every season from 2009 to 2026 — 18 seasons, 153 rounds. `public/results/index.json` is the season index and names the current season; trust it over any doc.
+Trackwalk (trackwalk.racing) is a UCI downhill race content aggregator and historical results database built by Bryon Scharenberg. Formerly Helltrack (helltrack.app 301-redirects here). It's a PWA that pulls from YouTube channels and Pinkbike RSS, filters to DH content, and shows a clean card-based feed. The Results tab has UCI DH World Cup results for every season from 2009 to 2026 — 18 seasons, 145 rounds. `public/results/index.json` is the season index and names the current season; trust it over any doc.
 
 This is a hobby project. Keep suggestions practical, avoid over-engineering, and prefer simple, maintainable changes.
 

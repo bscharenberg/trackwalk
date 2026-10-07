@@ -1,148 +1,121 @@
 # Trackwalk
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+**[trackwalk.racing](https://trackwalk.racing)** — UCI downhill, without the noise.
 
-> *"Ok dudes, let's walk this sucker."* — Cru Jones, RAD (1986)
+A mobile-first PWA with two halves: a filtered feed of DH race content, and a results database
+covering every UCI World Cup and World Championship round from 2009 to 2026.
 
-A mobile-first PWA that aggregates UCI downhill race content into one clean, bookmarkable feed. No algorithm. No notifications. No unread count. Just racing.
-
----
-
-## What it is
-
-Trackwalk pulls from the best sources in the game — YouTube channels, Pinkbike, podcasts, and race film outfits like Sleeper — filters out everything that isn't UCI DH, and serves it as a card-based digest you can bookmark on your phone home screen.
-
-Feels like a newspaper. Opens like an app. Updates itself.
-
-## Sources
-
-### Race coverage
-
-| Source | What it is | Channel ID |
-|---|---|---|
-| WHOOP UCI MTB World Series | Official race channel — DH, interviews | `UCWS4nfoou79mwo9nHew49fA` |
-| Pinkbike | Race coverage, Inside the Tape, WynTV, Story of the Race | `UC2GIHZpQiJy-8286f4lj_cg` |
-| Red Bull Bike | UCI World Cup DH, behind the scenes, race highlights | `UCXqlds5f7B2OOs9vQuevl4A` |
-| Just Ride | Rob Warner + Eliot Jackson — Red Bull podcast, rider interviews | `@RedBullJustRide` |
-| GoPro Bike | Rider POVs, winning runs, race edits | `UCqhnX4jA0A5paNd1v-zEysw` |
-| Vital MTB | Vital RAW race runs, World Cup DH coverage | `UCcX5xwMOCt92bi0dmspMFQw` |
-
-### Films + rider channels
-
-| Source | What it is | Channel ID |
-|---|---|---|
-| Sleeper Collective | Best cinematography in the sport, embedded with race teams | `UCuuLS5B9JraqXiKfYPIBNEw` |
-| Bernard Kerr | Pivot Factory Racing owner + rider, lifestyle DH documentary | `UCOYc6SI_fVrNvoutot7D9IA` |
-| WynTV | Wyn Masters — paddock interviews and race commentary (via Pinkbike RSS) | — |
-
-### Teams
-
-| Source | What it is | Channel ID |
-|---|---|---|
-| Santa Cruz Syndicate | Most decorated DH team — Jackson Goldstone, Nina Hoffmann, Laurie Greenland | `UCCb8I3PHEUFPV0Jds0-_eig` |
-| Specialized Gravity | Loic Bruni, Finn Iles, Jordan Williams | `@specializedgravity` |
-| Commencal Bikes & Skis | DH racing since 2003, strong race edit output | `UCPUGv78-mvU6gaFBgjY67vA` |
-| AON Racing | Reece Wilson's prototype DH team — Gamux bikes, Sleeper-produced content | `@AON_Racing` |
-| Frameworks / Neko Mulally | Privateer DH team, built their own race bike from scratch | `youtube.com/user/nekomulally` |
-
-### Podcasts + deep dives
-
-| Source | What it is | Feed / Channel ID |
-|---|---|---|
-| Downtime Podcast | The DH + enduro podcast — athletes, coaches, team managers, engineers | `downtimepodcast.com/feed/podcast/` |
-| Downtime Podcast (video) | YouTube version of above | `youtube.com/c/DowntimeMountainBikePodcast` |
-
-### RSS feeds
-
-| Source | Feed |
-|---|---|
-| Pinkbike racing | `pinkbike.com/rss/news/` (filtered: `racing`, `downhill`) |
-| Downtime Podcast | `downtimepodcast.com/feed/podcast/` |
-| UCI MTB World Series | `ucimtbworldseries.com` |
-
-### Key content to surface from within Pinkbike
-
-- `inside the tape` + `ben cathro` — track analysis and ghosted run breakdowns at every World Cup
-- `wyntv` — paddock and finish-corral interviews
-- `story of the race` — post-race video analysis
-- `race analysis` — split times and stats
+No algorithm. No notifications. No unread count. A newspaper, not an inbox.
 
 ---
+
+## What's in it
+
+**Feed** — YouTube channels, Pinkbike and podcasts, scored against a DH keyword list and served
+as a flat chronological card feed. Anything older than 30 days drops off, so it's always current.
+Categories: race runs, analysis, films, paddock, news, plus a shorts strip.
+
+**Results** — 18 seasons, 145 rounds, 2009–2026. Qualifying and finals, men and women, with
+DNF/DSQ/DNS riders kept rather than silently dropped. Search any rider for their full career
+history grouped by venue.
+
+**Riders** — follow a personal list and see only their results. 212 elite riders with Instagram links.
+
+**Pits** — teams, media, podcasts, UCI links, and where to watch by region.
+
+Installable to a phone home screen, works offline, no app store.
 
 ## How it works
 
-A GitHub Actions cron job runs weekly, fetches fresh content from each source, scores and filters it against a UCI DH keyword list, and commits a static `cache.json`. The PWA reads that file on load. No server. No database. No cost.
+No server and no database. GitHub Actions fetches, filters and commits static JSON; GitHub Pages
+serves it.
 
 ```
-GitHub Actions (weekly cron)
-  → fetch YouTube + RSS sources
-  → score + filter for UCI DH content
-  → write cache.json
-  → commit to main
+GitHub Actions
+  ├── refresh.yml        twice hourly — YouTube + RSS → public/cache.json
+  ├── fetch-results.yml  every 10 min — current-season results
+  ├── live-results.yml   race-day polling, dispatched
+  ├── dataride-fetch.yml every 6h — UCI DataRide backfill
+  └── preflight.yml      weekly — source health check
 
 trackwalk.racing (GitHub Pages)
-  → serves static PWA
-  → reads cache.json on load
-  → card-based feed by category
+  └── index.html reads public/cache.json + public/results/<year>.json
 ```
 
-## Content categories
-
-- 🏁 **Race runs** — full runs, qualifying, finals, Vital RAW
-- 🏆 **Results** — podiums, standings, race reports, split analysis
-- 🎬 **Films** — Sleeper and long-form race edits
-- 🎙️ **Paddock** — WynTV, Inside the Tape, Just Ride, Downtime
-- 📰 **News** — team updates, course previews, UCI announcements
+A Cloudflare Worker proxies the Pinkbike RSS feed, which doesn't send CORS headers.
 
 ## Content filtering
 
-Videos and articles are scored against a weighted keyword list. High-confidence terms (`dh world cup`, `ews`, `leogang`, `val di sole`, `fort william`, `qualifying`, `race run`) score highest. Generic MTB content scores low and gets dropped. Channels like Sleeper get a source-level score boost — if it's from Sleeper, it's almost certainly worth surfacing.
+Items are scored against a weighted keyword list in [`scripts/content-filter.js`](scripts/content-filter.js).
 
-Full logic in `scripts/content-filter.js`.
+| | |
+|---|---|
+| `MIN_SCORE` | **6** — below this an item is dropped |
+| `BOOST_SCORE` | **4** — added for trusted sources |
+| Untrusted threshold | **10** (`MIN_SCORE + 4`) |
+| `MAX_AGE_DAYS` | **30** |
 
-## Tech stack
+Venue names are high-signal and weighted so a venue alone can't carry an item over the line.
+XCO is excluded at weight 15 — high enough to beat the sum of every boost. Enduro (EWS, EDR) is
+excluded too: Trackwalk is DH only.
 
-- Vanilla JS + HTML/CSS (no framework needed for v1)
-- GitHub Actions — scheduled content refresh
-- GitHub Pages — free static hosting
-- YouTube Data API v3 — free tier (~6–10 units/week of 10,000/day limit)
-- Pinkbike RSS — public feed
-- PWA — installable, offline-capable, no app store
+The UCI MTB World Series channel is deliberately **not** trusted, because it posts XCO and enduro
+alongside downhill.
 
-## Quota strategy
+```bash
+node scripts/test-filter.js                                # suite
+node -e "const {scoreItem}=require('./scripts/content-filter.js'); console.log(scoreItem({title:'TEST'}))"
+```
 
-YouTube's free tier allows 10,000 API units/day. Trackwalk uses the uploads playlist approach (`playlistItems.list`) instead of `search.list`, which costs 1 unit per channel vs 100 units per search. Weekly refresh across all sources costs roughly 6–10 units total — well under 0.1% of the daily limit.
+## Sources
+
+17 YouTube channels and RSS feeds — official race coverage, team channels, film outfits like
+Sleeper, and podcasts. The authoritative list lives in
+[`scripts/youtube-fetcher.js`](scripts/youtube-fetcher.js) and
+[`scripts/rss-fetcher.js`](scripts/rss-fetcher.js); it changes often enough that duplicating it
+here just creates something else to go stale.
+
+Results come from the UCI's own systems — DataRide, ChronoRace and Tissot.
+
+## Quota
+
+YouTube's free tier allows 10,000 units/day. Trackwalk reads each channel's uploads playlist
+(`playlistItems.list`, 1 unit per channel) rather than `search.list` (100 units per query), so a
+full refresh costs roughly 20 units — well under the daily limit even at twice-hourly.
 
 ## Running locally
 
 ```bash
-git clone https://github.com/bscharenberg/trackwalk
+git clone git@github.com:bscharenberg/trackwalk.git
 cd trackwalk
 npm install
 
-# add your YouTube API key
-cp .env.example .env
-# edit .env and add YOUTUBE_API_KEY=your_key_here
+cp .env.example .env     # add YOUTUBE_API_KEY
 
-# run the content pipeline manually
-node scripts/build-cache.js
-
-# serve locally
-npx serve public
+node scripts/build-cache.js   # rebuild the feed
+npx serve .                   # index.html is at the repo root, not in public/
 ```
 
-## Philosophy
+See [`docs/dev-workflow.md`](docs/dev-workflow.md) for the full workflow, and
+[`docs/architecture.md`](docs/architecture.md) for how the pieces fit.
 
-No auth. No PII. No tracking. No ads. Fully public and open source.
+## Privacy
 
-Built for bike geeks who want the racing without the noise.
+No accounts, no login, no personal data collected. Your rider list and preferences live in your
+own browser's localStorage and are never sent anywhere. Analytics are aggregate only. No ads.
+
+---
+
+## License
+
+**Proprietary — all rights reserved.** See [LICENSE](LICENSE).
+
+The source is public to read for personal and educational reference. It is **not** open source:
+commercial use, redistribution, hosting, and reuse of the results database or filtering logic
+all require written permission. Licensing enquiries: bryon.career@gmail.com
 
 ---
 
 Built by a saddle donkey, for saddle donkeys.
 
----
-
-*Trackwalk is an independent project and is not affiliated with the film Rad, its cast, or any related properties. The name is used in tribute to the culture of the sport.*
-
-*MIT Licensed. © 2026 bscharenberg.*
+© 2026 Bryon Scharenberg.
