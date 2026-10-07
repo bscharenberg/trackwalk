@@ -21,6 +21,15 @@ Then **verify the surprising ones a second way before they go on a graphic.** A 
 - **Standings computed from `points` are finals-only** (punchlist #47). The resulting *order* has matched the UCI's official WCS column when cross-checked, so positions are safe to publish; raw point totals are not.
 - **Entry-list PDFs carry a WCS column** — the UCI's own standings. Use it to cross-check anything computed.
 - Round data can carry a `status` of `Confirmed` or nothing at all; absence is not provisional.
+- **`public/riders.json` is `{ men: [...], women: [...] }`, not a flat array.** A reader that takes the first array it finds gets 150 men, drops all 62 women, and looks complete. Walk both keys. Total is 212.
+- **The data starts in 2009.** Every superlative is bounded by that, and the pre-2009 era is exactly where the counterexamples live (Chausson, Vouilloz, Peat). Before publishing, grep the copy:
+  ```
+  grep -oE "(ever|never|nobody|no rider|first time|all.time|on record)[^<]{0,60}" <builder>
+  ```
+  Each hit must either be bounded in the copy itself ("in 18 years", "since 2009") or be a career claim about a rider young enough that pre-2009 cannot apply. "First World Cup win" for a rider born after ~1994 is safe; "nobody has ever" about a season record is not.
+- **A DSQ, DNS or DNF row still means the rider was in that session.** `rank` is `null` with a `dsq`/`dns`/`dnf` flag beside it. `if (!Number(rank)) continue` silently turns "made every final" into "finished every final" — it published "4 men made every final" when the answer was 6, and a commenter caught it. Count **appearances** and **placings** separately, always.
+- **The same rider is spelled differently across sources.** Rounds come from ChronoRace, DataRide and Tissot, and none of them agree on given names: Pinkerton appears as `Kenneth Ryan Pinkerton`, `Ryan Pinkerton` and `Kenneth Pinkerton` in one season. Never match a rider with an exact-string `===`. Match on nationality + surname, then split the group when given names are disjoint — `Till Alran` and `Max Alran` are two riders, not one.
+- **There are no stored standings.** Any championship position is your own derivation from finals points and will not match the UCI overall, which excludes Worlds. Do not put a derived rank on a graphic.
 
 ## What makes a Trackwalk post work
 The audience is DH fans who know the sport. They do not want explaining to.
