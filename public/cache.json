@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-08T05:55:33.596Z",
-  "totalItems": 167,
+  "builtAt": "2026-10-08T13:21:09.131Z",
+  "totalItems": 162,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -387,21 +387,6 @@
           "category": "race-runs"
         },
         {
-          "id": "https://www.pinkbike.com/news/finals-photo-epic-2026-lake-placid-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Finals Photo Epic: 2026 Lake Placid DH World Cup",
-          "description": "The Lake Placid World Cup was an incredible conclusion to an amazing season of racing.( Photos: 72, Comments: 24 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30365932/p2pb30365932.jpg",
-          "publishedAt": "2026-10-05T11:34:00.000Z",
-          "url": "https://www.pinkbike.com/news/finals-photo-epic-2026-lake-placid-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 13,
-          "category": "race-runs"
-        },
-        {
           "id": "Entxx9FJXUk",
           "type": "video",
           "source": "youtube",
@@ -689,6 +674,23 @@
           "isShort": false,
           "score": 11,
           "category": "race-runs"
+        },
+        {
+          "id": "Xzu-_HV2_8I",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV LAKE PLACID WORLD CUP FINALS TRACKWALK",
+          "description": "The season is nearly done and we’re already on the final trackwalk for the year here in Lake Placid, I caught up with all the riders on track.\n\nWin my custom FOCUS JAM ² bike and support Reed Russell’s road to recovery and the privateer project here, https://www.thedreambikecompetition.co.uk/raffles/win-wyn-masters-custom-focus-jam2-and-keep-the-privateer-program-rolling-ddc4aa7f-5104-428f-ac38-5624497c662d\n\n\nYou can support me by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
+          "thumbnail": "https://i.ytimg.com/vi/Xzu-_HV2_8I/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-01T23:49:29Z",
+          "url": "https://www.youtube.com/watch?v=Xzu-_HV2_8I",
+          "isShort": false,
+          "score": 17,
+          "category": "race-runs"
         }
       ]
     },
@@ -728,21 +730,6 @@
           "url": "https://www.youtube.com/watch?v=Sjf7wLWZyGY",
           "isShort": false,
           "score": 12,
-          "category": "results"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-story-of-the-race-from-the-2026-lake-placid-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Story Of The Race from the 2026 Lake Placid DH World Cup",
-          "description": "Ben, Innes and the team recap all the exciting racing at the final stop of this year's downhill World Cup series.( Comments: 15 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30367049/p2pb30367049.jpg",
-          "publishedAt": "2026-10-05T11:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-story-of-the-race-from-the-2026-lake-placid-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 17,
           "category": "results"
         },
         {
@@ -945,9 +932,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Sleeper Shreddit from the 2026 Lake Placid DH World Cup",
-          "description": "Incredible scenes from the 2026 downhill World Cup series finale at Lake Placid.( Comments: 33 )",
+          "description": "Incredible scenes from the 2026 downhill World Cup series finale at Lake Placid.( Comments: 37 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30375365/p2pb30375365.jpg",
-          "publishedAt": "2026-10-07T11:52:00.000Z",
+          "publishedAt": "2026-10-07T11:48:00.000Z",
           "url": "https://www.pinkbike.com/news/video-sleeper-shreddit-from-the-2026-lake-placid-dh-world-cup.html?trk=rss",
           "categories": [],
           "score": 11,
@@ -1204,15 +1191,30 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-vali-hlls-lake-placid-world-cup-race-recap.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Vali Höll's Lake Placid World Cup Race Recap",
+          "description": "Join Vali Höll for the final round of the 2026 downhill World Cup series in Lake Placid.",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30366260/p2pb30366260.jpg",
+          "publishedAt": "2026-10-08T11:57:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-vali-hlls-lake-placid-world-cup-race-recap.html?trk=rss",
+          "categories": [],
+          "score": 16,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/beyond-gravity-announces-loic-bruni-plans-to-compete-in-february-event-and-adds-williamson-and-newkirk-to-roster.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Loic Bruni, Jonty Williamson & Anna Newkirk Added to Beyond Gravity Athlete List",
-          "description": "Beyond Gravity has announced the fourth wave of confirmed athletes set to race on the modified Red Bull Hardline course at Maydena Bike Park, February 26-27 2027.( Photos: 1, Comments: 57 )",
+          "description": "Beyond Gravity has announced the fourth wave of confirmed athletes set to race on the modified Red Bull Hardline course at Maydena Bike Park, February 26-27 2027.( Photos: 1, Comments: 60 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29656699/p2pb29656699.jpg",
-          "publishedAt": "2026-10-06T11:50:00.000Z",
+          "publishedAt": "2026-10-06T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/beyond-gravity-announces-loic-bruni-plans-to-compete-in-february-event-and-adds-williamson-and-newkirk-to-roster.html?trk=rss",
           "categories": [],
           "score": 15,
@@ -1225,27 +1227,12 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "How Much Do 2026 World Cup Downhill Bikes Really Weigh?",
-          "description": "What's your ideal DH bike weight?( Photos: 30, Comments: 74 )",
+          "description": "What's your ideal DH bike weight?( Photos: 30, Comments: 76 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29951094/p2pb29951094.jpg",
-          "publishedAt": "2026-10-05T11:38:00.000Z",
+          "publishedAt": "2026-10-05T11:34:00.000Z",
           "url": "https://www.pinkbike.com/news/how-much-do-world-cup-downhill-bikes-really-weigh--2026.html?trk=rss",
           "categories": [],
           "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/race-analysis-2026-lake-placid-dh-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Analysis: Repeat Dominance & Maiden Wins at the 2026 Lake Placid DH World Cup",
-          "description": "How the races were won at the 2026 downhill World Cup series finale in Lake Placid.( Photos: 4, Comments: 17 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30365902/p2pb30365902.jpg",
-          "publishedAt": "2026-10-05T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/race-analysis-2026-lake-placid-dh-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 11,
           "category": "news"
         },
         {
