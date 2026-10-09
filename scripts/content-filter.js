@@ -181,6 +181,12 @@ const EXCLUDE_KEYWORDS = [
   // Freeride / slopestyle — not DH world cup
   { terms: ['crankworx slopestyle', 'rampage', 'redbull rampage',
             'natural selection', 'slopestyle'], weight: 6 },
+  // Freeride in the TITLE is a hard exclude, weighted like XCO. Weight 6 alone lost to a
+  // trusted channel's +4 plus DH words in the description: "Georgia Astle's Unlikely Road
+  // to Red Bull Rampage" (Just Ride) scored 11 and sat in Analysis on 2026-10-08. The
+  // full-text rule above stays, so a DH video that only mentions Rampage in its
+  // description still takes the softer penalty instead of being dropped.
+  { terms: ['rampage', 'slopestyle', 'natural selection'], weight: 15, titleOnly: true },
 
   // Generic filler
   { terms: ['word association', 'this or that', 'road and xc', 'road cycling legend',

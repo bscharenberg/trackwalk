@@ -102,6 +102,16 @@ const TEST_ITEMS = [
 
   // Should FAIL — noise
   {
+    // Real leak, 2026-10-08: trusted channel + DH words in the description outscored
+    // the freeride exclude. Must drop on the title alone.
+    id: 'rampage-1',
+    title: "Georgia Astle's Unlikely Road to Red Bull Rampage | Just Ride",
+    description: "Georgia Astle's journey to the top of freeride has been anything but conventional. Georgia joins Rob Warner and Eliot Jackson on Just Ride to tell the story of how she went from discovering mountain biking as a teenager in Whistler to racing downhill World Cups and enduro.",
+    channelId: 'UCUjYvTWqwm7x6LU8uGLvdxQ',
+    publishedAt: daysAgo(2),
+    source: 'youtube',
+  },
+  {
     id: '11',
     title: 'Best Budget MTB Helmets 2025 — Buyer\'s Guide',
     description: 'We test and review the best budget mountain bike helmets for trail and enduro riding.',
