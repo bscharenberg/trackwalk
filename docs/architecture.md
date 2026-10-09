@@ -14,7 +14,7 @@
 |---|---|---|
 | GitHub Pages | Static hosting | bscharenberg.github.io/trackwalk → trackwalk.racing |
 | Porkbun | DNS for trackwalk.racing (A → GitHub Pages) | — |
-| Cloudflare | DNS for helltrack.app only; 301 rule → trackwalk.racing | — |
+| Cloudflare | DNS for helltrack.app; `helltrack-sw-retire` Worker on `helltrack.app/*` (301 → trackwalk.racing + old service worker retirement) | — |
 | GitHub Actions | Hourly cache refresh CI/CD | .github/workflows/refresh.yml |
 | Cloudflare Worker (free) | Pinkbike RSS proxy | helltrack-rss.scharenbergs.workers.dev |
 | Google Analytics | Usage tracking | G-4EY22R6D2J |
@@ -28,8 +28,14 @@ which means re-issuing `PINKBIKE_PROXY` in GitHub Secrets and in every local `.e
 for a string no user ever sees. (The other Worker, `helltrack-results`, was deleted from
 Cloudflare long ago; its source now sits unused in `archive/helltrack-results/`.)
 
-The old domain **helltrack.app 301-redirects to trackwalk.racing** via a Cloudflare Redirect Rule
-(verified 2026-09-15). Its DNS stays on Cloudflare; trackwalk.racing DNS is on Porkbun. Moving
+The old domain **helltrack.app 301-redirects to trackwalk.racing** via the `helltrack-sw-retire`
+Worker (`workers/helltrack-sw-retire/`, route `helltrack.app/*`), which replaced a legacy Page
+Rule on 2026-10-09. The Worker exists because a redirected service-worker URL can never update:
+every browser that installed or visited helltrack.app was stuck on the old cached Helltrack
+shell. It answers `/service-worker.js` and `/public/service-worker.js` with a script that clears
+caches, unregisters itself and navigates to trackwalk.racing; every other path 301s with path and
+query string kept. **Do not put a Page Rule or Redirect Rule back on helltrack.app** — both run
+before Workers and would re-strand those users. Its DNS stays on Cloudflare; trackwalk.racing DNS is on Porkbun. Moving
 trackwalk.racing to Cloudflare is punchlist #50 — do not attempt before the season ends.
 
 ## Content Pipeline
