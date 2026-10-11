@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-11T15:36:43.408Z",
-  "totalItems": 155,
+  "builtAt": "2026-10-11T19:42:35.506Z",
+  "totalItems": 153,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1292,23 +1292,6 @@
           "url": "https://www.youtube.com/watch?v=VrcgfqTddlI",
           "isShort": false,
           "score": 8,
-          "category": "news"
-        },
-        {
-          "id": "snM5Aqg95CI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "DYFI BEFORE WHISTLER DUO",
-          "description": "We are back lapping the best at Dyfi bike park with the Red bull terra abajo CHAMP Roger viewer before we head off to whistler bike park!\n\nWe also discuss testing the phone duo...\n\nEnjoy sports fans!\n\n#bksport",
-          "thumbnail": "https://i.ytimg.com/vi/snM5Aqg95CI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-11T16:50:57Z",
-          "url": "https://www.youtube.com/watch?v=snM5Aqg95CI",
-          "isShort": false,
-          "score": 6,
           "category": "news"
         }
       ]
