@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-11T08:44:01.234Z",
-  "totalItems": 157,
+  "builtAt": "2026-10-11T15:36:43.408Z",
+  "totalItems": 155,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1175,21 +1175,6 @@
       "id": "news",
       "label": "News",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/video-vali-hlls-lake-placid-world-cup-race-recap.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Vali Höll's Lake Placid World Cup Race Recap",
-          "description": "Join Vali Höll for the final round of the 2026 downhill World Cup series in Lake Placid.( Comments: 3 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30366260/p2pb30366260.jpg",
-          "publishedAt": "2026-10-08T11:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-vali-hlls-lake-placid-world-cup-race-recap.html?trk=rss",
-          "categories": [],
-          "score": 16,
-          "category": "news"
-        },
         {
           "id": "S_o6yXyS_Nw",
           "type": "video",
