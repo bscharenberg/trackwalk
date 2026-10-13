@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-12T19:47:08.548Z",
-  "totalItems": 154,
+  "builtAt": "2026-10-13T01:59:36.975Z",
+  "totalItems": 156,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -926,6 +926,23 @@
       "label": "Films",
       "items": [
         {
+          "id": "OxIaN5OhUCo",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCXqlds5f7B2OOs9vQuevl4A",
+          "channelName": "Red Bull Bike",
+          "title": "Building the Gnarliest Course in Mountain Biking | Red Bull Hardline British Columbia",
+          "description": "What does it take to build the gnarliest course in mountain biking?\nLead builder Justin Wyper and his crew have spent 7,000 man-hours over five months bringing Red Bull Hardline British Columbia to life. Now it’s time to see if it actually works.\n\nTest Riders:\n\nDan Booker\nCaleb Holonko\nDylan Maples\nDillon Butcher\nCole Nichol\nMatt McDuff\nChance Moore\nJack Menzies\nFeatured Riders\nJackson Goldstone\nFinn Iles\nGracey Hemstreet\nDan Atherton\n\nGo behind the scenes of the build and see what it takes to create a Red Bull Hardline course from scratch.\n\n#redbullhardline #mountainbike #hardlinecanada\n\nSubscribe to Red Bull Bike on Youtube: https://win.gs/SubRedBullBike",
+          "thumbnail": "https://i.ytimg.com/vi/OxIaN5OhUCo/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-12T21:38:54Z",
+          "url": "https://www.youtube.com/watch?v=OxIaN5OhUCo",
+          "isShort": false,
+          "score": 12,
+          "category": "films"
+        },
+        {
           "id": "-Y6UN5kOUvg",
           "type": "video",
           "source": "youtube",
@@ -1192,6 +1209,21 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/video-building-the-gnarliest-course-in-mountain-biking-red-bull-hardline-bc.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Building the Gnarliest Course in Mountain Biking - Red Bull Hardline BC",
+          "description": "From the desert to the coastal rainforest, another rowdy event is on the way.( Photos: 1, Comments: 22 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30398170/p2pb30398170.jpg",
+          "publishedAt": "2026-10-12T12:00:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-building-the-gnarliest-course-in-mountain-biking-red-bull-hardline-bc.html?trk=rss",
+          "categories": [],
+          "score": 6,
+          "category": "news"
+        },
         {
           "id": "S_o6yXyS_Nw",
           "type": "video",
