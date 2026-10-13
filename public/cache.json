@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-13T09:20:40.307Z",
+  "builtAt": "2026-10-13T17:07:35.418Z",
   "totalItems": 157,
   "categories": {
     "shorts": {
@@ -1227,15 +1227,30 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/2026-red-bull-hardline-bc-preview-rider-list-how-to-watch-and-race-favorites.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "2026 Red Bull Hardline BC Preview: Rider List, How to Watch & Race Favorites",
+          "description": "Everything you need to know about this weekend's Red Bull Hardline BC.( Photos: 5, Comments: 63 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30399408/p2pb30399408.jpg",
+          "publishedAt": "2026-10-13T11:59:00.000Z",
+          "url": "https://www.pinkbike.com/news/2026-red-bull-hardline-bc-preview-rider-list-how-to-watch-and-race-favorites.html?trk=rss",
+          "categories": [],
+          "score": 10,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-building-the-gnarliest-course-in-mountain-biking-red-bull-hardline-bc.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Building the Gnarliest Course in Mountain Biking - Red Bull Hardline BC",
-          "description": "From the desert to the coastal rainforest, another rowdy event is on the way.( Photos: 1, Comments: 40 )",
+          "description": "From the desert to the coastal rainforest, another rowdy event is on the way.( Photos: 1, Comments: 52 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30398170/p2pb30398170.jpg",
-          "publishedAt": "2026-10-12T11:59:00.000Z",
+          "publishedAt": "2026-10-12T11:55:00.000Z",
           "url": "https://www.pinkbike.com/news/video-building-the-gnarliest-course-in-mountain-biking-red-bull-hardline-bc.html?trk=rss",
           "categories": [],
           "score": 6,
