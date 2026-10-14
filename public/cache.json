@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-10-14T20:39:52.219Z",
-  "totalItems": 159,
+  "builtAt": "2026-10-14T23:26:32.906Z",
+  "totalItems": 160,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "au9evELVcXc",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
+          "channelName": "Pinkbike",
+          "title": "Jackson Goldstone and Asa Vermette testing out the MASSIVE lily pad feature",
+          "description": "Jackson Goldstone and Asa Vermette testing out the MASSIVE lily pad feature at Red Bull Hardline BC\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\nhttps://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
+          "thumbnail": "https://i.ytimg.com/vi/au9evELVcXc/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-14T21:30:40Z",
+          "url": "https://www.youtube.com/watch?v=au9evELVcXc",
+          "isShort": true,
+          "score": 12,
+          "category": "shorts"
+        },
         {
           "id": "G_mWYKZDq3I",
           "type": "video",
@@ -327,23 +344,6 @@
           "url": "https://www.youtube.com/watch?v=7dAuOqhBrv0",
           "isShort": true,
           "score": 31,
-          "category": "shorts"
-        },
-        {
-          "id": "CMbO4xlEvHk",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Every place could prove crucial 👀",
-          "description": "Every place could prove crucial 👀\n\nHattie Harnden fights for every second at Whiteface Mountain, with the battle for second in the UCI DHI World Cup overall going right down to the wire 🏆\n\n📍Lake Placid Olympic Sites, Whiteface Mountain 🏁 Women’s Elite UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/CMbO4xlEvHk/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T17:46:27Z",
-          "url": "https://www.youtube.com/watch?v=CMbO4xlEvHk",
-          "isShort": true,
-          "score": 15,
           "category": "shorts"
         }
       ]
@@ -989,7 +989,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Red Bull Hardline BC Track Walk & First Hits",
-          "description": "Dan and Charlie head out with the measuring tape to scope the massive drops and jumps on the Hardline BC track.( Comments: 22 )",
+          "description": "Dan and Charlie head out with the measuring tape to scope the massive drops and jumps on the Hardline BC track.( Comments: 30 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30404006/p2pb30404006.jpg",
           "publishedAt": "2026-10-14T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/video-red-bull-hardline--2026-trackwalk-and-first-hits.html?trk=rss",
@@ -1265,7 +1265,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Red Bull Hardline Social Roundup: Practice Hits & An Appearance by Brandon Semenuk",
-          "description": "The course is looking sooo good.( Comments: 65 )",
+          "description": "The course is looking sooo good.( Comments: 66 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30402649/p2pb30402649.jpg",
           "publishedAt": "2026-10-13T11:52:00.000Z",
           "url": "https://www.pinkbike.com/news/red-bull-hardline-social-roundup-practice-hits-and-semenuk-showed-up.html?trk=rss",
