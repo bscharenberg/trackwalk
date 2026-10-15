@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-10-15T01:48:51.097Z",
-  "totalItems": 161,
+  "builtAt": "2026-10-15T07:21:48.456Z",
+  "totalItems": 163,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "gxrBy7Zd53o",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
+          "channelName": "Just Ride",
+          "title": "The mastermind behind the Red Bull Hardline British Columbia build 🪏",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/gxrBy7Zd53o/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-15T05:03:58Z",
+          "url": "https://www.youtube.com/watch?v=gxrBy7Zd53o",
+          "isShort": true,
+          "score": 10,
+          "category": "shorts"
+        },
         {
           "id": "6Ta_y_psob4",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 15,
           "category": "shorts"
-        },
-        {
-          "id": "T-KtI5J0qXA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "72.2kph and into the hot seat 💨",
-          "description": "72.2kph and into the hot seat 💨\n\nAsa Vermette goes fastest by just 0.2 seconds at Whiteface Mountain, a margin that could prove huge in the fight for the overall title 🏆🇺🇸\n\n📍Lake Placid Olympic Sites, Whiteface Mountain 🏁 Men’s Elite UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/T-KtI5J0qXA/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T18:34:11Z",
-          "url": "https://www.youtube.com/watch?v=T-KtI5J0qXA",
-          "isShort": true,
-          "score": 21,
-          "category": "shorts"
         }
       ]
     },
@@ -367,6 +367,21 @@
           "url": "https://www.youtube.com/watch?v=sjniFSGWG1o",
           "isShort": false,
           "score": 10,
+          "category": "race-runs"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/red-bull-hardline-bc-2026-finals-moved-forward-to-friday-due-to-weather.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Red Bull Hardline BC Finals Moved Forward to Friday Due to Weather",
+          "description": "Organizers adjust the Cypress Mountain schedule, pushing seeding to Thursday and finals to Friday, October 16.( Photos: 1, Comments: 46 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30399408/p2pb30399408.jpg",
+          "publishedAt": "2026-10-14T12:00:00.000Z",
+          "url": "https://www.pinkbike.com/news/red-bull-hardline-bc-2026-finals-moved-forward-to-friday-due-to-weather.html?trk=rss",
+          "categories": [],
+          "score": 9,
           "category": "race-runs"
         },
         {
@@ -674,23 +689,6 @@
           "isShort": false,
           "score": 19,
           "category": "race-runs"
-        },
-        {
-          "id": "6GcqkWseQsM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: MUDDY course preview again at the final round in Lake Placid  |  '26 UCI DH MTB World Series",
-          "description": "Crazy mudder again for the last course preview of the 2026 UCI DH MTB World Series!  @jacksongoldstone6453  did his best to give you a full run down Whiteface in Lake Placid USA.\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/6GcqkWseQsM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-02T17:07:11Z",
-          "url": "https://www.youtube.com/watch?v=6GcqkWseQsM",
-          "isShort": false,
-          "score": 11,
-          "category": "race-runs"
         }
       ]
     },
@@ -989,9 +987,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Red Bull Hardline BC Track Walk & First Hits",
-          "description": "Dan and Charlie head out with the measuring tape to scope the massive drops and jumps on the Hardline BC track.( Comments: 34 )",
+          "description": "Dan and Charlie head out with the measuring tape to scope the massive drops and jumps on the Hardline BC track.( Comments: 46 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30404006/p2pb30404006.jpg",
-          "publishedAt": "2026-10-14T11:59:00.000Z",
+          "publishedAt": "2026-10-14T11:58:00.000Z",
           "url": "https://www.pinkbike.com/news/video-red-bull-hardline--2026-trackwalk-and-first-hits.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -1004,7 +1002,7 @@
           "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
           "channelName": "Just Ride",
           "title": "First Impressions of the NEW Red Bull Hardline Track in British Columbia",
-          "description": "Rob Warner and Eliot Jackson walk the brand new Red Bull Hardline British Columbia track at Cypress Mountain for the very first time.\n\nA track up north means we did the only sensible thing: grabbed a tape measure, put on some plaid, and measured the gnarliest sections in proper Canadian units. Along the way we caught up with the riders getting their own first look at the track and what's in store for the week.\n\nBe sure to tune into the LIVE race this Saturday 👇https://www.youtube.com/live/GES8wItqoLI?si=h2Ggw9v0AA2Bnzzf \n\n#redbullhardline #justride #britishcolumbia \n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\n0:00 - Exploring the NEW Red Bull Hardline BC Course\n0:28 - Course Builder Justin Wyper Explains the Design\n1:21 - The Essence of British Columbia Riding\n2:06 - Finn Iles on the Canuck Drop\n3:21 - The Canuck Drop: Measured in Moose\n4:07 - Brendan Fairclough on Returning to Racing\n4:45 - Gracey Hemstreet Takes on Hardline BC\n5:17 - Steve Vanderhoek on His First Red Bull Hardline Race\n6:22 - The HUGE SRAM Kitchen Sink Drop\n7:04 - Ronan Dunne Reacts to the New Course\n7:44 - Jackson Goldstone Breaks Down the Double Drop\n8:44 - The 14-Foot Lily Pad Feature\n9:10 - The Cliff Line\n10:23 - The MASSIVE 100-Foot Final Jump",
+          "description": "Rob Warner and Eliot Jackson walk the brand new Red Bull Hardline British Columbia track at Cypress Mountain for the very first time.\n\nA track up north means we did the only sensible thing: grabbed a tape measure, put on some plaid, and measured the gnarliest sections in proper Canadian units. Along the way we caught up with the riders getting their own first look at the track and what's in store for the week.\n\nBe sure to tune into the LIVE race this Friday 👇https://www.youtube.com/live/GES8wItqoLI?si=h2Ggw9v0AA2Bnzzf \n\n#redbullhardline #justride #britishcolumbia \n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\n0:00 - Exploring the NEW Red Bull Hardline BC Course\n0:28 - Course Builder Justin Wyper Explains the Design\n1:21 - The Essence of British Columbia Riding\n2:06 - Finn Iles on the Canuck Drop\n3:21 - The Canuck Drop: Measured in Moose\n4:07 - Brendan Fairclough on Returning to Racing\n4:45 - Gracey Hemstreet Takes on Hardline BC\n5:17 - Steve Vanderhoek on His First Red Bull Hardline Race\n6:22 - The HUGE SRAM Kitchen Sink Drop\n7:04 - Ronan Dunne Reacts to the New Course\n7:44 - Jackson Goldstone Breaks Down the Double Drop\n8:44 - The 14-Foot Lily Pad Feature\n9:10 - The Cliff Line\n10:23 - The MASSIVE 100-Foot Final Jump",
           "thumbnail": "https://i.ytimg.com/vi/6D6Vdk6mQf4/maxresdefault.jpg",
           "thumbnailWidth": 1280,
           "thumbnailHeight": 720,
@@ -1267,7 +1265,7 @@
           "title": "Red Bull Hardline Social Roundup: Practice Hits & An Appearance by Brandon Semenuk",
           "description": "The course is looking sooo good.( Comments: 66 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30402649/p2pb30402649.jpg",
-          "publishedAt": "2026-10-13T11:52:00.000Z",
+          "publishedAt": "2026-10-13T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/red-bull-hardline-social-roundup-practice-hits-and-semenuk-showed-up.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1282,7 +1280,7 @@
           "title": "2026 Red Bull Hardline BC Preview: Rider List, How to Watch & Race Favorites",
           "description": "Everything you need to know about this weekend's Red Bull Hardline BC.( Photos: 5, Comments: 139 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30399408/p2pb30399408.jpg",
-          "publishedAt": "2026-10-13T11:48:00.000Z",
+          "publishedAt": "2026-10-13T11:47:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-red-bull-hardline-bc-preview-rider-list-how-to-watch-and-race-favorites.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -1297,7 +1295,7 @@
           "title": "Video: Building the Gnarliest Course in Mountain Biking - Red Bull Hardline BC",
           "description": "From the desert to the coastal rainforest, another rowdy event is on the way.( Photos: 1, Comments: 62 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30398170/p2pb30398170.jpg",
-          "publishedAt": "2026-10-12T11:46:00.000Z",
+          "publishedAt": "2026-10-12T11:45:00.000Z",
           "url": "https://www.pinkbike.com/news/video-building-the-gnarliest-course-in-mountain-biking-red-bull-hardline-bc.html?trk=rss",
           "categories": [],
           "score": 6,
