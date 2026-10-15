@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-10-14T23:26:32.906Z",
-  "totalItems": 160,
+  "builtAt": "2026-10-15T01:48:51.097Z",
+  "totalItems": 161,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "6Ta_y_psob4",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "Dakotah Norton weighs in on the state of World Cup DH",
+          "description": "Pulled from our latest B Practice Podcast - https://youtu.be/rNIvaxt5Lf0",
+          "thumbnail": "https://i.ytimg.com/vi/6Ta_y_psob4/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-15T00:11:07Z",
+          "url": "https://www.youtube.com/watch?v=6Ta_y_psob4",
+          "isShort": true,
+          "score": 13,
+          "category": "shorts"
+        },
         {
           "id": "au9evELVcXc",
           "type": "video",
@@ -327,23 +344,6 @@
           "url": "https://www.youtube.com/watch?v=T-KtI5J0qXA",
           "isShort": true,
           "score": 21,
-          "category": "shorts"
-        },
-        {
-          "id": "7dAuOqhBrv0",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Stolen at the death 🤯",
-          "description": "Stolen at the death 🤯\n\nLisa Bouladou snatches the final Women’s Elite DHI World Cup victory of 2026, beating Vali Höll in the lower slopes with a phenomenal performance 🔥🇫🇷\n\n🥇 Lisa Bouladou 🇫🇷 3:36.037\n🥈 Valentina Höll 🇦🇹 +0.463\n🥉 Tahnée Seagrave 🇬🇧 +0.621\n\n📍Lake Placid Olympic Sites, Whiteface Mountain 🏁 Women’s Elite UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/7dAuOqhBrv0/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T18:06:39Z",
-          "url": "https://www.youtube.com/watch?v=7dAuOqhBrv0",
-          "isShort": true,
-          "score": 31,
           "category": "shorts"
         }
       ]
@@ -989,7 +989,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Red Bull Hardline BC Track Walk & First Hits",
-          "description": "Dan and Charlie head out with the measuring tape to scope the massive drops and jumps on the Hardline BC track.( Comments: 30 )",
+          "description": "Dan and Charlie head out with the measuring tape to scope the massive drops and jumps on the Hardline BC track.( Comments: 34 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30404006/p2pb30404006.jpg",
           "publishedAt": "2026-10-14T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/video-red-bull-hardline--2026-trackwalk-and-first-hits.html?trk=rss",
@@ -1280,7 +1280,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "2026 Red Bull Hardline BC Preview: Rider List, How to Watch & Race Favorites",
-          "description": "Everything you need to know about this weekend's Red Bull Hardline BC.( Photos: 5, Comments: 137 )",
+          "description": "Everything you need to know about this weekend's Red Bull Hardline BC.( Photos: 5, Comments: 139 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30399408/p2pb30399408.jpg",
           "publishedAt": "2026-10-13T11:48:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-red-bull-hardline-bc-preview-rider-list-how-to-watch-and-race-favorites.html?trk=rss",
@@ -1295,7 +1295,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Building the Gnarliest Course in Mountain Biking - Red Bull Hardline BC",
-          "description": "From the desert to the coastal rainforest, another rowdy event is on the way.( Photos: 1, Comments: 61 )",
+          "description": "From the desert to the coastal rainforest, another rowdy event is on the way.( Photos: 1, Comments: 62 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30398170/p2pb30398170.jpg",
           "publishedAt": "2026-10-12T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/video-building-the-gnarliest-course-in-mountain-biking-red-bull-hardline-bc.html?trk=rss",
