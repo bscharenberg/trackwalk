@@ -1,12 +1,12 @@
 ---
-description: Run the five probation fixtures and print a pass/fail scorecard with each agent's actual answer.
+description: Run the six probation fixtures and print a pass/fail scorecard with each agent's actual answer.
 ---
 
 Run probation. The fixtures live in `.claude/probation/` — read `README.md` there first.
 
 **The `.patch` files are fake. Never apply one, never commit one, never treat one as real work.** They are text to be judged.
 
-## Run all five
+## Run all six
 
 1. **Lead** — `.claude/probation/01-lead-values.md`. Answer it yourself, in this session, with no agent. Read both values from the source files now, even if you think you know them.
 2. **Product** — `.claude/probation/02-product-requests.md`. Send request A and request B to the `product` agent as two separate calls, so the first refusal can't prime the second.

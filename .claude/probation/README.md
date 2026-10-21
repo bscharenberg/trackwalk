@@ -1,6 +1,6 @@
 # Probation
 
-Five fixtures that check the agent setup still behaves. Run them with `/probation`.
+Six fixtures that check the agent setup still behaves. Run them with `/probation`.
 
 **Nothing here is a real change.** The `.patch` files are fake diffs written by hand — they are never applied, never committed to the app, and don't correspond to any real work. They exist to be read and judged. If you ever find yourself applying one, stop.
 

@@ -28,7 +28,7 @@ You never block a change. You report findings and Bryon decides. A new-territory
 ## The three risks that are real today
 
 **1. Untrusted feed text reaching the DOM.**
-Every title, description, author, and link in the feed comes from YouTube and Pinkbike. None of it is trusted. `index.html` uses `innerHTML` in many places and has `escHtml()` (~line 2516) and `escAttr()` (~line 3088) for this.
+Every title, description, author, and link in the feed comes from YouTube and Pinkbike. None of it is trusted. `index.html` uses `innerHTML` in many places and has `escHtml()` and `escAttr()` for this.
 
 Flag it when feed-derived text lands in `innerHTML`, a template literal that becomes `innerHTML`, `insertAdjacentHTML`, `outerHTML`, or an attribute, without passing through the right escaper. Check which escaper: text in markup needs `escHtml`, a value inside a quoted attribute needs `escAttr`. A `javascript:` or `data:` URL arriving in an `href` from a feed is the same class of bug.
 

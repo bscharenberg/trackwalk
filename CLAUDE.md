@@ -36,16 +36,7 @@ Name things by job, never by model. Model slugs live only in `.claude/models.jso
 
 ## Critical rules
 
-**File editing**: never use `cp` to deploy. Edit files directly on disk with Python:
-```bash
-python3 << 'PYEOF'
-path = '/Users/bryon/Documents/Bryon Knowledge Base/Helltrack/index.html'
-with open(path) as f: c = f.read()
-c = c.replace('OLD', 'NEW')
-with open(path, 'w') as f: f.write(c)
-print('done' if 'NEW' in c else 'FAILED')
-PYEOF
-```
+**File editing**: edit files in place with the Edit tool. Never `cp` a file in from `~/Downloads`. That silently failed on this machine (decisions.md, "cp to deploy silently fails").
 
 **Git push**: always stash first:
 ```bash
@@ -87,7 +78,7 @@ node scripts/split-results.js
 - Category `results` in cache.json displays as `Analysis` in the UI. Do not rename.
 - Service worker caches aggressively. Unregister it in DevTools for fresh testing.
 - `riders-view` must have `style="display:none"` on the HTML element.
-- The Kit.com form embed (and whatever replaces it) is static HTML. Never inject it via JS template literals.
+- The newsletter form (Loops) is static HTML. Never inject it via JS template literals.
 - pdfjs-dist: use the `.mjs` extension, `Uint8Array` not `Buffer`, 10–11 digit UCI IDs.
 
 ## Naming notes
@@ -103,9 +94,3 @@ node scripts/split-results.js
 - Values clean, simple UI over feature-rich complexity.
 - Makes quick decisions when given clear options (2–3 max).
 - Cares deeply about DH/MTB culture; the app should feel authentic to that world.
-
-## Current switchover items (see punchlist.md)
-- ~~DNS move to Cloudflare~~ and ~~Email Routing for hello@trackwalk.racing~~ are both done (2026-09-22).
-- Migrate off Kit.com and rewrite the welcome sequence. Leading candidate is Loops (1,000 free contacts, welcome flows on the free tier); Brevo is the fallback. MailerLite is out — its free plan dropped to 250 subscribers on 2026-06-16. The embed must be static HTML, and the `email_signup` GA hook keyed on `.formkit-form` (`index.html:2836`) must be re-pointed, ideally to `.signup-section` so the next migration doesn't break it.
-- Retitle the Google feedback form (forms.gle/sRySzSFzzwDyKNrWA).
-- Instagram handle.

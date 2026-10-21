@@ -18,7 +18,7 @@ Then **verify the surprising ones a second way before they go on a graphic.** A 
 ## Known traps in this data — check these every time
 - **Val di Sole is World Championships.** No Q2 session, and **no trade teams recorded** (riders race for their nation), so every rider there looks like a privateer. Any Q1/Q2 or privateer stat must exclude it or it is wrong by a factor of four.
 - **`'finals-women'.includes('men')` is `true`.** Always test for `women` first when splitting by gender, or the women's field silently lands in the men's bucket.
-- **Standings computed from `points` are finals-only** (punchlist #47). The resulting *order* has matched the UCI's official WCS column when cross-checked, so positions are safe to publish; raw point totals are not.
+- **Standings computed from `points` are finals-only** (punchlist #47), so neither the totals nor the order they produce are publishable. If a post needs a rank, take it from the entry-list WCS column.
 - **Entry-list PDFs carry a WCS column** — the UCI's own standings. Use it to cross-check anything computed.
 - Round data can carry a `status` of `Confirmed` or nothing at all; absence is not provisional.
 - **`public/riders.json` is `{ men: [...], women: [...] }`, not a flat array.** A reader that takes the first array it finds gets 150 men, drops all 62 women, and looks complete. Walk both keys. Total is 212.
