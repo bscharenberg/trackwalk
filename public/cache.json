@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-22T14:38:54.030Z",
-  "totalItems": 167,
+  "builtAt": "2026-10-22T18:47:10.579Z",
+  "totalItems": 164,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -353,6 +353,23 @@
       "label": "Race runs",
       "items": [
         {
+          "id": "Np1XfOX1tLI",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "The Final Push - THE GRIND Episode 3 | A Monster Energy Documentary Series",
+          "description": "Nine rounds. Three riders. One season.\n\nEvery season has a beginning. Every race brings new challenges. But only one finish line marks the end.\n\nIn the final episode of THE GRIND, follow Luca Martin, Charlie Aldridge and Gwendalyn Gibson through the closing chapter of the 2026 UCI Cross-Country World Cup season, from Les Gets to the final round in Lake Placid, New York.\n\nAfter a season full of pressure, setbacks and defining moments, everything comes down to the final races.\n\nLuca Martin fights to secure the overall titles in both XCO and XCC. Charlie Aldridge, after a difficult start to the season, finds his way back to the top and finishes the year with a UCI World Cup victory. Gwendalyn Gibson reaches a new milestone in her career with an incredible second place at Soldier Hollow.\n\nThree different journeys. Three different definitions of success. One final push.\n\nMore than a race recap, THE GRIND goes behind the results to explore the people, the sacrifices and the moments that define a season at the highest level of Cross-country mountain biking.\n\nThis is the end of the season. This is THE GRIND.\n\nPresented by Monster Energy. 🟢\n\n#TheGrind #MonsterEnergy\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/Np1XfOX1tLI/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-22T17:17:00Z",
+          "url": "https://www.youtube.com/watch?v=Np1XfOX1tLI",
+          "isShort": false,
+          "score": 10,
+          "category": "race-runs"
+        },
+        {
           "id": "LpI8zKXRjPw",
           "type": "video",
           "source": "youtube",
@@ -367,21 +384,6 @@
           "url": "https://www.youtube.com/watch?v=LpI8zKXRjPw",
           "isShort": false,
           "score": 14,
-          "category": "race-runs"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-mens-winning-run-from-the-2026-red-bull-hardline-bc.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Asa Vermette's Winning Run from the 2026 Red Bull Hardline BC",
-          "description": "An incredible ride from the men's 2026 Red Bull Hardline BC champ.( Comments: 36 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30418631/p2pb30418631.jpg",
-          "publishedAt": "2026-10-18T11:33:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-mens-winning-run-from-the-2026-red-bull-hardline-bc.html?trk=rss",
-          "categories": [],
-          "score": 16,
           "category": "race-runs"
         },
         {
@@ -697,21 +699,6 @@
       "label": "Results",
       "items": [
         {
-          "id": "https://www.pinkbike.com/news/race-analysis-breaking-down-the-numbers-from-red-bull-hardline-bc-2026.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Race Analysis: Breaking Down the Numbers from Red Bull Hardline BC 2026",
-          "description": "How the race was won at the first Red Bull Hardline BC.( Photos: 4, Comments: 72 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb27326493/p2pb27326493.jpg",
-          "publishedAt": "2026-10-17T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/race-analysis-breaking-down-the-numbers-from-red-bull-hardline-bc-2026.html?trk=rss",
-          "categories": [],
-          "score": 12,
-          "category": "results"
-        },
-        {
           "id": "E1sql5z6cHY",
           "type": "video",
           "source": "youtube",
@@ -896,7 +883,7 @@
           "title": "Video: Sleeper Shreddit from Red Bull Hardline BC 2026",
           "description": "Sleeper captures the wild scenes from the first edition of Red Bull Hardline BC.( Comments: 48 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30423476/p2pb30423476.jpg",
-          "publishedAt": "2026-10-19T11:37:00.000Z",
+          "publishedAt": "2026-10-19T11:32:00.000Z",
           "url": "https://www.pinkbike.com/news/video-sleeper-shreddit-from-red-bull-hardline-bc-2026.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -968,7 +955,7 @@
           "title": "Dario's Randoms: Red Bull Hardline BC 2026",
           "description": "Massive features, stylish fans, and a winning bike check for good measure.( Photos: 101, Comments: 51 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30415862/p2pb30415862.jpg",
-          "publishedAt": "2026-10-18T11:36:00.000Z",
+          "publishedAt": "2026-10-18T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/darios-randoms-red-bull-hardline-bc-2026.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1208,9 +1195,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "What Protective Gear Were Riders Wearing at Red Bull Hardline BC?",
-          "description": "Riders donned more protective apparel than usual for the rowdy Hardline course.( Photos: 33, Comments: 81 )",
+          "description": "Riders donned more protective apparel than usual for the rowdy Hardline course.( Photos: 33, Comments: 91 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30408689/p2pb30408689.jpg",
-          "publishedAt": "2026-10-21T11:58:00.000Z",
+          "publishedAt": "2026-10-21T11:53:00.000Z",
           "url": "https://www.pinkbike.com/news/what-protection-equipment-were-riders-wearing-at-red-bull-hardline.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1225,7 +1212,7 @@
           "title": "Steve Vanderhoek Shares Crash Video from Red Bull Hardline BC",
           "description": "The crash that led to a concussion and a broken nose.( Photos: 2, Comments: 26 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30424997/p2pb30424997.jpg",
-          "publishedAt": "2026-10-19T11:40:00.000Z",
+          "publishedAt": "2026-10-19T11:35:00.000Z",
           "url": "https://www.pinkbike.com/news/steve-vanderhoek-shares-crash-video-from-red-bull-hardline-bc.html?trk=rss",
           "categories": [],
           "score": 6,
