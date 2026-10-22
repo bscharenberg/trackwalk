@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-22T18:47:10.579Z",
-  "totalItems": 164,
+  "builtAt": "2026-10-22T22:16:27.009Z",
+  "totalItems": 161,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -875,21 +875,6 @@
       "label": "Films",
       "items": [
         {
-          "id": "https://www.pinkbike.com/news/video-sleeper-shreddit-from-red-bull-hardline-bc-2026.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Sleeper Shreddit from Red Bull Hardline BC 2026",
-          "description": "Sleeper captures the wild scenes from the first edition of Red Bull Hardline BC.( Comments: 48 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30423476/p2pb30423476.jpg",
-          "publishedAt": "2026-10-19T11:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-sleeper-shreddit-from-red-bull-hardline-bc-2026.html?trk=rss",
-          "categories": [],
-          "score": 6,
-          "category": "films"
-        },
-        {
           "id": "1SgQ82H1IiY",
           "type": "video",
           "source": "youtube",
@@ -946,21 +931,6 @@
       "id": "paddock",
       "label": "Pits",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/darios-randoms-red-bull-hardline-bc-2026.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Dario's Randoms: Red Bull Hardline BC 2026",
-          "description": "Massive features, stylish fans, and a winning bike check for good measure.( Photos: 101, Comments: 51 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30415862/p2pb30415862.jpg",
-          "publishedAt": "2026-10-18T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/darios-randoms-red-bull-hardline-bc-2026.html?trk=rss",
-          "categories": [],
-          "score": 6,
-          "category": "paddock"
-        },
         {
           "id": "8eX8e73GZ6U",
           "type": "video",
@@ -1195,9 +1165,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "What Protective Gear Were Riders Wearing at Red Bull Hardline BC?",
-          "description": "Riders donned more protective apparel than usual for the rowdy Hardline course.( Photos: 33, Comments: 91 )",
+          "description": "Riders donned more protective apparel than usual for the rowdy Hardline course.( Photos: 33, Comments: 94 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30408689/p2pb30408689.jpg",
-          "publishedAt": "2026-10-21T11:53:00.000Z",
+          "publishedAt": "2026-10-21T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/what-protection-equipment-were-riders-wearing-at-red-bull-hardline.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1212,7 +1182,7 @@
           "title": "Steve Vanderhoek Shares Crash Video from Red Bull Hardline BC",
           "description": "The crash that led to a concussion and a broken nose.( Photos: 2, Comments: 26 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30424997/p2pb30424997.jpg",
-          "publishedAt": "2026-10-19T11:35:00.000Z",
+          "publishedAt": "2026-10-19T11:33:00.000Z",
           "url": "https://www.pinkbike.com/news/steve-vanderhoek-shares-crash-video-from-red-bull-hardline-bc.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1318,23 +1288,6 @@
           "url": "https://www.youtube.com/watch?v=Gm7jSfZ9hlM",
           "isShort": false,
           "score": 6,
-          "category": "news"
-        },
-        {
-          "id": "VrcgfqTddlI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "WHISTLER WORLD CUP HITS THE BIKE PARK",
-          "description": "Whistler World Cup is here and we hit the bike park with some all time crews, hit a line, dirt merch, garbanzo zone, goats gully, too mushroom, D1, captain safety and just so many sick laps!\n\nEnjoy sports fans the World Cup is just around the corner!\n\n#bksport #whistlerbikepark",
-          "thumbnail": "https://i.ytimg.com/vi/VrcgfqTddlI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-22T21:24:06Z",
-          "url": "https://www.youtube.com/watch?v=VrcgfqTddlI",
-          "isShort": false,
-          "score": 8,
           "category": "news"
         }
       ]
