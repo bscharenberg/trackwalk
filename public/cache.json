@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-23T11:31:44.207Z",
-  "totalItems": 161,
+  "builtAt": "2026-10-23T15:54:28.864Z",
+  "totalItems": 159,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1167,23 +1167,8 @@
           "title": "What Protective Gear Were Riders Wearing at Red Bull Hardline BC?",
           "description": "Riders donned more protective apparel than usual for the rowdy Hardline course.( Photos: 33, Comments: 94 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30408689/p2pb30408689.jpg",
-          "publishedAt": "2026-10-21T11:49:00.000Z",
+          "publishedAt": "2026-10-21T11:48:00.000Z",
           "url": "https://www.pinkbike.com/news/what-protection-equipment-were-riders-wearing-at-red-bull-hardline.html?trk=rss",
-          "categories": [],
-          "score": 6,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/steve-vanderhoek-shares-crash-video-from-red-bull-hardline-bc.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Steve Vanderhoek Shares Crash Video from Red Bull Hardline BC",
-          "description": "The crash that led to a concussion and a broken nose.( Photos: 2, Comments: 26 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30424997/p2pb30424997.jpg",
-          "publishedAt": "2026-10-19T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/steve-vanderhoek-shares-crash-video-from-red-bull-hardline-bc.html?trk=rss",
           "categories": [],
           "score": 6,
           "category": "news"
@@ -1271,23 +1256,6 @@
           "url": "https://www.youtube.com/watch?v=B9szWaJ0Xm4",
           "isShort": false,
           "score": 17,
-          "category": "news"
-        },
-        {
-          "id": "Gm7jSfZ9hlM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WHISTLER E-BIKE 80KM EPIC",
-          "description": "Straight off the plane and in to a 3 battery 80km epic ride exploring the trails here in Whistler! \n\nShout out to https://currentemtb.com for the support with batteries here in Whistler!",
-          "thumbnail": "https://i.ytimg.com/vi/Gm7jSfZ9hlM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-23T15:00:34Z",
-          "url": "https://www.youtube.com/watch?v=Gm7jSfZ9hlM",
-          "isShort": false,
-          "score": 6,
           "category": "news"
         }
       ]
