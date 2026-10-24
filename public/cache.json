@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-24T18:05:15.398Z",
-  "totalItems": 158,
+  "builtAt": "2026-10-24T20:42:44.336Z",
+  "totalItems": 157,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1133,23 +1133,6 @@
           "url": "https://www.youtube.com/watch?v=B6gIBP1AzR0",
           "isShort": false,
           "score": 20,
-          "category": "paddock"
-        },
-        {
-          "id": "JQyyT1Jvq78",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "PIT BITS - Whistler World Cup DOWNHILL",
-          "description": "The UCI Mountain Bike World Series lands at what is considered the world's greatest bike park - Whistler, British Columbia, Canada.\n\nJohn Lawlor checks out the pits to see how things are shaping up for this weekend's historic race down the insanely technical and rowdy 1199 track.",
-          "thumbnail": "https://i.ytimg.com/vi/JQyyT1Jvq78/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-24T20:25:32Z",
-          "url": "https://www.youtube.com/watch?v=JQyyT1Jvq78",
-          "isShort": false,
-          "score": 12,
           "category": "paddock"
         }
       ]
