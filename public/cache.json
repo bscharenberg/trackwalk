@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-24T22:44:03.992Z",
-  "totalItems": 157,
+  "builtAt": "2026-10-25T01:05:19.132Z",
+  "totalItems": 156,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -850,23 +850,6 @@
           "isShort": false,
           "score": 12,
           "category": "results"
-        },
-        {
-          "id": "GduBY60Vuvw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV WHISTLER WORLD CUP TRACKWALK",
-          "description": "The Whistler World Cup track is looking epic, I caught up with a lot of stoked riders on the track walk.\n\nYou can support me by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/GduBY60Vuvw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-24T23:28:04Z",
-          "url": "https://www.youtube.com/watch?v=GduBY60Vuvw",
-          "isShort": false,
-          "score": 17,
-          "category": "results"
         }
       ]
     },
@@ -1148,7 +1131,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "What Protective Gear Were Riders Wearing at Red Bull Hardline BC?",
-          "description": "Riders donned more protective apparel than usual for the rowdy Hardline course.( Photos: 33, Comments: 98 )",
+          "description": "Riders donned more protective apparel than usual for the rowdy Hardline course.( Photos: 33, Comments: 99 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30408689/p2pb30408689.jpg",
           "publishedAt": "2026-10-21T11:42:00.000Z",
           "url": "https://www.pinkbike.com/news/what-protection-equipment-were-riders-wearing-at-red-bull-hardline.html?trk=rss",
