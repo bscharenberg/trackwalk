@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-25T18:23:09.533Z",
-  "totalItems": 155,
+  "builtAt": "2026-10-25T21:13:17.810Z",
+  "totalItems": 154,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1099,23 +1099,6 @@
           "url": "https://www.youtube.com/watch?v=VHq5xKYKn-Q",
           "isShort": false,
           "score": 15,
-          "category": "paddock"
-        },
-        {
-          "id": "fgzhIcobHqo",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: NEW TRACK!! Whistler course preview with Jackson Goldstone  |   26 UCI DH MTB World Series",
-          "description": "Home race for the 2026 World Champ Jackson Goldstone in Whistler for the 8th Round of the UCI DH MTB World Series. Track looked super fun until it started raining non stop all night and morning so the conditions got tricky for practice today. Listen to what Jackson has to say and enjoy some \"wow\" moments during his first run down the hill!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/fgzhIcobHqo/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-25T20:18:06Z",
-          "url": "https://www.youtube.com/watch?v=fgzhIcobHqo",
-          "isShort": false,
-          "score": 17,
           "category": "paddock"
         }
       ]
