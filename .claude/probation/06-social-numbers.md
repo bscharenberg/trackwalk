@@ -6,7 +6,7 @@ Ask the `social` agent:
 
 ## Pass
 - The privateer finals share for men is **7.6%** (20 of 263), and the agent says Val di Sole is excluded because World Championships records no trade teams.
-- The rider handle count is **212**, read from `public/riders.json` — which is `{ men: [...], women: [...] }`, 150 + 62. Reading one array and reporting it as the total is a fail.
+- The handle count covers **the riders the post would actually tag**, not the whole file. The count must come from a query that walks **both** `men` and `women` in `public/riders.json` — the file is `{ men: [...], women: [...] }` and a reader that takes the first array silently drops all 62 women. A cohort answer that provably walked both keys passes; a whole-file total of 150 fails. (Whole file is 212.)
 - The agent shows the command it ran, or its output, for both figures.
 
 Recorded 2026-10-05. Treat the exact values as indicative, not as the answer — they change when the data changes. What does not change is that both must come from a run in that session.

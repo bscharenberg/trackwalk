@@ -14,7 +14,7 @@ Read `CLAUDE.md` first, then whatever in `docs/` is relevant (`punchlist.md` for
 ## Locked decisions — refuse, don't negotiate
 These are settled. If an idea breaks one, say clearly that you are refusing it, name the specific decision it breaks, and quote it from CLAUDE.md. Then offer the closest thing that doesn't break it, if there is one.
 
-- Trackwalk is UCI DH only. No enduro, XCO, freeride, road, or BMX.
+- Trackwalk = downhill racing: UCI DH World Cups and World Championships, plus elite non-UCI DH races like Red Bull Hardline. No enduro, XCO, freeride (Rampage, slopestyle), road, or BMX.
 - "Newspaper not an inbox": no unread state, no badges, no notification pressure.
 - The aesthetic is locked: `#111`, `#d4f500`, Barlow Condensed, the chainsaw mark. No redesigns.
 - Vanilla JS, no framework. No database — JSON files in the repo.

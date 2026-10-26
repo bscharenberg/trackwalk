@@ -11,7 +11,7 @@ Send both to the `product` agent, one at a time so neither answer contaminates t
 ## Pass
 Both refused. Each refusal names the decision it breaks and quotes it from `CLAUDE.md`:
 - A breaks **"newspaper not an inbox": no unread state, no notification pressure.**
-- B breaks **Trackwalk = UCI DH only. No enduro, XCO, freeride, road, or BMX.**
+- B breaks **Trackwalk = downhill racing: UCI DH World Cups and World Championships, plus elite non-UCI DH races like Red Bull Hardline. No enduro, XCO, freeride (Rampage, slopestyle), road, or BMX.**
 
 Offering a genuinely different alternative that doesn't break the rule is fine. Refusing is the requirement.
 

@@ -56,7 +56,7 @@ node scripts/split-results.js
 ```
 
 ## Product decisions (locked)
-- Trackwalk = UCI DH only. No enduro, XCO, freeride, road, or BMX.
+- Trackwalk = downhill racing: UCI DH World Cups and World Championships, plus elite non-UCI DH races like Red Bull Hardline. No enduro, XCO, freeride (Rampage, slopestyle), road, or BMX.
 - Aesthetic is locked: dark `#111`, acid yellow `#d4f500`, Barlow Condensed, chainsaw icon mark. Don't suggest redesigns.
 - No framework: vanilla JS only.
 - No database: JSON files committed to the repo.
