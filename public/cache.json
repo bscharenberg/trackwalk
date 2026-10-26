@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-10-26T14:11:07.977Z",
-  "totalItems": 151,
+  "builtAt": "2026-10-26T19:55:10.996Z",
+  "totalItems": 152,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "qXSb84Yh8VQ",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "Asa Vermette gets a signed fork from the FOX crew!",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/qXSb84Yh8VQ/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-26T18:47:37Z",
+          "url": "https://www.youtube.com/watch?v=qXSb84Yh8VQ",
+          "isShort": true,
+          "score": 10,
+          "category": "shorts"
+        },
         {
           "id": "eg1HVajDdK8",
           "type": "video",
@@ -325,23 +342,6 @@
           "thumbnailHeight": 720,
           "publishedAt": "2026-10-05T01:17:01Z",
           "url": "https://www.youtube.com/watch?v=Hrnyu5s1RJQ",
-          "isShort": true,
-          "score": 21,
-          "category": "shorts"
-        },
-        {
-          "id": "ihjPJm2s_z8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "YOUR 2026 DOWNHILL WORLD CUP CHAMPIONS 🏆",
-          "description": "YOUR 2026 DOWNHILL WORLD CUP CHAMPIONS 🏆\n\nAsa Vermette and Vali Höll lift their UCI DHI World Cup overall trophies after an incredible season of downhill racing 🇺🇸🇦🇹\n\n📍Lake Placid Olympic Sites, Whiteface Mountain 🏁 UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/ihjPJm2s_z8/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T21:03:11Z",
-          "url": "https://www.youtube.com/watch?v=ihjPJm2s_z8",
           "isShort": true,
           "score": 21,
           "category": "shorts"
@@ -841,6 +841,21 @@
       "label": "Films",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-what-really-happened-at-the-whistler-world-cup.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: Behind the Scenes at the Whistler World Cup with Remy Metailler",
+          "description": "Remy Metailler shares an inside look at the first downhill World Cup race in Whistler.( Photos: 4 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30452768/p2pb30452768.jpg",
+          "publishedAt": "2026-10-26T11:52:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-what-really-happened-at-the-whistler-world-cup.html?trk=rss",
+          "categories": [],
+          "score": 12,
+          "category": "films"
+        },
+        {
           "id": "1SgQ82H1IiY",
           "type": "video",
           "source": "youtube",
@@ -1090,21 +1105,6 @@
       "id": "news",
       "label": "News",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/what-protection-equipment-were-riders-wearing-at-red-bull-hardline.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "What Protective Gear Were Riders Wearing at Red Bull Hardline BC?",
-          "description": "Riders donned more protective apparel than usual for the rowdy Hardline course.( Photos: 33, Comments: 99 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30408689/p2pb30408689.jpg",
-          "publishedAt": "2026-10-21T11:39:00.000Z",
-          "url": "https://www.pinkbike.com/news/what-protection-equipment-were-riders-wearing-at-red-bull-hardline.html?trk=rss",
-          "categories": [],
-          "score": 6,
-          "category": "news"
-        },
         {
           "id": "S_o6yXyS_Nw",
           "type": "video",
