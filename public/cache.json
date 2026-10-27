@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-27T16:00:43.610Z",
-  "totalItems": 135,
+  "builtAt": "2026-10-27T20:39:52.343Z",
+  "totalItems": 130,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -699,6 +699,23 @@
       "label": "Results",
       "items": [
         {
+          "id": "qMUJfUa30EA",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
+          "channelName": "WynTV",
+          "title": "WYNTV SEA OTTER AUSTRALIA",
+          "description": "This week thanks to FOCUS Australia I’m down under for Sea Otter Australia in Batemans Bay and catching up with all the Aussie legends and some other special guests too! \n\nVideo by Clancy Kelley",
+          "thumbnail": "https://i.ytimg.com/vi/qMUJfUa30EA/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-27T18:51:44Z",
+          "url": "https://www.youtube.com/watch?v=qMUJfUa30EA",
+          "isShort": false,
+          "score": 10,
+          "category": "results"
+        },
+        {
           "id": "E1sql5z6cHY",
           "type": "video",
           "source": "youtube",
@@ -832,7 +849,7 @@
           "title": "Video: Behind the Scenes at the Whistler World Cup with Remy Metailler",
           "description": "Remy Metailler shares an inside look at the first downhill World Cup race in Whistler.( Photos: 4 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30452768/p2pb30452768.jpg",
-          "publishedAt": "2026-10-26T11:47:00.000Z",
+          "publishedAt": "2026-10-26T11:45:00.000Z",
           "url": "https://www.pinkbike.com/news/video-what-really-happened-at-the-whistler-world-cup.html?trk=rss",
           "categories": [],
           "score": 12,
