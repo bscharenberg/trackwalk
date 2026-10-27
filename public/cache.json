@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-26T23:49:53.542Z",
-  "totalItems": 150,
+  "builtAt": "2026-10-27T04:56:37.031Z",
+  "totalItems": 137,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -815,23 +815,6 @@
           "url": "https://www.youtube.com/watch?v=RTzXwWivEKo",
           "isShort": false,
           "score": 26,
-          "category": "results"
-        },
-        {
-          "id": "RT4lktmgQKM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV WHISTLER Q2 RAPID REACTION",
-          "description": "Whistler Q2 provided all the drama today! \n\nWin my custom FOCUS JAM ² bike and support Reed Russell’s road to recovery and the privateer project here, https://www.thedreambikecompetition.co.uk/raffles/win-wyn-masters-custom-focus-jam2-and-keep-the-privateer-program-rolling-ddc4aa7f-5104-428f-ac38-5624497c662d\n\n\nYou can support me by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/RT4lktmgQKM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-27T01:46:12Z",
-          "url": "https://www.youtube.com/watch?v=RT4lktmgQKM",
-          "isShort": false,
-          "score": 15,
           "category": "results"
         }
       ]
