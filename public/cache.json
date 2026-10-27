@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-27T04:56:37.031Z",
-  "totalItems": 137,
+  "builtAt": "2026-10-27T10:29:28.937Z",
+  "totalItems": 135,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -832,7 +832,7 @@
           "title": "Video: Behind the Scenes at the Whistler World Cup with Remy Metailler",
           "description": "Remy Metailler shares an inside look at the first downhill World Cup race in Whistler.( Photos: 4 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30452768/p2pb30452768.jpg",
-          "publishedAt": "2026-10-26T11:52:00.000Z",
+          "publishedAt": "2026-10-26T11:51:00.000Z",
           "url": "https://www.pinkbike.com/news/video-what-really-happened-at-the-whistler-world-cup.html?trk=rss",
           "categories": [],
           "score": 12,
@@ -1064,23 +1064,6 @@
           "isShort": false,
           "score": 9,
           "category": "paddock"
-        },
-        {
-          "id": "VHq5xKYKn-Q",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Whistler, BC. The Biggest World Cup Ever. - The Setup | FOX",
-          "description": "Round 8 is here, and we've all been waiting for this one.\n \nAfter nearly 30 years of Whistler Bike Park, the World Cup has finally made its way to the mountain. For generations of riders, this place has been a proving ground and now, the world’s best downhill racers get to test themselves on 1199.\n \nWhistler has played a huge role in the story of mountain biking, and it’s helped shape a deep generation of Canadian downhill talent. Riders like Jackson Goldstone, Gracey Hemstreet, and Dane and Jake Jewett grew up lapping Garbanzo and A-Line, learning to ride fast, rough and loose on the same mountain that will host this historic World Cup race.\n \nNow they get to do it in front of a home crowd that’s been waiting a long time for this moment. The mountain is ready. The fans are fired up. And after the chaos of Les Gets, Round 8 could be one for the books.\n \nWelcome to Whistler, and Welcome to the Setup.",
-          "thumbnail": "https://i.ytimg.com/vi/VHq5xKYKn-Q/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-27T05:56:15Z",
-          "url": "https://www.youtube.com/watch?v=VHq5xKYKn-Q",
-          "isShort": false,
-          "score": 15,
-          "category": "paddock"
         }
       ]
     },
@@ -1154,23 +1137,6 @@
           "url": "https://www.youtube.com/watch?v=_WsOcIJ9440",
           "isShort": false,
           "score": 9,
-          "category": "news"
-        },
-        {
-          "id": "B9szWaJ0Xm4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Jackson Goldstone crashes out of Q1 in Whistler   |    '26 UCI DH MTB WORLD Series",
-          "description": "Jackson Goldstone was on a solid Q1 run at his hometown race in Whistler but unfortunately crashed with two corners to go, damaged his front wheel and was unable to continue :-(\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/B9szWaJ0Xm4/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-27T05:32:54Z",
-          "url": "https://www.youtube.com/watch?v=B9szWaJ0Xm4",
-          "isShort": false,
-          "score": 17,
           "category": "news"
         }
       ]
