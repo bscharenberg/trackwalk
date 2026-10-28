@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-28T11:36:47.888Z",
-  "totalItems": 107,
+  "builtAt": "2026-10-28T17:21:45.677Z",
+  "totalItems": 105,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -699,6 +699,21 @@
       "label": "Results",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-wyntv-sea-otter-classic-australia-2026.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: WynTV at Sea Otter Classic Australia 2026",
+          "description": "Wyn Masters catches up with all the Aussie legends and some other special guests too.( Comments: 1 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30460619/p2pb30460619.jpg",
+          "publishedAt": "2026-10-28T11:57:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-wyntv-sea-otter-classic-australia-2026.html?trk=rss",
+          "categories": [],
+          "score": 8,
+          "category": "results"
+        },
+        {
           "id": "qMUJfUa30EA",
           "type": "video",
           "source": "youtube",
@@ -849,7 +864,7 @@
           "title": "Video: Behind the Scenes at the Whistler World Cup with Remy Metailler",
           "description": "Remy Metailler shares an inside look at the first downhill World Cup race in Whistler.( Photos: 4 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30452768/p2pb30452768.jpg",
-          "publishedAt": "2026-10-26T11:41:00.000Z",
+          "publishedAt": "2026-10-26T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/video-what-really-happened-at-the-whistler-world-cup.html?trk=rss",
           "categories": [],
           "score": 12,
