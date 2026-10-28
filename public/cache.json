@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-28T17:21:45.677Z",
-  "totalItems": 105,
+  "builtAt": "2026-10-28T21:53:57.730Z",
+  "totalItems": 102,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -705,9 +705,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: WynTV at Sea Otter Classic Australia 2026",
-          "description": "Wyn Masters catches up with all the Aussie legends and some other special guests too.( Comments: 1 )",
+          "description": "Wyn Masters catches up with all the Aussie legends and some other special guests too.( Comments: 4 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30460619/p2pb30460619.jpg",
-          "publishedAt": "2026-10-28T11:57:00.000Z",
+          "publishedAt": "2026-10-28T11:54:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-sea-otter-classic-australia-2026.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -864,7 +864,7 @@
           "title": "Video: Behind the Scenes at the Whistler World Cup with Remy Metailler",
           "description": "Remy Metailler shares an inside look at the first downhill World Cup race in Whistler.( Photos: 4 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30452768/p2pb30452768.jpg",
-          "publishedAt": "2026-10-26T11:38:00.000Z",
+          "publishedAt": "2026-10-26T11:35:00.000Z",
           "url": "https://www.pinkbike.com/news/video-what-really-happened-at-the-whistler-world-cup.html?trk=rss",
           "categories": [],
           "score": 12,
@@ -1152,23 +1152,6 @@
           "url": "https://www.youtube.com/watch?v=MdD7BY1c8pg",
           "isShort": false,
           "score": 13,
-          "category": "news"
-        },
-        {
-          "id": "_WsOcIJ9440",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "WHISTLER WC IS THE BEST!!",
-          "description": "Whistler World Cup done and dusted. Lake Placid next week, so proud of the team and all the effort. See you next week sports fans!!\n\n#sony  #mtb #bksport #downhill #mountainbike #pivot #mtblife #continental #shimano #fox #italy #canada",
-          "thumbnail": "https://i.ytimg.com/vi/_WsOcIJ9440/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-09-28T20:07:24Z",
-          "url": "https://www.youtube.com/watch?v=_WsOcIJ9440",
-          "isShort": false,
-          "score": 9,
           "category": "news"
         }
       ]
