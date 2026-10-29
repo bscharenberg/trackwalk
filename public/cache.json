@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-10-29T08:24:08.851Z",
-  "totalItems": 102,
+  "builtAt": "2026-10-29T15:31:38.003Z",
+  "totalItems": 104,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "mmmSE24X4cE",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "2027 Has ARRIVED 🎉 | The Official WHOOP UCI MTB World Series Calendar! 🗓️",
+          "description": "The stage is set for another incredible year of racing, bringing together some of the biggest names in mountain biking at the sport's most iconic venues! 🌍🏆\n\nFrom legendary circuits and tracks to breathtaking mountain landscapes, the 2027 season promises another year of world-class racing, fierce rivalries, and unforgettable moments across Cross-country and Downhill! 💪\n\n👀 There's plenty to get excited about, with fan-favourite Les Gets, Haute Savoie featuring earlier in the season and Val di Sole, Trentino making its highly anticipated comeback to the calendar! Two iconic venues ready to deliver even more incredible racing in 2027! 🇫🇷🇮🇹\n\nAlongside our European icons, the season rounds out in North America with Soldier Hollow and Whistler! 🇺🇸🇨🇦 After making their debuts in 2026, both venues delivered incredible crowds, high-stakes drama and thrilling racing. Now they're back to bring the heat once again as the season reaches its final stages! 🔥\n\nNew challenges, familiar battlegrounds, and another season of the world's best riders going head-to-head for UCI World Cup glory! 🏆\n\n📆 Get the dates in your diary! Which round are you most excited for? 👇\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
+          "thumbnail": "https://i.ytimg.com/vi/mmmSE24X4cE/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-10-29T14:00:00Z",
+          "url": "https://www.youtube.com/watch?v=mmmSE24X4cE",
+          "isShort": true,
+          "score": 10,
+          "category": "shorts"
+        },
         {
           "id": "qXSb84Yh8VQ",
           "type": "video",
@@ -325,23 +342,6 @@
           "thumbnailHeight": 720,
           "publishedAt": "2026-10-05T01:17:05Z",
           "url": "https://www.youtube.com/watch?v=LOHoU4z66aU",
-          "isShort": true,
-          "score": 21,
-          "category": "shorts"
-        },
-        {
-          "id": "Hrnyu5s1RJQ",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Not bad having Aaron Gwin in your corner 😂🤝 | WHOOP UCI MTB World Series",
-          "description": "Asa Vermette forgot his race jersey on the morning he could become World Cup champion, so Aaron Gwin brought it to him at the top of the mountain. Problem solved 😅🇺🇸\n\n📍Lake Placid Olympic Sites, Whiteface Mountain 🏁 Men’s Elite UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/Hrnyu5s1RJQ/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-05T01:17:01Z",
-          "url": "https://www.youtube.com/watch?v=Hrnyu5s1RJQ",
           "isShort": true,
           "score": 21,
           "category": "shorts"
@@ -699,6 +699,21 @@
       "label": "Results",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/2026-world-cup-dh-season-in-review-tech-trends.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "2026 World Cup Downhill Season in Review: Winners, Bike Tech, and Trends Worth Watching",
+          "description": "Do you know which tire won the most DH World Cups this year? After reading this you will.( Photos: 29, Comments: 4 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29649677/p2pb29649677.jpg",
+          "publishedAt": "2026-10-29T12:00:00.000Z",
+          "url": "https://www.pinkbike.com/news/2026-world-cup-dh-season-in-review-tech-trends.html?trk=rss",
+          "categories": [],
+          "score": 13,
+          "category": "results"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-wyntv-sea-otter-classic-australia-2026.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -707,7 +722,7 @@
           "title": "Video: WynTV at Sea Otter Classic Australia 2026",
           "description": "Wyn Masters catches up with all the Aussie legends and some other special guests too.( Comments: 6 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30460619/p2pb30460619.jpg",
-          "publishedAt": "2026-10-28T11:53:00.000Z",
+          "publishedAt": "2026-10-28T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/video-wyntv-sea-otter-classic-australia-2026.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -855,21 +870,6 @@
       "id": "films",
       "label": "Films",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/video-what-really-happened-at-the-whistler-world-cup.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Behind the Scenes at the Whistler World Cup with Remy Metailler",
-          "description": "Remy Metailler shares an inside look at the first downhill World Cup race in Whistler.( Photos: 4 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30452768/p2pb30452768.jpg",
-          "publishedAt": "2026-10-26T11:34:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-what-really-happened-at-the-whistler-world-cup.html?trk=rss",
-          "categories": [],
-          "score": 12,
-          "category": "films"
-        },
         {
           "id": "1SgQ82H1IiY",
           "type": "video",
@@ -1103,6 +1103,36 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/pinkbike-podcast-cesar-rojo-discusses-suspension-kinematics-e-bike-development-and-downhill-racing.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Cesar Rojo Discusses Suspension Kinematics, E-Bike Development, and Downhill Racing",
+          "description": "We caught up with Cesar after the Whistler World Cup to learn more about the Unno brand, e-bike durability, suspension design, and downhill bike testing.( Photos: 7, Comments: 1 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30462461/p2pb30462461.jpg",
+          "publishedAt": "2026-10-29T11:59:00.000Z",
+          "url": "https://www.pinkbike.com/news/pinkbike-podcast-cesar-rojo-discusses-suspension-kinematics-e-bike-development-and-downhill-racing.html?trk=rss",
+          "categories": [],
+          "score": 8,
+          "category": "news"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/beyond-gravity-announces-broadcast-packages-for-its-2027-event.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Beyond Gravity Announces Broadcast Packages for its 2027 Event",
+          "description": "Pricing for viewing options will start at $10.95 USD.( Photos: 1, Comments: 19 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30463026/p2pb30463026.jpg",
+          "publishedAt": "2026-10-29T11:56:00.000Z",
+          "url": "https://www.pinkbike.com/news/beyond-gravity-announces-broadcast-packages-for-its-2027-event.html?trk=rss",
+          "categories": [],
+          "score": 7,
+          "category": "news"
+        },
         {
           "id": "S_o6yXyS_Nw",
           "type": "video",
