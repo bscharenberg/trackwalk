@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-31T15:17:00.099Z",
-  "totalItems": 103,
+  "builtAt": "2026-10-31T19:31:46.544Z",
+  "totalItems": 102,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -830,23 +830,6 @@
           "url": "https://www.youtube.com/watch?v=ODCMuTAlh2U",
           "isShort": false,
           "score": 15,
-          "category": "results"
-        },
-        {
-          "id": "RTzXwWivEKo",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "Last '26 World Cup DH - PIT BITS - Lake Placid, USA",
-          "description": "With one race left, we talk to Asa Vermette, current Elite Men's World Cup DH leader, Jordan Williams, Jackson Goldstone and more. Myriam Nicole shares her 100th World Cup celebration bike and the mechanics talk about the long drive from Whistler to New York.\n\nFilmed by John Lawlor\n\nContents\n0:00 - RockShox Rebuilds\n1:26 - Norco Factory Racing\n2:56 - Tony Seagrave Orbea FMD\n4:00 - Richie Rude\n4:51 - Drive Times - Whistler to Lake Placid\n6:05 - Asa Vermette\n7:00 - Jackson Goldstone\n8:03 - Jordan Williams\n9:18 - Kevin Joly, Finn's Mechanic Retiring\n10:13 - BoXXer World Champs Winner\n11:29 - Aon Racing Bike Setup\n14:26 - Dakotah Norton's Bike Setup\n15:21 - Ronan Dunne's Bike Setup\n16:22 - Myriam Nicole's 100th World Cup DH Bike",
-          "thumbnail": "https://i.ytimg.com/vi/RTzXwWivEKo/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-01T18:46:10Z",
-          "url": "https://www.youtube.com/watch?v=RTzXwWivEKo",
-          "isShort": false,
-          "score": 26,
           "category": "results"
         }
       ]
