@@ -142,7 +142,7 @@ Can go any time before May. **Bryon does:** create a fine-grained PAT (this repo
 
 ## 6. Decision points
 
-1. **Where AI jobs run** (still open. Bryon, 2026-10-31: leaning cloud routine, exploring a home box too):
+1. **Where AI jobs run: decided, cloud routines** (2026-10-31). Every Trackwalk job needs only the repo and the web. Hardware is on hold. A personal Mac mini is worth buying for personal work and home projects, not for these agents. The options that were weighed:
    - **Cloud routines under the personal account** *(recommended to start)*. No hardware, and the Mac can be asleep.
    - **GitHub Actions headless.** No hardware, but it needs a Claude token as a repo secret, its logs are public, and its scheduler is unreliable.
    - **A dedicated personal always-on box** (6a). Signed in with the personal account only, its own clone, its own narrow secrets.
