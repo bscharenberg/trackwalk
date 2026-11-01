@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-11-01T09:08:59.248Z",
-  "totalItems": 98,
+  "builtAt": "2026-11-01T15:58:39.427Z",
+  "totalItems": 99,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "oOcW1XkH9-8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "A cut above the rest! 💪😮‍💨",
+          "description": "A cut above the rest! 💪😮‍💨\n\nVali Höll delivered a sensational run on home soil this year, storming into the hot seat with a time nobody could match in front of the Austrian fans! 🇦🇹💥\n\nWant to relive the BEST Women's Elite Downhill runs of 2026? 👀 Head to our YouTube channel to watch five of the most incredible runs of the season! 📺 LINK IN BIO 🔗\n\n📍Saalfelden-Leogang, SalzburgerLand 🏁 Women’s Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/oOcW1XkH9-8/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-01T11:47:23Z",
+          "url": "https://www.youtube.com/watch?v=oOcW1XkH9-8",
+          "isShort": true,
+          "score": 21,
+          "category": "shorts"
+        },
         {
           "id": "U1R18yNIqjc",
           "type": "video",
@@ -328,23 +345,6 @@
           "isShort": true,
           "score": 18,
           "category": "shorts"
-        },
-        {
-          "id": "2ZfeHpuadpk",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "Rebuilding and ready for more 🧱 | WHOOP UCI MTB World Series",
-          "description": "After his first Elite win brought a new level of pressure and expectation in 2023, Jordan Williams has had to rebuild himself. Two victories and second in the UCI DHI World Cup overall later, he feels he’s found the foundations for something even bigger 💪🇬🇧\n\n📍Lake Placid Olympic Sites, Whiteface Mountain 🏁 Men’s Elite UCI DHI World Cup\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/2ZfeHpuadpk/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-05T01:17:09Z",
-          "url": "https://www.youtube.com/watch?v=2ZfeHpuadpk",
-          "isShort": true,
-          "score": 21,
-          "category": "shorts"
         }
       ]
     },
@@ -352,6 +352,21 @@
       "id": "race-runs",
       "label": "Race runs",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/video-10-winning-runs-from-the-2026-downhill-world-cup-season.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: 10 Winning Runs from the 2026 Downhill World Cup Season",
+          "description": "The UCI Mountain Bike World Series shares its favourite winning rides from the 2026 World Cup season.( Comments: 1 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30337539/p2pb30337539.jpg",
+          "publishedAt": "2026-11-01T11:59:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-10-winning-runs-from-the-2026-downhill-world-cup-season.html?trk=rss",
+          "categories": [],
+          "score": 12,
+          "category": "race-runs"
+        },
         {
           "id": "KgFDKTHW6Jg",
           "type": "video",
@@ -674,23 +689,6 @@
           "isShort": false,
           "score": 10,
           "category": "race-runs"
-        },
-        {
-          "id": "1lQjjl7owoI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: 7th place qualifying for Nina Hoffmann in Lake Placid  |   '26 UCI DH MTB World Series",
-          "description": "Nina Hoffmann finishes in a solid 7th place at the last round of the 2026 UCI DH MTB World Series in Lake Placid, USA!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/1lQjjl7owoI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T03:03:07Z",
-          "url": "https://www.youtube.com/watch?v=1lQjjl7owoI",
-          "isShort": false,
-          "score": 17,
-          "category": "race-runs"
         }
       ]
     },
@@ -707,7 +705,7 @@
           "title": "Winners, Bike Tech, and Trends Worth Watching: The 2026 World Cup Downhill Season in Review",
           "description": "Do you know which tire won the most DH World Cups this year? After reading this you will.( Photos: 29, Comments: 73 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29649677/p2pb29649677.jpg",
-          "publishedAt": "2026-10-29T11:42:00.000Z",
+          "publishedAt": "2026-10-29T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-world-cup-dh-season-in-review-tech-trends.html?trk=rss",
           "categories": [],
           "score": 13,
@@ -887,7 +885,7 @@
           "title": "Interview: Cesar Rojo on Suspension Kinematics, E-Bike Development, and Downhill Racing",
           "description": "We caught up with Cesar after the Whistler World Cup to learn more about the Unno brand, e-bike durability, suspension design, and downhill bike testing.( Photos: 7, Comments: 28 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30462461/p2pb30462461.jpg",
-          "publishedAt": "2026-10-29T11:39:00.000Z",
+          "publishedAt": "2026-10-29T11:35:00.000Z",
           "url": "https://www.pinkbike.com/news/pinkbike-podcast-cesar-rojo-discusses-suspension-kinematics-e-bike-development-and-downhill-racing.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -1061,7 +1059,7 @@
           "title": "Video: Inside Lachlan Stevens-McNab's First Red Bull Hardline",
           "description": "Lachlan Stevens-McNab got his first taste of Hardline racing on the fresh BC course.( Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30413155/p2pb30413155.jpg",
-          "publishedAt": "2026-10-30T11:43:00.000Z",
+          "publishedAt": "2026-10-30T11:39:00.000Z",
           "url": "https://www.pinkbike.com/news/video-inside-lachlan-stevens-mcnabs-first-red-bull-hardline.html?trk=rss",
           "categories": [],
           "score": 6,
@@ -1076,7 +1074,7 @@
           "title": "Video: Following the Dream with Johnathan Helly at the Whistler DH World Cup",
           "description": "Keeping the privateer dream alive pitting out the back of his Honda CRV.( Photos: 3, Comments: 22 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30456544/p2pb30456544.jpg",
-          "publishedAt": "2026-10-29T11:38:00.000Z",
+          "publishedAt": "2026-10-29T11:34:00.000Z",
           "url": "https://www.pinkbike.com/news/video-following-the-dream-with-johnathan-helly-at-the-whistler-world-cup.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -1091,25 +1089,10 @@
           "title": "Video: The Long Way Back to the Top with Dakotah Norton",
           "description": "From traumatic injury back to the World Cup circuit.( Comments: 13 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29786723/p2pb29786723.jpg",
-          "publishedAt": "2026-10-29T11:37:00.000Z",
+          "publishedAt": "2026-10-29T11:33:00.000Z",
           "url": "https://www.pinkbike.com/news/video-the-long-way-back-to-the-top-with-dakotah-norton.html?trk=rss",
           "categories": [],
           "score": 8,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/beyond-gravity-announces-broadcast-packages-for-its-2027-event.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Beyond Gravity Announces Broadcast Packages for Its 2027 Event",
-          "description": "Pricing for viewing options will start at $10.95 USD.( Photos: 1, Comments: 71 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30463026/p2pb30463026.jpg",
-          "publishedAt": "2026-10-29T11:34:00.000Z",
-          "url": "https://www.pinkbike.com/news/beyond-gravity-announces-broadcast-packages-for-its-2027-event.html?trk=rss",
-          "categories": [],
-          "score": 7,
           "category": "news"
         },
         {
