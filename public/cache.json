@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-01T15:58:39.427Z",
-  "totalItems": 99,
+  "builtAt": "2026-11-01T20:27:31.661Z",
+  "totalItems": 97,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -703,7 +703,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Winners, Bike Tech, and Trends Worth Watching: The 2026 World Cup Downhill Season in Review",
-          "description": "Do you know which tire won the most DH World Cups this year? After reading this you will.( Photos: 29, Comments: 73 )",
+          "description": "Do you know which tire won the most DH World Cups this year? After reading this you will.( Photos: 29, Comments: 74 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29649677/p2pb29649677.jpg",
           "publishedAt": "2026-10-29T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/2026-world-cup-dh-season-in-review-tech-trends.html?trk=rss",
@@ -1025,23 +1025,6 @@
           "url": "https://www.youtube.com/watch?v=FpanS2B9G_w",
           "isShort": false,
           "score": 15,
-          "category": "paddock"
-        },
-        {
-          "id": "nvVL16pYBZM",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCEJsJ1KnRSiNvOQEU8fwFTQ",
-          "channelName": "MBUK TV",
-          "title": "Reece Wilson's Trophy Truck - The Wildest DH Bike You'll Ever See!",
-          "description": "Is this downhill’s most radical rig? Watch Next 👉 https://youtu.be/B6gIBP1AzR0\n\nReece Wilson’s prototype Gamux Trophy Truck is one of the most specialist bikes on the DH scene, with a design built around Reece’s particular requirements.\n\nThe bike is custom made for Reece and his AON Racing teammates, and features a gearbox drivetrain, super-high stem, unbelievably short cranks and plenty of intricate details which are all performance optimised.\n\nIn this video we’ll find out about;\n\n00:00 Introduction\n00:40 The Trophy Truck Frame\n02:19 Rear suspension\n04:00 Frame stiffness\n05:08 Set and forget geometry\n07:04 Added weight\n07:53 High-rise stem\n10:03 Tiny cranks\n11:59 Upside down fork features\n14:18 Gearbox transmission\n15:58 Finishing touches\n\nV I D E O S    T O    W A T C H    N E X T :\n\nhttps://youtu.be/ywQh31I7zFs\nhttps://youtu.be/W2M3NDj89LE\n\n --------------------------------------------\nCatch our socials here ⬇️\nhttps://www.youtube.com/@mbuktv/shorts\nhttps://www.instagram.com/mbukmagazine\n --------------------------------------------\n\n#MTB #MountainBiking #Cycling #MountainBike #BikeLife #DownhillMTB #EnduroMTB #TrailRiding #MTBTech #BikeTech #MountainBikeTech #CyclingTech #BikeParts #BikeReview #BikeUpgrade #BikeBuild #BikeMaintenance #mbuk #mbuktv #gamuxbikes #reecewilson #gamuxtrophytruck #downhill #dhMTB #bikecheck #whistler #whistlerdh",
-          "thumbnail": "https://i.ytimg.com/vi/nvVL16pYBZM/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-02T16:30:05Z",
-          "url": "https://www.youtube.com/watch?v=nvVL16pYBZM",
-          "isShort": false,
-          "score": 13,
           "category": "paddock"
         }
       ]
