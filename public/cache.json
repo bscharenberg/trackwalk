@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-31T22:49:13.535Z",
-  "totalItems": 102,
+  "builtAt": "2026-11-01T02:08:43.313Z",
+  "totalItems": 98,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -885,7 +885,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Interview: Cesar Rojo on Suspension Kinematics, E-Bike Development, and Downhill Racing",
-          "description": "We caught up with Cesar after the Whistler World Cup to learn more about the Unno brand, e-bike durability, suspension design, and downhill bike testing.( Photos: 7, Comments: 25 )",
+          "description": "We caught up with Cesar after the Whistler World Cup to learn more about the Unno brand, e-bike durability, suspension design, and downhill bike testing.( Photos: 7, Comments: 26 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30462461/p2pb30462461.jpg",
           "publishedAt": "2026-10-29T11:39:00.000Z",
           "url": "https://www.pinkbike.com/news/pinkbike-podcast-cesar-rojo-discusses-suspension-kinematics-e-bike-development-and-downhill-racing.html?trk=rss",
@@ -1045,23 +1045,6 @@
           "isShort": false,
           "score": 13,
           "category": "paddock"
-        },
-        {
-          "id": "NYggdS8Id9c",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Track Walk in Lake Placid!",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/NYggdS8Id9c/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-02T01:40:19Z",
-          "url": "https://www.youtube.com/watch?v=NYggdS8Id9c",
-          "isShort": false,
-          "score": 9,
-          "category": "paddock"
         }
       ]
     },
@@ -1161,23 +1144,6 @@
           "url": "https://www.youtube.com/watch?v=YTNvVu3I9T4",
           "isShort": false,
           "score": 7,
-          "category": "news"
-        },
-        {
-          "id": "MdD7BY1c8pg",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "LAST WORLDCUP ROUND OF THE SEASON!!",
-          "description": "We're back in `Lake Placid for another World Cup round sports fans and we're hyped to be back on the DH bikes. See you tomorrow for practice people!\n\n\n#sony  #mtb #bksport #downhill #mountainbike #pivot #mtblife #continental #shimano #fox #italy #america",
-          "thumbnail": "https://i.ytimg.com/vi/MdD7BY1c8pg/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-01T23:31:18Z",
-          "url": "https://www.youtube.com/watch?v=MdD7BY1c8pg",
-          "isShort": false,
-          "score": 13,
           "category": "news"
         }
       ]
