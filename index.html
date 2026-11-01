@@ -1545,6 +1545,8 @@ html, body {
 }
 .signup-form input[type="email"]::placeholder { color: #888; }
 .signup-fieldset { border: none; padding: 0; margin: 16px 0 0 0; }
+/* Honeypot: off-screen rather than display:none, which some bots know to skip. */
+.signup-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .signup-legend {
   color: #888;
   font-family: 'Barlow Condensed', sans-serif;
@@ -1685,11 +1687,17 @@ html, body {
   <div class="signup-section">
     <h2 class="signup-headline">Every round, in your inbox</h2>
     <p class="signup-subhead">You don't have to go looking. Podium, times, and the clips worth watching after every round.</p>
-    <!-- Static HTML posting to the Loops form endpoint. Do not inject this via a JS template
-         literal (see CLAUDE.md). Submission is intercepted in JS only so the reader stays in
-         the app instead of being navigated to Loops' own success page. -->
-    <form class="signup-form" action="https://app.loops.so/api/newsletter-form/cmud7r43m018g0jwx17eid8q3" method="POST">
+    <!-- Static HTML. Do not inject this via a JS template literal (see CLAUDE.md). There is
+         deliberately no `action`: the Loops endpoint lives only in the submit handler, because
+         bots harvest form actions out of the HTML and POST to them directly (spam signups,
+         2026-10-30). JS posts the form so the reader stays in the app. -->
+    <form class="signup-form" method="POST">
       <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required>
+      <!-- Honeypot. Invisible to people, and bots fill in every field they find. A filled value
+           means a bot: the handler fakes success and sends nothing. Stripped before the POST. -->
+      <div class="signup-hp" aria-hidden="true">
+        <label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+      </div>
       <fieldset class="signup-fieldset">
         <legend class="signup-legend">Trackwalk is downhill. Would you want this for anything else?</legend>
         <div class="signup-options">
@@ -2915,6 +2923,11 @@ window.addEventListener('appinstalled', () => { dismissInstall() })
 //
 // The selector is the SECTION, not a provider class. The old Kit hook keyed on `.formkit-form`
 // and would have silently gone to zero at this migration. Keyed this way it survives the next one.
+//
+// The endpoint is assembled here instead of sitting in the form's `action`, and split so it
+// never appears as one URL string. Harvesters grep page source for form-endpoint URLs; this
+// won't stop a bot that runs the page, but the honeypot below catches most of those.
+const LOOPS_FORM_URL = ['https://app.loops.so/api/', 'newsletter-form/', 'cmud7r43m018g0jwx17eid8q3'].join('')
 document.addEventListener('submit', async e => {
   const form = e.target
   if (!form || !form.closest || !form.closest('.signup-section')) return
@@ -2926,6 +2939,12 @@ document.addEventListener('submit', async e => {
     .filter(Boolean)
     .join(',') || 'none'
 
+  const done = () => { form.outerHTML = '<p class="signup-result">You\'re on the list. See you at the finish line.</p>' }
+
+  // Honeypot filled → a bot. Show the same success so it learns nothing, and send nothing.
+  const hp = form.querySelector('input[name="company"]')
+  if (hp && hp.value) { done(); return }
+
   // Where they came from — ?src=whistler on the sticker QR, so venue handouts can be told
   // apart from ordinary web traffic in Loops. Defaults to 'web'.
   const src = form.querySelector('input[name="source"]')
@@ -2933,11 +2952,14 @@ document.addEventListener('submit', async e => {
 
   if (btn) { btn.disabled = true; btn.textContent = 'Sending…' }
 
+  const body = new URLSearchParams(new FormData(form))
+  body.delete('company')
+
   try {
-    const res = await fetch(form.action, {
+    const res = await fetch(LOOPS_FORM_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString(),
+      body: body.toString(),
     })
     const data = await res.json().catch(() => ({}))
     // Loops rate-limits this endpoint per IP and answers 429. Worth its own message: "try again"
@@ -2947,7 +2969,7 @@ document.addEventListener('submit', async e => {
 
     if (typeof gtag === 'function') gtag('event', 'email_signup', { interests })
 
-    form.outerHTML = '<p class="signup-result">You\'re on the list. See you at the finish line.</p>'
+    done()
   } catch (err) {
     // Never swallow it — a silent failure here looks like a successful signup to the reader.
     if (btn) { btn.disabled = false; btn.textContent = 'Send it' }
