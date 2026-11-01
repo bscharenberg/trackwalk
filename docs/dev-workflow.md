@@ -147,7 +147,7 @@ Plan: `docs/always-on-plan.md`, Phase 1. One GitHub issue, **"Trackwalk weekly"*
 ```bash
 node scripts/health-check.mjs           # first line: "All quiet" or "N things need you"
 node scripts/near-miss.mjs              # passed items within 2 points of their bar
-node scripts/near-miss.mjs --all --json # every stored item, for the curator
+node scripts/near-miss.mjs --all --json # every stored item; the curator reads this (it has no shell)
 node scripts/render-verdicts.mjs verdicts.json   # curator JSON -> inert markdown (titles from the cache, not the model)
 ```
 
