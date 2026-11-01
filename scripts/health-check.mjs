@@ -23,6 +23,7 @@ import { execFileSync, spawnSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { safe } from './lib/md-safe.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -60,8 +61,6 @@ function median(xs) {
   const s = [...xs].sort((a, b) => a - b), m = s.length >> 1
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2
 }
-// Strip anything that would render as markup or ping someone if it reaches an issue body.
-function safe(text) { return String(text ?? '').replace(/[`<>]/g, '').replace(/@/g, '@​') }
 
 function check(name, fn) {
   try {

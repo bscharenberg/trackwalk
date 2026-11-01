@@ -25,6 +25,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
+import { safe, safeLink } from './lib/md-safe.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const require = createRequire(import.meta.url)
@@ -98,8 +99,7 @@ if (args.json) {
   process.exit(0)
 }
 
-// Markdown. Titles are untrusted: strip markup/mention characters before they reach an issue.
-const safe = t => String(t ?? '').replace(/[`<>[\]|]/g, '').replace(/@/g, '@​').replace(/\s+/g, ' ').trim()
+// Markdown. Titles are untrusted: lib/md-safe.mjs makes them inert before they reach an issue.
 
 const out = []
 out.push(`**Near-miss list**: ${meta.nearMisses} of ${rows.length} stored items cleared their bar by ${MARGIN} points or less.`)
@@ -109,9 +109,7 @@ if (picked.length) {
   out.push('| Margin | Score / bar | Source | Category | Channel | Title |')
   out.push('|---:|---|---|---|---|---|')
   for (const r of picked) {
-    // Only http(s) links, and only the characters that would break the markdown link escaped.
-    const url = /^https?:\/\//i.test(r.url || '') ? r.url.replace(/[()\s<>|]/g, encodeURIComponent) : null
-    const title = url ? `[${safe(r.title).slice(0, 90)}](${url})` : safe(r.title).slice(0, 90)
+    const title = safeLink(String(r.title ?? '').slice(0, 90), r.url)
     out.push(`| +${r.margin} | ${r.score} / ${r.threshold} | ${r.source} | ${safe(r.category)} | ${safe(r.channelName)} | ${title} |`)
   }
 } else {
@@ -120,6 +118,6 @@ if (picked.length) {
 if (drift.length) {
   out.push('')
   out.push(`**Filter drift**: ${drift.length} item(s) score differently from when the cache was built, so the filter changed since. Rebuild the cache.`)
-  for (const r of drift) out.push(`- ${safe(r.title).slice(0, 90)}: stored ${r.storedScore}, now ${r.score}${r.stillPasses ? '' : ', **would now drop**'}`)
+  for (const r of drift) out.push(`- ${safe(r.title, 90)}: stored ${r.storedScore}, now ${r.score}${r.stillPasses ? '' : ', **would now drop**'}`)
 }
 console.log(out.join('\n'))

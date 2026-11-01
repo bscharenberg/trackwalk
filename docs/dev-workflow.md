@@ -148,9 +148,10 @@ Plan: `docs/always-on-plan.md`, Phase 1. One GitHub issue, **"Trackwalk weekly"*
 node scripts/health-check.mjs           # first line: "All quiet" or "N things need you"
 node scripts/near-miss.mjs              # passed items within 2 points of their bar
 node scripts/near-miss.mjs --all --json # every stored item, for the curator
+node scripts/render-verdicts.mjs verdicts.json   # curator JSON -> inert markdown (titles from the cache, not the model)
 ```
 
-**Where the curator keeps state:** `docs/dh-culture.md` (your taste, from the interview) and `docs/agent-log/curator.md` (its verdicts and your rulings). Fill in the `Ruling` column when you read the digest; that's what stops the same question coming back.
+**Where the curator keeps state:** `docs/dh-culture.md` (your taste, from the interview) and `docs/agent-log/curator.md` (its verdicts and your rulings). The routine commits new log entries to the `bot/curator-log` branch with one PR open, never to `main`. Fill in the `Ruling` column when you read the digest, then merge; that's what stops the same question coming back.
 
 **Pause it:** disable the routine on claude.ai, and disable the workflow in the Actions tab (`Trackwalk Weekly (backstop)` → `···` → Disable). Either can be off on its own.
 

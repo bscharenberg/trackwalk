@@ -75,7 +75,9 @@ jobs:
           WEEK=$(date -u +%G-W%V)
           MARKER="trackwalk-weekly week=$WEEK"
 
-          ISSUE=$(gh issue list --label "$LABEL" --state all --limit 1 --json number --jq '.[0].number // empty')
+          # Label AND exact title, so a second issue that happens to carry the label is never overwritten.
+          ISSUE=$(gh issue list --label "$LABEL" --state all --limit 50 --json number,title \
+            --jq '[.[] | select(.title == "Trackwalk weekly")][0].number // empty')
 
           if [ -n "$ISSUE" ] && [ "$FORCE" != "true" ]; then
             if gh issue view "$ISSUE" --json body --jq '.body' | grep -qF "$MARKER"; then
