@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-01T23:52:49.105Z",
-  "totalItems": 96,
+  "builtAt": "2026-11-02T05:54:39.341Z",
+  "totalItems": 91,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -1093,23 +1093,6 @@
           "url": "https://www.youtube.com/watch?v=S_o6yXyS_Nw",
           "isShort": false,
           "score": 12,
-          "category": "news"
-        },
-        {
-          "id": "YTNvVu3I9T4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "MADNESS ON LAKE PLACID WC TRACK!!!",
-          "description": "First day riding here in Lake Placid has been WET! We're all having fun tho, the teams vibing and the bikes are running so well. Thank you so much to everyone involved with putting on these events and we'll see you tomorrow sports fans!\n\n#sony  #mtb #bksport #downhill #mountainbike #pivot #mtblife #continental #shimano #fox #canada",
-          "thumbnail": "https://i.ytimg.com/vi/YTNvVu3I9T4/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-03T00:37:57Z",
-          "url": "https://www.youtube.com/watch?v=YTNvVu3I9T4",
-          "isShort": false,
-          "score": 7,
           "category": "news"
         }
       ]
