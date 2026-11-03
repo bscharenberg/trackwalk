@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-03T11:51:55.104Z",
-  "totalItems": 74,
+  "builtAt": "2026-11-03T19:27:49.464Z",
+  "totalItems": 58,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -361,7 +361,7 @@
           "title": "Video: 10 Winning Runs from the 2026 Downhill World Cup Season",
           "description": "The UCI Mountain Bike World Series shares its favourite winning rides from the 2026 World Cup season.( Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30337539/p2pb30337539.jpg",
-          "publishedAt": "2026-11-01T11:53:00.000Z",
+          "publishedAt": "2026-11-01T11:45:00.000Z",
           "url": "https://www.pinkbike.com/news/video-10-winning-runs-from-the-2026-downhill-world-cup-season.html?trk=rss",
           "categories": [],
           "score": 12,
@@ -638,57 +638,6 @@
           "isShort": false,
           "score": 20,
           "category": "race-runs"
-        },
-        {
-          "id": "G0Nqj5DC0Gc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Asa Vermette Q1 crash in Lake Placid   |   '26 UCI DH MTB World Series",
-          "description": "Asa Vermette crashed in Qualifying 1 in Lake Placid and had to go through Q2 to enter the final race of the season—the championship decider of the 2026 UCI DH MTB World Series.\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/G0Nqj5DC0Gc/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T16:10:51Z",
-          "url": "https://www.youtube.com/watch?v=G0Nqj5DC0Gc",
-          "isShort": false,
-          "score": 17,
-          "category": "race-runs"
-        },
-        {
-          "id": "nWxNqdcfwoA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "One Final Battle | Vermette Vs Williams | Lake Placid Olympic Sites DHI | WHOOP UCI MTB World Series",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/nWxNqdcfwoA/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T15:56:48Z",
-          "url": "https://www.youtube.com/watch?v=nWxNqdcfwoA",
-          "isShort": false,
-          "score": 10,
-          "category": "race-runs"
-        },
-        {
-          "id": "MwIh99xye6o",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "It's Race Day in Lake Placid",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/MwIh99xye6o/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T12:52:36Z",
-          "url": "https://www.youtube.com/watch?v=MwIh99xye6o",
-          "isShort": false,
-          "score": 10,
-          "category": "race-runs"
         }
       ]
     },
@@ -696,21 +645,6 @@
       "id": "results",
       "label": "Results",
       "items": [
-        {
-          "id": "https://www.pinkbike.com/news/2026-world-cup-dh-season-in-review-tech-trends.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Winners, Bike Tech, and Trends Worth Watching: The 2026 World Cup Downhill Season in Review",
-          "description": "Do you know which tire won the most DH World Cups this year? After reading this you will.( Photos: 29, Comments: 75 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb29649677/p2pb29649677.jpg",
-          "publishedAt": "2026-10-29T11:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/2026-world-cup-dh-season-in-review-tech-trends.html?trk=rss",
-          "categories": [],
-          "score": 13,
-          "category": "results"
-        },
         {
           "id": "qMUJfUa30EA",
           "type": "video",
@@ -777,23 +711,6 @@
           "url": "https://www.youtube.com/watch?v=mzcFY5FG7hA",
           "isShort": false,
           "score": 13,
-          "category": "results"
-        },
-        {
-          "id": "-W2QlXz4NHU",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV “On track with Gary” Lake Placid final practice!",
-          "description": "Gary was on track for the final practice session from Lake Placid!",
-          "thumbnail": "https://i.ytimg.com/vi/-W2QlXz4NHU/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T17:39:41Z",
-          "url": "https://www.youtube.com/watch?v=-W2QlXz4NHU",
-          "isShort": false,
-          "score": 12,
           "category": "results"
         }
       ]
@@ -968,6 +885,38 @@
       "label": "News",
       "items": [
         {
+          "id": "SbHOtnae7Ks",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
+          "channelName": "Bernard Kerr",
+          "title": "RIDING IN THE DESERT WITH PIVOT",
+          "description": "We heat to Phoenix in the desert to ride with the company and local shops before hardline...what a time!!!!\n\nEnjoy sports fans!\n\n#bksport",
+          "thumbnail": "https://i.ytimg.com/vi/SbHOtnae7Ks/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-03T17:16:17Z",
+          "url": "https://www.youtube.com/watch?v=SbHOtnae7Ks",
+          "isShort": false,
+          "score": 10,
+          "category": "news"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/video-emtb-lapping-coast-gravity-park-with-gracey-hemstreet.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: eMTB Lapping Coast Gravity Park with Gracey Hemstreet",
+          "description": "“Probably my favorite place in the world. Always coming back home is the best.”( Photos: 1, Comments: 7 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30464727/p2pb30464727.jpg",
+          "publishedAt": "2026-11-03T11:55:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-emtb-lapping-coast-gravity-park-with-gracey-hemstreet.html?trk=rss",
+          "categories": [],
+          "score": 7,
+          "category": "news"
+        },
+        {
           "id": "LT1g0v5EMO8",
           "type": "video",
           "source": "youtube",
@@ -982,21 +931,6 @@
           "url": "https://www.youtube.com/watch?v=LT1g0v5EMO8",
           "isShort": false,
           "score": 15,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-inside-lachlan-stevens-mcnabs-first-red-bull-hardline.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Inside Lachlan Stevens-McNab's First Red Bull Hardline",
-          "description": "Lachlan Stevens-McNab got his first taste of Hardline racing on the fresh BC course.( Comments: 5 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30413155/p2pb30413155.jpg",
-          "publishedAt": "2026-10-30T11:33:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-inside-lachlan-stevens-mcnabs-first-red-bull-hardline.html?trk=rss",
-          "categories": [],
-          "score": 6,
           "category": "news"
         }
       ]
