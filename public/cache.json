@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-02T23:12:57.180Z",
-  "totalItems": 79,
+  "builtAt": "2026-11-03T03:55:51.599Z",
+  "totalItems": 74,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -795,40 +795,6 @@
           "isShort": false,
           "score": 12,
           "category": "results"
-        },
-        {
-          "id": "RU085q5GQK8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Asa Vermette leads the Overall with One Last Dance in Lake Placid - The Setup | FOX",
-          "description": "The 2026 World Cup season comes down to one last showdown in Lake Placid, New York.\n \nWith the Adirondacks exploding in fall colour, the stage is set for a finale worthy of the season. But there’s no time to admire the view the overall standings are on the line. \n \nAfter a dominant performance in Whistler, Asa Vermette enters the final round with the momentum and the points lead. But with two riders still in contention for the men’s overall, the title is anything but settled.\n \nAnd while the overall winners in the women’s, junior men’s, and junior women’s categories may already be decided, there’s still plenty to race for. Podium positions, pride, and one final chance to finish the season on top.\n\nLake Placid has hosted its share of historic moments. \n \nNow, it’s time to add another one. Welcome to The Set Up.",
-          "thumbnail": "https://i.ytimg.com/vi/RU085q5GQK8/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T02:43:57Z",
-          "url": "https://www.youtube.com/watch?v=RU085q5GQK8",
-          "isShort": false,
-          "score": 17,
-          "category": "results"
-        },
-        {
-          "id": "ODCMuTAlh2U",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV LAKE PLACID Q2 RAPID REACTION",
-          "description": "Q2 in Lake Placid was a wild one, I caught up with everyone afterwards.\n\nYou can support me by buying me a coffee here, https://buymeacoffee.com/wyntv\n\nFollow me here:\nhttps://www.instagram.com/wynmasters/\nhttps://www.facebook.com/profile.php?id=100044392447551",
-          "thumbnail": "https://i.ytimg.com/vi/ODCMuTAlh2U/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T00:26:52Z",
-          "url": "https://www.youtube.com/watch?v=ODCMuTAlh2U",
-          "isShort": false,
-          "score": 15,
-          "category": "results"
         }
       ]
     },
@@ -1002,6 +968,23 @@
       "label": "News",
       "items": [
         {
+          "id": "LT1g0v5EMO8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "Tested in Whistler - Norco Team DH",
+          "description": "For the past five years, we’ve patiently waited for Norco to release the production version of its next downhill bike. We watched multiple versions raced at World Cups, including Gracey Hemstreet racking up three wins on the bike in 2025. And now that it's finally here, it offers plenty to talk about.\n\nWith plenty to dive into, we spent a few days testing the Team DH in the Whistler Bike Park to see what all these years of development have produced.\n\nRead our review of the Norco Team DH 2 FOX Build - https://www.vitalmtb.com/product/guide/bikes/norco/team-dh-80361\nCrankbrothers Synthesis 2.0 test wheels - https://www.crankbrothers.com/collect...\nMaxxis High Roller control tires - https://shop.maxxis.com/products/high....\nFox Racing DH test gear - https://www.foxracing.com/mens/mtb/\n\n⚙️ - Vital MTB Tech Discussions - https://www.vitalmtb.com/forums/Vital... \n\nFollow us on Social \n✅  Instagram -   / vitalmtb  \n✅  Facebook -   / vitalmtb  \n\nContents\n0:00 - Intro\n1:25 - HVP6 Suspension Platform Explained\n2:34 - Carbon & Alloy Frame\n2:54 - Suspension and Size Adjustability\n4:05 - Norco Team DH Geometry\n5:01 - 2 Build Kit Options\n5:32 - Jason's Initial Setup & Impressions\n8:31 - Ryan's Initial Setup\n10:32 - Final Impressions and Review Thoughts\n\n\n\n\n#MTB #bike #mountainbike #downhill #Frameworks #summerofdownhill",
+          "thumbnail": "https://i.ytimg.com/vi/LT1g0v5EMO8/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-02T23:41:31Z",
+          "url": "https://www.youtube.com/watch?v=LT1g0v5EMO8",
+          "isShort": false,
+          "score": 15,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-inside-lachlan-stevens-mcnabs-first-red-bull-hardline.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
@@ -1014,23 +997,6 @@
           "url": "https://www.pinkbike.com/news/video-inside-lachlan-stevens-mcnabs-first-red-bull-hardline.html?trk=rss",
           "categories": [],
           "score": 6,
-          "category": "news"
-        },
-        {
-          "id": "S_o6yXyS_Nw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Lake Placid chats with Aaron Gwin and Asa Vermette",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/S_o6yXyS_Nw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-04T03:19:29Z",
-          "url": "https://www.youtube.com/watch?v=S_o6yXyS_Nw",
-          "isShort": false,
-          "score": 12,
           "category": "news"
         }
       ]
