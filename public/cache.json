@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-04T14:51:42.956Z",
-  "totalItems": 44,
+  "builtAt": "2026-11-04T21:16:09.027Z",
+  "totalItems": 45,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -277,23 +277,6 @@
           "isShort": true,
           "score": 16,
           "category": "shorts"
-        },
-        {
-          "id": "ui7z7GQ405U",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCRuCx-QoX3PbPaM2NEWw-Tw",
-          "channelName": "Fox Racing",
-          "title": "Asa Vermette 2026 UCI DH World Cup Champion",
-          "description": "Follow Fox Racing on social media:\nInstagram: https://www.instagram.com/foxracing\nFacebook: https://www.facebook.com/FoxRacing\nTikTok: https://www.tiktok.com/@foxracing\n\nShop Fox Racing: https://bit.ly/shop-fox-",
-          "thumbnail": "https://i.ytimg.com/vi/ui7z7GQ405U/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-05T19:25:35Z",
-          "url": "https://www.youtube.com/watch?v=ui7z7GQ405U",
-          "isShort": true,
-          "score": 14,
-          "category": "shorts"
         }
       ]
     },
@@ -310,7 +293,7 @@
           "title": "Video: 10 Winning Runs from the 2026 Downhill World Cup Season",
           "description": "The UCI Mountain Bike World Series shares its favourite winning rides from the 2026 World Cup season.( Comments: 5 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30337539/p2pb30337539.jpg",
-          "publishedAt": "2026-11-01T11:41:00.000Z",
+          "publishedAt": "2026-11-01T11:33:00.000Z",
           "url": "https://www.pinkbike.com/news/video-10-winning-runs-from-the-2026-downhill-world-cup-season.html?trk=rss",
           "categories": [],
           "score": 12,
@@ -485,23 +468,6 @@
           "isShort": false,
           "score": 13,
           "category": "race-runs"
-        },
-        {
-          "id": "OtfIQK0ozg0",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: 2nd place in the finals for Andreas Kolb in Lake Placid   |    '26 UCI DH MTB World Series",
-          "description": "A strong finish to the 2026 UCI DH World Series for Andreas Kolb, securing 2nd place at the final round in Lake Placid, USA!\n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/OtfIQK0ozg0/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-05T18:02:26Z",
-          "url": "https://www.youtube.com/watch?v=OtfIQK0ozg0",
-          "isShort": false,
-          "score": 17,
-          "category": "race-runs"
         }
       ]
     },
@@ -566,6 +532,23 @@
       "id": "films",
       "label": "Films",
       "items": [
+        {
+          "id": "Xi2Xs6Ulz8c",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "THE SEARCH FOR MILLISECONDS TRAILER : MITCH GUTHRIE",
+          "description": "Milliseconds make the difference. Victory is in the details.\n\nRed Bull, Ford Racing, and FOX, in association with Anthill Films, present “The Search for Milliseconds.” Go behind the scenes with Mitch Guthrie Jr. and his dedicated team as they turn fractions of a second into victory.\n\nWatch the search for Milliseconds on Redbull TV here: https://www.redbull.tv/en_US/page/page:rrn:content:films:c447128b-cf3e-4ff9-aff5-bb193197ea1a/the-search-for-milliseconds-mitch-guthrie-jr?cid=playlists%3A%3A8492e568-626a-48a3-b0d7-6d11e0f00dc3\n\nCheck out FOX here: https://ca.ridefox.com/\n \n#RideFox #FOX #TheSearchForMilliseconds",
+          "thumbnail": "https://i.ytimg.com/vi/Xi2Xs6Ulz8c/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-04T16:09:51Z",
+          "url": "https://www.youtube.com/watch?v=Xi2Xs6Ulz8c",
+          "isShort": false,
+          "score": 7,
+          "category": "films"
+        },
         {
           "id": "1SgQ82H1IiY",
           "type": "video",
@@ -732,6 +715,38 @@
       "label": "News",
       "items": [
         {
+          "id": "AXfli0SiCFk",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
+          "channelName": "Pinkbike",
+          "title": "What Happens When You Ignore the Rules of Downhill Bike Design?",
+          "description": "One of the most unconventional bikes on the Downhill World Cup circuit is proving its worth.\n\nAfter leaving a factory team to pursue his own vision of the ultimate downhill race bike, Reece Wilson teamed up with Gamux to challenge conventional bike design. With a Gates belt drive, gearbox drivetrain, radical geometry, and an unusual cockpit setup, almost nothing about this bike follows the traditional formula.\n\nMade in partnership with Gates\nhttps://go.gates.com/GBD-100K-BELTED-PURSE.html\n\n00:00 The Quest for a Better Downhill Bike\n08:20 Putting the New Bike to the Test\n12:59 Developing the Belt Drive for World Cup Racing\n20:34 The Run That Changed Everything\n23:58 The Team's Breakthrough\n24:40 What's Next for the Bike?",
+          "thumbnail": "https://i.ytimg.com/vi/AXfli0SiCFk/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-04T16:00:06Z",
+          "url": "https://www.youtube.com/watch?v=AXfli0SiCFk",
+          "isShort": false,
+          "score": 17,
+          "category": "news"
+        },
+        {
+          "id": "https://www.pinkbike.com/news/video-from-development-to-the-podium-inside-reece-wilsons-belt-driven-race-bike--belted-purse.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: What Happens When You Ignore the Rules of Downhill Bike Design? | Gates Belted Purse",
+          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 25 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30166954/p2pb30166954.jpg",
+          "publishedAt": "2026-11-04T11:57:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-from-development-to-the-podium-inside-reece-wilsons-belt-driven-race-bike--belted-purse.html?trk=rss",
+          "categories": [],
+          "score": 10,
+          "category": "news"
+        },
+        {
           "id": "SbHOtnae7Ks",
           "type": "video",
           "source": "youtube",
@@ -755,9 +770,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: Gracey Hemstreet Laps Coast Gravity Park on Her eMTB",
-          "description": "“Probably my favorite place in the world. Always coming back home is the best.”( Photos: 1, Comments: 15 )",
+          "description": "“Probably my favorite place in the world. Always coming back home is the best.”( Photos: 1, Comments: 16 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30464727/p2pb30464727.jpg",
-          "publishedAt": "2026-11-03T11:51:00.000Z",
+          "publishedAt": "2026-11-03T11:43:00.000Z",
           "url": "https://www.pinkbike.com/news/video-emtb-lapping-coast-gravity-park-with-gracey-hemstreet.html?trk=rss",
           "categories": [],
           "score": 7,
@@ -769,7 +784,7 @@
           "source": "youtube",
           "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
           "channelName": "Vital MTB",
-          "title": "Tested in Whistler - Norco Team DH",
+          "title": "After Years of Prototyping, We Finally Get to Ride It - Norco Team DH",
           "description": "For the past five years, we’ve patiently waited for Norco to release the production version of its next downhill bike. We watched multiple versions raced at World Cups, including Gracey Hemstreet racking up three wins on the bike in 2025. And now that it's finally here, it offers plenty to talk about.\n\nWith plenty to dive into, we spent a few days testing the Team DH in the Whistler Bike Park to see what all these years of development have produced.\n\nRead our review of the Norco Team DH 2 FOX Build - https://www.vitalmtb.com/product/guide/bikes/norco/team-dh-80361\nCrankbrothers Synthesis 2.0 test wheels - https://www.crankbrothers.com/collect...\nMaxxis High Roller control tires - https://shop.maxxis.com/products/high....\nFox Racing DH test gear - https://www.foxracing.com/mens/mtb/\n\n⚙️ - Vital MTB Tech Discussions - https://www.vitalmtb.com/forums/Vital... \n\nFollow us on Social \n✅  Instagram -   / vitalmtb  \n✅  Facebook -   / vitalmtb  \n\nContents\n0:00 - Intro\n1:25 - HVP6 Suspension Platform Explained\n2:34 - Carbon & Alloy Frame\n2:54 - Suspension and Size Adjustability\n4:05 - Norco Team DH Geometry\n5:01 - 2 Build Kit Options\n5:32 - Jason's Initial Setup & Impressions\n8:31 - Ryan's Initial Setup\n10:32 - Final Impressions and Review Thoughts\n\n\n\n\n#MTB #bike #mountainbike #downhill #Frameworks #summerofdownhill",
           "thumbnail": "https://i.ytimg.com/vi/LT1g0v5EMO8/maxresdefault.jpg",
           "thumbnailWidth": 1280,
