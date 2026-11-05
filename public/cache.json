@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-05T17:37:28.841Z",
-  "totalItems": 43,
+  "builtAt": "2026-11-05T22:49:51.714Z",
+  "totalItems": 42,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -459,23 +459,6 @@
           "isShort": false,
           "score": 16,
           "category": "results"
-        },
-        {
-          "id": "l7vHLfwr_g4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC-oqtSrbAwCIB98RZfsdreA",
-          "channelName": "GoPro Bike",
-          "title": "GoPro: Asa Vermette's 8th-place run to clinch the 2026 UCI DH MTB World Series overall title!",
-          "description": "The run that secured Asa Veremtte the 2026 UCI DH MTB Men Elite overall title! Congrats on an amazing season—first year in Elite, winning your first Elite qualification and race, taking two wins total, and winning the overall! \n\nShot 100% on GoPro: https://bit.ly/37HfrtO\nGet stoked and subscribe: https://bit.ly/3miThlc\n\nFor more from GoPro, follow us:\nFacebook: https://www.facebook.com/gopro\nTwitter: https://twitter.com/gopro\nInstagram: https://instagram.com/gopro\nTikTok: https://www.tiktok.com/@gopro\nThe Current: https://gopro.com/news\nGoPro: https://gopro.com/channel/",
-          "thumbnail": "https://i.ytimg.com/vi/l7vHLfwr_g4/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-06T19:22:13Z",
-          "url": "https://www.youtube.com/watch?v=l7vHLfwr_g4",
-          "isShort": false,
-          "score": 12,
-          "category": "results"
         }
       ]
     },
@@ -706,9 +689,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: What Happens When You Ignore the Rules of Downhill Bike Design? | Gates Belted Purse",
-          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 67 )",
+          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 73 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30166954/p2pb30166954.jpg",
-          "publishedAt": "2026-11-04T11:49:00.000Z",
+          "publishedAt": "2026-11-04T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/video-from-development-to-the-podium-inside-reece-wilsons-belt-driven-race-bike--belted-purse.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -740,7 +723,7 @@
           "title": "Video: Gracey Hemstreet Laps Coast Gravity Park on Her eMTB",
           "description": "“Probably my favorite place in the world. Always coming back home is the best.”( Photos: 1, Comments: 17 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30464727/p2pb30464727.jpg",
-          "publishedAt": "2026-11-03T11:35:00.000Z",
+          "publishedAt": "2026-11-03T11:32:00.000Z",
           "url": "https://www.pinkbike.com/news/video-emtb-lapping-coast-gravity-park-with-gracey-hemstreet.html?trk=rss",
           "categories": [],
           "score": 7,
