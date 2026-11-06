@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-11-05T22:49:51.714Z",
-  "totalItems": 42,
+  "builtAt": "2026-11-06T03:23:19.518Z",
+  "totalItems": 43,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "71GP-Fjsvuc",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
+          "channelName": "Fox Factory",
+          "title": "THE SEARCH FOR MILLISECONDS - MITCH GUTHRIE",
+          "description": "",
+          "thumbnail": "https://i.ytimg.com/vi/71GP-Fjsvuc/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-04T17:12:00Z",
+          "url": "https://www.youtube.com/watch?v=71GP-Fjsvuc",
+          "isShort": true,
+          "score": 7,
+          "category": "shorts"
+        },
         {
           "id": "PlzoHGr74RI",
           "type": "video",
@@ -689,7 +706,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: What Happens When You Ignore the Rules of Downhill Bike Design? | Gates Belted Purse",
-          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 73 )",
+          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 80 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30166954/p2pb30166954.jpg",
           "publishedAt": "2026-11-04T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/video-from-development-to-the-podium-inside-reece-wilsons-belt-driven-race-bike--belted-purse.html?trk=rss",
