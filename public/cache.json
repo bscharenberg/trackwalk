@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-06T03:23:19.518Z",
-  "totalItems": 43,
+  "builtAt": "2026-11-06T11:27:33.049Z",
+  "totalItems": 42,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -706,9 +706,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: What Happens When You Ignore the Rules of Downhill Bike Design? | Gates Belted Purse",
-          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 80 )",
+          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 82 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30166954/p2pb30166954.jpg",
-          "publishedAt": "2026-11-04T11:46:00.000Z",
+          "publishedAt": "2026-11-04T11:43:00.000Z",
           "url": "https://www.pinkbike.com/news/video-from-development-to-the-podium-inside-reece-wilsons-belt-driven-race-bike--belted-purse.html?trk=rss",
           "categories": [],
           "score": 10,
@@ -729,21 +729,6 @@
           "url": "https://www.youtube.com/watch?v=SbHOtnae7Ks",
           "isShort": false,
           "score": 10,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-emtb-lapping-coast-gravity-park-with-gracey-hemstreet.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: Gracey Hemstreet Laps Coast Gravity Park on Her eMTB",
-          "description": "“Probably my favorite place in the world. Always coming back home is the best.”( Photos: 1, Comments: 17 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30464727/p2pb30464727.jpg",
-          "publishedAt": "2026-11-03T11:32:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-emtb-lapping-coast-gravity-park-with-gracey-hemstreet.html?trk=rss",
-          "categories": [],
-          "score": 7,
           "category": "news"
         },
         {
