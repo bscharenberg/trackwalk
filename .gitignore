@@ -16,3 +16,4 @@ node_modules/
 # data/raw/    = cached raw UCI DataRide JSON (re-fetched if absent)
 # data/staging = per-season normalized output before merge into public/results.json
 data/
+.weekly/

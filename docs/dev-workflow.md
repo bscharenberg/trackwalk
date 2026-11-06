@@ -135,6 +135,26 @@ been wrong too. Treat this table as orientation, never as the schedule. See punc
 - Can also trigger manually via GitHub Actions → workflow_dispatch with any venue slug
 - Backfill / re-write a completed round: `node scripts/results-fetcher.mjs <slug> --force` (bypasses the "both finals already present" guard)
 
+## Always-on: the weekly digest
+
+Plan: `docs/always-on-plan.md`, Phase 1. One GitHub issue, **"Trackwalk weekly"** (label `weekly`), edited in place each week. A quiet week edits the body silently. A week that needs you reopens the issue and adds a comment, which is the only thing that notifies.
+
+**What writes it:**
+- **The weekly cloud routine** (claude.ai, Bryon's personal account; Mondays). Runs the health check, the near-miss list and the `curator` agent, then rewrites the issue body. Its prompt is in the Phase 1 PR description.
+- **`.github/workflows/health-check.yml`**, the backstop. Health check only, no AI. Five slots Mon–Wed; each skips if the issue already has this ISO week's report, so it writes at most once a week, and never over the routine's.
+
+**Run the pieces by hand:**
+```bash
+node scripts/health-check.mjs           # first line: "All quiet" or "N things need you"
+node scripts/near-miss.mjs              # passed items within 2 points of their bar
+node scripts/near-miss.mjs --all --json # every stored item; the curator reads this (it has no shell)
+node scripts/render-verdicts.mjs verdicts.json   # curator JSON -> inert markdown (titles from the cache, not the model)
+```
+
+**Where the curator keeps state:** `docs/dh-culture.md` (your taste, from the interview) and `docs/agent-log/curator.md` (its verdicts and your rulings). The routine commits new log entries to the `bot/curator-log` branch with one PR open, never to `main`. Fill in the `Ruling` column when you read the digest, then merge; that's what stops the same question coming back.
+
+**Pause it:** disable the routine on claude.ai, and disable the workflow in the Actions tab (`Trackwalk Weekly (backstop)` → `···` → Disable). Either can be off on its own.
+
 ## Debugging Tips
 
 ### cache.json conflict during rebase
