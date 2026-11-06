@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-06T11:27:33.049Z",
-  "totalItems": 42,
+  "builtAt": "2026-11-06T18:25:31.552Z",
+  "totalItems": 41,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -419,23 +419,6 @@
           "isShort": false,
           "score": 10,
           "category": "race-runs"
-        },
-        {
-          "id": "wXG3Ygs3mPk",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "The Ultimate Finale In Lake Placid 🤩 | THE B LINE 🇺🇸 | WHOOP UCI MTB World Series",
-          "description": "Useful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/wXG3Ygs3mPk/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-07T13:10:15Z",
-          "url": "https://www.youtube.com/watch?v=wXG3Ygs3mPk",
-          "isShort": false,
-          "score": 13,
-          "category": "race-runs"
         }
       ]
     },
@@ -706,9 +689,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: What Happens When You Ignore the Rules of Downhill Bike Design? | Gates Belted Purse",
-          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 82 )",
+          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 87 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30166954/p2pb30166954.jpg",
-          "publishedAt": "2026-11-04T11:43:00.000Z",
+          "publishedAt": "2026-11-04T11:38:00.000Z",
           "url": "https://www.pinkbike.com/news/video-from-development-to-the-podium-inside-reece-wilsons-belt-driven-race-bike--belted-purse.html?trk=rss",
           "categories": [],
           "score": 10,
