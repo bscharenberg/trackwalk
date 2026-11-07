@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-07T10:02:09.925Z",
-  "totalItems": 41,
+  "builtAt": "2026-11-07T16:22:48.179Z",
+  "totalItems": 40,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -641,23 +641,6 @@
           "isShort": false,
           "score": 12,
           "category": "paddock"
-        },
-        {
-          "id": "G4kpoKyBDeY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCEJsJ1KnRSiNvOQEU8fwFTQ",
-          "channelName": "MBUK TV",
-          "title": "Under The Cover - How Loic Bruni’s Demo Works",
-          "description": "How does Bruni’s downhill bike work? Watch Next 👉 https://youtu.be/nvVL16pYBZM\n\nThe Specialized Gravity Team have spent the past few seasons riding various wild-looking prototype DH bikes, to great success, spurning many headlines in the mountain bike media - what’s really going on under the cover?\n\nThe latest Demo was recently launched, with their HighDrive system, co-developed with SRAM, being an integral part of the DH race bike’s performance.\n\nBut what happens within the bike, under the cover?\n\nWe grabbed Loic Bruni’s bike, pulled the cover off, and had a detailed walkthrough of how the HighDrive system, and the suspension linkage, actually works.\n\nIn this video;\n00:00 Introduction\n00:40 What is HighGear?\n04:18 Two chains?\n05:55 Sealed from the elements\n07:59 Hidden linkage\n09:43 Added weight\n\nV I D E O S    T O    W A T C H    N E X T :\n\nhttps://youtu.be/_L-8IvNRQqg\nhttps://youtu.be/ywQh31I7zFs\n\n --------------------------------------------\nCatch our socials here ⬇️\nhttps://www.youtube.com/@mbuktv/shorts\nhttps://www.instagram.com/mbukmagazine\n --------------------------------------------\n\n#MTB #MountainBiking #Cycling #MountainBike #BikeLife #DownhillMTB #EnduroMTB #TrailRiding #MTBTech #BikeTech #MountainBikeTech #CyclingTech #BikeParts #BikeReview #BikeUpgrade #BikeBuild #BikeMaintenance #mbuk #mbuktv #specializeddemo #loicbruni #specialized #downhill #dhMTB #bikecheck #whistler #whistlerdh",
-          "thumbnail": "https://i.ytimg.com/vi/G4kpoKyBDeY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-08T16:00:19Z",
-          "url": "https://www.youtube.com/watch?v=G4kpoKyBDeY",
-          "isShort": false,
-          "score": 13,
-          "category": "paddock"
         }
       ]
     },
@@ -665,6 +648,21 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/beyond-gravity-explores-potential-for-races-in-new-zealand-the-us-and-more-for-expanded-2028-race-series.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Beyond Gravity Explores Potential for Races in New Zealand, the US & More for Expanded 2028 Race Series",
+          "description": "The organisers of Beyond Gravity are hoping to create a three-round 'off season' race series for 2028.( Photos: 1, Comments: 9 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29305501/p2pb29305501.jpg",
+          "publishedAt": "2026-11-07T11:57:00.000Z",
+          "url": "https://www.pinkbike.com/news/beyond-gravity-explores-potential-for-races-in-new-zealand-the-us-and-more-for-expanded-2028-race-series.html?trk=rss",
+          "categories": [],
+          "score": 7,
+          "category": "news"
+        },
         {
           "id": "AXfli0SiCFk",
           "type": "video",
@@ -680,21 +678,6 @@
           "url": "https://www.youtube.com/watch?v=AXfli0SiCFk",
           "isShort": false,
           "score": 17,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-from-development-to-the-podium-inside-reece-wilsons-belt-driven-race-bike--belted-purse.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: What Happens When You Ignore the Rules of Downhill Bike Design? | Gates Belted Purse",
-          "description": "Reece Wilson has never been afraid to do things differently, but the last few years have taken that philosophy to another level.( Photos: 6, Comments: 89 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30166954/p2pb30166954.jpg",
-          "publishedAt": "2026-11-04T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-from-development-to-the-podium-inside-reece-wilsons-belt-driven-race-bike--belted-purse.html?trk=rss",
-          "categories": [],
-          "score": 10,
           "category": "news"
         },
         {
