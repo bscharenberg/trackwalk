@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-08T13:15:36.535Z",
-  "totalItems": 40,
+  "builtAt": "2026-11-08T18:29:29.309Z",
+  "totalItems": 39,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -242,23 +242,6 @@
           "url": "https://www.youtube.com/watch?v=au9evELVcXc",
           "isShort": true,
           "score": 12,
-          "category": "shorts"
-        },
-        {
-          "id": "G_mWYKZDq3I",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "What a way to end your season 🏆🔥",
-          "description": "What a way to end your season 🏆🔥\n\nLisa Bouladou signed off her 2026 campaign in style with an incredible winning run, edging past Vali Höll by less than half a second 🤯",
-          "thumbnail": "https://i.ytimg.com/vi/G_mWYKZDq3I/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-09T16:34:26Z",
-          "url": "https://www.youtube.com/watch?v=G_mWYKZDq3I",
-          "isShort": true,
-          "score": 10,
           "category": "shorts"
         }
       ]
@@ -655,7 +638,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Beyond Gravity Explores Potential for Races in New Zealand, the US & More for Expanded 2028 Race Series",
-          "description": "The organisers of Beyond Gravity are hoping to create a three-round 'off season' race series for 2028.( Photos: 1, Comments: 24 )",
+          "description": "The organisers of Beyond Gravity are hoping to create a three-round 'off season' race series for 2028.( Photos: 1, Comments: 26 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29305501/p2pb29305501.jpg",
           "publishedAt": "2026-11-07T11:56:00.000Z",
           "url": "https://www.pinkbike.com/news/beyond-gravity-explores-potential-for-races-in-new-zealand-the-us-and-more-for-expanded-2028-race-series.html?trk=rss",
