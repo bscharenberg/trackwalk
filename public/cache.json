@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-12T08:14:46.966Z",
-  "totalItems": 37,
+  "builtAt": "2026-11-12T17:03:41.781Z",
+  "totalItems": 38,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -250,6 +250,23 @@
       "id": "race-runs",
       "label": "Race runs",
       "items": [
+        {
+          "id": "wIIOWslEnVo",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "Thoughts on World Cup Downhill Content - Vital’s B Practice Podcast",
+          "description": "Tanner Stephens, Dakotah Norton, and Jason Schroeder bring you an off-season podcast to discuss the 2027 World Cup downhill schedule, thoughts on media coverage around races and what could be better, and a bunch of hot-take style questions. Enjoy.\n\nThese awesome brands make The B Practice Podcast possible!\n @MaxxisTiresUSA  \n @jensonusabicycles\n @burgtecltd ​\n\n👕 - Vital Merch - https://merch.vitalmedianet.com/collections/vital-mtb\n⚙️ - Vital MTB Tech Discussions - https://www.vitalmtb.com/forums/VitalMTB/The-Hub,2 \n\n❤️ Follow us on Social ❤️\n✅  Instagram - https://www.instagram.com/vitalmtb/\n✅  Facebook - https://www.facebook.com/VitalMTB\n\n#MTB #bike #mountainbike\n\n00:00 Dirt Bike vs. Downhill: Who Makes More Prize Money?\n04:15 The Best and Worst MTB Content Lately\n13:20 Breaking Down the 2027 World Cup Schedule\n14:55 What's Changing at Les Gets?\n16:30 The Morzine Valley and Lift Situation\n20:00 World Cup Locations and the Future of the Series\n22:00 Should Whistler Host the World Cup Finals?\n24:10 What's Next for the U.S. Open?\n26:00 Are Repeated World Cup Venues Making DH Boring?\n31:50 Is World Cup Media Coverage Getting Worse?\n34:00 What Makes Good Mountain Bike Content?\n44:20 What Do Racers Want From MTB Media?\n56:00 What MTB Media Can Learn From Moto and Surf\n01:00:20 What's the Most Important Geometry Number?\n01:03:00 Training for Gravity Riding\n01:05:00 Strength vs. Fitness for Downhill\n01:09:00 The Mental Fatigue of Riding and Bike Testing\n01:16:10 Winter Riding Plans and Staying Active\n01:19:10 Wrapping Up",
+          "thumbnail": "https://i.ytimg.com/vi/wIIOWslEnVo/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-12T13:00:24Z",
+          "url": "https://www.youtube.com/watch?v=wIIOWslEnVo",
+          "isShort": false,
+          "score": 19,
+          "category": "race-runs"
+        },
         {
           "id": "KgFDKTHW6Jg",
           "type": "video",
@@ -604,9 +621,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Beyond Gravity Explores Potential for Races in New Zealand, the US & More for Expanded 2028 Race Series",
-          "description": "The organisers of Beyond Gravity are hoping to create a three-round 'off season' race series for 2028.( Photos: 1, Comments: 35 )",
+          "description": "The organisers of Beyond Gravity are hoping to create a three-round 'off season' race series for 2028.( Photos: 1, Comments: 36 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb29305501/p2pb29305501.jpg",
-          "publishedAt": "2026-11-07T11:33:00.000Z",
+          "publishedAt": "2026-11-07T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/beyond-gravity-explores-potential-for-races-in-new-zealand-the-us-and-more-for-expanded-2028-race-series.html?trk=rss",
           "categories": [],
           "score": 7,
