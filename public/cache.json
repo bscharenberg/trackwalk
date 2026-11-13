@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-13T10:51:46.516Z",
-  "totalItems": 36,
+  "builtAt": "2026-11-13T18:29:33.538Z",
+  "totalItems": 34,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -402,23 +402,6 @@
           "isShort": false,
           "score": 17,
           "category": "race-runs"
-        },
-        {
-          "id": "sjniFSGWG1o",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Red Bull Hardline BC Has Taken Things to Another Level",
-          "description": "Red Bull Hardline BC is back with an entirely new track, and the features are massive.\n\nCharlie and Dan walk the course, measure the biggest jumps, and get a closer look at the blind drops, technical sections, and massive gaps riders will face on race day. Just how gnarly is the new Hardline track?\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\nhttps://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/sjniFSGWG1o/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-14T16:17:11Z",
-          "url": "https://www.youtube.com/watch?v=sjniFSGWG1o",
-          "isShort": false,
-          "score": 10,
-          "category": "race-runs"
         }
       ]
     },
@@ -572,23 +555,6 @@
           "url": "https://www.youtube.com/watch?v=dT75OGMS6SY",
           "isShort": false,
           "score": 16,
-          "category": "paddock"
-        },
-        {
-          "id": "5gSvpwSCFDw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "REDBULL HARDLINE CANADA FIRST SENDS!!",
-          "description": "We’re back in Canada for arguably one of the sickest events of the year!  The location and track are insane, with a wild mix of features, huge drops, big jumps, technical sections, you name it!\n\nWe’re kicking things off with a track walk before heading straight into afternoon practice. Let’s get after it, sports fans! \n\nSee you tomorrow for some more sends! 🚀\n\n@RedBullBike\n\n#sony  #mtb #bksport #downhill #mountainbike #pivot #mtblife #continental #shimano #fox  #canada",
-          "thumbnail": "https://i.ytimg.com/vi/5gSvpwSCFDw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-14T12:46:52Z",
-          "url": "https://www.youtube.com/watch?v=5gSvpwSCFDw",
-          "isShort": false,
-          "score": 14,
           "category": "paddock"
         }
       ]
