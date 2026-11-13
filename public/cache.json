@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-13T18:29:33.538Z",
-  "totalItems": 34,
+  "builtAt": "2026-11-13T23:51:11.514Z",
+  "totalItems": 33,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -225,23 +225,6 @@
           "url": "https://www.youtube.com/watch?v=6Ta_y_psob4",
           "isShort": true,
           "score": 13,
-          "category": "shorts"
-        },
-        {
-          "id": "au9evELVcXc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Jackson Goldstone and Asa Vermette testing out the MASSIVE lily pad feature",
-          "description": "Jackson Goldstone and Asa Vermette testing out the MASSIVE lily pad feature at Red Bull Hardline BC\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\nhttps://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
-          "thumbnail": "https://i.ytimg.com/vi/au9evELVcXc/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-14T21:30:40Z",
-          "url": "https://www.youtube.com/watch?v=au9evELVcXc",
-          "isShort": true,
-          "score": 12,
           "category": "shorts"
         }
       ]
