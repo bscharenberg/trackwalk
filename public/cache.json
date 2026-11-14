@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-14T18:50:43.579Z",
-  "totalItems": 29,
+  "builtAt": "2026-11-14T22:56:44.550Z",
+  "totalItems": 28,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -316,23 +316,6 @@
           "url": "https://www.youtube.com/watch?v=XCSvEgR5S_k",
           "isShort": false,
           "score": 18,
-          "category": "race-runs"
-        },
-        {
-          "id": "iykvlseKKdY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCXqlds5f7B2OOs9vQuevl4A",
-          "channelName": "Red Bull Bike",
-          "title": "The BIGGEST Sends of the Week | Red Bull Hardline British Columbia",
-          "description": "Riders are on course at Cypress Mountain, ticking off the brand-new features of Red Bull Hardline British Columbia. For the event's first year, lead builder Justin Wyper has laid out a North Shore–inspired track unlike anything we've seen in Wales or Tasmania.\n\nWatch FINALs right here 👇\nhttps://www.youtube.com/live/GES8wItqoLI?si=OlnI7lV0cpph-6zO\n\nRIDER LIST:\nVaea Verbeeck\nTayte Proulx-Royds\nLina Frener\nJessica Blewitt\nGracey Hemstreet\nHarry Molloy\nJack Menzies\nOli Clark\nBas Van Steenbergen\nHugo Frixtalon\nBrendan Fairclough\nTegan Cruz\nLucas Cruz\nDane Jewett\nJohnathan Helly\nMichael Delesalle\nJakob Jewett\nTuhoto-Ariki Pene\nCharlie Hatton\nLachlan Stevens-McNab\nFinn Iles\nFelipe Agurto\nTheo Erlangsen\nRoger Vieira\nKaos Seagrave\nJackson Goldstone\nBernard Kerr\nRonan Dunne\nAsa Vermette\nBrandon Semenuk\n\n🎥 FILMERS: Clay Porter, Isaac Wallen, Nic Genovese, Cole Nelson, Thomas Doyle and Graeme Meiklejon\n\n🎞️ EDITORS: Hugh Saint-Jacques & Rupert Walker\n\n#redbullbike #redbullhardline #mountainbike \n\nSubscribe to Red Bull Bike on Youtube: https://win.gs/SubRedBullBike",
-          "thumbnail": "https://i.ytimg.com/vi/iykvlseKKdY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-15T19:59:09Z",
-          "url": "https://www.youtube.com/watch?v=iykvlseKKdY",
-          "isShort": false,
-          "score": 17,
           "category": "race-runs"
         }
       ]
