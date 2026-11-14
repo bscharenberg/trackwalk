@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-13T23:51:11.514Z",
-  "totalItems": 33,
+  "builtAt": "2026-11-14T06:10:36.217Z",
+  "totalItems": 30,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -174,57 +174,6 @@
           "url": "https://www.youtube.com/watch?v=Ign5Au1R2z8",
           "isShort": true,
           "score": 10,
-          "category": "shorts"
-        },
-        {
-          "id": "gxrBy7Zd53o",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
-          "channelName": "Just Ride",
-          "title": "The mastermind behind the Red Bull Hardline British Columbia build 🪏",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/gxrBy7Zd53o/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-15T05:03:58Z",
-          "url": "https://www.youtube.com/watch?v=gxrBy7Zd53o",
-          "isShort": true,
-          "score": 10,
-          "category": "shorts"
-        },
-        {
-          "id": "GRUoQBgEaaE",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCXqlds5f7B2OOs9vQuevl4A",
-          "channelName": "Red Bull Bike",
-          "title": "Asa Vermette: 97ft BACKFLIP at Red Bull Hardline 🤯",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/GRUoQBgEaaE/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-15T01:19:38Z",
-          "url": "https://www.youtube.com/watch?v=GRUoQBgEaaE",
-          "isShort": true,
-          "score": 12,
-          "category": "shorts"
-        },
-        {
-          "id": "6Ta_y_psob4",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
-          "channelName": "Vital MTB",
-          "title": "Dakotah Norton weighs in on the state of World Cup DH",
-          "description": "Pulled from our latest B Practice Podcast - https://youtu.be/rNIvaxt5Lf0",
-          "thumbnail": "https://i.ytimg.com/vi/6Ta_y_psob4/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-15T00:11:07Z",
-          "url": "https://www.youtube.com/watch?v=6Ta_y_psob4",
-          "isShort": true,
-          "score": 13,
           "category": "shorts"
         }
       ]
