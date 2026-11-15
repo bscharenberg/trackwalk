@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-15T17:01:46.336Z",
-  "totalItems": 26,
+  "builtAt": "2026-11-15T21:43:38.228Z",
+  "totalItems": 25,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -155,23 +155,6 @@
           "thumbnailHeight": 720,
           "publishedAt": "2026-10-17T15:56:34Z",
           "url": "https://www.youtube.com/watch?v=_c4ydK7JcKc",
-          "isShort": true,
-          "score": 10,
-          "category": "shorts"
-        },
-        {
-          "id": "Ign5Au1R2z8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
-          "channelName": "Just Ride",
-          "title": "The Bike setups for Red Bull Hardline BC",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/Ign5Au1R2z8/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-16T17:34:40Z",
-          "url": "https://www.youtube.com/watch?v=Ign5Au1R2z8",
           "isShort": true,
           "score": 10,
           "category": "shorts"
