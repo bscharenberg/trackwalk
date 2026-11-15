@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-14T22:56:44.550Z",
-  "totalItems": 28,
+  "builtAt": "2026-11-15T02:36:39.679Z",
+  "totalItems": 27,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -436,23 +436,6 @@
           "url": "https://www.youtube.com/watch?v=8eX8e73GZ6U",
           "isShort": false,
           "score": 12,
-          "category": "paddock"
-        },
-        {
-          "id": "H6Q_UC1CWYI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCXqlds5f7B2OOs9vQuevl4A",
-          "channelName": "Red Bull Bike",
-          "title": "POV: MOST PHYSICAL Red Bull Hardline Yet? | Course Preview 2026",
-          "description": "Jackson Goldstone is back on course preview duty, this time for the inaugral Red Bull Hardline British Columbia.\n\nTake a first look at the brand new track on Cypress Mountain as Jackson runs through the intense line and shows what the world's best riders are about to face. \n\n📍 Cypress Mountain\n🚴 Rider: Jackson Goldstone\n\nWatch the LIVE on Red Bull Bike 👇\nhttps://www.youtube.com/live/GES8wItqoLI?si=HQmUau6EuzdVJLv- \n\n#RedBullHardline #JacksonGoldstone #MTB #RedBullBike",
-          "thumbnail": "https://i.ytimg.com/vi/H6Q_UC1CWYI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-16T01:58:33Z",
-          "url": "https://www.youtube.com/watch?v=H6Q_UC1CWYI",
-          "isShort": false,
-          "score": 11,
           "category": "paddock"
         }
       ]
