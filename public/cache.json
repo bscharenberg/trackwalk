@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-15T02:36:39.679Z",
-  "totalItems": 27,
+  "builtAt": "2026-11-15T09:53:02.498Z",
+  "totalItems": 26,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -299,23 +299,6 @@
           "url": "https://www.youtube.com/watch?v=GES8wItqoLI",
           "isShort": false,
           "score": 21,
-          "category": "race-runs"
-        },
-        {
-          "id": "XCSvEgR5S_k",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCOYc6SI_fVrNvoutot7D9IA",
-          "channelName": "Bernard Kerr",
-          "title": "HARDLINE RED FLAG!??",
-          "description": "Heavy day at hardline with Roger finishing his seeding run with a huge crash on the final kicker but luckily he's going to be okey. \n\nBecause of Rogers crash I had to go back up for a rerun, I then also crashed  but somehow managed to pull off a second place which is crazy!  I've just been to see Roger in hospital so I'm all in for him and the boys tomorrow so see you there sports fans!!\n\n@RedBullBike‬\n\n#sony #mtb #bksport #downhill #mountainbike #pivot #mtblife #continental #shimano #fox  #canada",
-          "thumbnail": "https://i.ytimg.com/vi/XCSvEgR5S_k/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-16T02:52:02Z",
-          "url": "https://www.youtube.com/watch?v=XCSvEgR5S_k",
-          "isShort": false,
-          "score": 18,
           "category": "race-runs"
         }
       ]
