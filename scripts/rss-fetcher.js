@@ -93,7 +93,7 @@ async function parseRSS091(xmlText, feed) {
       description: stripHtml(description),
       thumbnail:   extractThumbnail(description),
       publishedAt: normalizePubDate(pubDate, index),
-      url:         link || null,
+      url:         /^https?:\/\//i.test(link) ? link : null,
       categories:  [],
     }
   }).filter(item => item.title)

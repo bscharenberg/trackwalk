@@ -1,4 +1,4 @@
-const CACHE_NAME = 'trackwalk-v30'
+const CACHE_NAME = 'trackwalk-v31'
 const STATIC_ASSETS = [
   '/',
   '/index.html',

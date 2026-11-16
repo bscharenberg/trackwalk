@@ -1994,7 +1994,7 @@ function fallbackToCTA(item) {
   const cta = document.getElementById('sheet-cta')
   cta.style.display = 'block'
   cta.textContent = ctaLabel(item)
-  cta.href = item.url || '#'
+  cta.href = safeUrl(item.url) || '#'
 }
 
 function openSheet(item) {
@@ -2011,7 +2011,7 @@ function openSheet(item) {
 
   if (videoId) {
     renderYouTubePlayer(thumbEl, videoId, item)
-    ytLink.href = item.url || '#'
+    ytLink.href = safeUrl(item.url) || '#'
     ytLink.style.display = 'block'
     ytLink.onclick = () => {
       if (typeof gtag === 'function') {
@@ -2039,7 +2039,7 @@ function openSheet(item) {
     ytLink.style.display = 'none'
     cta.style.display = 'block'
     cta.textContent = ctaLabel(item)
-    cta.href = item.url || '#'
+    cta.href = safeUrl(item.url) || '#'
     cta.onclick = () => { markSeen(item.url); applySeenState() }
   }
 
@@ -2420,9 +2420,9 @@ function spOnReachEnd() {
 
 function spOpenOnYouTube(i) {
   const item = spItems[i]
-  if (!item || !item.url) return
+  if (!item || !safeUrl(item.url)) return
   spTrackOut(i)
-  window.open(item.url, '_blank', 'noopener')
+  window.open(safeUrl(item.url), '_blank', 'noopener')
 }
 
 // A single ticker for the whole player rather than one per slide — the inactive players are
@@ -3061,7 +3061,7 @@ function buildSeasonBar() {
   const yearBar  = document.getElementById('rs-year-bar')
   const roundBar = document.getElementById('rs-round-bar')
   if (yearBar) {
-    yearBar.innerHTML = seasons.map(yr =>
+    yearBar.innerHTML = seasons.filter(yr => /^\d{4}$/.test(yr)).map(yr =>
       `<div class="rs-round-pill${yr === activeSeason ? ' active' : ''}" data-year="${yr}"
         onclick="setSeason('${yr}')">${yr}</div>`
     ).join('')
@@ -3073,7 +3073,7 @@ function buildSeasonBar() {
         ? `Worlds · ${r.venue.split(/[ ,]/)[0]}`
         : `R${r.round} · ${r.venue.split(/[ ,]/)[0]}`
       return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}" data-slug="${escAttr(r.slug)}"
-        onclick="setRound(${i})">${label}</div>`
+        onclick="setRound(${i})">${escHtml(label)}</div>`
     }).join('')
 
     // The bar is chronological and the app opens on the LAST round, so on any season with more
@@ -3092,10 +3092,10 @@ async function setSeason(yr) {
   activeSeason = yr
   buildSeasonBar()          // repaint the year pills immediately, before the fetch
   if (!resultsData?.seasons?.[yr]) {
-    document.getElementById('rs-content').innerHTML = `<div class="rs-empty">Loading ${yr}…</div>`
+    document.getElementById('rs-content').innerHTML = `<div class="rs-empty">Loading ${escHtml(yr)}…</div>`
     try { await loadSeason(yr) }
     catch {
-      document.getElementById('rs-content').innerHTML = `<div class="rs-empty">Couldn't load ${yr}</div>`
+      document.getElementById('rs-content').innerHTML = `<div class="rs-empty">Couldn't load ${escHtml(yr)}</div>`
       return
     }
     if (activeSeason !== yr) return   // user moved on while this was in flight
@@ -3207,11 +3207,11 @@ function renderStandings() {
     return `<div class="rs-hero-row pos-${r.rank}">
   <div class="rs-pos-num">${r.rank}</div>
   <div class="rs-rider-info">
-    <div class="rs-rider-name">${name}</div>
-    <div class="rs-rider-nat">${r.nat}</div>
+    <div class="rs-rider-name">${escHtml(name)}</div>
+    <div class="rs-rider-nat">${escHtml(r.nat)}</div>
   </div>
   <div class="rs-time-col">
-    <div class="rs-time">${r.points} pts</div>
+    <div class="rs-time">${escHtml(r.points)} pts</div>
     <div class="rs-gap">${r.rounds} round${r.rounds !== 1 ? 's' : ''}</div>
   </div>
 </div>`
@@ -3220,16 +3220,16 @@ function renderStandings() {
     const name = formatName(r.name)
     return `<tr>
   <td class="rs-td-rank">${r.rank}</td>
-  <td class="rs-td-nat">${r.nat}</td>
-  <td class="rs-td-name">${name}</td>
-  <td class="rs-td-pts">${r.points}</td>
+  <td class="rs-td-nat">${escHtml(r.nat)}</td>
+  <td class="rs-td-name">${escHtml(name)}</td>
+  <td class="rs-td-pts">${escHtml(r.points)}</td>
   <td class="rs-td-time" style="color:var(--text-muted);font-size:11px">${r.rounds}r</td>
 </tr>`
   }).join('')
   const genderLabel = activeGender === 'men' ? 'Elite Men' : 'Elite Women'
   el.innerHTML = `
 <div class="rs-section">
-  <div class="rs-section-label">${activeSeason} · ${genderLabel} · Championship Standings</div>
+  <div class="rs-section-label">${escHtml(activeSeason)} · ${genderLabel} · Championship Standings</div>
   <div class="rs-top5">${podiumHtml}</div>
   ${rest.length ? `
   <div class="rs-section-label">Full standings</div>
@@ -3319,11 +3319,11 @@ function pickVisitHeadline(entries) {
 function renderVisitDetailRow(e) {
   const status = e.dnf ? 'DNF' : e.dsq ? 'DSQ' : e.dns ? 'DNS' : null
   return `<div class="rvc-detail-row">
-  <span class="rvc-detail-session">${sessionLabel(e.session)}</span>
-  <span class="rvc-detail-rank">${status || (e.rank != null ? '#' + e.rank : '—')}</span>
-  <span class="rvc-detail-time">${status ? '—' : (e.time || '')}</span>
-  <span class="rvc-detail-gap">${status ? '' : (e.gap || '')}</span>
-  <span class="rvc-detail-pts">${e.points != null ? e.points + ' pts' : ''}</span>
+  <span class="rvc-detail-session">${escHtml(sessionLabel(e.session))}</span>
+  <span class="rvc-detail-rank">${escHtml(status || (e.rank != null ? '#' + e.rank : '—'))}</span>
+  <span class="rvc-detail-time">${escHtml(status ? '—' : (e.time || ''))}</span>
+  <span class="rvc-detail-gap">${escHtml(status ? '' : (e.gap || ''))}</span>
+  <span class="rvc-detail-pts">${escHtml(e.points != null ? e.points + ' pts' : '')}</span>
 </div>`
 }
 
@@ -3331,7 +3331,7 @@ function renderVisitRow(visit) {
   const h = pickVisitHeadline(visit.entries)
   const rankHtml = h.status
     ? `<span class="rvc-badge">${h.status}</span>`
-    : `<span class="rvc-rank${h.isP1 ? ' rvc-rank-p1' : ''}">${h.rank ?? '—'}</span>`
+    : `<span class="rvc-rank${h.isP1 ? ' rvc-rank-p1' : ''}">${escHtml(h.rank ?? '—')}</span>`
   const detail = [...visit.entries]
     .sort((a, b) => (SESSION_ORDER[b.session] || 0) - (SESSION_ORDER[a.session] || 0))
     .map(renderVisitDetailRow).join('')
@@ -3341,11 +3341,11 @@ function renderVisitRow(visit) {
   <div class="rvc-visit-main" onclick="toggleRvcVisit(this)">
     <div class="rvc-visit-rank-col">${rankHtml}</div>
     <div class="rvc-visit-info">
-      <div class="rvc-visit-year">${visit.year}</div>
-      <div class="rvc-visit-session">${h.sessionLbl}</div>
+      <div class="rvc-visit-year">${escHtml(visit.year)}</div>
+      <div class="rvc-visit-session">${escHtml(h.sessionLbl)}</div>
     </div>
     <div class="rvc-visit-time-col">
-      <div class="rvc-visit-time${h.isP1 ? ' rvc-time-p1' : ''}">${h.time}</div>
+      <div class="rvc-visit-time${h.isP1 ? ' rvc-time-p1' : ''}">${escHtml(h.time)}</div>
     </div>
     <div class="rvc-chevron">&rsaquo;</div>
   </div>
@@ -3426,8 +3426,8 @@ function renderRiderSearchResults() {
     el.innerHTML = shown.map(m => `
 <div class="rs-search-pick" data-key="${escAttr(m.key)}" onclick="selectSearchRider(this)">
   <div class="rs-rider-info">
-    <div class="rs-rider-name">${formatName(m.name)}</div>
-    <div class="rs-rider-nat">${m.nat}</div>
+    <div class="rs-rider-name">${escHtml(formatName(m.name))}</div>
+    <div class="rs-rider-nat">${escHtml(m.nat)}</div>
   </div>
   <div class="rs-gap">${m.entries.length} result${m.entries.length !== 1 ? 's' : ''}</div>
 </div>`).join('') + (matches.length > 30
@@ -3441,8 +3441,8 @@ function renderRiderSearchResults() {
 
   el.innerHTML = `
 ${matches.length > 1 ? `<div class="rs-search-back" onclick="clearSearchSelection()">&larr; Back to results</div>` : ''}
-<div class="rs-rider-name" style="font-size:18px;margin-bottom:2px">${formatName(rider.name)}</div>
-<div class="rs-rider-nat" style="margin-bottom:12px">${rider.nat} · ${venueGroups.length} venue${venueGroups.length !== 1 ? 's' : ''} · ${rider.entries.length} result${rider.entries.length !== 1 ? 's' : ''}</div>
+<div class="rs-rider-name" style="font-size:18px;margin-bottom:2px">${escHtml(formatName(rider.name))}</div>
+<div class="rs-rider-nat" style="margin-bottom:12px">${escHtml(rider.nat)} · ${venueGroups.length} venue${venueGroups.length !== 1 ? 's' : ''} · ${rider.entries.length} result${rider.entries.length !== 1 ? 's' : ''}</div>
 ${cardsHtml}`
 }
 
@@ -3477,15 +3477,15 @@ function renderHeroRows(session, isFinals) {
     const posClass = isFinals ? `pos-${r.rank || 'x'}` : `pos-${r.rank && r.rank <= 3 ? r.rank : 4}`
     const name     = formatName(r.name)
     const gap      = status ? '' : (r.rank === 1 ? (isFinals ? 'Winner' : 'Fastest') : r.gap || '')
-    return `<div class="rs-hero-row ${posClass}">
-  <div class="rs-pos-num">${status || r.rank}</div>
+    return `<div class="rs-hero-row ${escAttr(posClass)}">
+  <div class="rs-pos-num">${escHtml(status || r.rank)}</div>
   <div class="rs-rider-info">
-    <div class="rs-rider-name">${name}</div>
-    <div class="rs-rider-nat">${r.nat || ''}</div>
+    <div class="rs-rider-name">${escHtml(name)}</div>
+    <div class="rs-rider-nat">${escHtml(r.nat || '')}</div>
   </div>
   <div class="rs-time-col">
-    <div class="rs-time">${status ? '—' : r.time}</div>
-    <div class="rs-gap">${gap}</div>
+    <div class="rs-time">${escHtml(status ? '—' : r.time)}</div>
+    <div class="rs-gap">${escHtml(gap)}</div>
   </div>
 </div>`
   }).join('')
@@ -3522,7 +3522,7 @@ function renderVenueCrossYear() {
     if (!session.length) return ''
     return `
 <div class="rs-section">
-  <div class="rs-section-label">${round.year}</div>
+  <div class="rs-section-label">${escHtml(round.year)}</div>
   <div class="rs-top5">${renderHeroRows(session, isFinals)}</div>
 </div>`
   }).filter(Boolean).join('')
@@ -3530,7 +3530,7 @@ function renderVenueCrossYear() {
   el.innerHTML = `
 <div class="rs-section" style="padding-bottom:0">
   <div class="rs-search-back" onclick="setResultsView('search')">&larr; Back to search</div>
-  <div class="rs-rider-name" style="font-size:18px;margin-bottom:2px">${selectedVenue}</div>
+  <div class="rs-rider-name" style="font-size:18px;margin-bottom:2px">${escHtml(selectedVenue)}</div>
   <div class="rs-rider-nat" style="margin-bottom:0">${genderLbl} · ${sessionLbl}</div>
 </div>
 ${yearBlocks || `<div class="rs-section"><div class="rs-empty">No ${sessionLbl} data for ${genderLbl}</div></div>`}`
@@ -3575,12 +3575,12 @@ function renderResultsView() {
     const status = r.dnf ? 'DNF' : r.dsq ? 'DSQ' : r.dns ? 'DNS' : null
     const name = formatName(r.name)
     return `<tr${status ? ' class="rs-row-dnf"' : ''}>
-  <td class="rs-td-rank">${status || r.rank}</td>
-  <td class="rs-td-nat">${r.nat || ''}</td>
-  <td class="rs-td-name">${name}</td>
-  <td class="rs-td-time">${status ? '—' : r.time}</td>
-  <td class="rs-td-gap">${r.gap || ''}</td>
-  <td class="rs-td-pts">${r.points || ''}</td>
+  <td class="rs-td-rank">${escHtml(status || r.rank)}</td>
+  <td class="rs-td-nat">${escHtml(r.nat || '')}</td>
+  <td class="rs-td-name">${escHtml(name)}</td>
+  <td class="rs-td-time">${escHtml(status ? '—' : r.time)}</td>
+  <td class="rs-td-gap">${escHtml(r.gap || '')}</td>
+  <td class="rs-td-pts">${escHtml(r.points || '')}</td>
 </tr>`
   }).join('')
 
@@ -3599,7 +3599,7 @@ function renderResultsView() {
 
   el.innerHTML = `
 <div class="rs-section">
-  <div class="rs-section-label">${round.venue} · ${venueDate} · ${sessionLabel}</div>
+  <div class="rs-section-label">${escHtml(round.venue)} · ${escHtml(venueDate)} · ${escHtml(sessionLabel)}</div>
   ${stateHtml}
   <div class="rs-top5">${top5Html}</div>
   ${rest.length ? `
@@ -4270,12 +4270,12 @@ function renderMyRiders() {
     return
   }
   strip.innerHTML = `<div class="my-riders-chips">` + saved.map(r => {
-    const nm   = String(r.name || '').replace(/"/g, '&quot;')
+    const nm   = escAttr(r.name || '')
     const last = String(r.name || '').split(' ').slice(-1)[0].toUpperCase()
     return `
-    <a class="rider-chip" href="${r.instagram || '#'}" target="_blank" rel="noopener" onclick="${r.instagram ? '' : 'event.preventDefault()'}">
-      <span class="rider-chip-flag">${r.flag}</span>
-      <span class="rider-chip-name">${last}</span>
+    <a class="rider-chip" href="${escAttr(safeUrl(r.instagram) || '#')}" target="_blank" rel="noopener" onclick="${r.instagram ? '' : 'event.preventDefault()'}">
+      <span class="rider-chip-flag">${escHtml(r.flag)}</span>
+      <span class="rider-chip-name">${escHtml(last)}</span>
     </a>
     <button class="rider-chip-remove" data-name="${nm}" onclick="event.preventDefault();event.stopPropagation();removeMyRider(this.dataset.name)">✕</button>
   `}).join('') + `</div>`
@@ -4293,19 +4293,19 @@ function bookmarkSVG(filled) {
 function riderCardHTML(r) {
   const saved = isRiderSaved(r.name)
   const igZone = r.instagram
-    ? `<a class="rider-zone-ig" href="${r.instagram}" target="_blank" rel="noopener">${igSVG}</a>`
+    ? `<a class="rider-zone-ig" href="${escAttr(safeUrl(r.instagram) || '#')}" target="_blank" rel="noopener">${igSVG}</a>`
     : `<div class="rider-zone-ig" style="opacity:0.2">${igSVG}</div>`
-  const genderLabel = r._gender ? `<div class="rider-gender-label">${r._gender}</div>` : ''
+  const genderLabel = r._gender ? `<div class="rider-gender-label">${escHtml(r._gender)}</div>` : ''
   // Store rider data on the button via data attributes to avoid JSON/quote escaping issues
   const escapedName = r.name.replace(/"/g, '&quot;')
   const escapedIg   = (r.instagram || '').replace(/"/g, '&quot;')
   return `<div class="rider-card${saved ? ' saved' : ''}">
     <button class="rider-zone-bookmark"
-      data-name="${escapedName}" data-nat="${r.nat}" data-flag="${r.flag}" data-ig="${escapedIg}"
+      data-name="${escapedName}" data-nat="${escAttr(r.nat)}" data-flag="${escAttr(r.flag)}" data-ig="${escapedIg}"
       onclick="toggleRiderBtn(this)">${bookmarkSVG(saved)}</button>
     <div class="rider-zone-info">
-      <div class="rider-flag">${r.flag}</div>
-      <div class="rider-name">${r.name}</div>
+      <div class="rider-flag">${escHtml(r.flag)}</div>
+      <div class="rider-name">${escHtml(r.name)}</div>
       ${genderLabel}
     </div>
     ${igZone}
@@ -4324,7 +4324,7 @@ function renderRiders() {
     const women = (ridersData.women || []).map(r => ({...r, _gender:'Women'}))
     const results = [...men, ...women].filter(r => r.name.toLowerCase().includes(q))
     if (!results.length) {
-      el.innerHTML = `<div class="rs-empty">No riders matching "${q}"</div>`
+      el.innerHTML = `<div class="rs-empty">No riders matching "${escHtml(q)}"</div>`
       return
     }
     el.innerHTML = '<div class="riders-grid">' + results.map(r => riderCardHTML(r)).join('') + '</div>'
@@ -4437,11 +4437,11 @@ function renderPitsWatch() {
   let html = '<div class="pits-label">How to Watch</div>'
   if (!watchData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
   for (const region of watchData.regions) {
-    html += `<div class="pits-region-label">${region.region}</div>`
+    html += `<div class="pits-region-label">${escHtml(region.region)}</div>`
     for (const opt of region.options) {
       const badge = `<span class="watch-badge ${opt.cost === 'free' ? 'free' : 'paid'}">${opt.cost === 'free' ? 'Free' : 'Paid'}</span>`
-      const notes = opt.notes ? `<div class="pits-row-desc">${opt.notes}</div>` : ''
-      html += `<a class="pits-row" href="${opt.url}" target="_blank" rel="noopener"><div class="pits-row-body"><div class="pits-row-name">${opt.name}</div>${notes}</div>${badge}</a>`
+      const notes = opt.notes ? `<div class="pits-row-desc">${escHtml(opt.notes)}</div>` : ''
+      html += `<a class="pits-row" href="${escAttr(safeUrl(opt.url) || '#')}" target="_blank" rel="noopener"><div class="pits-row-body"><div class="pits-row-name">${escHtml(opt.name)}</div>${notes}</div>${badge}</a>`
     }
   }
   el.innerHTML = html
@@ -4453,9 +4453,9 @@ function renderPitsTeams() {
   let html = '<div class="pits-label">Teams</div>'
   if (!dirData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
   for (const t of dirData.teams) {
-    const pri = t.primary  ? `<a class="pits-icon-btn" href="${t.primary.url}"  target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(t.primary.icon)}</a>`  : ''
-    const sec = t.secondary ? `<a class="pits-icon-btn" href="${t.secondary.url}" target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(t.secondary.icon)}</a>` : ''
-    html += `<div class="pits-row"><div class="pits-row-body"><div class="pits-row-name">${t.name}</div></div><div class="pits-row-icons">${pri}${sec}</div></div>`
+    const pri = t.primary  ? `<a class="pits-icon-btn" href="${escAttr(safeUrl(t.primary.url) || '#')}"  target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(t.primary.icon)}</a>`  : ''
+    const sec = t.secondary ? `<a class="pits-icon-btn" href="${escAttr(safeUrl(t.secondary.url) || '#')}" target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(t.secondary.icon)}</a>` : ''
+    html += `<div class="pits-row"><div class="pits-row-body"><div class="pits-row-name">${escHtml(t.name)}</div></div><div class="pits-row-icons">${pri}${sec}</div></div>`
   }
   el.innerHTML = html
 }
@@ -4466,10 +4466,10 @@ function renderPitsMedia() {
   let html = '<div class="pits-label">Media</div>'
   if (!dirData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
   for (const m of dirData.media) {
-    const pri = m.primary  ? `<a class="pits-icon-btn" href="${m.primary.url}"  target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(m.primary.icon)}</a>`  : ''
-    const sec = m.secondary ? `<a class="pits-icon-btn" href="${m.secondary.url}" target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(m.secondary.icon)}</a>` : ''
-    const desc = m.description ? `<div class="pits-row-desc">${m.description}</div>` : ''
-    html += `<div class="pits-row"><div class="pits-row-body"><div class="pits-row-name">${m.name}</div>${desc}</div><div class="pits-row-icons">${pri}${sec}</div></div>`
+    const pri = m.primary  ? `<a class="pits-icon-btn" href="${escAttr(safeUrl(m.primary.url) || '#')}"  target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(m.primary.icon)}</a>`  : ''
+    const sec = m.secondary ? `<a class="pits-icon-btn" href="${escAttr(safeUrl(m.secondary.url) || '#')}" target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon(m.secondary.icon)}</a>` : ''
+    const desc = m.description ? `<div class="pits-row-desc">${escHtml(m.description)}</div>` : ''
+    html += `<div class="pits-row"><div class="pits-row-body"><div class="pits-row-name">${escHtml(m.name)}</div>${desc}</div><div class="pits-row-icons">${pri}${sec}</div></div>`
   }
   el.innerHTML = html
 }
@@ -4481,10 +4481,10 @@ function renderPitsPodcasts() {
   if (!dirData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
   for (const p of dirData.podcasts) {
     const playUrl = p.primary?.url || '#'
-    const desc    = p.description ? `<div class="pits-row-desc">${p.description}</div>` : ''
+    const desc    = p.description ? `<div class="pits-row-desc">${escHtml(p.description)}</div>` : ''
     const spotify = p.secondary?.icon === 'spotify'
-      ? `<a class="pits-icon-btn" href="${p.secondary.url}" target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon('spotify')}</a>` : ''
-    html += `<div class="pits-row"><a class="pits-play-btn" href="${playUrl}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" fill="var(--acid)"/></svg></a><div class="pits-row-body"><div class="pits-row-name">${p.name}</div>${desc}</div><div class="pits-row-icons">${spotify}</div></div>`
+      ? `<a class="pits-icon-btn" href="${escAttr(safeUrl(p.secondary.url) || '#')}" target="_blank" rel="noopener" style="color:var(--text-secondary)">${pitsIcon('spotify')}</a>` : ''
+    html += `<div class="pits-row"><a class="pits-play-btn" href="${escAttr(safeUrl(playUrl) || '#')}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" fill="var(--acid)"/></svg></a><div class="pits-row-body"><div class="pits-row-name">${escHtml(p.name)}</div>${desc}</div><div class="pits-row-icons">${spotify}</div></div>`
   }
   el.innerHTML = html
 }
@@ -4495,8 +4495,8 @@ function renderPitsUCI() {
   let html = '<div class="pits-label">UCI Official</div>'
   if (!dirData) { el.innerHTML = html + '<div style="color:var(--text-muted);font-size:12px">Loading…</div>'; return }
   for (const u of dirData.uci) {
-    const desc = u.description ? `<div class="pits-row-desc">${u.description}</div>` : ''
-    html += `<a class="pits-row" href="${u.url}" target="_blank" rel="noopener"><div class="pits-row-body"><div class="pits-row-name">${u.name}</div>${desc}</div><div class="pits-row-icons"><span class="pits-icon-btn" style="color:var(--text-muted)">${pitsIcon('website')}</span></div></a>`
+    const desc = u.description ? `<div class="pits-row-desc">${escHtml(u.description)}</div>` : ''
+    html += `<a class="pits-row" href="${escAttr(safeUrl(u.url) || '#')}" target="_blank" rel="noopener"><div class="pits-row-body"><div class="pits-row-name">${escHtml(u.name)}</div>${desc}</div><div class="pits-row-icons"><span class="pits-icon-btn" style="color:var(--text-muted)">${pitsIcon('website')}</span></div></a>`
   }
   el.innerHTML = html
 }
