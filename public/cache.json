@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-16T09:31:50.667Z",
+  "builtAt": "2026-11-16T19:50:26.984Z",
   "totalItems": 23,
   "categories": {
     "shorts": {
@@ -141,23 +141,6 @@
           "isShort": true,
           "score": 17,
           "category": "shorts"
-        },
-        {
-          "id": "_c4ydK7JcKc",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
-          "channelName": "Just Ride",
-          "title": "I guess we now know 😅#redbullhardline",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/_c4ydK7JcKc/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-17T15:56:34Z",
-          "url": "https://www.youtube.com/watch?v=_c4ydK7JcKc",
-          "isShort": true,
-          "score": 10,
-          "category": "shorts"
         }
       ]
     },
@@ -279,6 +262,21 @@
       "id": "films",
       "label": "Films",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/gabe-fox-steps-down-as-canyon-factory-dh-team-leader.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Gabe Fox Steps Down As Canyon Factory DH Team Leader",
+          "description": "Gabe's been the man behind the scenes at Canyon for a decade, from Troy Brosnan’s win in Andorra to Luca Shaw’s first World Cup victory this year.( Photos: 2, Comments: 8 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30530485/p2pb30530485.jpg",
+          "publishedAt": "2026-11-16T11:59:00.000Z",
+          "url": "https://www.pinkbike.com/news/gabe-fox-steps-down-as-canyon-factory-dh-team-leader.html?trk=rss",
+          "categories": [],
+          "score": 9,
+          "category": "films"
+        },
         {
           "id": "hEVZmHa1Cnc",
           "type": "video",
