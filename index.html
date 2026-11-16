@@ -3046,7 +3046,10 @@ document.getElementById('results-nav').addEventListener('click', e => {
 })
 
 function formatName(raw) {
-  return raw.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ')
+  return raw.split(' ').map(w => {
+    if (w.includes('.') || !/\p{Lu}.*\p{Lu}/u.test(w) || w !== w.toUpperCase()) return w
+    return w.toLowerCase().replace(/(^|[-'])\p{L}/gu, c => c.toUpperCase())
+  }).join(' ')
 }
 
 function currentRounds() {
@@ -3070,8 +3073,8 @@ function buildSeasonBar() {
   if (roundBar) {
     roundBar.innerHTML = rounds.map((r, i) => {
       const label = (r.eventType === 'world-championship' || r.type === 'World Championships')
-        ? `Worlds · ${r.venue.split(/[ ,]/)[0]}`
-        : `R${r.round} · ${r.venue.split(/[ ,]/)[0]}`
+        ? `Worlds · ${r.venue}`
+        : `R${r.round} · ${r.venue}`
       return `<div class="rs-round-pill${i === activeRound ? ' active' : ''}" data-slug="${escAttr(r.slug)}"
         onclick="setRound(${i})">${escHtml(label)}</div>`
     }).join('')
