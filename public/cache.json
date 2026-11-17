@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-16T19:50:26.984Z",
-  "totalItems": 23,
+  "builtAt": "2026-11-17T02:54:01.640Z",
+  "totalItems": 22,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -269,7 +269,7 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Gabe Fox Steps Down As Canyon Factory DH Team Leader",
-          "description": "Gabe's been the man behind the scenes at Canyon for a decade, from Troy Brosnan’s win in Andorra to Luca Shaw’s first World Cup victory this year.( Photos: 2, Comments: 8 )",
+          "description": "Gabe's been the man behind the scenes at Canyon for a decade, from Troy Brosnan’s win in Andorra to Luca Shaw’s first World Cup victory this year.( Photos: 2, Comments: 26 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30530485/p2pb30530485.jpg",
           "publishedAt": "2026-11-16T11:59:00.000Z",
           "url": "https://www.pinkbike.com/news/gabe-fox-steps-down-as-canyon-factory-dh-team-leader.html?trk=rss",
@@ -349,23 +349,6 @@
           "url": "https://www.youtube.com/watch?v=o3LIqibX-6Q",
           "isShort": false,
           "score": 11,
-          "category": "paddock"
-        },
-        {
-          "id": "8eX8e73GZ6U",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCXqlds5f7B2OOs9vQuevl4A",
-          "channelName": "Red Bull Bike",
-          "title": "POV: WINNING the Toughest Race in MTB | Red Bull Hardline BC",
-          "description": "Asa Vermette secures his 3rd Red Bull Hardline win at the inaugural British Colombia event.\n\nVermette becomes the first rider to take a win at all 3 Red Bull Hardline events: Wales 2025, Tasmania 2026 and now British Columbia.\n\nWatch the REPLAY on Red Bull Bike 👇\nhttps://www.youtube.com/live/GES8wItqoLI?si=HQmUau6EuzdVJLv- \n\n#RedBullHardline #AsaVermette #MTB #redbullbike \n\nSubscribe to Red Bull Bike on Youtube: https://win.gs/SubRedBullBike\nGet the FREE Red Bull TV apps for all your devices: http://onelink.to/yfbct7\nWatch Red Bull TV: https://win.gs/WatchRBTVBike\n\nSee into our world: http://goo.gl/J49U\n\nFollow Red Bull Bike on:\nTiktok: https://www.tiktok.com/@redbullbike\nInstagram: https://www.instagram.com/redbullbike/\nFacebook: https://www.facebook.com/RedBullBike/",
-          "thumbnail": "https://i.ytimg.com/vi/8eX8e73GZ6U/sddefault.jpg",
-          "thumbnailWidth": 640,
-          "thumbnailHeight": 480,
-          "publishedAt": "2026-10-18T02:05:00Z",
-          "url": "https://www.youtube.com/watch?v=8eX8e73GZ6U",
-          "isShort": false,
-          "score": 12,
           "category": "paddock"
         }
       ]
