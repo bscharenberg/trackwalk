@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-18T02:23:32.914Z",
-  "totalItems": 22,
+  "builtAt": "2026-11-18T10:41:24.358Z",
+  "totalItems": 20,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -215,23 +215,6 @@
           "isShort": false,
           "score": 10,
           "category": "race-runs"
-        },
-        {
-          "id": "LpI8zKXRjPw",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCUjYvTWqwm7x6LU8uGLvdxQ",
-          "channelName": "Just Ride",
-          "title": "Inside the Commentary Booth at Red Bull Hardline BC",
-          "description": "Take a peak behind the scenes at Rob Warner & Eliot Jackson in full commentary duty at Red Bull Hardline British Columbia.\n\nLooking for more Just Ride? Check out all the episodes here: \nhttps://www.youtube.com/playlist?list=PLpfgeSePLuLxnuzGCXgpiQfMplr9bW-6c\n\nSubscribe to Red Bull Just Ride here:\nhttps://www.youtube.com/@RedBullJustRide?sub_confirmation=1\n\nJoin Rob Warner and Eliot Jackson in Just Ride as they delve into an array of cycling adventures. \n\nWhether on your screens or in your ears, catch them speaking to the biggest names from the world of mountain biking, road cycling, and everything in-between. We've got some incredible guests planned - and we will be bringing you Just Ride from all around the world. \n\nCome and join the ride!\n\n#redbull #justride #redbullhardline\n\n00:00 - Behind the Scenes at Red Bull Hardline BC\n00:30 - An Early Start at Cypress Mountain\n01:22 - When the Transport Breaks Down!\n01:53 - Rehearsing the Opening Commentary\n02:14 - Getting the Perfect Introduction\n02:44 - A Little Downtime Before the Race\n03:07 - Moving into Position for the Broadcast\n03:46 - Setting Up the Commentary Booth\n04:25 - Final Notes Before Going Live\n04:58 - The Red Bull Hardline BC Race Begins!\n05:27 - Calling the Action from the Booth\n06:00 - Crowning the First Hardline BC Champion\n06:33 - Reflecting on an Incredible Race Day",
-          "thumbnail": "https://i.ytimg.com/vi/LpI8zKXRjPw/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-19T09:38:19Z",
-          "url": "https://www.youtube.com/watch?v=LpI8zKXRjPw",
-          "isShort": false,
-          "score": 14,
-          "category": "race-runs"
         }
       ]
     },
@@ -309,23 +292,6 @@
           "url": "https://www.youtube.com/watch?v=Xi2Xs6Ulz8c",
           "isShort": false,
           "score": 7,
-          "category": "films"
-        },
-        {
-          "id": "1SgQ82H1IiY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCuuLS5B9JraqXiKfYPIBNEw",
-          "channelName": "Sleeper Collective",
-          "title": "RED BULL HARDLINE BC 2026 | SLEEPER SHREDDIT",
-          "description": "The First Ever Red Bull Hardline in Beautiful British Columbia, Canada.\n\nhttps://sleepermerch.com",
-          "thumbnail": "https://i.ytimg.com/vi/1SgQ82H1IiY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-19T09:11:26Z",
-          "url": "https://www.youtube.com/watch?v=1SgQ82H1IiY",
-          "isShort": false,
-          "score": 10,
           "category": "films"
         }
       ]
