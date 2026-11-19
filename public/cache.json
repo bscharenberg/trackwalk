@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-11-19T17:39:29.119Z",
+  "builtAt": "2026-11-19T23:47:15.257Z",
   "totalItems": 23,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "TCSd_PH8G9w",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Newkirk. New winner 🫡",
+          "description": "Newkirk. New winner 🫡\n\nSaving the best for last, Anna Newkirk put green on the screen at the final split before storming into the lead and taking victory in Lenzerheide by just 0.591 seconds 🤯\n\n📍Bike Kingdom – Lenzerheide 🏁 Women’s Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/TCSd_PH8G9w/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-19T18:11:23Z",
+          "url": "https://www.youtube.com/watch?v=TCSd_PH8G9w",
+          "isShort": true,
+          "score": 14,
+          "category": "shorts"
+        },
         {
           "id": "PRJ8gXnlbCg",
           "type": "video",
@@ -141,40 +158,6 @@
           "isShort": true,
           "score": 10,
           "category": "shorts"
-        },
-        {
-          "id": "eg1HVajDdK8",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Gracey Hemstreet won the first Red Bull Hardline BC 👑",
-          "description": "Hometown hero Gracey Hemstreet won the first Red Bull Hardline BC 👑",
-          "thumbnail": "https://i.ytimg.com/vi/eg1HVajDdK8/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-20T21:25:06Z",
-          "url": "https://www.youtube.com/watch?v=eg1HVajDdK8",
-          "isShort": true,
-          "score": 12,
-          "category": "shorts"
-        },
-        {
-          "id": "3QDDhDCOagY",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
-          "channelName": "Pinkbike",
-          "title": "Asa Vermette won the first ever Red Bull Hardline BC",
-          "description": "Asa Vermette won the first ever Red Bull Hardline BC! Incredible performance from the World Cup champion. He now makes it 3 wins in a row and in every location 🤯",
-          "thumbnail": "https://i.ytimg.com/vi/3QDDhDCOagY/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-20T20:45:13Z",
-          "url": "https://www.youtube.com/watch?v=3QDDhDCOagY",
-          "isShort": true,
-          "score": 17,
-          "category": "shorts"
         }
       ]
     },
@@ -303,9 +286,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Gabe Fox Steps Down As Canyon Factory DH Team Leader",
-          "description": "Gabe's been the man behind the scenes at Canyon for a decade, from Troy Brosnan’s win in Andorra to Luca Shaw’s first World Cup victory this year.( Photos: 2, Comments: 51 )",
+          "description": "Gabe's been the man behind the scenes at Canyon for a decade, from Troy Brosnan’s win in Andorra to Luca Shaw’s first World Cup victory this year.( Photos: 2, Comments: 52 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30530485/p2pb30530485.jpg",
-          "publishedAt": "2026-11-16T11:39:00.000Z",
+          "publishedAt": "2026-11-16T11:36:00.000Z",
           "url": "https://www.pinkbike.com/news/gabe-fox-steps-down-as-canyon-factory-dh-team-leader.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -374,6 +357,21 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: We Blind Tested MTB Tires With Asa Vermette",
+          "description": "Can the 2026 World Cup DH champion tell the difference between three different tire casings out on the trail?( Photos: 1, Comments: 37 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30536577/p2pb30536577.jpg",
+          "publishedAt": "2026-11-19T12:00:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
+          "categories": [],
+          "score": 13,
+          "category": "news"
+        },
         {
           "id": "AXfli0SiCFk",
           "type": "video",
