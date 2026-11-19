@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-19T08:42:48.120Z",
-  "totalItems": 22,
+  "builtAt": "2026-11-19T17:39:29.119Z",
+  "totalItems": 23,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -257,6 +257,23 @@
       "label": "Results",
       "items": [
         {
+          "id": "g8pPZsCoYYc",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UC2GIHZpQiJy-8286f4lj_cg",
+          "channelName": "Pinkbike",
+          "title": "We Blind Tested MTB Tires With Asa Vermette",
+          "description": "Can a Downhill World Cup champion tell the difference between mountain bike tires without knowing what he's riding?\n\nWe teamed up with Continental Tires and 2026 Downhill World Cup overall champion Asa Vermette for a blind tire test at Whistler Bike Park to find out just how much tire casing and rubber compound affect performance on the trail.\n\nWith three different Continental Kryptotal tire setups, we put downhill, enduro, and trail casings and compounds head-to-head. The catch? Neither rider knows which tires they're using.\n\nPresented By: Continental\n\n00:00 Why Are There So Many MTB Tire Options?\n00:56 Meet Downhill World Cup Champion Asa Vermette\n01:52 MTB Tire Technology Explained\n03:46 The Three Tire Setups & Testing Method\n04:21 Blind Test: Round One\n07:40 Blind Test: Round Two\n10:08 Blind Test: Final Round\n11:05 Final Impressions & Predictions\n12:02 Revealing the Blind Test Results\n\nLike Pinkbike? Try Trailforks, the best mountain bike trail mapping app.\nhttps://applink.trailforks.com/4EpG/fvn5pxf9\n\nSubscribe for more content from the pulse of mountain biking.\n\nWebsite - https://pinkbike.com\nPodcast - https://pinkbike.link/pbpodcast\nInstagram - https://instagram.com/pinkbike\nFacebook - https://facebook.com/pinkbikecom",
+          "thumbnail": "https://i.ytimg.com/vi/g8pPZsCoYYc/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-19T17:00:05Z",
+          "url": "https://www.youtube.com/watch?v=g8pPZsCoYYc",
+          "isShort": false,
+          "score": 16,
+          "category": "results"
+        },
+        {
           "id": "qMUJfUa30EA",
           "type": "video",
           "source": "youtube",
@@ -288,7 +305,7 @@
           "title": "Gabe Fox Steps Down As Canyon Factory DH Team Leader",
           "description": "Gabe's been the man behind the scenes at Canyon for a decade, from Troy Brosnan’s win in Andorra to Luca Shaw’s first World Cup victory this year.( Photos: 2, Comments: 51 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30530485/p2pb30530485.jpg",
-          "publishedAt": "2026-11-16T11:42:00.000Z",
+          "publishedAt": "2026-11-16T11:39:00.000Z",
           "url": "https://www.pinkbike.com/news/gabe-fox-steps-down-as-canyon-factory-dh-team-leader.html?trk=rss",
           "categories": [],
           "score": 9,
