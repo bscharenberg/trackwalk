@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-11-20T07:03:58.902Z",
-  "totalItems": 23,
+  "builtAt": "2026-11-20T16:04:39.867Z",
+  "totalItems": 24,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "5qq_YHVaFtg",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Years in the making 🥹",
+          "description": "Years in the making 🥹\n\nThe moment Luca Shaw crossed the line to take his debut World Cup win 🥇💪\n\n📍Loudenvielle - Peyragudes presented by FACOM 🏁 Men’s UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/5qq_YHVaFtg/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-20T15:34:22Z",
+          "url": "https://www.youtube.com/watch?v=5qq_YHVaFtg",
+          "isShort": true,
+          "score": 20,
+          "category": "shorts"
+        },
         {
           "id": "TCSd_PH8G9w",
           "type": "video",
@@ -288,7 +305,7 @@
           "title": "Gabe Fox Steps Down As Canyon Factory DH Team Leader",
           "description": "Gabe's been the man behind the scenes at Canyon for a decade, from Troy Brosnan’s win in Andorra to Luca Shaw’s first World Cup victory this year.( Photos: 2, Comments: 52 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30530485/p2pb30530485.jpg",
-          "publishedAt": "2026-11-16T11:36:00.000Z",
+          "publishedAt": "2026-11-16T11:33:00.000Z",
           "url": "https://www.pinkbike.com/news/gabe-fox-steps-down-as-canyon-factory-dh-team-leader.html?trk=rss",
           "categories": [],
           "score": 9,
@@ -364,9 +381,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: We Blind Tested MTB Tires With Asa Vermette",
-          "description": "Can the 2026 World Cup DH champion tell the difference between three different tire casings out on the trail?( Photos: 1, Comments: 54 )",
+          "description": "Can the 2026 World Cup DH champion tell the difference between three different tire casings out on the trail?( Photos: 1, Comments: 68 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30536577/p2pb30536577.jpg",
-          "publishedAt": "2026-11-19T12:00:00.000Z",
+          "publishedAt": "2026-11-19T11:58:00.000Z",
           "url": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
           "categories": [],
           "score": 13,
