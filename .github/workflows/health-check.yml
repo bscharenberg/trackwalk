@@ -1,0 +1,111 @@
+name: Trackwalk Weekly (backstop)
+
+# Backstop for the weekly digest (docs/always-on-plan.md, Phase 1).
+#
+# The weekly cloud routine is the primary writer: it runs scripts/health-check.mjs, the
+# near-miss list and the curator agent, then edits the one "Trackwalk weekly" issue. This
+# workflow runs only the deterministic health check, so if the routine is ever off, paused
+# or broken, the pipeline checks still land somewhere. No AI, no secrets beyond the job token.
+#
+# Idempotent: the issue body carries a marker with the ISO week. If this week's marker is
+# already there (from the routine or from an earlier slot of this workflow), every later slot
+# exits without touching anything. So the five slots below cost at most one edit a week.
+#
+# Why five slots: GitHub drops most scheduled runs and ':00' is the most contended minute
+# (decisions.md, 2026-09-16: ~24% of hourly slots fired, ~5% of 10-minute ones). All slots
+# are after the routine's Monday-morning run, so the routine's richer report wins when it ran.
+#
+# Quiet when fine: an "All quiet" week edits the body silently (GitHub doesn't notify on
+# body edits). Only a week that needs Bryon reopens the issue and comments, which notifies.
+
+on:
+  schedule:
+    - cron: '17 18 * * 1'   # Mon 18:17 UTC
+    - cron: '41 21 * * 1'   # Mon 21:41 UTC
+    - cron: '23 3 * * 2'    # Tue 03:23 UTC
+    - cron: '47 14 * * 2'   # Tue 14:47 UTC
+    - cron: '11 16 * * 3'   # Wed 16:11 UTC
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Rewrite this week even if it already has a report'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: trackwalk-weekly
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    if: github.repository == 'bscharenberg/trackwalk'
+    runs-on: ubuntu-latest
+
+    steps:
+      # Full history: the refresh-gap and service-worker checks read git log. The repo is ~5 MB.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # No npm ci: health-check.mjs and test-filter.js use only Node built-ins.
+      - name: Run the health check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/health-check.mjs --out=health-report.md
+
+      - name: Create or edit the "Trackwalk weekly" issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FORCE: ${{ inputs.force }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          TITLE="Trackwalk weekly"
+          LABEL="weekly"
+          WEEK=$(date -u +%G-W%V)
+          MARKER="trackwalk-weekly week=$WEEK"
+
+          # Label AND exact title, so a second issue that happens to carry the label is never overwritten.
+          ISSUE=$(gh issue list --label "$LABEL" --state all --limit 50 --json number,title \
+            --jq '[.[] | select(.title == "Trackwalk weekly")][0].number // empty')
+
+          if [ -n "$ISSUE" ] && [ "$FORCE" != "true" ]; then
+            if gh issue view "$ISSUE" --json body --jq '.body' | grep -qF "$MARKER"; then
+              echo "Issue #$ISSUE already has a report for $WEEK. Nothing to do."
+              exit 0
+            fi
+          fi
+
+          HEADLINE=$(head -n 1 health-report.md)
+          {
+            head -c 60000 health-report.md
+            echo
+            echo "---"
+            echo "_Week $WEEK. Written by the backstop workflow ([run]($RUN_URL)): health check only, no curator review this week, which usually means the weekly routine didn't run._"
+            echo
+            echo "<!-- $MARKER by=backstop -->"
+          } > issue-body.md
+
+          if [ -n "$ISSUE" ]; then
+            gh issue edit "$ISSUE" --body-file issue-body.md
+          else
+            gh label create "$LABEL" --color 0E8A16 --description "Weekly Trackwalk digest" 2>/dev/null || true
+            ISSUE=$(gh issue create --title "$TITLE" --label "$LABEL" --body-file issue-body.md | grep -oE '[0-9]+$')
+          fi
+
+          if [ "$HEADLINE" != "All quiet" ]; then
+            STATE=$(gh issue view "$ISSUE" --json state --jq '.state')
+            if [ "$STATE" = "CLOSED" ]; then gh issue reopen "$ISSUE"; fi
+            gh issue comment "$ISSUE" --body "**$HEADLINE** ($WEEK). Details are in the issue body."
+          fi
+          echo "Issue #$ISSUE updated for $WEEK: $HEADLINE"
