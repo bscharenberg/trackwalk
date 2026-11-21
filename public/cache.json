@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-11-21T11:44:50.924Z",
+  "builtAt": "2026-11-21T19:07:57.512Z",
   "totalItems": 24,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "XNVMPhq4aIA",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "UNSTOPPABLE 👑",
+          "description": "UNSTOPPABLE 👑\n\nVali Höll claimed a stellar victory in Pal Arinsal, holding off Gracey Hemstreet and Sacha Earnest after another thrilling day of downhill racing 🤩\n\n🥇 Vali Höll – 3:06.717\n🥈 Gracey Hemstreet +0.485\n🥉 Sacha Earnest +2.869\n\n📍Pal Arinsal, Andorra 🏁 Elite Women’s UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/XNVMPhq4aIA/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-21T17:27:30Z",
+          "url": "https://www.youtube.com/watch?v=XNVMPhq4aIA",
+          "isShort": true,
+          "score": 21,
+          "category": "shorts"
+        },
         {
           "id": "Ak_3pYSrRJI",
           "type": "video",
@@ -249,23 +266,6 @@
           "isShort": false,
           "score": 21,
           "category": "race-runs"
-        },
-        {
-          "id": "Np1XfOX1tLI",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCWS4nfoou79mwo9nHew49fA",
-          "channelName": "UCI MTB World Series",
-          "title": "The Final Push - THE GRIND Episode 3 | A Monster Energy Documentary Series",
-          "description": "Nine rounds. Three riders. One season.\n\nEvery season has a beginning. Every race brings new challenges. But only one finish line marks the end.\n\nIn the final episode of THE GRIND, follow Luca Martin, Charlie Aldridge and Gwendalyn Gibson through the closing chapter of the 2026 UCI Cross-Country World Cup season, from Les Gets to the final round in Lake Placid, New York.\n\nAfter a season full of pressure, setbacks and defining moments, everything comes down to the final races.\n\nLuca Martin fights to secure the overall titles in both XCO and XCC. Charlie Aldridge, after a difficult start to the season, finds his way back to the top and finishes the year with a UCI World Cup victory. Gwendalyn Gibson reaches a new milestone in her career with an incredible second place at Soldier Hollow.\n\nThree different journeys. Three different definitions of success. One final push.\n\nMore than a race recap, THE GRIND goes behind the results to explore the people, the sacrifices and the moments that define a season at the highest level of Cross-country mountain biking.\n\nThis is the end of the season. This is THE GRIND.\n\nPresented by Monster Energy. 🟢\n\n#TheGrind #MonsterEnergy\n\nUseful Links:\nWhere to watch 👉 https://ucimtbworldseries.com/watch\nLearn about each format  👉 https://ucimtbworldseries.com/formats\nNews from the UCI Mountain Bike World Series 👉  https://ucimtbworldseries.com/news  \nSign-up for our newsletter 👉 https://rb.gy/akj501\n\nThe WHOOP UCI Mountain Bike World Series unites mountain bike’s major formats under a single brand. The WHOOP UCI Mountain Bike World Series includes the UCI Mountain Bike World Cup for Cross-country Olympic (XCO), Cross-country Short Track (XCC), Downhill (DHI), and Enduro (EDR).\n\nComprehensive coverage from the races captures the excitement through exclusive interviews, analysis, reactions and event highlights. In-between events and through the off-season there are regular features covering technical and rider-based topics. All embedded with the latest mountain bike action from the world's best riders.\n\nThanks to our 2026 partners: 👇\nWHOOP: https://whoop.com\nMonster Energy: https://monsterenergy.com\nMichelin: https://michelinman.com\nShimano: https://shimano.com\nMOTUL: https://motul.com\nRockShox: https://sram.com/rockshox\nFACOM: https://facom.com\nGoPro: https://gopro.com\nCommencal: https://commencal.com\nMavic: https://mavic.com\nGOBIK: https://gobik.com",
-          "thumbnail": "https://i.ytimg.com/vi/Np1XfOX1tLI/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-22T17:17:00Z",
-          "url": "https://www.youtube.com/watch?v=Np1XfOX1tLI",
-          "isShort": false,
-          "score": 10,
-          "category": "race-runs"
         }
       ]
     },
@@ -385,7 +385,7 @@
           "title": "Video: We Blind Tested MTB Tires With Asa Vermette",
           "description": "Can the 2026 World Cup DH champion tell the difference between three different tire casings out on the trail?( Photos: 1, Comments: 80 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30536577/p2pb30536577.jpg",
-          "publishedAt": "2026-11-19T11:53:00.000Z",
+          "publishedAt": "2026-11-19T11:49:00.000Z",
           "url": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
           "categories": [],
           "score": 13,
