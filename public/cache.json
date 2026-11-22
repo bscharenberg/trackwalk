@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-22T06:37:26.925Z",
-  "totalItems": 24,
+  "builtAt": "2026-11-22T14:53:01.547Z",
+  "totalItems": 25,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -377,15 +377,30 @@
       "label": "News",
       "items": [
         {
+          "id": "https://www.pinkbike.com/news/video-how-aletha-ostgaard-max-and-till-alran-handle-racing-pressure-in-earned-ground.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Video: How Aletha Ostgaard, Max & Till Alran Handle High Expectations in 'Earned Ground'",
+          "description": "Earned Ground is a new three-part series from RockShox following the 2026 World Cup season.( Photos: 6, Comments: 2 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb30515954/p2pb30515954.jpg",
+          "publishedAt": "2026-11-22T12:00:00.000Z",
+          "url": "https://www.pinkbike.com/news/video-how-aletha-ostgaard-max-and-till-alran-handle-racing-pressure-in-earned-ground.html?trk=rss",
+          "categories": [],
+          "score": 8,
+          "category": "news"
+        },
+        {
           "id": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
           "type": "article",
           "source": "pinkbike",
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: We Blind Tested MTB Tires With Asa Vermette",
-          "description": "Can the 2026 World Cup DH champion tell the difference between three different tire casings out on the trail?( Photos: 1, Comments: 81 )",
+          "description": "Can the 2026 World Cup DH champion tell the difference between three different tire casings out on the trail?( Photos: 1, Comments: 82 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30536577/p2pb30536577.jpg",
-          "publishedAt": "2026-11-19T11:49:00.000Z",
+          "publishedAt": "2026-11-19T11:46:00.000Z",
           "url": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
           "categories": [],
           "score": 13,
