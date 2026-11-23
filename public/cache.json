@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-11-23T09:44:13.591Z",
-  "totalItems": 25,
+  "builtAt": "2026-11-23T22:00:37.436Z",
+  "totalItems": 26,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "9j8aTz9Ms2I",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Last rider. Best run. 🤯",
+          "description": "Last rider. Best run. 🤯\n\nJordan Williams saved the best until last, producing an incredible run to take victory in La Thuile 👊\n\n🥇 Jordan Williams – 3:25.767\n🥈 Asa Vermette – +0.961\n🥉 Jackson Goldstone – +1.393\n\n📍La Thuile, Valle d’Aosta 🏁 Men’s Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/9j8aTz9Ms2I/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-23T16:38:19Z",
+          "url": "https://www.youtube.com/watch?v=9j8aTz9Ms2I",
+          "isShort": true,
+          "score": 20,
+          "category": "shorts"
+        },
         {
           "id": "XNVMPhq4aIA",
           "type": "video",
@@ -383,9 +400,9 @@
           "channelId": null,
           "channelName": "Pinkbike",
           "title": "Video: How Aletha Ostgaard, Max & Till Alran Handle High Expectations in 'Earned Ground'",
-          "description": "Earned Ground is a new three-part series from RockShox following the 2026 World Cup season.( Photos: 6, Comments: 16 )",
+          "description": "Earned Ground is a new three-part series from RockShox following the 2026 World Cup season.( Photos: 6, Comments: 22 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30515954/p2pb30515954.jpg",
-          "publishedAt": "2026-11-22T12:00:00.000Z",
+          "publishedAt": "2026-11-22T11:54:00.000Z",
           "url": "https://www.pinkbike.com/news/video-how-aletha-ostgaard-max-and-till-alran-handle-racing-pressure-in-earned-ground.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -400,7 +417,7 @@
           "title": "Video: We Blind Tested MTB Tires With Asa Vermette",
           "description": "Can the 2026 World Cup DH champion tell the difference between three different tire casings out on the trail?( Photos: 1, Comments: 82 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30536577/p2pb30536577.jpg",
-          "publishedAt": "2026-11-19T11:45:00.000Z",
+          "publishedAt": "2026-11-19T11:39:00.000Z",
           "url": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
           "categories": [],
           "score": 13,
