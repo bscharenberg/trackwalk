@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-11-24T05:57:36.339Z",
-  "totalItems": 26,
+  "builtAt": "2026-11-24T17:34:18.310Z",
+  "totalItems": 27,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "SLZGs04eJuQ",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "An agonising wait 👀",
+          "description": "An agonising wait 👀\n\nPure relief for Marine Cabirou in Val di Sole as she marked her 10th World Cup victory in 2025 🤩",
+          "thumbnail": "https://i.ytimg.com/vi/SLZGs04eJuQ/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-24T16:28:21Z",
+          "url": "https://www.youtube.com/watch?v=SLZGs04eJuQ",
+          "isShort": true,
+          "score": 10,
+          "category": "shorts"
+        },
         {
           "id": "9j8aTz9Ms2I",
           "type": "video",
@@ -366,33 +383,27 @@
         }
       ]
     },
-    "paddock": {
-      "id": "paddock",
-      "label": "Pits",
-      "items": [
-        {
-          "id": "o3LIqibX-6Q",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UC_wCbFZHCh9amfaXXI4yq_g",
-          "channelName": "Rémy Métailler",
-          "title": "Whistler Downhill World Cup: What you did not see on TV...",
-          "description": "The Whistler Downhill World Cup 2026 was absolute madness! \n\nIf you enjoyed this video please subscribe and check out my links below for all my codes and affiliates. \n\nFOLLOW ME on social media @remymetailler   \nSUBSCRIBE to my podcast: @brakingdowntheline  \nSUBSCRIBE to my second channel: @remymetaillerraw  \n\nAll my codes and links below or here: https://beacons.ai/remymetailler\nGet 10% off the GoPro website. Use code Remy10 : https://prf.hn/l/6qOdNVB\n\nSUPPORT ME? Use the links below: \n\nWHAT I RIDE:\n\nMy Online Bike Shop (Jenson USA): https://alnk.to/eONa8al\nMy Bikes (Propain): https://www.propain-bikes.com/\nSuspensions (Vorsprung): https://vorsprungsuspension.com/\nTires (Maxxis Assegai and DHR): https://alnk.to/6bW2r9e\nWheels: (NOBL rims HD30 or 35) : https://bit.ly/shop-nobl-wheels-remy-metailler USE CODE: REMYNOBL10\nHubs (Project 321): https://project321.com/ USE CODE: REMY10\nBrakes (Hayes Dominion A4): https://alnk.to/faCGMPw \nBrake pads and Rotor (Galfer): https://alnk.to/1Caznck\nGrips, seats (Ergon): https://alnk.to/31soMrX\nComponents (OneUp Components): https://alnk.to/3J7qHHw \nPedals (Time): https://alnk.to/880ne8T\nCranks: TBA\nChain Damper / Inserts (Rimpact): https://www.rimpactmtb.com/ USE CODE: REMY10\nChain (KMC SL 12): https://alnk.to/eDSpwl1\nMud Guards (MudHugger Long Evo): https://www.themudhugger.co.uk \nQuiet bike (STFU Bike): https://stfubike.com USE CODE: REMY15\nFrame protection (RideWrap): https://ridewrap.avln.me/c/RxoAeqknuebN \n\nEQUIPMENT:\n\nClothing (Norrøna): https://www.norrona.com/\nCamera (GoPro:) https://prf.hn/l/6qOdNVB USE CODE: REMY10\nLights (Outbound Lighting): https://bit.ly/3s3oC23\nHelmets (MET and Bluegrass): https://alnk.to/a47ezmp\nProtections (Bluegrass): https://alnk.to/6mTjYdD \nShoes TBA\nGlasses and goggles (Julbo): https://backcountry.tnu8.net/ZQ5D5q  \nHydration packs (USWE): https://uswe.com/\nWater bottles and phone mount (Fidlock): https://alnk.to/58tIZsL\nCar racks and trainer (Saris): https://alnk.to/7X5CfF3\nSocks (Dissent Labs): https://bit.ly/3iAPyND\n\nSERVICES AND MAINTENANCE:\n\nLube, wash: TBA\nTools (Topeak): https://www.jensonusa.com/Topeak\nWhistler Bike Shop: https://www.evolutionwhistler.com\nSuspensions service (S4 Suspensions): https://s4suspension.com/\nBike racks (Steady Rack): https://www.steadyrack.com/?utm_source=Remy%20Metailler&utm_medium=Ambassador&utm_campaign=Social\n \nThanks for watching, see you on the trails or on Youtube\n \nFOLLOW : @remymetailler \nhttp://www.facebook.com/remymetailler\nhttp://www.instagram.com/remymetailler\nhttp://www.twitter.com/remymetailler\n\n #mountainbiking #remymetailler",
-          "thumbnail": "https://i.ytimg.com/vi/o3LIqibX-6Q/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-25T15:00:35Z",
-          "url": "https://www.youtube.com/watch?v=o3LIqibX-6Q",
-          "isShort": false,
-          "score": 11,
-          "category": "paddock"
-        }
-      ]
-    },
     "news": {
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "mcuCj7258o8",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCcX5xwMOCt92bi0dmspMFQw",
+          "channelName": "Vital MTB",
+          "title": "World Cup Speed Comes at a Price - Commencal Supreme V5.2 Tested",
+          "description": "All Vital Downhill Bike Tests - https://www.youtube.com/playlist?list=PLLiDwPfY-lhyKX6qJehUoemu-DtWI7jf1\n\nThe latest version of Commencal’s Supreme V5.2 was developed and won races during the 2025 season before being released to the public this summer. The changes are visually minor, but pivot points were moved, and the bike's personality was altered. The changes clearly worked: Max Alran scored his first Elite win this season, and Vali Holl wrapped up her 5th Elite title two rounds early. \n\nThe bike is obviously a rocket ship, but what enables it to go so dang fast? What’s it like to manage and direct that speed when you don’t have World Cup-level abilities? Time to find out…\n\nRead our review of the Commencal Supreme V5.2 - https://www.vitalmtb.com/product/guide/bikes/transition/tr11-75131\n\nCrankbrothers Synthesis 2.0 test wheels - https://www.crankbrothers.com/collect...\nMaxxis High Roller control tires - https://shop.maxxis.com/products/high....\nFox Racing DH test gear - https://www.foxracing.com/mens/mtb/\n\n⚙️ - Vital MTB Tech Discussions - https://www.vitalmtb.com/forums/Vital... \n\nFollow us on Social \n✅  Instagram -   / vitalmtb  \n✅  Facebook -   / vitalmtb",
+          "thumbnail": "https://i.ytimg.com/vi/mcuCj7258o8/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-24T13:00:28Z",
+          "url": "https://www.youtube.com/watch?v=mcuCj7258o8",
+          "isShort": false,
+          "score": 13,
+          "category": "news"
+        },
         {
           "id": "https://www.pinkbike.com/news/video-how-aletha-ostgaard-max-and-till-alran-handle-racing-pressure-in-earned-ground.html?trk=rss",
           "type": "article",
@@ -402,7 +413,7 @@
           "title": "Video: How Aletha Ostgaard, Max & Till Alran Handle High Expectations in 'Earned Ground'",
           "description": "Earned Ground is a new three-part series from RockShox following the 2026 World Cup season.( Photos: 6, Comments: 27 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30515954/p2pb30515954.jpg",
-          "publishedAt": "2026-11-22T11:54:00.000Z",
+          "publishedAt": "2026-11-22T11:52:00.000Z",
           "url": "https://www.pinkbike.com/news/video-how-aletha-ostgaard-max-and-till-alran-handle-racing-pressure-in-earned-ground.html?trk=rss",
           "categories": [],
           "score": 8,
@@ -417,7 +428,7 @@
           "title": "Video: We Blind Tested MTB Tires With Asa Vermette",
           "description": "Can the 2026 World Cup DH champion tell the difference between three different tire casings out on the trail?( Photos: 1, Comments: 82 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30536577/p2pb30536577.jpg",
-          "publishedAt": "2026-11-19T11:39:00.000Z",
+          "publishedAt": "2026-11-19T11:37:00.000Z",
           "url": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
           "categories": [],
           "score": 13,
