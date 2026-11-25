@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-25T10:27:00.144Z",
-  "totalItems": 27,
+  "builtAt": "2026-11-25T20:09:46.689Z",
+  "totalItems": 25,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -226,23 +226,6 @@
           "isShort": true,
           "score": 10,
           "category": "shorts"
-        },
-        {
-          "id": "qXSb84Yh8VQ",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCN_B2-bdBtmAq-5TOEU63nQ",
-          "channelName": "Fox Factory",
-          "title": "Asa Vermette gets a signed fork from the FOX crew!",
-          "description": "",
-          "thumbnail": "https://i.ytimg.com/vi/qXSb84Yh8VQ/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-26T18:47:37Z",
-          "url": "https://www.youtube.com/watch?v=qXSb84Yh8VQ",
-          "isShort": true,
-          "score": 10,
-          "category": "shorts"
         }
       ]
     },
@@ -413,25 +396,10 @@
           "title": "Video: How Aletha Ostgaard, Max & Till Alran Handle High Expectations in 'Earned Ground'",
           "description": "Earned Ground is a new three-part series from RockShox following the 2026 World Cup season.( Photos: 6, Comments: 27 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30515954/p2pb30515954.jpg",
-          "publishedAt": "2026-11-22T11:46:00.000Z",
+          "publishedAt": "2026-11-22T11:39:00.000Z",
           "url": "https://www.pinkbike.com/news/video-how-aletha-ostgaard-max-and-till-alran-handle-racing-pressure-in-earned-ground.html?trk=rss",
           "categories": [],
           "score": 8,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: We Blind Tested MTB Tires With Asa Vermette",
-          "description": "Can the 2026 World Cup DH champion tell the difference between three different tire casings out on the trail?( Photos: 1, Comments: 82 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30536577/p2pb30536577.jpg",
-          "publishedAt": "2026-11-19T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-we-blind-tested-mtb-tires-with-asa-vermette.html?trk=rss",
-          "categories": [],
-          "score": 13,
           "category": "news"
         },
         {
