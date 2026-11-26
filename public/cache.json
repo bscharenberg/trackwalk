@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-11-26T12:18:10.570Z",
-  "totalItems": 25,
+  "builtAt": "2026-11-26T21:54:40.431Z",
+  "totalItems": 24,
   "categories": {
     "shorts": {
       "id": "shorts",
@@ -306,23 +306,6 @@
           "isShort": false,
           "score": 16,
           "category": "results"
-        },
-        {
-          "id": "qMUJfUa30EA",
-          "type": "video",
-          "source": "youtube",
-          "channelId": "UCtvJR7iamL8WFAbvpsC2HTw",
-          "channelName": "WynTV",
-          "title": "WYNTV SEA OTTER AUSTRALIA",
-          "description": "This week thanks to FOCUS Australia I’m down under for Sea Otter Australia in Batemans Bay and catching up with all the Aussie legends and some other special guests too! \n\nVideo by Clancy Kelley",
-          "thumbnail": "https://i.ytimg.com/vi/qMUJfUa30EA/maxresdefault.jpg",
-          "thumbnailWidth": 1280,
-          "thumbnailHeight": 720,
-          "publishedAt": "2026-10-27T18:51:44Z",
-          "url": "https://www.youtube.com/watch?v=qMUJfUa30EA",
-          "isShort": false,
-          "score": 10,
-          "category": "results"
         }
       ]
     },
@@ -396,7 +379,7 @@
           "title": "Video: How Aletha Ostgaard, Max & Till Alran Handle High Expectations in 'Earned Ground'",
           "description": "Earned Ground is a new three-part series from RockShox following the 2026 World Cup season.( Photos: 6, Comments: 27 )",
           "thumbnail": "https://ep1.pinkbike.org/p2pb30515954/p2pb30515954.jpg",
-          "publishedAt": "2026-11-22T11:38:00.000Z",
+          "publishedAt": "2026-11-22T11:31:00.000Z",
           "url": "https://www.pinkbike.com/news/video-how-aletha-ostgaard-max-and-till-alran-handle-racing-pressure-in-earned-ground.html?trk=rss",
           "categories": [],
           "score": 8,
