@@ -153,6 +153,8 @@ Can go any time before May. **Bryon does:** create a fine-grained PAT (this repo
 
 ### 6a. A home always-on box (option B, done properly)
 
+Decided 2026-11-26: the everyday laptop runs nothing always-on and sleeps when idle. A separate dedicated laptop at home is the 6a machine, running Linux with Remote Control in server mode (`claude remote-control`). Setup not started.
+
 Option B as written above is "the Desktop app on the Mac you also work on." That isn't viable here: the current laptop has more than one Claude account on it. A dedicated setup is a different thing:
 
 1. ~~Keep this Mac awake.~~ Ruled out: shared device, account switching.
