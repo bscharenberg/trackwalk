@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-11-27T13:49:56.121Z",
-  "totalItems": 24,
+  "builtAt": "2026-11-27T22:39:34.865Z",
+  "totalItems": 26,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "hJV1NDJvaVU",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "Flawless from Vali Höll 😮‍💨🔥",
+          "description": "Flawless from Vali Höll 😮‍💨🔥\n\nOverall series confirmed, World champion's jersey on her back, and still gave it everything to take another victory in Whistler 🤩\n\n📍Whistler Mountain Bike Park, BC, Canada 🏁 Women’s Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/hJV1NDJvaVU/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-27T16:57:21Z",
+          "url": "https://www.youtube.com/watch?v=hJV1NDJvaVU",
+          "isShort": true,
+          "score": 23,
+          "category": "shorts"
+        },
         {
           "id": "brP_5fWOWIg",
           "type": "video",
@@ -370,6 +387,21 @@
       "id": "news",
       "label": "News",
       "items": [
+        {
+          "id": "https://www.pinkbike.com/news/matt-walker-parts-ways-with-the-trek-unbroken-dh-team.html?trk=rss",
+          "type": "article",
+          "source": "pinkbike",
+          "channelId": null,
+          "channelName": "Pinkbike",
+          "title": "Matt Walker Parts Ways with the Trek-Unbroken DH Team",
+          "description": "Matt Walker is heading somewhere new after two years with Trek.( Photos: 1, Comments: 5 )",
+          "thumbnail": "https://ep1.pinkbike.org/p2pb29956469/p2pb29956469.jpg",
+          "publishedAt": "2026-11-27T11:57:00.000Z",
+          "url": "https://www.pinkbike.com/news/matt-walker-parts-ways-with-the-trek-unbroken-dh-team.html?trk=rss",
+          "categories": [],
+          "score": 7,
+          "category": "news"
+        },
         {
           "id": "mcuCj7258o8",
           "type": "video",
