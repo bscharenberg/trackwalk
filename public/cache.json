@@ -1,11 +1,28 @@
 {
-  "builtAt": "2026-11-27T04:12:02.553Z",
+  "builtAt": "2026-11-27T13:49:56.121Z",
   "totalItems": 24,
   "categories": {
     "shorts": {
       "id": "shorts",
       "label": "Shorts",
       "items": [
+        {
+          "id": "brP_5fWOWIg",
+          "type": "video",
+          "source": "youtube",
+          "channelId": "UCWS4nfoou79mwo9nHew49fA",
+          "channelName": "UCI MTB World Series",
+          "title": "A race for the history books 🤯",
+          "description": "A race for the history books 🤯\n\nAsa Vermette took his second win of the season in phenomenal style, unseating Max Alran by more than four seconds to claim victory in Whistler 🔥\n\n📍Whistler Mountain Bike Park, BC, Canada 🏁 Men’s Elite UCI DHI World Cup",
+          "thumbnail": "https://i.ytimg.com/vi/brP_5fWOWIg/maxresdefault.jpg",
+          "thumbnailWidth": 1280,
+          "thumbnailHeight": 720,
+          "publishedAt": "2026-11-27T10:09:25Z",
+          "url": "https://www.youtube.com/watch?v=brP_5fWOWIg",
+          "isShort": true,
+          "score": 20,
+          "category": "shorts"
+        },
         {
           "id": "SLZGs04eJuQ",
           "type": "video",
@@ -368,21 +385,6 @@
           "url": "https://www.youtube.com/watch?v=mcuCj7258o8",
           "isShort": false,
           "score": 13,
-          "category": "news"
-        },
-        {
-          "id": "https://www.pinkbike.com/news/video-how-aletha-ostgaard-max-and-till-alran-handle-racing-pressure-in-earned-ground.html?trk=rss",
-          "type": "article",
-          "source": "pinkbike",
-          "channelId": null,
-          "channelName": "Pinkbike",
-          "title": "Video: How Aletha Ostgaard, Max & Till Alran Handle High Expectations in 'Earned Ground'",
-          "description": "Earned Ground is a new three-part series from RockShox following the 2026 World Cup season.( Photos: 6, Comments: 27 )",
-          "thumbnail": "https://ep1.pinkbike.org/p2pb30515954/p2pb30515954.jpg",
-          "publishedAt": "2026-11-22T11:31:00.000Z",
-          "url": "https://www.pinkbike.com/news/video-how-aletha-ostgaard-max-and-till-alran-handle-racing-pressure-in-earned-ground.html?trk=rss",
-          "categories": [],
-          "score": 8,
           "category": "news"
         },
         {
